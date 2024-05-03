@@ -1,3 +1,16 @@
+.happyTrail {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../../public/syn-star.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+
+    animation-duration: 2s;
+}
+
 main {
     cursor: url('../../../public/cursor-2.cur'), auto;
 }
