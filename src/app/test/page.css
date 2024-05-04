@@ -1,3 +1,16 @@
+main {
+    cursor: url('../../../public/cursor-2.cur'), auto;
+}
+
+:root {
+    --blob-color: linear-gradient(
+            #00f,
+            #00f0
+    );
+    --blob-size: 150px;
+}
+
+
 .happyTrail {
     position: absolute;
     width: 24px;
@@ -11,6 +24,22 @@
     animation-duration: 2s;
 }
 
-main {
-    cursor: url('../../../public/cursor-2.cur'), auto;
+#blob {
+    animation: rotate360 20s infinite;
+    background: var(--blob-color);
+    filter: blur(calc(var(--blob-size)/2.15));
+
+    width: var(--blob-size);
+    height: var(--blob-size);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+}
+
+@keyframes rotate360 {
+    from { rotate: 0deg; }
+    50% { scale: 1 1.15; }
+    to { rotate: 360deg; }
 }
