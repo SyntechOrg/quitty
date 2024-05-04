@@ -7,7 +7,7 @@ main {
             #00f,
             #00f0
     );
-    --blob-size: 150px;
+    --blob-size: 225px;
 }
 
 
@@ -25,13 +25,15 @@ main {
 }
 
 #blob {
-    animation: rotate360 20s infinite;
+    animation: rotate360 10s infinite;
     background: var(--blob-color);
-    filter: blur(calc(var(--blob-size)/2.15));
+    filter: blur(calc(var(--blob-size)/4));
+    opacity: 0.7;
 
     width: var(--blob-size);
     height: var(--blob-size);
     position: absolute;
+    z-index: 0;
     left: 50%;
     top: 50%;
     translate: -50% -50%;
@@ -40,6 +42,6 @@ main {
 
 @keyframes rotate360 {
     from { rotate: 0deg; }
-    50% { scale: 1 1.15; }
+    50% { scale: 1 1.25; }
     to { rotate: 360deg; }
 }
