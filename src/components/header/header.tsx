@@ -1,18 +1,39 @@
-import React, {FC} from 'react';
+import React, { FC } from "react";
+import { Button, Icon, IconType, Logo } from "../shared";
+import Link from "next/link";
 
-const Header: FC = () => {
+const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
+
+type NavProps = {};
+
+export const Nav: FC<NavProps> = () => {
   return (
-    <header className="max-w-[1290px] w-full flex justify-between items-center text-white mx-auto">
-      <nav>
-        <ul className="flex gap-4">
-          <li>Home</li>
-          <li>About</li>
-          <li>Portfolio</li>
-          <li>Services</li>
-        </ul>
-      </nav>
-    </header>
+    <nav className="hidden lg:block">
+      <ul className="flex gap-x-[60px] text-base">
+        {NAV_ITEMS.map((item) => (
+          <li key={item}>
+            <Link href={`/${item === "Home" ? "" : item.toLowerCase()}`}>
+              {item}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
-export default Header;
+export const Header: FC = () => {
+  return (
+    <header className="container py-[33px] flex items-center justify-between">
+      <Logo />
+      <Nav />
+
+      <div className="flex items-center">
+        <Button to="contact">Get in Touch</Button>
+        <Button>
+          <Icon icon={IconType.ARROW} />
+        </Button>
+      </div>
+    </header>
+  );
+};
