@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import Link from "next/link";
-import { ReactNode, type FC } from "react";
+import { ButtonHTMLAttributes, ReactNode, type FC } from "react";
 
 const variantClasses = {
   primary: "border border-primary text-white",
-  secondary: "bg-secondary text-white",
+  secondary: "bg-primary text-white",
 };
 
 const sizeClasses = {
@@ -20,7 +20,7 @@ type ButtonProps = {
   className?: string;
   onClick?: () => void;
   to?: string;
-};
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
   children,
@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <Link href={to} {...props} className={buttonClassNames}>
+      <Link href={to} className={buttonClassNames}>
         {children}
       </Link>
     );
