@@ -19,7 +19,7 @@ type ContactPageBannerProps = {};
 
 export const ContactPageBanner: FC<ContactPageBannerProps> = () => {
   return (
-    <div className="mt-[210px]">
+    <div className="mt-[210px] container">
       <div className="flex justify-between lg:pr-[110px]">
         <div className="text-primary mt-[30px] text-[24px] tracking-[20%]">
           GET IN TOUCH
@@ -28,17 +28,17 @@ export const ContactPageBanner: FC<ContactPageBannerProps> = () => {
           Let's create something special together...
         </h1>
       </div>
-      <div className="flex items-center justify-between mt-[161px]">
+      <div className="flex lg:items-center justify-between mt-[161px] flex-col lg:flex-row gap-y-5 lg:gap-y-0">
         <p className="w-full max-w-[340px] text-sm leading-[30px]">
           Have a project or want to talk?
           <br /> Here you'll find a few convenient <br />
           ways to reach us.
         </p>
-        <ul className="flex w-full justify-between">
+        <ul className="flex lg:flex-row w-full justify-between flex-col">
           {GENERAL_INFO.map((info) => (
             <li
               key={info.label}
-              className="pl-[60px] py-3 border-l border-l-[#3F3D45] last-of-type:border-r-[#3F3D45] last-of-type:border-r last-of-type:pr-[60px]"
+              className="pl-[30px] lg:pl-[60px] py-3 border-l border-l-[#3F3D45] last-of-type:border-r-[#3F3D45] lg:last-of-type:border-r lg:last-of-type:pr-[60px]"
             >
               <div className="text-sm text-[#B0B0B0] font-bold mb-[30px]">
                 {info.label}

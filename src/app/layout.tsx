@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Header } from "@/components";
-import Footer from "@/components/footer/footer";
+import { Footer, Header } from "@/components";
+
 import React, { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
 

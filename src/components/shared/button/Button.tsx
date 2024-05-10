@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode, type FC } from "react";
 
 const variantClasses = {
-  primary: "border border-primary text-white",
+  primary: "border border-primary text-white hover:bg-primary hover:text-white",
   secondary: "bg-primary text-white",
 };
 
@@ -31,7 +31,7 @@ export const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const buttonClassNames = classNames([
-    "rounded-full flex items-center justify-center cursor-pointer",
+    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out",
     sizeClasses[size],
     variantClasses[variant],
     className,

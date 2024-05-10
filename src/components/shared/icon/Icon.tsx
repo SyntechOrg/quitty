@@ -8,14 +8,14 @@ type IconProps = {
   className?: string;
 };
 
-const Icon: FC<IconProps> = ({ icon, className }) => {
+const Icon: FC<IconProps> = ({ icon, ...props }) => {
   switch (icon) {
     case IconType.LOGO:
-      return <LogoIcon />;
+      return <LogoIcon {...props} />;
     case IconType.ARROW:
-      return <ArrowIcon />;
+      return <ArrowIcon {...props} />;
     case IconType.DIAMOND:
-      return <DiamondIcon />;
+      return <DiamondIcon {...props} />;
     default:
       throw new Error("Invalid icon type");
   }

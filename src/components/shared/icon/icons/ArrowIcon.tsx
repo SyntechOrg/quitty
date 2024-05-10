@@ -13,7 +13,7 @@ export const ArrowIcon: FC<IconProps> = (props) => {
     >
       <path
         d="M12.9063 5.09444L5.09374 12.907M12.9063 5.09444L12.9063 11.3445M12.9063 5.09444L6.65624 5.09445"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeMiterlimit="10"
         strokeLinecap="round"

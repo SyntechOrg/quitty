@@ -22,7 +22,7 @@ export const Select: FC<SelectProps> = (props) => {
         <div
           key={option}
           className={classNames(
-            "px-5 py-[15px] cursor-pointer hover:opacity-90 transition-all duration-100 ease-in-out max-h-[40px] border border-[#3F3D45] rounded-[16px] flex items-center justify-end",
+            "px-5 py-[15px] cursor-pointer hover:opacity-90 transition-all duration-150 ease-in-out max-h-[40px] border border-[#3F3D45] rounded-[16px] flex items-center justify-end",
             selectedOption === option &&
               "bg-[#3F3D45] border-transparent text-white"
           )}

@@ -3,37 +3,34 @@
 @tailwind utilities;
 
 :root {
-    --blob-color: #00f;
-    --blob-size: 180px;
+  --blob-color: #00f;
+  --blob-size: 180px;
 }
 
 #blob {
-    animation: blobAnimation 15s infinite;
-    background: var(--blob-color);
-    filter: blur(calc(var(--blob-size) / 3.5));
-    opacity: 0.75;
+  animation: blobAnimation 15s infinite;
+  background: var(--blob-color);
+  filter: blur(calc(var(--blob-size) / 3.5));
+  opacity: 0.75;
 
-    width: var(--blob-size);
-    height: var(--blob-size);
-    position: fixed;
-    z-index: -2;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
+  width: var(--blob-size);
+  height: var(--blob-size);
+  position: fixed;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
 }
 
 @keyframes blobAnimation {
-    from {
-        rotate: 0deg;
-    }
-    50% {
-        scale: 0.9 1.6;
-    }
-    to {
-        rotate: 360deg;
-    }
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 0.9 1.6;
+  }
+  to {
+    rotate: 360deg;
+  }
 }
-
-
-
