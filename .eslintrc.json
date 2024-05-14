@@ -1,13 +1,13 @@
 {
+  "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "node": true
   },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb",
-    "plugin:import/typescript",
-    "plugin:tailwindcss/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,7 +21,13 @@
     "react",
     "@typescript-eslint"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
+
     "max-len": ["error", {"code":  125}],
     "react/require-default-props": 0,
     "react/destructuring-assignment": 0,
@@ -36,16 +42,6 @@
         ]
       }
     ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
     "react/function-component-definition": [
       2,
       {
@@ -57,6 +53,7 @@
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "react/jsx-props-no-spreading": 0,
     "linebreak-style": 0,
-    "@typescript-eslint/no-explicit-any": "error"
+    "@typescript-eslint/no-explicit-any": "error",
+    "react/react-in-jsx-scope": "off"
   }
 }

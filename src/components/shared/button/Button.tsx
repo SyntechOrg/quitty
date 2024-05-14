@@ -1,17 +1,18 @@
-import classNames from "classnames";
-import Link from "next/link";
-import React, {ButtonHTMLAttributes, ReactNode, type FC} from "react";
-import {Icon, IconType} from "@/components/shared";
+import classNames from 'classnames';
+import Link from 'next/link';
+import { ButtonHTMLAttributes, ReactNode, type FC } from 'react';
+
+import { Icon, IconType } from '@/components/shared';
 
 const variantClasses = {
-  primary: "border border-primary text-white group-hover:bg-primary hover:bg-primary hover:text-white",
-  secondary: "bg-primary text-white",
+  primary: 'border border-primary text-white group-hover:bg-primary group-active:bg-primary/80 hover:text-white',
+  secondary: 'bg-primary text-white hover:bg-primary/80 active:bg-primary/50 border border-primary duration-200',
 };
 
 const sizeClasses = {
-  sm: "px-3 py-1 text-sm",
-  md: "px-[25px] py-[18px] text-[15px] leading-[10px] max-h-[48px]",
-  lg: "px-6 py-3 text-lg",
+  sm: 'px-3 py-1 text-sm',
+  md: 'px-[25px] py-[18px] text-[15px] leading-[10px] max-h-[48px]',
+  lg: 'px-6 py-3 text-lg',
 };
 
 type ButtonProps = {
@@ -24,15 +25,15 @@ type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
-                                          children,
-                                          className,
-                                          size = "md",
-                                          variant = "primary",
-                                          to,
-                                          ...props
-                                        }) => {
+  children,
+  className,
+  size = 'md',
+  variant = 'primary',
+  to,
+  ...props
+}) => {
   const buttonClassNames = classNames([
-    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out",
+    'rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out',
     sizeClasses[size],
     variantClasses[variant],
     className,
@@ -40,20 +41,21 @@ export const Button: FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <div className="group flex items-center">
-        <Link href={to} className={buttonClassNames}>
+      <Link href={to} className="group flex items-center">
+        <span className={buttonClassNames}>
           {children}
-        </Link>
-        <Link href={to} className={buttonClassNames}>
-          <Icon icon={IconType.ARROW}/>
-        </Link>
-      </div>
+        </span>
+        <span className={buttonClassNames}>
+          <Icon icon={IconType.ARROW} />
+        </span>
+      </Link>
     );
   }
 
   return (
-    <button {...props} className={buttonClassNames}>
+    <button type="button" {...props} className={buttonClassNames}>
       {children}
     </button>
   );
 };
+
