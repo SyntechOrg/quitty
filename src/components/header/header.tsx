@@ -1,39 +1,41 @@
-import React, { FC } from "react";
-import { Button, Icon, IconType, Logo } from "../shared";
-import Link from "next/link";
+"use client";
+import React, { FC } from 'react';
+import Link from 'next/link';
+import {Button, Logo} from '../shared';
+import {usePathname} from "next/navigation";
 
-const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
+const NAV_ITEMS = ['Home', 'About', 'Portfolio', 'Services'] as const;
 
-type NavProps = {};
+export const Nav: FC = () => {
+  const pathname = usePathname()
+  const isHomePage = pathname === '/';
 
-export const Nav: FC<NavProps> = () => {
   return (
-    <nav className="hidden lg:block">
-      <ul className="flex gap-x-[60px] text-base">
-        {NAV_ITEMS.map((item) => (
-          <li key={item}>
-            <Link href={`/${item === "Home" ? "" : item.toLowerCase()}`}>
-              {item}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
-
-export const Header: FC = () => {
-  return (
-    <header className="container py-[33px] flex items-center justify-between">
-      <Logo />
-      <Nav />
-
-      <div className="flex items-center">
-        <Button to="contact">Get in Touch</Button>
-        <Button>
-          <Icon icon={IconType.ARROW} />
-        </Button>
-      </div>
-    </header>
-  );
-};
+  <nav className="hidden lg:block">
+    <ul className="flex gap-x-[60px] text-base">
+      {NAV_ITEMS.map((item) => (
+        <li key={item}>
+          {/* TODO: ask designer for an active and hover color (substitute: text-red-xxx) */}
+          <Link
+            href={`/${item === "Home" ? "" : item.toLowerCase()}`}
+            className={`
+              ${isHomePage && item.toLowerCase() === 'home' ? 'text-red-400' : ''}
+              ${!isHomePage && pathname === "/" + item.toLowerCase() ? 'text-red-400' : ''}
+              hover:text-red-300
+            `}
+          >
+            {item}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
+}
+export const Header: FC = () => (
+  <header className="container flex items-center justify-between py-[33px]">
+    <Logo />
+    <Nav />
+    <Button to="contact">Get in Touch</Button>
+  </header>
+);

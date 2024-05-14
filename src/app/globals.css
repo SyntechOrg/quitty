@@ -4,14 +4,25 @@
 
 :root {
   --blob-color: #00f;
-  --blob-size: 180px;
+  --blob-size: 160px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background-color: #00f9;
 }
 
 #blob {
-  animation: blobAnimation 15s infinite;
+  animation: blobAnimation 14s infinite;
   background: var(--blob-color);
-  filter: blur(calc(var(--blob-size) / 3.5));
-  opacity: 0.75;
+  filter: blur(calc(var(--blob-size) / 3));
+  opacity: 0.5;
 
   width: var(--blob-size);
   height: var(--blob-size);
@@ -28,7 +39,7 @@
     rotate: 0deg;
   }
   50% {
-    scale: 0.9 1.6;
+    scale: 0.8 1.6;
   }
   to {
     rotate: 360deg;
