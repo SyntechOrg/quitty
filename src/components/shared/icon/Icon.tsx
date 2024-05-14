@@ -1,0 +1,24 @@
+import { memo, type FC } from "react";
+
+import { LogoIcon, ArrowIcon, DiamondIcon } from "./icons";
+import { IconType } from "./icon-types";
+
+type IconProps = {
+  icon: IconType;
+  className?: string;
+};
+
+const Icon: FC<IconProps> = ({ icon, ...props }) => {
+  switch (icon) {
+    case IconType.LOGO:
+      return <LogoIcon {...props} />;
+    case IconType.ARROW:
+      return <ArrowIcon {...props} />;
+    case IconType.DIAMOND:
+      return <DiamondIcon {...props} />;
+    default:
+      throw new Error("Invalid icon type");
+  }
+};
+
+export default memo(Icon);

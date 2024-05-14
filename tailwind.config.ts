@@ -11,7 +11,15 @@ const config: Config = {
       colors: {
         primary: "#0000FF",
         text: "#D1CCD7",
-      }
+        background: "#111114",
+      },
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          lg: "1290px",
+        },
+      },
     },
   },
   plugins: [],

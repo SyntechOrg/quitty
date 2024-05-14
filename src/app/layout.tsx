@@ -1,27 +1,31 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
+import { Footer, Header } from "@/components";
+
+import React, { ReactNode } from "react";
+import { Montserrat } from "next/font/google";
+
 import "./globals.css";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
-import React, {ReactNode} from "react";
-import SynTransparent from "../../public/syn-transparent.png";
+
+//TODO: implement actual fonts here / discuss with client to get the some fonts from google font.
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Syn-Tech",
   description: "Welcome to Syn-Tech!",
 };
 
-export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
-    <body className="bg-black overflow-x-hidden">
-      <div className="fixed top-0 left-0 w-full h-full z-[-1]"
-        style={{backgroundImage: `url(${SynTransparent.src})`}}
-      />
-      <div id="blob" />
-      <Header/>
+    <html lang="en" className={montserrat.className}>
+      <body className="bg-background text-white">
+        <Header />
         {children}
-      <Footer/>
-      <script src="blob-script.js"></script>
-    </body>
+        <Footer />
+      </body>
     </html>
   );
 }
