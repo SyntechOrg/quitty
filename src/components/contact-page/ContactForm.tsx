@@ -3,9 +3,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { type FC } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { InputField } from "../shared/input/Input";
+import { InputField } from "@/components/shared";
 import { SelectField } from "../shared/select/Select";
-import { Button } from "../shared";
+import { Button } from "@/components/shared";
 
 const SERVICE_OPTIONS = [
   "Informational Web",
@@ -141,7 +141,7 @@ export const ContactForm: FC<ContactFormProps> = () => {
         <Button
           type="submit"
           variant="secondary"
-          className="max-w-[180px] rounded-[16px]"
+          className="max-w-[180px] rounded-2xl"
         >
           <span className="text-sm">SEND</span>
         </Button>

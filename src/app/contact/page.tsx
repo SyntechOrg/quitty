@@ -1,20 +1,15 @@
-"use client";
-import { Clients } from "@/components/clients/Clients";
-import { ContactForm, ContactPageBanner } from "@/components/contact-page";
-import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
-import { type FC } from "react";
+import { FC } from "react";
+import { Clients } from '@/components/clients/Clients';
+import { ContactForm, ContactPageBanner } from '@/components/contact-page';
+import { SocialMedia } from '@/components/shared/social-media/SocialMedia';
 
-type ContactPageProps = {};
-
-const ContactPage: FC<ContactPageProps> = () => {
-  return (
-    <div>
-      <ContactPageBanner />
-      <ContactForm />
-      <Clients />
-      <SocialMedia />
-    </div>
-  );
-};
+const ContactPage: FC = () => (
+  <div>
+    <ContactPageBanner />
+    <ContactForm />
+    <Clients />
+    <SocialMedia />
+  </div>
+);
 
 export default ContactPage;

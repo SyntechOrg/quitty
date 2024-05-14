@@ -21,8 +21,8 @@
 #blob {
   animation: blobAnimation 12s infinite;
   background: var(--blob-color);
-  filter: blur(calc(var(--blob-size) / 3.5));
-  opacity: 0.75;
+  filter: blur(calc(var(--blob-size) / 3));
+  opacity: 0.5;
 
   width: var(--blob-size);
   height: var(--blob-size);
