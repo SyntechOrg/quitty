@@ -1,9 +1,10 @@
 import classNames from "classnames";
 import Link from "next/link";
-import { ButtonHTMLAttributes, ReactNode, type FC } from "react";
+import React, {ButtonHTMLAttributes, ReactNode, type FC} from "react";
+import {Icon, IconType} from "@/components/shared";
 
 const variantClasses = {
-  primary: "border border-primary text-white hover:bg-primary hover:text-white",
+  primary: "border border-primary text-white group-hover:bg-primary hover:bg-primary hover:text-white",
   secondary: "bg-primary text-white",
 };
 
@@ -23,13 +24,13 @@ type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
-  children,
-  className,
-  size = "md",
-  variant = "primary",
-  to,
-  ...props
-}) => {
+                                          children,
+                                          className,
+                                          size = "md",
+                                          variant = "primary",
+                                          to,
+                                          ...props
+                                        }) => {
   const buttonClassNames = classNames([
     "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out",
     sizeClasses[size],
@@ -39,9 +40,14 @@ export const Button: FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <Link href={to} className={buttonClassNames}>
-        {children}
-      </Link>
+      <div className="group flex items-center">
+        <Link href={to} className={buttonClassNames}>
+          {children}
+        </Link>
+        <Link href={to} className={buttonClassNames}>
+          <Icon icon={IconType.ARROW}/>
+        </Link>
+      </div>
     );
   }
 

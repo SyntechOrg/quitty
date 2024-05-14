@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Button, Icon, IconType, Logo } from "../shared";
+import React, {FC} from "react";
+import {Button, Icon, IconType, Logo} from "../shared";
 import Link from "next/link";
 
 const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
@@ -25,15 +25,9 @@ export const Nav: FC<NavProps> = () => {
 export const Header: FC = () => {
   return (
     <header className="container py-[33px] flex items-center justify-between">
-      <Logo />
-      <Nav />
-
-      <div className="flex items-center">
-        <Button to="contact">Get in Touch</Button>
-        <Button>
-          <Icon icon={IconType.ARROW} />
-        </Button>
-      </div>
+      <Logo/>
+      <Nav/>
+      <Button to="contact">Get in Touch</Button>
     </header>
   );
 };
