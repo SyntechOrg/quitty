@@ -5,6 +5,8 @@ import React, { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
 
 import "./globals.css";
+import Blob from "@/components/blob/blob";
+import SynBackground from "@/components/background/syn-background";
 
 //TODO: implement actual fonts here / discuss with client to get the some fonts from google font.
 const montserrat = Montserrat({
@@ -22,6 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body className="bg-background text-white">
+      <SynBackground />
+      <Blob />
         <Header />
         {children}
         <Footer />
