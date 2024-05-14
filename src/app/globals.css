@@ -19,7 +19,7 @@
 }
 
 #blob {
-  animation: blobAnimation 12s infinite;
+  animation: blobAnimation 14s infinite;
   background: var(--blob-color);
   filter: blur(calc(var(--blob-size) / 3));
   opacity: 0.5;
