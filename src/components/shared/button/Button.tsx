@@ -24,13 +24,13 @@ type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
-                                          children,
-                                          className,
-                                          size = "md",
-                                          variant = "primary",
-                                          to,
-                                          ...props
-                                        }) => {
+    children,
+    className,
+    size = "md",
+    variant = "primary",
+    to,
+    ...props
+  }) => {
   const buttonClassNames = classNames([
     "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out",
     sizeClasses[size],
