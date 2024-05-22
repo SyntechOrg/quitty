@@ -20,11 +20,11 @@ type ContactPageBannerProps = {};
 export const ContactPageBanner: FC<ContactPageBannerProps> = () => {
   return (
     <div className="mt-[210px] container">
-      <div className="flex justify-between lg:pr-[110px]">
+      <div className="flex lg:justify-between lg:pr-[110px] flex-col lg:flex-row items-center justify-center lg:items-start text-center lg:text-left">
         <div className="text-primary mt-[30px] text-[24px] tracking-[20%]">
           GET IN TOUCH
         </div>
-        <h1 className="text-[70px] leading-[80px] w-full max-w-[650px]">
+        <h1 className="lg:text-[70px] text-[30px] leading-[40px] lg:leading-[80px] w-full max-w-[650px]">
           Let's create something special together...
         </h1>
       </div>
