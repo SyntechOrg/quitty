@@ -2,9 +2,13 @@ import classNames from "classnames";
 import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode, type FC } from "react";
 
+import { Icon, IconType } from "@/components/shared";
+
 const variantClasses = {
-  primary: "border border-primary text-white hover:bg-primary hover:text-white",
-  secondary: "bg-primary text-white",
+  primary:
+    "border border-primary text-white group-hover:bg-primary group-active:bg-primary/80 hover:text-white",
+  secondary:
+    "bg-primary text-white hover:bg-primary/80 active:bg-primary/50 border border-primary duration-200",
 };
 
 const sizeClasses = {
@@ -39,14 +43,17 @@ export const Button: FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <Link href={to} className={buttonClassNames}>
-        {children}
+      <Link href={to} className="group flex items-center">
+        <span className={buttonClassNames}>{children}</span>
+        <span className={buttonClassNames}>
+          <Icon icon={IconType.ARROW} />
+        </span>
       </Link>
     );
   }
 
   return (
-    <button {...props} className={buttonClassNames}>
+    <button type="button" {...props} className={buttonClassNames}>
       {children}
     </button>
   );

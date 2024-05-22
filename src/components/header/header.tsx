@@ -1,12 +1,15 @@
+"use client";
 import React, { FC } from "react";
-import { Button, Icon, IconType, Logo } from "../shared";
 import Link from "next/link";
+import { Button, Icon, IconType, Logo } from "../shared";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
 
-type NavProps = {};
+export const Nav: FC = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
-export const Nav: FC<NavProps> = () => {
   return (
     <nav className="hidden lg:block">
       <ul className="flex gap-x-[60px] text-base">
