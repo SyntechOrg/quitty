@@ -81,7 +81,7 @@ export const Footer = () => {
           <li>Terms and Conditions</li>
           <li>Impressum</li>
         </ul>
-        <div className="flex items-center text-[10px] lg:hidden justify-between w-full gap-x-[10px]">
+        <div className="flex items-center text-[10px] lg:hidden justify-between w-full gap-x-[10px] mt-[30px]">
           <span className="">© {new Date().getFullYear()}</span>
           <div className="bg-[#0000FF] h-[1px] flex-1"></div>
           <ul className="gap-x-[16px] flex">
