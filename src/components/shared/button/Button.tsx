@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link";
-import { ButtonHTMLAttributes, ReactNode, type FC } from "react";
+import { ButtonHTMLAttributes, ReactNode, FC } from "react";
 
 import { Icon, IconType } from "@/components/shared";
 
@@ -24,6 +24,7 @@ type ButtonProps = {
   className?: string;
   onClick?: () => void;
   to?: string;
+  icon?: IconType;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
@@ -32,22 +33,21 @@ export const Button: FC<ButtonProps> = ({
   size = "md",
   variant = "primary",
   to,
+  icon,
   ...props
 }) => {
-  const buttonClassNames = classNames([
-    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out",
+  const buttonClassNames = classNames(
+    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out gap-x-2",
     sizeClasses[size],
     variantClasses[variant],
-    className,
-  ]);
+    className
+  );
 
   if (to) {
     return (
-      <Link href={to} className="group flex items-center">
+      <Link href={to} className="group flex items-center gap-x-2">
         <span className={buttonClassNames}>{children}</span>
-        <span className={buttonClassNames}>
-          <Icon icon={IconType.ARROW} />
-        </span>
+        {icon && <Icon icon={icon as unknown as IconType} />}
       </Link>
     );
   }
@@ -55,6 +55,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button type="button" {...props} className={buttonClassNames}>
       {children}
+      {icon && <Icon icon={icon} />}
     </button>
   );
 };

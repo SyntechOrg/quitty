@@ -12,10 +12,12 @@ export const Footer = () => {
               Let’s talk about your Digital Experience
             </p>
             <div className="flex mt-8">
-              <Button>Work with us</Button>
-              <Button>
-                <Icon icon={IconType.ARROW} />
-              </Button>
+              <div className="flex items-center group">
+                <Button to="contact">Get in Touch</Button>
+                <Button to="contact">
+                  <Icon icon={IconType.ARROW} />
+                </Button>
+              </div>
             </div>
           </div>
           <div className="lg:px-[100px] flex justify-between flex-1 lg:border-r lg:border-r-[#35353C] py-[50px] lg:py-[90px] border-y border-y-[#35353C]">
