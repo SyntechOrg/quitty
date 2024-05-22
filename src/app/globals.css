@@ -34,3 +34,7 @@
     rotate: 360deg;
   }
 }
+
+* {
+  /* outline: 1px solid red; */
+}

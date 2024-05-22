@@ -28,7 +28,7 @@ export const Header: FC = () => {
       <Logo />
       <Nav />
 
-      <div className="flex items-center">
+      <div className="lg:flex items-center hidden">
         <Button to="contact">Get in Touch</Button>
         <Button>
           <Icon icon={IconType.ARROW} />
