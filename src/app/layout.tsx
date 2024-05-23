@@ -5,7 +5,7 @@ import { Montserrat } from "next/font/google";
 
 import "./globals.css";
 import SynBackground from "@/components/background/syn-background";
-import {Footer, Header} from "@/components";
+import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
 //TODO: implement actual fonts here / discuss with client to get the some fonts from google font.
