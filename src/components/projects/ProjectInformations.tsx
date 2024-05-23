@@ -30,7 +30,7 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
   className,
 }) => {
   return (
-    <div className={classNames("absolute bottom-0 z-[3] inset-x-0", className)}>
+    <div className={classNames("relative bottom-0 z-[3] inset-x-0", className)}>
       <div className="container grid grid-cols-4 gap-x-[70px]">
         {INFORMATIONS.map((information, index) => (
           <ul
