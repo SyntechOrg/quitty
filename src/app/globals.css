@@ -18,6 +18,12 @@
   background-color: #00f9;
 }
 
+@layer components {
+  .container {
+    width: 95%;
+  }
+}
+
 #blob {
   animation: blobAnimation 14s infinite;
   background: var(--blob-color);
