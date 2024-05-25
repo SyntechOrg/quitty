@@ -1,16 +1,15 @@
 import HeroSectionBackground from "@/components/sections/heroSectionBackground";
 import HeroSection from "@/components/sections/heroSection";
-import ProjectCard from "@/components/cards/projectCard";
-import AllProjectsSection from "@/components/sections/allProjectsSection";
+import FeaturedWorksSection from "@/components/sections/featuredWorksSection";
+import ServicesSection from "@/components/sections/servicesSection";
 
 const Home = () => {
   return (
     <>
       <HeroSectionBackground/>
       <HeroSection/>
-      <div className="">
-        <AllProjectsSection />
-      </div>
+      <FeaturedWorksSection/>
+      <ServicesSection/>
     </>
   );
 }

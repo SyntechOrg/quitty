@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       gridTemplateColumns: {
         "auto-fit-lg": "repeat(auto-fit, minmax(325px, 1fr))",
-        "auto-fit": "repeat(auto-fit, minmax(255px, 1fr))",
+        "auto-fit": "repeat(auto-fit, minmax(265px, 1fr))",
       },
       colors: {
         primary: "#0000FF",
