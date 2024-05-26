@@ -1,4 +1,4 @@
-import { ProjectsBanner } from "@/components/projects";
+import { ChallengeAndSolution, ProjectsBanner } from "@/components/projects";
 import { ProjectInteraction } from "@/components/projects/ProjectInteraction";
 import { getAllPosts, getPostBySlug } from "@/lib/helpers/markdown";
 
@@ -32,6 +32,18 @@ Thanks for reaching out! It's with great pleasure that we assist you and the Spa
             title: "Designer",
           },
         ]}
+      />
+      <ChallengeAndSolution
+        challenge={{
+          title: "We are more than just a team",
+          description: `We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of'every project step. We are Ministry`,
+          imageUrl: null,
+        }}
+        solution={{
+          title: "We are more than just a team",
+          description: `We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of every project step. We are Ministry`,
+          imageUrl: null,
+        }}
       />
     </div>
   );
