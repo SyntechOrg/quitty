@@ -1,11 +1,14 @@
 import { type FC } from "react";
 import { Image } from "../shared/image/Image";
 import classNames from "classnames";
+import solutionAndChallenge1 from "@/assets/images/projects/project-1/solutionAndChallenge-1.png";
+import solutionAndChallenge2 from "@/assets/images/projects/project-1/solutionAndChallenge-2.png";
+import { StaticImageData } from "next/image";
 
 type ItemProps = {
   title: string;
   description: string;
-  imageUrl: string | null;
+  imageUrl: string | StaticImageData | null;
   type: "challenge" | "solution";
 };
 
@@ -15,12 +18,12 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
   return (
     <div
       className={classNames(
-        "flex",
+        "flex gap-x-[80px]",
         !isChallenge && "flex-row-reverse",
         !isChallenge && !imageUrl && "mt-[-50px]"
       )}
     >
-      <div>
+      <div className={classNames(imageUrl && "mt-[100px]")}>
         <div className="text-2xl text-primary mb-[30px]">
           {isChallenge ? "MAIN CHALLENGE" : "OUR SOLUTION"}
         </div>
@@ -31,7 +34,13 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
           {description}
         </p>
       </div>
-      {imageUrl && <Image src={imageUrl} alt={title} />}
+      {imageUrl && (
+        <Image
+          wrapperClassNames="w-[660px] h-[540px] rounded-[40px] overflow-hidden"
+          src={imageUrl}
+          alt={title}
+        />
+      )}
     </div>
   );
 };
@@ -54,9 +63,9 @@ export const ChallengeAndSolution: FC<ChallengeAndSolutionProps> = ({
   solution,
 }) => {
   return (
-    <div className="container mt-[80px]">
-      <Item {...challenge} type="challenge" />
-      <Item {...solution} type="solution" />
+    <div className="container mt-[80px] flex flex-col gap-y-[200px] pb-[165px]">
+      <Item {...challenge} imageUrl={solutionAndChallenge1} type="challenge" />
+      <Item {...solution} imageUrl={solutionAndChallenge2} type="solution" />
     </div>
   );
 };
