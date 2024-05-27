@@ -9,7 +9,12 @@ type ImageProps = {
 export const Image: FC<ImageProps> = ({ wrapperClassNames, ...props }) => {
   return (
     <div className={classNames("relative w-full h-full", wrapperClassNames)}>
-      <NextImage className="w-full h-full object-cover" {...props} />
+      <NextImage
+        className="w-full h-full object-cover"
+        sizes="100%"
+        fill
+        {...props}
+      />
     </div>
   );
 };

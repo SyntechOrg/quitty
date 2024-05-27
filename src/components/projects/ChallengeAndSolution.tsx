@@ -19,7 +19,7 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
     <div
       className={classNames(
         "flex lg:flex-row flex-col gap-y-[40px] lg:gap-x-[80px]",
-        !isChallenge && "flex-row-reverse",
+        !isChallenge && "!flex-row-reverse",
         !isChallenge && !imageUrl && "lg:mt-[-50px] mt-[-25px]"
       )}
     >

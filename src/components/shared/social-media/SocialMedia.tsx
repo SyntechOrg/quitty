@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { Icon, IconType } from "../icon";
 import { Carousel } from "../carousel/Carousel";
+import classNames from "classnames";
 
 const SOCIAL_MEDIA = [
   {
@@ -22,11 +23,13 @@ const SOCIAL_MEDIA = [
   },
 ];
 
-type SocialMediaProps = {};
+type SocialMediaProps = {
+  className?: string;
+};
 
-export const SocialMedia: FC<SocialMediaProps> = () => {
+export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
   return (
-    <div>
+    <div className={classNames(className)}>
       <div className="container text-center">
         <p className="lg:text-base text-[10px] text-primary mb-[18px]">
           04- SOCIAL MEDIA
