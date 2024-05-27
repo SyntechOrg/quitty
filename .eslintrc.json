@@ -28,7 +28,7 @@
   },
   "rules": {
 
-    "max-len": ["error", {"code":  125}],
+    "max-len": ["error", {"code":  135}],
     "react/require-default-props": 0,
     "react/destructuring-assignment": 0,
     "react/jsx-filename-extension": [
