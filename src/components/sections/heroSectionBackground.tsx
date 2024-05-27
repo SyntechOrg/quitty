@@ -2,6 +2,7 @@
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useRef} from "react";
 import {Icon, IconType} from "@/components/shared";
+import {HEADER_HEIGHT_DESKTOP, HEADER_HEIGHT_MOBILE} from "@/assets/constants/constants";
 
 const HeroSectionBackground = () => {
   const ref = useRef(null);
@@ -15,8 +16,7 @@ const HeroSectionBackground = () => {
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]); // scrollYProgress
 
   return (
-    <div ref={ref} className="min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]">
-      {/* 114px/106px is the height of the header desktop/mobile */}
+    <div ref={ref} className={`min-h-[calc(100vh-${HEADER_HEIGHT_MOBILE}px)] md:min-h-[calc(100vh-${HEADER_HEIGHT_DESKTOP}px)]`}>
       <motion.div
         style={{
           maxWidth: changeMaxWidth,
