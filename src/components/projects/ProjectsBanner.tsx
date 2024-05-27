@@ -51,7 +51,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
           </div>
           <div className="relative min-h-[231px] lg:h-[463px] w-full max-w-[680px] mb-5 lg:mb-0">
             <Image
-              wrapperClassNames="w-full h-full"
+              wrapperClassNames="w-full h-full overflow-hidden rounded-[30px]"
               className="md:object-cover object-contain min-h-[231px]"
               src={heroInsideImage}
               alt="Banner Image"
