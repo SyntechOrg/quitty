@@ -1,13 +1,24 @@
 import React from 'react';
 import SectionHeader from "@/components/header/sectionHeader";
 import BasicServiceCard from "@/components/cards/basicServiceCard";
+import WebDevImage from "../../../public/assets/images/web-dev-image.png";
+import MobileAppImage from "../../../public/assets/images/mobile-app-image.png";
 import BrandIdentityImage from "../../../public/assets/images/brand-identity-image.png";
+import BrandIdentityImage2 from "../../../public/assets/images/brand-identity-image2.png";
+import DigitalMarketingImage from "../../../public/assets/images/digital-marketing-image.png";
 
 const services = [
   {
     title: "Brand Identity",
     description: "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
-    image: BrandIdentityImage,
+    image: WebDevImage,
+    categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
+    href: "/some-href"
+  },
+  {
+    title: "Brand Identity",
+    description: "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
+    image: MobileAppImage,
     categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
     href: "/some-href"
   },
@@ -21,14 +32,7 @@ const services = [
   {
     title: "Brand Identity",
     description: "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
-    image: BrandIdentityImage,
-    categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
-    href: "/some-href"
-  },
-  {
-    title: "Brand Identity",
-    description: "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
-    image: BrandIdentityImage,
+    image: DigitalMarketingImage,
     categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
     href: "/some-href"
   }
