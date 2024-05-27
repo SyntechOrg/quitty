@@ -15,9 +15,9 @@ const ProjectCard: FC<ProjectCardProps> = ({image, title, year}) => {
       <div>
         <Image src={image} alt="project-image" className="w-full h-full rounded-[30px]"/>
       </div>
-      <div className="flex justify-between px-6 py-4">
+      <div className="flex justify-between md:px-8 px-7 sm:py-3 py-2">
         <div className="flex items-center gap-1">
-          <p className="sm:text-[18px] md:text-[21px] leading-[2]">
+          <p className="sm:text-[18px] md:text-[21px] text-[14px] leading-[2]">
             {title}
           </p>
           <Icon
