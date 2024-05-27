@@ -30,12 +30,17 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
   className,
 }) => {
   return (
-    <div className={classNames("relative bottom-0 z-[3] inset-x-0", className)}>
-      <div className="container grid grid-cols-4 gap-x-[70px]">
+    <div
+      className={classNames(
+        "relative bottom-0 z-[3] inset-x-0 w-full",
+        className
+      )}
+    >
+      <div className="container grid grid-cols-2 place-items-center lg:place-items-start lg:grid-cols-4 gap-x-[70px] w-full">
         {INFORMATIONS.map((information, index) => (
           <ul
             key={index}
-            className="flex flex-col gap-y-5 border-r-[2px] border-r-[#2D2D33] pb-[60px]"
+            className="flex flex-col gap-y-5 lg:border-r-[2px] lg:border-r-[#2D2D33] pb-[60px] lg:w-full"
           >
             <li className="flex items-center gap-x-[10px] text-xl text-[#A6A6AE] lg:-mr-5">
               <Icon icon={IconType.DIAMOND} />

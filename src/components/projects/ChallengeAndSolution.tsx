@@ -18,25 +18,25 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
   return (
     <div
       className={classNames(
-        "flex gap-x-[80px]",
+        "flex lg:flex-row flex-col gap-y-[40px] lg:gap-x-[80px]",
         !isChallenge && "flex-row-reverse",
-        !isChallenge && !imageUrl && "mt-[-50px]"
+        !isChallenge && !imageUrl && "lg:mt-[-50px] mt-[-25px]"
       )}
     >
-      <div className={classNames(imageUrl && "mt-[100px]")}>
-        <div className="text-2xl text-primary mb-[30px]">
+      <div className={classNames(imageUrl && "mt-[50px] lg:mt-[100px]")}>
+        <div className="text-lg lg:text-2xl text-primary mb-[15px] lg:mb-[30px]">
           {isChallenge ? "MAIN CHALLENGE" : "OUR SOLUTION"}
         </div>
-        <div className="leading-[70px] text-[50px] max-w-[560px] mb-[50px]">
+        <div className="lg:leading-[70px] text-[25px] lg:text-[50px] max-w-[560px] mb-[25px] lg:mb-[50px]">
           {title}
         </div>
-        <p className="text-[18px] leading-[28px] max-w-[560px]">
+        <p className="lg:text-[18px] lg:leading-[28px] max-w-[560px] w-full text-base">
           {description}
         </p>
       </div>
       {imageUrl && (
         <Image
-          wrapperClassNames="w-[660px] h-[540px] rounded-[40px] overflow-hidden"
+          wrapperClassNames="w-full max-w-[660px] h-[270px] lg:h-[540px] rounded-[40px] overflow-hidden"
           src={imageUrl}
           alt={title}
         />
@@ -63,7 +63,7 @@ export const ChallengeAndSolution: FC<ChallengeAndSolutionProps> = ({
   solution,
 }) => {
   return (
-    <div className="container mt-[80px] flex flex-col gap-y-[200px] pb-[165px]">
+    <div className="container mt-[40px] lg:mt-[80px] flex flex-col gap-y-[100px] pb-[80px] lg:gap-y-[200px] lg:pb-[165px]">
       <Item {...challenge} imageUrl={solutionAndChallenge1} type="challenge" />
       <Item {...solution} imageUrl={solutionAndChallenge2} type="solution" />
     </div>
