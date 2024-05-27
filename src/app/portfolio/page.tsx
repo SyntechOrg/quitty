@@ -1,17 +1,20 @@
 import React, {type FC} from "react";
 import {SecondaryHeroSection} from "@/components/sections/secondaryHeroSection";
 import {SocialMedia} from "@/components/shared/social-media/SocialMedia";
+import AllProjects, {AllProjectsHeader} from "@/components/sections/allProjects";
 
-type PortfolioPageProps = {};
-
-const PortfolioPage: FC<PortfolioPageProps> = () => {
+const PortfolioPage: FC = () => {
   return <div>
     <SecondaryHeroSection
       title="We choose a different → starting point"
       text="Every project is a chance to try something new. Look at something with a fresh perspective.
       Do something for the first time."
     />
-    <SocialMedia/>
+    <AllProjectsHeader disableButton/>
+    <AllProjects />
+    <div className="lg:mt-[150px] md:mt-[100px] mt-[60px]">
+      <SocialMedia/>
+    </div>
   </div>;
 };
 

@@ -6,7 +6,7 @@ const FeaturedWorksSection = () => {
   return (
     <>
       <AllProjectsHeader />
-      <AllProjects/>
+      <AllProjects itemsToShow={6}/>
       <div className="flex md:hidden items-center justify-center mt-[40px]">
         <Button to="portfolio">All Cases</Button>
         <Button to="portfolio">
