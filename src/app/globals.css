@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/assets/fonts/fonnts.com-Aeonik_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/assets/fonts/fonnts.com-Aeonik_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/assets/fonts/fonnts.com-Aeonik_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/assets/fonts/fonnts.com-Aeonik_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     --blob-color: #00f;
     --blob-size: 160px;
@@ -22,6 +50,10 @@
     .container {
         width: 95%;
     }
+}
+
+body {
+    font-family: 'Aeonik', sans-serif;
 }
 
 .category-text {
