@@ -17,10 +17,10 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
       lg:px-[100px] lg:py-[60px] md:p-[60px] sm:p-[50px] px-0 py-8 rounded-[30px] overflow-clip"
     >
       <div className="w-11/12 lg:w-1/2 mx-auto max-sm:text-center">
-        <h4 className="lg:text-[50px] md:text-[36px] text-[32px]">
+        <h4 className="lg:text-[50px] md:text-[36px] text-[24px]">
           {title}
         </h4>
-        <p className="lg:mt-[45px] md:mt-8 mt-5 leading-[1.5]">
+        <p className="lg:mt-[45px] max-sm:text-[15px] md:mt-8 mt-5 leading-[1.5]">
           {description}
         </p>
         <div className="flex flex-wrap items-center max-sm:justify-center gap-2.5 lg:mt-[100px] md:mt-[50px] mt-7">
@@ -29,7 +29,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
               key={index}
               className="rounded-3xl px-[30px] h-[40px] bg-[#15151b] border border-gray grid place-content-center w-fit"
             >
-              <span className="md:text-[18px] text-[16px] leading-[1]">
+              <span className="md:text-[17px] text-[15px] leading-[1]">
                 {category}
               </span>
             </div>
@@ -40,7 +40,8 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
         <Image
           src={image}
           alt="service"
-          className="lg:absolute relative md:top-[60px] sm:top-[50px] top-[40px] w-full h-full max-lg:max-w-[400px] max-lg:mx-auto object-contain"
+          className="lg:absolute relative md:top-[60px] sm:top-[50px] top-[40px] w-full h-full max-lg:max-w-[400px] max-lg:mx-auto
+          object-contain"
         />
         <div className="group flex items-center lg:absolute lg:right-0 relative sm:ml-auto max-sm:mx-auto mt-10">
           <Button to="portfolio">Read More</Button>

@@ -22,12 +22,11 @@ const Nav: FC = () => {
 
           return (
             <li key={item}>
-              {/* TODO: ask designer for an active and hover color (substitute: text-red-xxx) */}
               <Link
                 href={`/${item === "Home" ? "" : lowerCaseItem}`}
                 className={classNames(
                   "transition-colors duration-200",
-                  isActive ? "text-red-400" : "hover:text-red-300"
+                  isActive ? "text-primary" : "hover:text-primary"
                 )}
               >
                 {item}

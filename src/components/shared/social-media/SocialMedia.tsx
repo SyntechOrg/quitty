@@ -28,10 +28,10 @@ export const SocialMedia: FC<SocialMediaProps> = () => {
   return (
     <div>
       <div className="container text-center">
-        <p className="lg:text-base text-[10px] text-primary mb-[18px]">
+        <p className="category-text">
           04- SOCIAL MEDIA
         </p>
-        <p className="text-[30px] lg:text-[50px] text-white">
+        <p className="lg:text-[48px] md:text-[32px] text-[24px] leading-[1.4] tracking-[0.02em] lg:mt-[24px] md:mt-[21px] mt-[18px]">
           Follow us on social media
         </p>
       </div>
