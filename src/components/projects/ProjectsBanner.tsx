@@ -32,6 +32,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
           alt="Banner Image"
           wrapperClassNames="w-full h-full"
           fill
+          loading="eager"
         />
       </div>
       <div className="flex flex-col justify-between h-full w-full min-h-screen relative z-[2]">

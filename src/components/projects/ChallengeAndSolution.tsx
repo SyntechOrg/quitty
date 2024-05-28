@@ -1,8 +1,6 @@
 import { type FC } from "react";
 import { Image } from "../shared/image/Image";
 import classNames from "classnames";
-import solutionAndChallenge1 from "@/assets/images/projects/project-1/solutionAndChallenge-1.png";
-import solutionAndChallenge2 from "@/assets/images/projects/project-1/solutionAndChallenge-2.png";
 import { StaticImageData } from "next/image";
 
 type ItemProps = {
@@ -14,12 +12,13 @@ type ItemProps = {
 
 export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
   const isChallenge = type === "challenge";
+  console.log({ imageUrl });
 
   return (
     <div
       className={classNames(
-        "flex lg:flex-row flex-col gap-y-[40px] lg:gap-x-[80px]",
-        !isChallenge && "!flex-row-reverse",
+        "flex lg:flex-row flex-col gap-y-5 lg:gap-x-[80px]",
+        !isChallenge && "lg:!flex-row-reverse",
         !isChallenge && !imageUrl && "lg:mt-[-50px] mt-[-25px]"
       )}
     >
@@ -35,11 +34,9 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
         </p>
       </div>
       {imageUrl && (
-        <Image
-          wrapperClassNames="w-full max-w-[660px] h-[270px] lg:h-[540px] rounded-[40px] overflow-hidden"
-          src={imageUrl}
-          alt={title}
-        />
+        <div className="w-full max-w-[660px] h-[270px] lg:h-[540px] rounded-[40px] overflow-hidden">
+          <Image wrapperClassNames="w-full h-full" src={imageUrl} alt={title} />
+        </div>
       )}
     </div>
   );
@@ -64,8 +61,8 @@ export const ChallengeAndSolution: FC<ChallengeAndSolutionProps> = ({
 }) => {
   return (
     <div className="container mt-[40px] lg:mt-[80px] flex flex-col gap-y-[100px] pb-[80px] lg:gap-y-[200px] lg:pb-[165px]">
-      <Item {...challenge} imageUrl={solutionAndChallenge1} type="challenge" />
-      <Item {...solution} imageUrl={solutionAndChallenge2} type="solution" />
+      <Item {...challenge} type="challenge" />
+      <Item {...solution} type="solution" />
     </div>
   );
 };

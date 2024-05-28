@@ -49,13 +49,13 @@ export const projects: Array<Project> = [
       title: "We are more than just a team",
       description:
         "We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of every project step. We are Ministry",
-      imageUrl: null,
+      imageUrl: "/images/projects/spandoekman/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "We are more than just a team",
       description:
         "We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of every project step. We are Ministry",
-      imageUrl: null,
+      imageUrl: "/images/projects/spandoekman/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/spandoekman/showcase-1.png",
     projectViewImageTwo: "/images/projects/spandoekman/showcase-2.png",
@@ -108,13 +108,13 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
       title: "Crafting a standout website in a competitive market.",
       description:
         "In a crowded online market, capturing potential customer interest is crucial. Socks, available in numerous styles, colors, and materials, pose a unique challenge. Balancing the presentation of this diverse product range on a website without overwhelming visitors requires careful consideration of layout, categorization, and visual hierarchy.",
-      imageUrl: null,
+      imageUrl: "/images/projects/soxey/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "Simple, modern design and easy to use!",
       description:
         "High quality images and visually appealing graphics are used to attract attention. A clean and modern design has been implemented that reflects the brand identity prioritizing the user experience. Powerful filtering and sorting options have also been added to help customers narrow down their choices based on preferences such as size, color, material and style.",
-      imageUrl: null,
+      imageUrl: "/images/projects/soxey/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/soxey/showcase-1.png",
     interactions: [
@@ -168,13 +168,13 @@ It has been a pleasure working with you throughout this process, and we're delig
       title: "Empowering SMEs with Effective Online Representation",
       description:
         "In the digital age, development companies face the challenge of effectively showcasing their expertise online while adapting to evolving trends and technologies. Balancing comprehensive information, user-friendly navigation, and visual appeal within the constraints of a digital platform presents a key challenge for these companies.",
-      imageUrl: null,
+      imageUrl: "/images/projects/qonsultant/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "Qonsultant GmbH: SME Empowerment Online",
       description:
         "Tailored Web Design: Qonsultant GmbH crafts custom websites for SMEs, ensuring user-friendly navigation and visual appeal. Expert Content: They curate informative content, empowering SMEs with valuable insights. Seamless Integration: Qonsultant GmbH integrates tailored solutions into their website, providing SMEs with easy access to expert guidance. Ongoing Support: Offering continuous assistance, they ensure their website remains a reliable resource for SMEs navigating challenges in the digital business environment.",
-      imageUrl: null,
+      imageUrl: "/images/projects/qonsultant/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
@@ -225,13 +225,13 @@ Exciting news! Preparations are finished, and we're ready to launch Qonsultant G
       title: "Meeting Diverse Needs in Service Offerings",
       description:
         "One primary challenge in redesigning the website for sun protection and garage door solutions could be effectively showcasing the diverse range of products and customizable options while ensuring a user-friendly experience for visitors.",
-      imageUrl: null,
+      imageUrl: "/images/projects/ele-uznach/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "Our Tailored Solutions for ELE Uznach",
       description:
         "Customization: We offer tailored solutions, allowing customers to choose from a variety of designs and styles to meet their unique preferences. Versatility: With options from awnings to blinds, we provide flexibility in adjusting shade levels and controlling natural light entry. Security and Aesthetics: Our garage doors ensure protection and enhance visual appeal, with various sizes, styles, and operational mechanisms available. Quality Assurance: Collaborating with experienced professionals and using high-quality materials ensures durable, reliable products, prioritizing customer satisfaction.",
-      imageUrl: null,
+      imageUrl: "/images/projects/ele-uznach/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
@@ -282,13 +282,13 @@ Great news! We're delighted to hear that you're pleased with our proposal! Let's
       title: "Positioning Reputy as a Reputation Management Leader",
       description:
         "Navigating the competitive landscape of reputation management poses the challenge of distinguishing Reputy as a trusted industry leader. It requires showcasing expertise, commitment to excellence, and adaptability to evolving market dynamics to solidify its position in the field.",
-      imageUrl: null,
+      imageUrl: "/images/projects/reputy-solutions/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "Pioneering Reputation Management Solutions",
       description:
         "Strategic Brand Positioning: We crafted a unique identity for Reputy, emphasizing its commitment to excellence in reputation management. Targeted Online Presence: Through precise digital strategy, we optimized Reputy's online platforms to effectively engage its audience. Innovative Offerings: We developed creative solutions, setting Reputy apart as an industry leader. Continuous Improvement: Staying agile, we ensure Reputy remains at the forefront of reputation management.",
-      imageUrl: null,
+      imageUrl: "/images/projects/reputy-solutions/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
@@ -339,13 +339,13 @@ Great news! Thank you for considering our proposal for your case study. We're ex
       title: "Differentiating in the Competitive Beauty Market",
       description:
         "Establishing a unique presence in the bustling beauty industry poses a significant challenge for FACEDRIP. Amidst fierce competition, it must define its identity and narrative to stand out, all while adapting to evolving trends and consumer preferences.",
-      imageUrl: null,
+      imageUrl: "/images/projects/facedrip/solutionAndChallenge-1.png",
     },
     ourSolution: {
       title: "Tackling Beauty Industry Challenges",
       description:
         "Distinctive Brand Identity: We crafted FACEDRIP's unique identity, emphasizing its enchanting wellness approach to stand out. Tailored Digital Strategy: We devised a custom marketing plan, targeting FACEDRIP's audience across online platforms for maximum engagement. Engaging Online Platform: Our precise web development created an intuitive, visually captivating experience for FACEDRIP, enhancing user interaction. Continuous Support: We provide ongoing assistance, ensuring FACEDRIP adapts to industry shifts for sustained growth.",
-      imageUrl: null,
+      imageUrl: "/images/projects/facedrip/solutionAndChallenge-2.png",
     },
     projectViewImageOne: "/images/projects/facedrip/showcase-1.png",
     interactions: [
