@@ -1,2 +1,0 @@
-export const HEADER_HEIGHT_DESKTOP = 114;
-export const HEADER_HEIGHT_MOBILE = 106;
