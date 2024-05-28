@@ -1,8 +1,8 @@
-"use client";
 import { type FC } from "react";
-import { Icon, IconType } from "../shared";
+import { IconType } from "../shared";
 import { Image } from "../shared/image/Image";
 import classNames from "classnames";
+import companyLogo from "@/assets/images/interaction-company-logo.png";
 
 type ProjectInteractionProps = {
   className?: string;
@@ -30,16 +30,15 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
           >
             <div
               className={classNames(
-                "lg:w-[90px] w-[45px] min-w-[45px] lg:min-w-[90px] h-[45px] lg:h-[90px] rounded-full",
+                "lg:w-[90px] w-[45px] min-w-[45px] lg:min-w-[90px] h-[45px] lg:h-[90px] rounded-full overflow-hidden",
                 isEven ? "bg-white text-[#121217]" : "bg-primary text-white"
               )}
             >
-              {interaction.avatar &&
-                (typeof interaction.avatar === "string" ? (
-                  <Image src={interaction.avatar} alt="Interaction Avatar" />
-                ) : (
-                  <Icon icon={interaction.avatar as IconType} />
-                ))}
+              {interaction.avatar ? (
+                <Image src={interaction.avatar} alt="Interaction Avatar" />
+              ) : (
+                <Image src={companyLogo} alt="Interaction Avatar" />
+              )}
             </div>
             <div className="flex-1">
               <p

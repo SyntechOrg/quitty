@@ -11,7 +11,6 @@ export type Project = {
   productType: string[];
   expertise: string[];
   release: string[];
-
   interactions: Array<{
     avatar: string | null;
     description: string;
@@ -62,7 +61,7 @@ export const projects: Array<Project> = [
     projectViewImageTwo: "/images/projects/spandoekman/showcase-2.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/spandoekman/client-avatar.png",
         description: `Hi Syntech Team,
 We're in a bit of a bind! Our online shop has been running since 2011 without any significant updates. It's high time for a major redesign. To effectively engage with potential clients, we recognize the urgent need for a revamped and impactful webshop presence. Can you assist us in this endeavor?`,
         name: "John Doe",
@@ -76,7 +75,7 @@ Thanks for reaching out! It's with great pleasure that we assist you and the Spa
         title: "Designer",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/spandoekman/client-avatar.png",
         description: `Hi Syntech Team,
 Wow, it looks incredible! It far exceeds our expectations. Even though we had high hopes, you've surpassed them and delivered beyond what we could have imagined. Thank you for your exceptional work. We're all set to launch. Cheers to the entire Syntech Team!`,
         name: "John Doe",
@@ -120,7 +119,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
     projectViewImageOne: "/images/projects/soxey/showcase-1.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/soxey/client-avatar.png",
         description: `Hi Syntech Team,
 We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage!
 To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
@@ -135,7 +134,7 @@ Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp 
         title: "Developer",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/soxey/client-avatar.png",
         description: `Hi Syntech Team,
 I wanted to take a moment to express my sincere appreciation for the outstanding work your team has done on the design of my online sock store website.
 Having had the opportunity to review the design concepts and see the website come to life, I am thoroughly impressed with the level of creativity, attention to detail, and professionalism exhibited throughout the process. The website truly embodies the vision and brand identity that I had envisioned, and I couldn't be happier with the results.`,
@@ -180,7 +179,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     projectViewImageOne: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/qonsultant/client-avatar.png",
         description: `Hi Syntech Team,
 We're in the process of launching a business consultancy firm called Qonsultant GmbH! Currently, all we have is the registration sorted. This means we're in need of branding, a website, and social media presence. Could you assist us with these essential components? Looking forward to your support.`,
         name: "Qonsultant Team",
@@ -194,7 +193,7 @@ Congratulations on the launch of Qonsultant GmbH! We're thrilled to hear about y
         title: "Team Lead",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/qonsultant/client-avatar.png",
         description: `Hi Syntech Team,
 Thanks for your quick response and willingness to help launch Qonsultant GmbH. We've seen the concept you sent over and we're impressed! Excited to keep working together!`,
         name: "Qonsultant Team",
@@ -237,7 +236,7 @@ Exciting news! Preparations are finished, and we're ready to launch Qonsultant G
     projectViewImageOne: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/ele-uznach/client-avatar.png",
         description: `Hi Syntech Team,
 We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: "ELE Uznach",
@@ -251,7 +250,7 @@ Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp 
         title: "Developer",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/ele-uznach/client-avatar.png",
         description: `Hi Syntech Team,
 Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: "ELE Uznach",
@@ -294,7 +293,7 @@ Great news! We're delighted to hear that you're pleased with our proposal! Let's
     projectViewImageOne: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/reputy-solutions/client-avatar.png",
         description: `Hi Syntech Team,
 Launching our exceptional reputation management services at Reputy, where excellence and innovation are paramount! Understanding the importance of a captivating online platform, can you guide us in crafting this experience?`,
         name: "Eldi Nazifi",
@@ -308,7 +307,7 @@ Absolutely, we're thrilled about your reputation management venture with Reputy!
         title: "Team Lead",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/reputy-solutions/client-avatar.png",
         description: `Hi Syntech Team,
 We're impressed by your proposal for our case study and eager to showcase it online. Your expertise will undoubtedly elevate our reputation management efforts. Let's collaborate to bring this project to life!`,
         name: "Eldi Nasufi",
@@ -351,7 +350,7 @@ Great news! Thank you for considering our proposal for your case study. We're ex
     projectViewImageOne: "/images/projects/facedrip/showcase-1.png",
     interactions: [
       {
-        avatar: null,
+        avatar: "/images/projects/facedrip/client-avatar.png",
         description: `Hi Syntech Team,
 We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: "Merita Llumnica",
@@ -365,7 +364,7 @@ Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp 
         title: "Team Lead",
       },
       {
-        avatar: null,
+        avatar: "/images/projects/facedrip/client-avatar.png",
         description: `Hi Syntech Team,
 Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: "Merita Llumnica",
