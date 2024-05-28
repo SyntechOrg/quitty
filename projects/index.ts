@@ -28,8 +28,8 @@ export type Project = {
     description: string;
     imageUrl: string | null;
   };
-  projectViewImageOne: string;
-  projectViewImageTwo: string;
+  projectViewImageOne?: string;
+  projectViewImageTwo?: string;
 };
 
 export const projects: Array<Project> = [
@@ -118,7 +118,6 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
       imageUrl: null,
     },
     projectViewImageOne: "/images/projects/soxey/showcase-1.png",
-    projectViewImageTwo: "/images/projects/soxey/showcase-2.png",
     interactions: [
       {
         avatar: null,
@@ -179,7 +178,6 @@ It has been a pleasure working with you throughout this process, and we're delig
       imageUrl: null,
     },
     projectViewImageOne: "/images/projects/qonsultant/showcase-1.png",
-    projectViewImageTwo: "/images/projects/qonsultant/showcase-2.png",
     interactions: [
       {
         avatar: null,
@@ -237,7 +235,6 @@ Exciting news! Preparations are finished, and we're ready to launch Qonsultant G
       imageUrl: null,
     },
     projectViewImageOne: "/images/projects/ele-uznach/showcase-1.png",
-    projectViewImageTwo: "/images/projects/ele-uznach/showcase-2.png",
     interactions: [
       {
         avatar: null,
@@ -295,7 +292,6 @@ Great news! We're delighted to hear that you're pleased with our proposal! Let's
       imageUrl: null,
     },
     projectViewImageOne: "/images/projects/reputy-solutions/showcase-1.png",
-    projectViewImageTwo: "/images/projects/reputy-solutions/showcase-2.png",
     interactions: [
       {
         avatar: null,
@@ -353,7 +349,6 @@ Great news! Thank you for considering our proposal for your case study. We're ex
       imageUrl: null,
     },
     projectViewImageOne: "/images/projects/facedrip/showcase-1.png",
-    projectViewImageTwo: "/images/projects/facedrip/showcase-2.png",
     interactions: [
       {
         avatar: null,
