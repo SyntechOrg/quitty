@@ -12,7 +12,10 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ image, title, year, slug }) => {
   return (
-    <Link href={`/projects/${slug}`}>
+    <Link
+      href={`/projects/${slug}`}
+      className="hover:opacity-90 duration-75 ease-in-out"
+    >
       <div className="max-w-[410px] w-full rounded-[30px] border border-gray mx-auto overflow-clip">
         <div>
           <Image
