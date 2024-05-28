@@ -12,7 +12,7 @@ const HeroSectionBackground = () => {
   const fullDisappear = useTransform(scrollY, [40, 500], [1, 0]);
   const almostDisappear = useTransform(scrollY, [40, 500], [1, 0.3]);
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
-  const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]); // scrollYProgress
+  const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
   return (
     <div ref={ref} className={`min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]`}>
