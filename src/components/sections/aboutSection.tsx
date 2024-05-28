@@ -43,8 +43,8 @@ const AboutSection = () => {
           and design using our tried and tested approach to deliver truly magnetic and disruptive design.
         </p>
         <div className="flex items-center max-lg:justify-center group lg:mt-[32px] md:mt-[24px] mt-[20px]">
-          <Button to="about">More about us</Button>
-          <Button to="about" className="px-[21px]">
+          <Button to="/about">More about us</Button>
+          <Button to="/about" className="px-[21px]">
             <Icon icon={IconType.ARROW}/>
           </Button>
         </div>

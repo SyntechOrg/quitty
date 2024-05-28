@@ -13,8 +13,8 @@ export const Footer = () => {
             </p>
             <div className="flex mt-8">
               <div className="flex items-center group">
-                <Button to="contact">Get in Touch</Button>
-                <Button to="contact">
+                <Button to="/contact">Get in Touch</Button>
+                <Button to="/contact">
                   <Icon icon={IconType.ARROW} />
                 </Button>
               </div>

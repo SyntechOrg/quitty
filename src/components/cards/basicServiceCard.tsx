@@ -44,8 +44,8 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
            max-lg:mx-auto object-contain"
         />
         <div className="group flex items-center lg:absolute lg:right-0 relative sm:ml-auto max-sm:mx-auto mt-10">
-          <Button to="portfolio">Read More</Button>
-          <Button to="portfolio">
+          <Button to="/portfolio">Read More</Button>
+          <Button to="/portfolio">
             <Icon icon={IconType.ARROW}/>
           </Button>
         </div>
