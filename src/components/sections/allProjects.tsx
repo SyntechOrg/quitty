@@ -9,19 +9,19 @@ import FacedripImage from "../../../public/assets/images/facedrip-project.png";
 import {Button, Icon, IconType} from "@/components/shared";
 
 const projectData = [
-  { title: "Spandoekman.nl", image: SpandoekmanImage, year: "2024", href: "" },
-  { title: "Reputy", image: ReputyImage, year: "2024", href: "" },
-  { title: "Qonsultant", image: QonsultantImage, year: "2024", href: "" },
-  { title: "Soxey", image: SoxeyImage, year: "2024", href: "" },
-  { title: "ELE Uznach", image: EleUznachImage, year: "2024", href: "" },
-  { title: "Facedrip", image: FacedripImage, year: "2024", href: "" }
+  {title: "Spandoekman.nl", image: SpandoekmanImage, year: "2024", href: ""},
+  {title: "Reputy", image: ReputyImage, year: "2024", href: ""},
+  {title: "Qonsultant", image: QonsultantImage, year: "2024", href: ""},
+  {title: "Soxey", image: SoxeyImage, year: "2024", href: ""},
+  {title: "ELE Uznach", image: EleUznachImage, year: "2024", href: ""},
+  {title: "Facedrip", image: FacedripImage, year: "2024", href: ""}
 ];
 
 interface AllProjectsProps {
   itemsToShow?: number;
 }
 
-const AllProjects: FC<AllProjectsProps> = ({ itemsToShow }) => {
+const AllProjects: FC<AllProjectsProps> = ({itemsToShow}) => {
   const projectsToShow = itemsToShow && itemsToShow < projectData.length ? projectData.slice(0, itemsToShow) : projectData;
 
   return (
@@ -67,6 +67,7 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({disableButton}) =
           </Button>
         </div>
       )}
-    </div>);
+    </div>
+  );
 };
 
