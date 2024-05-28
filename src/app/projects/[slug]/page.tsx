@@ -4,6 +4,7 @@ import { Image } from "@/components/shared/image/Image";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { projects } from "../../../../projects";
 import { notFound } from "next/navigation";
+import AllProjects from "@/components/sections/allProjects";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -58,6 +59,7 @@ const PostPage = async ({ params }: PostPageProps) => {
         </div>
       )}
       <ProjectInteraction interactions={secondInteractions} />
+      <AllProjects itemsToShow={3} />
       <SocialMedia className="mt-[100px] lg:mt-[200px]" />
     </div>
   );
