@@ -4,6 +4,7 @@ import { Control, Controller, FieldError, FieldValues } from "react-hook-form";
 
 type SelectProps = {
   options: string[];
+  // eslint-disable-next-line no-unused-vars
   onChange?: (option: string) => void;
   value?: string;
 };
@@ -35,6 +36,7 @@ export const Select: FC<SelectProps> = (props) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SelectFieldProps<T extends FieldValues = any> = {
   error: FieldError | undefined;
   name: string;

@@ -39,17 +39,28 @@ const Nav: FC = () => {
   );
 };
 
-const Header: FC = () => (
-  <header className="container flex items-center justify-between py-[33px]">
-    <Logo />
-    <Nav />
-    <div className="flex items-center group">
-      <Button to="contact">Get in Touch</Button>
-      <Button to="contact">
-        <Icon icon={IconType.ARROW} />
-      </Button>
-    </div>
-  </header>
-);
+const Header: FC = () => {
+  const pathname = usePathname();
+
+  const isProjectsPage = pathname.includes("projects");
+
+  return (
+    <header
+      className={classNames(
+        "container flex items-center justify-between py-[33px]",
+        isProjectsPage && "absolute top-0 inset-x-0 z-20"
+      )}
+    >
+      <Logo />
+      <Nav />
+      <div className="lg:flex items-center group hidden">
+        <Button to="contact">Get in Touch</Button>
+        <Button to="contact">
+          <Icon icon={IconType.ARROW} />
+        </Button>
+      </div>
+    </header>
+  );
+};
 
 export { Nav, Header };

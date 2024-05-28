@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from "react";
 import { Button, Icon, IconType } from "../shared";
 import Link from "next/link";

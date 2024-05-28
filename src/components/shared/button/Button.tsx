@@ -8,7 +8,7 @@ const variantClasses = {
   primary:
     "border border-primary text-white group-hover:bg-primary group-active:bg-primary/80 hover:text-white",
   secondary:
-    "bg-primary text-white hover:bg-primary/80 active:bg-primary/50 border border-primary duration-200",
+    "bg-primary text-white hover:bg-primary/80 active:bg-primary/50 border border-primary duration-200 group-hover:bg-primary/80 group-active:bg-primary/50 hover:text-white",
 };
 
 const sizeClasses = {
