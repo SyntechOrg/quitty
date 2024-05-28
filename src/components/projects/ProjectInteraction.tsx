@@ -18,7 +18,6 @@ type ProjectInteractionProps = {
 export const ProjectInteraction: FC<ProjectInteractionProps> = ({
   interactions,
 }) => {
-  console.log({ interactions });
   return (
     <div className="container flex flex-col gap-y-5 lg:gap-y-[60px] max-w-[1040px] mx-auto mt-[90px] lg:mt-[180px]">
       {interactions.map((interaction, index) => {
