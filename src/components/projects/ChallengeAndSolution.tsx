@@ -12,7 +12,6 @@ type ItemProps = {
 
 export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
   const isChallenge = type === "challenge";
-  console.log({ imageUrl });
 
   return (
     <div
