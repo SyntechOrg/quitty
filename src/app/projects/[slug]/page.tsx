@@ -2,8 +2,6 @@ import { ChallengeAndSolution, ProjectsBanner } from "@/components/projects";
 import { ProjectInteraction } from "@/components/projects/ProjectInteraction";
 import { Image } from "@/components/shared/image/Image";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
-import projectShowCase1 from "@/assets/images/projects/project-1/showcase-1.png";
-import projectShowCase2 from "@/assets/images/projects/project-1/showcase-2.png";
 import { projects } from "../../../../projects";
 import { notFound } from "next/navigation";
 
@@ -39,16 +37,26 @@ const PostPage = async ({ params }: PostPageProps) => {
         }}
         solution={{ ...project.ourSolution }}
       />
-      <Image
-        src={projectShowCase1}
-        alt="Project Showcase 1"
-        wrapperClassNames="w-full h-[929px]"
-      />
-      <Image
-        src={projectShowCase2}
-        alt="Project Showcase 1"
-        wrapperClassNames="w-full h-[1440px] mt-[136px]"
-      />
+      {project?.projectViewImageOne && (
+        <div className="w-full h-[929px] relative">
+          <Image
+            src={project.projectViewImageOne}
+            alt="Project Showcase 1"
+            wrapperClassNames="w-full h-full"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      {project?.projectViewImageTwo && (
+        <div className="w-full h-[1440px] mt-[136px]">
+          <Image
+            src={project?.projectViewImageTwo}
+            alt="Project Showcase 1"
+            wrapperClassNames="w-full h-[1440px] mt-[136px]"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <ProjectInteraction interactions={secondInteractions} />
       <SocialMedia className="mt-[100px] lg:mt-[200px]" />
     </div>
