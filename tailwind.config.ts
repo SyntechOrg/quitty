@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        "auto-fit-lg": "repeat(auto-fit, minmax(325px, 1fr))",
+        "auto-fit": "repeat(auto-fit, minmax(265px, 1fr))",
+      },
       colors: {
         primary: "#0000FF",
         text: "#D1CCD7",
         background: "#111114",
+        gray: "#36363e",
       },
       container: {
         center: true,
