@@ -160,10 +160,10 @@ const ServicesPage = () => {
          redesigning websites, building web applications, and delivering e-commerce solutions."
       />
       <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
-        <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
-          <h2 className="category-text text-center lg:mb-20 lg:text-[22px]">
-            WE ARE EXPERTS IN
-          </h2>
+        <h2 className="category-text text-center lg:text-[22px]">
+          WE ARE EXPERTS IN
+        </h2>
+        <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
