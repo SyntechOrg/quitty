@@ -9,32 +9,12 @@ import FacedripImage from '../../../public/assets/images/facedrip-project.png';
 import { Button, Icon, IconType } from '@/components/shared';
 
 const projectData = [
-  {
-    title: 'Spandoekman.nl',
-    image: SpandoekmanImage,
-    year: '2024',
-    slug: 'spandoekman',
-  },
-  {
-    title: 'Reputy',
-    image: ReputyImage,
-    year: '2024',
-    slug: 'reputy-solutions',
-  },
-  {
-    title: 'Qonsultant',
-    image: QonsultantImage,
-    year: '2024',
-    slug: 'qonsultant',
-  },
-  { title: 'Soxey', image: SoxeyImage, year: '2024', slug: 'soxey' },
-  {
-    title: 'ELE Uznach',
-    image: EleUznachImage,
-    year: '2024',
-    slug: 'ele-uznach',
-  },
-  { title: 'Facedrip', image: FacedripImage, year: '2024', slug: 'facedrip' },
+  { title: 'Spandoekman.nl', image: SpandoekmanImage, year: '2024', href: '' },
+  { title: 'Reputy', image: ReputyImage, year: '2024', href: '' },
+  { title: 'Qonsultant', image: QonsultantImage, year: '2024', href: '' },
+  { title: 'Soxey', image: SoxeyImage, year: '2024', href: '' },
+  { title: 'ELE Uznach', image: EleUznachImage, year: '2024', href: '' },
+  { title: 'Facedrip', image: FacedripImage, year: '2024', href: '' },
 ];
 
 interface AllProjectsProps {
@@ -53,7 +33,13 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow }) => {
           lg:mt-[100px] lg:gap-y-[50px]"
     >
       {projectsToShow.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <ProjectCard
+          key={index}
+          title={project.title}
+          image={project.image}
+          year={project.year}
+          href={project.href}
+        />
       ))}
     </div>
   );
@@ -77,8 +63,8 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
       </div>
       {!disableButton && (
         <div className="group hidden items-center md:flex">
-          <Button to="portfolio">All Cases</Button>
-          <Button to="portfolio">
+          <Button to="/portfolio">All Cases</Button>
+          <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

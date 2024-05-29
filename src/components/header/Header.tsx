@@ -53,9 +53,9 @@ const Header: FC = () => {
     >
       <Logo />
       <Nav />
-      <div className="group hidden items-center lg:flex">
-        <Button to="contact">Get in Touch</Button>
-        <Button to="contact">
+      <div className="lg:flex items-center group hidden">
+        <Button to="/contact">Get in Touch</Button>
+        <Button to="/contact">
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>

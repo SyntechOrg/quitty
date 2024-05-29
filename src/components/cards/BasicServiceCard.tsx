@@ -1,16 +1,21 @@
-import React, {FC, ReactNode} from 'react';
-import Image, {StaticImageData} from "next/image";
-import {Button, Icon, IconType} from "@/components/shared";
+import React, { FC, ReactNode } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { Button, Icon, IconType } from '@/components/shared';
 
 interface BasicServiceCardProps {
-  title: ReactNode,
-  description: string,
-  image: StaticImageData,
-  categories: string[],
-  href: string
+  title: ReactNode;
+  description: string;
+  image: StaticImageData;
+  categories: string[];
+  href: string;
 }
 
-const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image, categories}) => {
+const BasicServiceCard: FC<BasicServiceCardProps> = ({
+  title,
+  description,
+  image,
+  categories,
+}) => {
   return (
     <div
       className="relative flex flex-col lg:flex-row justify-between max-w-[1300px] w-full bg-[#0F0F13] border border-gray
@@ -27,9 +32,9 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
           {categories.map((category, index) => (
             <div
               key={index}
-              className="rounded-3xl px-7 h-[40px] bg-[#15151b] border border-gray grid place-content-center w-fit"
+              className="rounded-3xl lg:px-7 px-5 lg:h-[40px] h-[36px] bg-[#15151b] border border-gray grid place-content-center w-fit"
             >
-              <span className="md:text-[16px] text-[15px] leading-[1]">
+              <span className="md:text-[16px] text-[14px] leading-[1]">
                 {category}
               </span>
             </div>
@@ -40,13 +45,13 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
         <Image
           src={image}
           alt="service"
-          className="lg:absolute relative lg:top-[100px] md:top-[75px] sm:top-[65px] top-[45px] w-11/12 h-full max-w-[380px] max-h-[340px] right-0
-           max-lg:mx-auto object-contain"
+          className="lg:absolute relative lg:top-[100px] md:top-[75px] sm:top-[65px] top-[45px] right-0 w-11/12 h-full
+           max-w-[380px] max-h-[340px] max-lg:mx-auto object-contain"
         />
         <div className="group flex items-center lg:absolute lg:right-0 relative sm:ml-auto max-sm:mx-auto mt-10">
-          <Button to="portfolio">Read More</Button>
-          <Button to="portfolio">
-            <Icon icon={IconType.ARROW}/>
+          <Button to="/portfolio">Read More</Button>
+          <Button to="/portfolio">
+            <Icon icon={IconType.ARROW} />
           </Button>
         </div>
       </div>
