@@ -5,7 +5,10 @@
     "node": true
   },
   "extends": [
+    "next",
+    "next/core-web-vitals",
     "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -28,7 +31,6 @@
   },
   "rules": {
 
-    "max-len": ["error", {"code":  135}],
     "react/require-default-props": 0,
     "react/destructuring-assignment": 0,
     "react/jsx-filename-extension": [
@@ -54,6 +56,14 @@
     "react/jsx-props-no-spreading": 0,
     "linebreak-style": 0,
     "@typescript-eslint/no-explicit-any": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "semi": true
+      }
+    ]
   }
 }
