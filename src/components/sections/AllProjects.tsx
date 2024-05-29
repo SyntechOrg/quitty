@@ -114,8 +114,8 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
       </div>
       {!disableButton && (
         <div className="group hidden items-center md:flex">
-          <Button to="portfolio">All Cases</Button>
-          <Button to="portfolio">
+          <Button to="/portfolio">All Cases</Button>
+          <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
