@@ -1,5 +1,5 @@
-import { type FC } from "react";
-import { IconProps } from "../types";
+import { type FC } from 'react';
+import { IconProps } from '../types';
 
 export const ArrowIcon: FC<IconProps> = (props) => {
   return (
