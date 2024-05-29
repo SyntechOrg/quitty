@@ -59,7 +59,7 @@ const PostPage = async ({ params }: PostPageProps) => {
         </div>
       )}
       <ProjectInteraction interactions={secondInteractions} />
-      <AllProjects itemsToShow={3} />
+      <AllProjects itemsToShow={3} slug={params.slug} random />
       <SocialMedia className="mt-[100px] lg:mt-[200px]" />
     </div>
   );

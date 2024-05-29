@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+'use client';
+import React, {FC, useEffect, useState} from 'react';
 import ProjectCard from '@/components/cards/ProjectCard';
 import SpandoekmanImage from '../../../public/assets/images/spandoekman-project.png';
 import ReputyImage from '../../../public/assets/images/reputy-project.png';
@@ -9,37 +10,87 @@ import FacedripImage from '../../../public/assets/images/facedrip-project.png';
 import { Button, Icon, IconType } from '@/components/shared';
 
 const projectData = [
-  { title: 'Spandoekman.nl', image: SpandoekmanImage, year: '2024', href: '' },
-  { title: 'Reputy', image: ReputyImage, year: '2024', href: '' },
-  { title: 'Qonsultant', image: QonsultantImage, year: '2024', href: '' },
-  { title: 'Soxey', image: SoxeyImage, year: '2024', href: '' },
-  { title: 'ELE Uznach', image: EleUznachImage, year: '2024', href: '' },
-  { title: 'Facedrip', image: FacedripImage, year: '2024', href: '' },
+  {
+    title: 'Spandoekman.nl',
+    image: SpandoekmanImage,
+    year: '2024',
+    slug: 'spandoekman',
+  },
+  {
+    title: 'Reputy',
+    image: ReputyImage,
+    year: '2024',
+    slug: 'reputy-solutions',
+  },
+  {
+    title: 'Qonsultant',
+    image: QonsultantImage,
+    year: '2024',
+    slug: 'qonsultant',
+  },
+  {
+    title: 'Soxey',
+    image: SoxeyImage,
+    year: '2024',
+    slug: 'soxey',
+  },
+  {
+    title: 'ELE Uznach',
+    image: EleUznachImage,
+    year: '2024',
+    slug: 'ele-uznach',
+  },
+  {
+    title: 'Facedrip',
+    image: FacedripImage,
+    year: '2024',
+    slug: 'facedrip',
+  },
 ];
+
+const shuffleArray = (array: typeof projectData) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
 
 interface AllProjectsProps {
   itemsToShow?: number;
+  random?: boolean;
+  slug?: string;
 }
 
-const AllProjects: FC<AllProjectsProps> = ({ itemsToShow }) => {
-  const projectsToShow =
-    itemsToShow && itemsToShow < projectData.length
-      ? projectData.slice(0, itemsToShow)
-      : projectData;
+const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
+  const [projectsToDisplay, setProjectsToDisplay] = useState<
+    typeof projectData
+  >([]);
+
+  useEffect(() => {
+    let shuffledProjects = projectData.filter(
+      (project) => project.slug !== slug,
+    );
+
+    if (random) {
+      shuffledProjects = shuffleArray(shuffledProjects);
+    }
+
+    if (itemsToShow && itemsToShow < shuffledProjects.length) {
+      shuffledProjects = shuffledProjects.slice(0, itemsToShow);
+    }
+
+    setProjectsToDisplay(shuffledProjects);
+  }, [itemsToShow, random, slug]);
 
   return (
     <div
       className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
           lg:mt-[100px] lg:gap-y-[50px]"
     >
-      {projectsToShow.map((project, index) => (
-        <ProjectCard
-          key={index}
-          title={project.title}
-          image={project.image}
-          year={project.year}
-          href={project.href}
-        />
+      {projectsToDisplay.map((project) => (
+        <ProjectCard key={project.slug} {...project} />
       ))}
     </div>
   );
@@ -63,8 +114,8 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
       </div>
       {!disableButton && (
         <div className="group hidden items-center md:flex">
-          <Button to="/portfolio">All Cases</Button>
-          <Button to="/portfolio">
+          <Button to="portfolio">All Cases</Button>
+          <Button to="portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
