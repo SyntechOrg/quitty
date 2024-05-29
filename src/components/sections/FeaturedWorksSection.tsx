@@ -1,8 +1,8 @@
 import React from 'react';
+import { Button, Icon, IconType } from '@/components/shared';
 import AllProjects, {
   AllProjectsHeader,
 } from '@/components/sections/AllProjects';
-import { Button, Icon, IconType } from '@/components/shared';
 
 const FeaturedWorksSection = () => {
   return (
