@@ -1,28 +1,32 @@
-"use client";
-import {motion, useScroll, useTransform} from "framer-motion";
-import {useRef} from "react";
-import {Icon, IconType} from "@/components/shared";
+'use client';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { Icon, IconType } from '@/components/shared';
 
 const HeroSectionBackground = () => {
   const ref = useRef(null);
-  const {scrollY, } = useScroll({
-    target: ref
+  const { scrollY } = useScroll({
+    target: ref,
   });
 
   const fullDisappear = useTransform(scrollY, [40, 500], [1, 0]);
   const almostDisappear = useTransform(scrollY, [40, 500], [1, 0.3]);
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
-  const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
+  const changeWidth = useTransform(scrollY, [40, 700], ['55vw', '95vw']);
 
   return (
-    <div ref={ref} className={`min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]`}>
+    <div
+      ref={ref}
+      className={`min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]`}
+    >
       <motion.div
         style={{
           maxWidth: changeMaxWidth,
           width: changeWidth,
           minWidth: 250,
         }}
-        className="fixed z-[-1] left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
+        className="fixed z-[-1] left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+      >
         <motion.div
           style={{
             opacity: fullDisappear,
@@ -38,7 +42,8 @@ const HeroSectionBackground = () => {
           style={{
             opacity: almostDisappear,
           }}
-          className="absolute top-[50%] translate-y-[-50%]">
+          className="absolute top-[50%] translate-y-[-50%]"
+        >
           <Icon
             icon={IconType.HERO_ARROW_LEFT}
             className="relative w-[25vw] h-full max-w-[300px] max-h-[65vh]"
@@ -48,7 +53,8 @@ const HeroSectionBackground = () => {
           style={{
             opacity: almostDisappear,
           }}
-          className="absolute top-[50%] translate-y-[-50%] right-0">
+          className="absolute top-[50%] translate-y-[-50%] right-0"
+        >
           <Icon
             icon={IconType.HERO_ARROW_RIGHT}
             className="relative w-[25vw] h-full max-w-[300px] max-h-[65vh]"
@@ -68,6 +74,6 @@ const HeroSectionBackground = () => {
       </motion.div>
     </div>
   );
-}
+};
 
 export default HeroSectionBackground;

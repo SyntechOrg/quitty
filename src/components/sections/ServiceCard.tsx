@@ -1,13 +1,12 @@
-import React, { FC, ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
-import { Button, Icon, IconType } from "@/components/shared";
-import FAQSection from "@/components/sections/FAQSection";
+import React, { FC, ReactNode } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { Button, Icon, IconType } from '@/components/shared';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/shared/accordion/Accordion";
+} from '@/components/shared/accordion/Accordion';
 
 interface ServiceCardProps {
   title: ReactNode;

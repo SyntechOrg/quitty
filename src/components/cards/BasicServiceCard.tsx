@@ -1,16 +1,21 @@
-import React, {FC, ReactNode} from 'react';
-import Image, {StaticImageData} from "next/image";
-import {Button, Icon, IconType} from "@/components/shared";
+import React, { FC, ReactNode } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { Button, Icon, IconType } from '@/components/shared';
 
 interface BasicServiceCardProps {
-  title: ReactNode,
-  description: string,
-  image: StaticImageData,
-  categories: string[],
-  href: string
+  title: ReactNode;
+  description: string;
+  image: StaticImageData;
+  categories: string[];
+  href: string;
 }
 
-const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image, categories}) => {
+const BasicServiceCard: FC<BasicServiceCardProps> = ({
+  title,
+  description,
+  image,
+  categories,
+}) => {
   return (
     <div
       className="relative flex flex-col lg:flex-row justify-between max-w-[1300px] w-full bg-[#0F0F13] border border-gray
@@ -46,7 +51,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({title, description, image,
         <div className="group flex items-center lg:absolute lg:right-0 relative sm:ml-auto max-sm:mx-auto mt-10">
           <Button to="/portfolio">Read More</Button>
           <Button to="/portfolio">
-            <Icon icon={IconType.ARROW}/>
+            <Icon icon={IconType.ARROW} />
           </Button>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { SocialMedia } from '@/components/shared/social-media/SocialMedia';
-import { SecondaryHeroSection } from '@/components/sections/secondaryHeroSection';
+import { SecondaryHeroSection } from '@/components/sections/SecondaryHeroSection';
 import WebDevImage from '../../../public/assets/images/web-dev-service-image.png';
 import MobileAppImage from '../../../public/assets/images/mobile-app-service-image.png';
 import BrandIdentityImage from '../../../public/assets/images/brand-identity-service-image.png';
 import DigitalMarketingImage from '../../../public/assets/images/digital-marketing-service-image.png';
-import ServiceCard from '@/components/sections/serviceCard';
+import ServiceCard from '@/components/sections/ServiceCard';
 
 const services = [
   {

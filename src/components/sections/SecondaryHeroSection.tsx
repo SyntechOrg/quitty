@@ -1,17 +1,21 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
 interface SecondaryHeroSectionProps {
   title: string;
   text: string;
 }
 
-export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({title, text}) => {
+export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({
+  title,
+  text,
+}) => {
   return (
     <div
       className={`container min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]
        mx-auto w-10/12 grid items-center`}
     >
-      <div className={`relative flex lg:flex-row flex-col justify-between max-lg:items-center max-lg:text-center gap-x-5 
+      <div
+        className={`relative flex lg:flex-row flex-col justify-between max-lg:items-center max-lg:text-center gap-x-5 
       gap-y-8 md:translate-y-[-57px] translate-y-[-53px]`}
       >
         <h1
@@ -27,4 +31,3 @@ export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({title, text
     </div>
   );
 };
-

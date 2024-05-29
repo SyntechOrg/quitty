@@ -1,7 +1,7 @@
 import React, {type FC} from "react";
-import {SecondaryHeroSection} from "@/components/sections/secondaryHeroSection";
+import {SecondaryHeroSection} from "@/components/sections/SecondaryHeroSection";
 import {SocialMedia} from "@/components/shared/social-media/SocialMedia";
-import AllProjects, {AllProjectsHeader} from "@/components/sections/allProjects";
+import AllProjects, {AllProjectsHeader} from "@/components/sections/AllProjects";
 
 const PortfolioPage: FC = () => {
   return <div>

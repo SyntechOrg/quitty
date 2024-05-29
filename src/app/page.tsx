@@ -1,8 +1,8 @@
-import HeroSectionBackground from "@/components/sections/heroSectionBackground";
-import HeroSection from "@/components/sections/heroSection";
-import FeaturedWorksSection from "@/components/sections/featuredWorksSection";
-import ServicesSection from "@/components/sections/servicesSection";
-import AboutSection from "@/components/sections/aboutSection";
+import HeroSectionBackground from "@/components/sections/HeroSectionBackground";
+import HeroSection from "@/components/sections/HeroSection";
+import FeaturedWorksSection from "@/components/sections/FeaturedWorksSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import AboutSection from "@/components/sections/AboutSection";
 import {SocialMedia} from "@/components/shared/social-media/SocialMedia";
 import {Clients} from "@/components";
 

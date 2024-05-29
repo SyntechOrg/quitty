@@ -1,15 +1,15 @@
-"use client";
-import React, { FC } from "react";
-import Link from "next/link";
-import { Button, Icon, IconType, Logo } from "../shared";
-import { usePathname } from "next/navigation";
-import classNames from "classnames";
+'use client';
+import React, { FC } from 'react';
+import Link from 'next/link';
+import { Button, Icon, IconType, Logo } from '../shared';
+import { usePathname } from 'next/navigation';
+import classNames from 'classnames';
 
-const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
+const NAV_ITEMS = ['Home', 'About', 'Portfolio', 'Services'] as const;
 
 const Nav: FC = () => {
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  const isHomePage = pathname === '/';
 
   return (
     <nav className="hidden lg:block">
@@ -17,16 +17,16 @@ const Nav: FC = () => {
         {NAV_ITEMS.map((item) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =
-            (isHomePage && lowerCaseItem === "home") ||
+            (isHomePage && lowerCaseItem === 'home') ||
             (!isHomePage && pathname === `/${lowerCaseItem}`);
 
           return (
             <li key={item}>
               <Link
-                href={`/${item === "Home" ? "" : lowerCaseItem}`}
+                href={`/${item === 'Home' ? '' : lowerCaseItem}`}
                 className={classNames(
-                  "transition-colors duration-200",
-                  isActive ? "text-primary" : "hover:text-primary"
+                  'transition-colors duration-200',
+                  isActive ? 'text-primary' : 'hover:text-primary',
                 )}
               >
                 {item}
@@ -42,13 +42,13 @@ const Nav: FC = () => {
 const Header: FC = () => {
   const pathname = usePathname();
 
-  const isProjectsPage = pathname.includes("projects");
+  const isProjectsPage = pathname.includes('projects');
 
   return (
     <header
       className={classNames(
-        "container flex items-center justify-between py-[33px]",
-        isProjectsPage && "absolute top-0 inset-x-0 z-20"
+        'container flex items-center justify-between py-[33px]',
+        isProjectsPage && 'absolute top-0 inset-x-0 z-20',
       )}
     >
       <Logo />
