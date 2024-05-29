@@ -1,6 +1,13 @@
-import React, { FC, ReactNode } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Button, Icon, IconType } from '@/components/shared';
+import React, { FC, ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Button, Icon, IconType } from "@/components/shared";
+import FAQSection from "@/components/sections/FAQSection";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/shared/accordion/Accordion";
 
 interface ServiceCardProps {
   title: ReactNode;
@@ -62,8 +69,16 @@ const ServiceCard: FC<ServiceCardProps> = ({
             </Button>
           </div>
         </div>
-        <div className="w-full bg-red-950 lg:mt-[310px]">
-          questions and answers
+        <div className="w-full lg:mt-[310px] max-w-[630px]">
+          <Accordion type="single" className="space-y-4" defaultValue="item-0">
+            {FAQ.map((faq, index) => (
+              // eslint-disable-next-line react/jsx-key
+              <AccordionItem value={`item-${index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </div>

@@ -3,91 +3,91 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Aeonik';
-    src: url('/assets/fonts/fonnts.com-Aeonik_Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'Aeonik';
+  src: url('/assets/fonts/fonnts.com-Aeonik_Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Aeonik';
-    src: url('/assets/fonts/fonnts.com-Aeonik_Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Aeonik';
+  src: url('/assets/fonts/fonnts.com-Aeonik_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Aeonik';
-    src: url('/assets/fonts/fonnts.com-Aeonik_Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Aeonik';
+  src: url('/assets/fonts/fonnts.com-Aeonik_Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Aeonik';
-    src: url('/assets/fonts/fonnts.com-Aeonik_Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Aeonik';
+  src: url('/assets/fonts/fonnts.com-Aeonik_Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
-    --blob-color: #00f;
-    --blob-size: 160px;
+  --blob-color: #00f;
+  --blob-size: 160px;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: transparent;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 16px;
-    background-color: #00f9;
+  border-radius: 16px;
+  background-color: #00f9;
 }
 
 @layer components {
-    .container {
-        width: 95%;
-    }
+  .container {
+    width: 95%;
+  }
 }
 
 body {
-    font-family: 'Aeonik', sans-serif;
+  font-family: 'Aeonik', sans-serif;
 }
 
 .category-text {
-    @apply lg:text-[16px] md:text-[15px] text-[14px] font-bold text-primary leading-[1.25] tracking-[0.2em];
+  @apply lg:text-[16px] md:text-[15px] text-[14px] font-bold text-primary leading-[1.25] tracking-[0.2em];
 }
 
 #blob {
-    animation: blobAnimation 14s infinite;
-    background: var(--blob-color);
-    filter: blur(calc(var(--blob-size) / 3));
-    opacity: 0.5;
+  animation: blobAnimation 14s infinite;
+  background: var(--blob-color);
+  filter: blur(calc(var(--blob-size) / 3));
+  opacity: 0.5;
 
-    width: var(--blob-size);
-    height: var(--blob-size);
-    position: fixed;
-    z-index: -2;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
+  width: var(--blob-size);
+  height: var(--blob-size);
+  position: fixed;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
 }
 
 @keyframes blobAnimation {
-    from {
-        rotate: 0deg;
-    }
-    50% {
-        scale: 0.8 1.6;
-    }
-    to {
-        rotate: 360deg;
-    }
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 0.8 1.6;
+  }
+  to {
+    rotate: 360deg;
+  }
 }
 
 * {
-    /* outline: 1px solid red; */
+  /* outline: 1px solid red; */
 }
