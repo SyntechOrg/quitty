@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import AboutHeroSection from "@/components/sections/AboutHeroSection";
 
 const AboutPage = () => {
-  return <div>test about</div>;
+  return (
+    <div>
+      <AboutHeroSection />
+    </div>
+  );
 };
 
 export default AboutPage;
