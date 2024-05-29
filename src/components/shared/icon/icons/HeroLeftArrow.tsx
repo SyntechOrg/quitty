@@ -1,7 +1,7 @@
-import {type FC} from "react";
-import {IconProps} from "../types";
+import { type FC } from 'react';
+import { IconProps } from '../types';
 
-export const HeroLeftArrow: FC<IconProps> = ({className, ...props}) => {
+export const HeroLeftArrow: FC<IconProps> = ({ className, ...props }) => {
   return (
     <svg
       width="438"
@@ -14,8 +14,8 @@ export const HeroLeftArrow: FC<IconProps> = ({className, ...props}) => {
     >
       <path
         d="M352.821 510.904L197.918 356L352.584 201.333L415.044 138.874L415.636 138.281C444.555 109.481 444.555 62.1925 415.755 33.3925L404.377 22.0148C376.051 -6.31114 330.066 -6.78522 301.621 21.4222C300.91 22.1333 300.318 22.7259 299.607 23.437L24.6435 298.281C-7.23795 330.163 -7.23795 381.837 24.6435 413.718L299.488 688.563C300.081 689.155 300.792 689.867 301.384 690.459C330.066 718.785 376.288 718.311 404.732 689.867L416.584 678.015C445.384 649.215 444.673 602.637 415.755 573.837C415.518 573.6 415.281 573.363 415.044 573.126L352.821 510.904Z"
-        fill="#0000FF"/>
+        fill="#0000FF"
+      />
     </svg>
-
   );
 };
