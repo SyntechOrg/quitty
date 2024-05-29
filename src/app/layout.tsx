@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 
 import "./globals.css";
 import SynBackground from "@/components/background/syn-background";
-import {Footer, Header} from "@/components";
+import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
 export const metadata: Metadata = {
