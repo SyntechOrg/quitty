@@ -22,7 +22,8 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "tailwindcss"
   ],
   "settings": {
     "react": {
@@ -64,6 +65,7 @@
         "singleQuote": true,
         "semi": true
       }
-    ]
+    ],
+    "tailwindcss/classnames-order": "warn"
   }
 }

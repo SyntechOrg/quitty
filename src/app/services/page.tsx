@@ -159,8 +159,8 @@ const ServicesPage = () => {
         text="Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands,
          redesigning websites, building web applications, and delivering e-commerce solutions."
       />
-      <div className="container lg:mb-[150px] md:mb-[120px] mb-[60px]">
-        <div className="lg:mt-[100px] md:mt-[80px] mt-[50px] space-y-[50px]">
+      <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
+        <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

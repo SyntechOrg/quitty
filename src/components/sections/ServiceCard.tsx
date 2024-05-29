@@ -68,7 +68,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
             </Button>
           </div>
         </div>
-        <div className="w-full lg:mt-[310px] max-w-[630px]">
+        <div className="w-full max-w-[630px] lg:mt-[310px]">
           <Accordion type="single" className="space-y-4" defaultValue="item-0">
             {FAQ.map((faq, index) => (
               // eslint-disable-next-line react/jsx-key

@@ -76,12 +76,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="container lg:mt-[150px] md:mt-[120px] mt-[60px]">
+    <div className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
       <SectionHeader
         title="Creating Impactful Digital Narratives"
         category="02- SERVICES"
       />
-      <div className="lg:mt-[100px] md:mt-[80px] mt-[50px] space-y-[50px]">
+      <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
         {services.map((service, index) => (
           <BasicServiceCard
             key={index}

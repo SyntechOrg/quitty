@@ -29,8 +29,8 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow }) => {
 
   return (
     <div
-      className="container grid gap-x-5 lg:gap-y-[50px] gap-y-10 mt-[40px] lg:mt-[100px]
-          md:grid-cols-auto-fit-lg grid-cols-auto-fit"
+      className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
+          lg:mt-[100px] lg:gap-y-[50px]"
     >
       {projectsToShow.map((project, index) => (
         <ProjectCard
@@ -54,15 +54,15 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
   return (
-    <div className="max-w-[1000px] mx-auto w-10/12 flex justify-between items-center">
+    <div className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
       <div>
         <p className="category-text">01- PROJECTS</p>
-        <h3 className="lg:text-[48px] md:text-[32px] text-[24px] leading-[1.4]">
+        <h3 className="text-[24px] leading-[1.4] md:text-[32px] lg:text-[48px]">
           Our featured works
         </h3>
       </div>
       {!disableButton && (
-        <div className="group md:flex hidden items-center">
+        <div className="group hidden items-center md:flex">
           <Button to="/portfolio">All Cases</Button>
           <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />

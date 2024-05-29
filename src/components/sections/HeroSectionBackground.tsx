@@ -25,17 +25,17 @@ const HeroSectionBackground = () => {
           width: changeWidth,
           minWidth: 250,
         }}
-        className="fixed z-[-1] left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+        className="fixed left-[50%] top-[50%] z-[-1] translate-x-[-50%] translate-y-[-50%]"
       >
         <motion.div
           style={{
             opacity: fullDisappear,
           }}
-          className="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+          className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
         >
           <Icon
             icon={IconType.HERO_STAR}
-            className="relative w-[16vw] h-full max-w-[367px] max-h-[30vh]"
+            className="relative h-full max-h-[30vh] w-[16vw] max-w-[367px]"
           />
         </motion.div>
         <motion.div
@@ -46,29 +46,29 @@ const HeroSectionBackground = () => {
         >
           <Icon
             icon={IconType.HERO_ARROW_LEFT}
-            className="relative w-[25vw] h-full max-w-[300px] max-h-[65vh]"
+            className="relative h-full max-h-[65vh] w-[25vw] max-w-[300px]"
           />
         </motion.div>
         <motion.div
           style={{
             opacity: almostDisappear,
           }}
-          className="absolute top-[50%] translate-y-[-50%] right-0"
+          className="absolute right-0 top-[50%] translate-y-[-50%]"
         >
           <Icon
             icon={IconType.HERO_ARROW_RIGHT}
-            className="relative w-[25vw] h-full max-w-[300px] max-h-[65vh]"
+            className="relative h-full max-h-[65vh] w-[25vw] max-w-[300px]"
           />
         </motion.div>
         <motion.div
           style={{
             opacity: fullDisappear,
           }}
-          className="absolute w-full left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+          className="absolute left-[50%] top-[50%] w-full translate-x-[-50%] translate-y-[-50%]"
         >
           <Icon
             icon={IconType.SYNTECH_HERO_TEXT}
-            className="relative w-[90%] mx-auto max-w-[1031px] max-h-[65vh]"
+            className="relative mx-auto max-h-[65vh] w-[90%] max-w-[1031px]"
           />
         </motion.div>
       </motion.div>
