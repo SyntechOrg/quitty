@@ -20,6 +20,8 @@ const config: Config = {
       },
       backgroundImage: {
         'dark-gradient': 'linear-gradient(180deg, #111115 0%, #161618 100%)',
+        'radial-gradient-background':
+          'radial-gradient(circle at 10% 100%, rgba(0, 0, 255, 0.5) 0%, #121217 25%, transparent 30%), radial-gradient(circle at 90% 10%, rgba(0, 0, 255, 0.5) 0%, #121217 25%, transparent 30%)',
       },
       container: {
         center: true,
