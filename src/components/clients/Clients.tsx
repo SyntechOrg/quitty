@@ -1,30 +1,30 @@
-import { type FC } from 'react';
-import { Carousel, Icon, IconType } from '../shared';
+import { type FC } from "react";
+import { Carousel, Icon, IconType } from "../shared";
 
 const CLIENTS: {
   name: string;
   logo: IconType;
 }[] = [
   {
-    name: 'Spandoekman',
+    name: "Spandoekman",
     logo: IconType.SPANDOEKMAN_LOGO,
   },
   {
-    name: 'Reputy',
+    name: "Reputy",
     logo: IconType.REPUTY_LOGO,
   },
-  { name: 'Quitty', logo: IconType.QUITTY_LOGO },
+  { name: "Quitty", logo: IconType.QUITTY_LOGO },
   {
-    name: 'Soxey',
+    name: "Soxey",
     logo: IconType.SOXEY_LOGO,
   },
   {
-    name: 'Qonsultant',
+    name: "Qonsultant",
     logo: IconType.QONSULTANT_LOGO,
   },
-  { name: 'Facedrip', logo: IconType.FACEDRIP_LOGO },
+  { name: "Facedrip", logo: IconType.FACEDRIP_LOGO },
   {
-    name: 'Ele Uznach',
+    name: "Ele Uznach",
     logo: IconType.ELE_UZNACH_LOGO,
   },
 ];
