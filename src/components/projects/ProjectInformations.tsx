@@ -48,9 +48,9 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
         {data.map((information, index) => (
           <ul
             key={index}
-            className="flex flex-col gap-y-5 lg:border-r-[2px] lg:border-r-[#2D2D33] pb-[60px] lg:w-full"
+            className="flex flex-col gap-y-5 lg:border-r-[2px] lg:border-r-[#2D2D33] pb-[60px] w-full h-full"
           >
-            <li className="flex items-center gap-x-[10px] text-xl text-[#A6A6AE] lg:-mr-5">
+            <li className="flex items-center gap-x-[10px] text-xl text-[#A6A6AE] lg:-mr-5 w-full">
               <Icon icon={IconType.DIAMOND} />
               <span>{information.title}</span>
             </li>

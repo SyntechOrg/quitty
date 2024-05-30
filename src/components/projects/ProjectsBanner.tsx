@@ -50,10 +50,10 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
               </Button>
             </div>
           </div>
-          <div className="relative min-h-[231px] lg:h-[463px] w-full max-w-[680px] mb-5 lg:mb-0">
+          <div className="relative min-h-[231px] lg:h-[463px] w-full max-w-[680px] mb-5 lg:mb-0 h-[231px] rounded-[30px] overflow-hidden">
             <Image
-              wrapperClassNames="w-full h-full overflow-hidden rounded-[30px]"
-              className="md:object-cover object-contain min-h-[231px]"
+              wrapperClassNames="w-full h-full"
+              className="object-cover object-center"
               src={heroInsideImage}
               alt="Banner Image"
               fill

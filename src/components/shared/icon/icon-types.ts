@@ -7,4 +7,11 @@ export enum IconType {
   HERO_STAR = "hero-star",
   HERO_ARROW_LEFT = "hero-arrow-left",
   HERO_ARROW_RIGHT = "hero-arrow-right",
+  SPANDOEKMAN_LOGO = "spandoekman-logo",
+  REPUTY_LOGO = "reputy-logo",
+  QUITTY_LOGO = 'quitty_logo',
+  SOXEY_LOGO = 'soxey_logo',
+  QONSULTANT_LOGO = 'qonsultant_logo',
+  FACEDRIP_LOGO = 'facedrip_logo',
+  ELE_UZNACH_LOGO = 'ele_uznach_logo',
 }
