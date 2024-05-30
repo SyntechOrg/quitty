@@ -54,7 +54,7 @@ type ClientsProps = {
 
 export const Clients: FC<ClientsProps> = ({ backgroundPrimary }) => {
   return (
-    <div className="mx-auto max-w-[2100px] py-[100px] lg:py-[200px]">
+    <div className="mx-auto max-w-[2100px]">
       <Carousel
         options={{
           slideClassName:
