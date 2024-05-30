@@ -1,18 +1,28 @@
-import React, { FC } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Icon, IconType } from '@/components/shared';
-import Link from 'next/link';
+import React, { FC } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Icon, IconType } from "@/components/shared";
+import Link from "next/link";
 
 interface ProjectCardProps {
   image: StaticImageData;
   title: string;
   year: string;
   slug: string;
+  index: number;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ image, title, year, slug }) => {
+const ProjectCard: FC<ProjectCardProps> = ({
+  image,
+  title,
+  year,
+  slug,
+  index,
+}) => {
+  const animationDelay = (index * 200).toString();
   return (
     <Link
+      data-aos="fade-up"
+      data-aos-delay={animationDelay}
       href={`/projects/${slug}`}
       className="mx-auto w-full max-w-[410px] transform overflow-clip rounded-[30px] border border-gray
       transition-all duration-300 ease-in-out hover:-translate-y-5 hover:scale-105 active:opacity-75"

@@ -90,8 +90,8 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
       className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
           lg:mt-[100px] lg:gap-y-[50px]"
     >
-      {projectsToDisplay.map((project) => (
-        <ProjectCard key={project.slug} {...project} />
+      {projectsToDisplay.map((project, index) => (
+        <ProjectCard key={project.slug} {...project} index={index} />
       ))}
     </div>
   );
