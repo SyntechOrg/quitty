@@ -9,7 +9,7 @@ const AboutPage = () => {
     <div className="overflow-x-clip">
       <AboutHeroSection />
       <WhatWeDoSection />
-      <Clients />
+      <Clients backgroundPrimary />
       <div className="container grid h-screen max-h-[1000px] items-center">
         <OverviewCard />
       </div>
