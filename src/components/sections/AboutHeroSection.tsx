@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AboutHeroSection = () => {
   return (
@@ -10,7 +10,10 @@ const AboutHeroSection = () => {
         muted
         autoPlay
       />
-      <div className="container relative flex max-h-[850px] items-center max-lg:my-32 lg:h-[calc(100vh-114px)]">
+      <div
+        data-aos="fade-up"
+        className="container relative flex max-h-[850px] items-center max-lg:my-32 lg:h-[calc(100vh-114px)]"
+      >
         <div className="w-full max-w-[520px] max-lg:mx-auto max-lg:text-center lg:w-1/2">
           <p className="category-text max-sm:text-[12px]">
             WHERE INNOVATION MEETS CREATIVITY
