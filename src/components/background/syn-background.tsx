@@ -1,10 +1,10 @@
-import SynTransparent from "../../../public/assets/images/syn-transparent.png";
+import SynTransparent from '../../../public/assets/images/syn-transparent.png';
 
 const SynBackground = () => {
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full z-[-1]"
-      style={{backgroundImage: `url(${SynTransparent.src})`}}
+      className="fixed inset-0 z-[-1]"
+      style={{ backgroundImage: `url(${SynTransparent.src})` }}
     />
   );
 };

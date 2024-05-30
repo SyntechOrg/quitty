@@ -17,7 +17,7 @@ const HeroSectionBackground = () => {
   return (
     <div
       ref={ref}
-      className={`min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]`}
+      className="min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-114px)]"
     >
       <motion.div
         style={{
