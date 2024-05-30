@@ -25,7 +25,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
   services,
 }) => {
   return (
-    <div className="relative min-h-screen bg-background">
+    <div data-aos="fade-up" className="relative min-h-screen bg-background">
       <div className="absolute inset-0 h-full min-h-screen w-full">
         <Image
           src={heroImage}

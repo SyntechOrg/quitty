@@ -1,40 +1,40 @@
-'use client';
-import { useRef } from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
-import InformativeCard from '@/components/cards/InformativeCard';
+"use client";
+import { useRef } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
+import InformativeCard from "@/components/cards/InformativeCard";
 
 const cards = [
   {
-    increment: '01',
-    title: 'Innovative Solutions',
+    increment: "01",
+    title: "Innovative Solutions",
     description:
-      'As visionaries and digital artisans, we specialize in crafting innovative solutions tailored to your unique ' +
-      'needs and goals. Leveraging cutting-edge technologies and creative thinking, we develop bespoke strategies and digital ' +
-      'products that set you apart from the competition and drive tangible results.',
+      "As visionaries and digital artisans, we specialize in crafting innovative solutions tailored to your unique " +
+      "needs and goals. Leveraging cutting-edge technologies and creative thinking, we develop bespoke strategies and digital " +
+      "products that set you apart from the competition and drive tangible results.",
   },
   {
-    increment: '02',
-    title: 'Strategic Partnerships',
+    increment: "02",
+    title: "Strategic Partnerships",
     description:
-      'We believe in building lasting partnerships based on trust and collaboration, working hand in hand to achieve success ' +
-      'together. By deeply understanding your business objectives and challenges, we align our strategies and efforts with ' +
-      'your long-term goals, ensuring mutual growth and prosperity.',
+      "We believe in building lasting partnerships based on trust and collaboration, working hand in hand to achieve success " +
+      "together. By deeply understanding your business objectives and challenges, we align our strategies and efforts with " +
+      "your long-term goals, ensuring mutual growth and prosperity.",
   },
   {
-    increment: '03',
-    title: 'Boundary-Pushing Collaboration',
+    increment: "03",
+    title: "Boundary-Pushing Collaboration",
     description:
-      'Our team thrives on collaboration, pushing boundaries to deliver impactful digital experiences that exceed expectations. ' +
-      'Through seamless communication and synergy, we harness the collective expertise of our team to tackle complex challenges ' +
-      'and innovate at every turn, delivering solutions that make a meaningful difference.',
+      "Our team thrives on collaboration, pushing boundaries to deliver impactful digital experiences that exceed expectations. " +
+      "Through seamless communication and synergy, we harness the collective expertise of our team to tackle complex challenges " +
+      "and innovate at every turn, delivering solutions that make a meaningful difference.",
   },
   {
-    increment: '04',
-    title: 'Trusted Allies',
+    increment: "04",
+    title: "Trusted Allies",
     description:
       "We're more than just a team – we're your trusted allies in the digital realm, dedicated to your success every step of " +
-      'the way. With a commitment to transparency, reliability, and excellence, we strive to be your go-to partner for all your digital needs, ' +
-      'providing unwavering support and guidance to help you navigate the ever-evolving digital landscape.',
+      "the way. With a commitment to transparency, reliability, and excellence, we strive to be your go-to partner for all your digital needs, " +
+      "providing unwavering support and guidance to help you navigate the ever-evolving digital landscape.",
   },
 ];
 
@@ -44,7 +44,7 @@ const WhatWeDoSection = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ['2%', '-75%']);
+  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-75%"]);
 
   return (
     <section
@@ -56,7 +56,10 @@ const WhatWeDoSection = () => {
           What we can do
         </p>
       </div>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div
+        data-aos="fade-up"
+        className="sticky top-0 flex h-screen items-center overflow-hidden"
+      >
         <motion.div style={{ x }} className="flex gap-7">
           {cards.map((card) => (
             <InformativeCard

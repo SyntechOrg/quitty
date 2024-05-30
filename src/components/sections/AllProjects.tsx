@@ -1,50 +1,50 @@
-'use client';
-import React, {FC, useEffect, useState} from 'react';
-import ProjectCard from '@/components/cards/ProjectCard';
-import SpandoekmanImage from '../../../public/assets/images/spandoekman-project.png';
-import ReputyImage from '../../../public/assets/images/reputy-project.png';
-import QonsultantImage from '../../../public/assets/images/qonsultant-project.png';
-import SoxeyImage from '../../../public/assets/images/soxey-project.png';
-import EleUznachImage from '../../../public/assets/images/ele-uznach-project.png';
-import FacedripImage from '../../../public/assets/images/facedrip-project.png';
-import { Button, Icon, IconType } from '@/components/shared';
+"use client";
+import React, { FC, useEffect, useState } from "react";
+import ProjectCard from "@/components/cards/ProjectCard";
+import SpandoekmanImage from "../../../public/assets/images/spandoekman-project.png";
+import ReputyImage from "../../../public/assets/images/reputy-project.png";
+import QonsultantImage from "../../../public/assets/images/qonsultant-project.png";
+import SoxeyImage from "../../../public/assets/images/soxey-project.png";
+import EleUznachImage from "../../../public/assets/images/ele-uznach-project.png";
+import FacedripImage from "../../../public/assets/images/facedrip-project.png";
+import { Button, Icon, IconType } from "@/components/shared";
 
 const projectData = [
   {
-    title: 'Spandoekman.nl',
+    title: "Spandoekman.nl",
     image: SpandoekmanImage,
-    year: '2024',
-    slug: 'spandoekman',
+    year: "2024",
+    slug: "spandoekman",
   },
   {
-    title: 'Reputy',
+    title: "Reputy",
     image: ReputyImage,
-    year: '2024',
-    slug: 'reputy-solutions',
+    year: "2024",
+    slug: "reputy-solutions",
   },
   {
-    title: 'Qonsultant',
+    title: "Qonsultant",
     image: QonsultantImage,
-    year: '2024',
-    slug: 'qonsultant',
+    year: "2024",
+    slug: "qonsultant",
   },
   {
-    title: 'Soxey',
+    title: "Soxey",
     image: SoxeyImage,
-    year: '2024',
-    slug: 'soxey',
+    year: "2024",
+    slug: "soxey",
   },
   {
-    title: 'ELE Uznach',
+    title: "ELE Uznach",
     image: EleUznachImage,
-    year: '2024',
-    slug: 'ele-uznach',
+    year: "2024",
+    slug: "ele-uznach",
   },
   {
-    title: 'Facedrip',
+    title: "Facedrip",
     image: FacedripImage,
-    year: '2024',
-    slug: 'facedrip',
+    year: "2024",
+    slug: "facedrip",
   },
 ];
 
@@ -86,6 +86,7 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
 
   return (
     <div
+      data-aos="fade-up"
       className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
           lg:mt-[100px] lg:gap-y-[50px]"
     >
@@ -105,7 +106,10 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
   return (
-    <div className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
+    <div
+      data-aos="fade-up"
+      className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between"
+    >
       <div>
         <p className="category-text">01- PROJECTS</p>
         <h3 className="text-[24px] leading-[1.4] md:text-[32px] lg:text-[48px]">

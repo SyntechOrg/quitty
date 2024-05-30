@@ -1,52 +1,52 @@
-'use client';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { type FC } from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { InputField } from '@/components/shared';
-import { SelectField } from '../shared/select/Select';
-import { Button } from '@/components/shared';
+"use client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { type FC } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { InputField } from "@/components/shared";
+import { SelectField } from "../shared/select/Select";
+import { Button } from "@/components/shared";
 
 const SERVICE_OPTIONS = [
-  'Informational Web',
-  'Web Application',
-  'Shop Online Web',
-  'Brand Identity',
-  'Social Media',
+  "Informational Web",
+  "Web Application",
+  "Shop Online Web",
+  "Brand Identity",
+  "Social Media",
 ];
 
 const BUDGET_OPTIONS = [
-  'up to CHF 5,000',
-  'CHF 5,000 - CHF 10,000',
-  'CHF 10,000 - CHF 20,000',
-  'CHF 20,000 - CHF 50,000',
-  'more than CHF 50,000',
+  "up to CHF 5,000",
+  "CHF 5,000 - CHF 10,000",
+  "CHF 10,000 - CHF 20,000",
+  "CHF 20,000 - CHF 50,000",
+  "more than CHF 50,000",
 ];
 
 const schema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  lastName: z.string().min(1, 'Last name is required'),
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
   serviceType: z
     .enum([
-      'Informational Web',
-      'Web Application',
-      'Shop Online Web',
-      'Brand Identity',
-      'Social Media',
+      "Informational Web",
+      "Web Application",
+      "Shop Online Web",
+      "Brand Identity",
+      "Social Media",
     ])
     .refine((value) => {
       return SERVICE_OPTIONS.includes(value);
     }),
   budget: z.enum([
-    'up to CHF 5,000',
-    'CHF 5,000 - CHF 10,000',
-    'CHF 10,000 - CHF 20,000',
-    'CHF 20,000 - CHF 50,000',
-    'more than CHF 50,000',
+    "up to CHF 5,000",
+    "CHF 5,000 - CHF 10,000",
+    "CHF 10,000 - CHF 20,000",
+    "CHF 20,000 - CHF 50,000",
+    "more than CHF 50,000",
   ]),
-  email: z.string().email('Invalid email address'),
-  phoneNumber: z.string().min(1, 'Phone number is required'),
-  projectDescription: z.string().min(1, 'Project description is required'),
+  email: z.string().email("Invalid email address"),
+  phoneNumber: z.string().min(1, "Phone number is required"),
+  projectDescription: z.string().min(1, "Project description is required"),
 });
 
 type FormType = z.infer<typeof schema>;
@@ -57,11 +57,11 @@ export const ContactForm: FC = () => {
   });
 
   const onSubmit = (data: FormType) => {
-    console.log('FormData::::', data);
+    console.log("FormData::::", data);
   };
 
   return (
-    <div className="container">
+    <div data-aos="fade-up" className="container">
       <form
         className="mt-[130px] flex w-full flex-col gap-y-[50px] lg:px-[110px]"
         onSubmit={formMethods.handleSubmit(onSubmit)}

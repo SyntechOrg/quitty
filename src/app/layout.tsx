@@ -7,6 +7,7 @@ import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
 import "./globals.css";
+import { AosTransition } from "@/components/shared/aos/aos-transition";
 
 export const metadata: Metadata = {
   title: "Syn-Tech",
@@ -23,7 +24,7 @@ export default function RootLayout({
         <SynBackground />
         <Blob />
         <Header />
-        {children}
+        <AosTransition>{children}</AosTransition>
         <Footer />
       </body>
     </html>

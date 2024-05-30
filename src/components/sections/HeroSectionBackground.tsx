@@ -1,7 +1,7 @@
-'use client';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { Icon, IconType } from '@/components/shared';
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { Icon, IconType } from "@/components/shared";
 
 const HeroSectionBackground = () => {
   const ref = useRef(null);
@@ -12,7 +12,7 @@ const HeroSectionBackground = () => {
   const fullDisappear = useTransform(scrollY, [40, 500], [1, 0]);
   const almostDisappear = useTransform(scrollY, [40, 500], [1, 0.3]);
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
-  const changeWidth = useTransform(scrollY, [40, 700], ['55vw', '95vw']);
+  const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
   return (
     <div

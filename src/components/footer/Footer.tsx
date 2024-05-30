@@ -1,20 +1,18 @@
-/* eslint-disable max-len */
-"use client";
 import React from "react";
 import { Button, Icon, IconType } from "../shared";
 import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-white pb-[26px] lg:pb-[71px]">
-      <div className="border-b-[#35353C] border-b">
-        <div className="container flex justify-center lg:flex-row flex-col">
-          <div className="lg:border-r lg:border-r-[#35353C] lg:py-[90px] py-[46px] lg:px-0">
-            <p className="lg:text-[36px] text-[30px] leading-[45px] lg:leading-[56px] max-w-[410px]">
+    <footer className="w-full pb-[26px] text-white lg:pb-[71px]">
+      <div className="border-b border-b-[#35353C]">
+        <div className="container flex flex-col justify-center lg:flex-row">
+          <div className="py-[46px] lg:border-r lg:border-r-[#35353C] lg:px-0 lg:py-[90px]">
+            <p className="max-w-[410px] text-[30px] leading-[45px] lg:text-[36px] lg:leading-[56px]">
               Let’s talk about your Digital Experience
             </p>
-            <div className="flex mt-8">
-              <div className="flex items-center group">
+            <div className="mt-8 flex">
+              <div className="group flex items-center">
                 <Button to="/contact">Get in Touch</Button>
                 <Button to="/contact">
                   <Icon icon={IconType.ARROW} />
@@ -22,14 +20,14 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="xl:px-[100px] gap-x-5 lg:px-[50px] flex justify-between flex-1 lg:border-r lg:border-r-[#35353C] py-[50px] lg:py-[90px] border-y border-y-[#35353C]">
+          <div className="flex flex-1 justify-between gap-x-5 border-y border-y-[#35353C] py-[50px] lg:border-r lg:border-r-[#35353C] lg:px-[50px] lg:py-[90px] xl:px-[100px]">
             <ul className="flex flex-col gap-y-5">
               <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
                 <Icon icon={IconType.DIAMOND} />
                 <span>SITEMAP</span>
               </li>
               {["About", "Portfolio", "Services", "Contact"].map((item) => (
-                <li key={item} className="text-sm mt-2 text-text font-light">
+                <li key={item} className="mt-2 text-sm font-light text-text">
                   <Link href={`/${item.toLowerCase()}`}>{item}</Link>
                 </li>
               ))}
@@ -40,7 +38,7 @@ export const Footer = () => {
                 <span>GET IN TOUCH</span>
               </li>
               {["Instagram", "Facebook", "LinkedIn", "Tiktok"].map((item) => (
-                <li key={item} className="text-sm mt-2 text-text font-light">
+                <li key={item} className="mt-2 text-sm font-light text-text">
                   <Link href={`/${item.toLowerCase()}`}>{item}</Link>
                 </li>
               ))}
@@ -51,13 +49,13 @@ export const Footer = () => {
               <Icon icon={IconType.DIAMOND} />
               <span>STAY IN THE LOOP</span>
             </p>
-            <p className="text-text text-sm font-light leading-[70px]">
+            <p className="text-sm font-light leading-[70px] text-text">
               Subscribe to our newsletter
             </p>
-            <div className="flex items-center border-b border-b-[#35353C] p-1 pl-4 w-full">
+            <div className="flex w-full items-center border-b border-b-[#35353C] p-1 pl-4">
               <input
                 type="text"
-                className="bg-transparent focus:outline-none text-text"
+                className="bg-transparent text-text focus:outline-none"
                 placeholder="Enter your e-mail"
               />
               <Button className="ml-auto">
@@ -67,28 +65,28 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container flex items-center justify-center pt-5 lg:pt-[50px] pb-[30px] lg:px-[30px] lg:flex-row flex-col">
+      <div className="container flex flex-col items-center justify-center pb-[30px] pt-5 lg:flex-row lg:px-[30px] lg:pt-[50px]">
         <Icon
           icon={IconType.LOGO_BACKGROUND}
-          className="w-full h-[41px] lg:h-auto"
+          className="h-[41px] w-full lg:h-auto"
         />
       </div>
-      <div className="container flex items-center gap-x-[30px] flex-col lg:flex-row">
+      <div className="container flex flex-col items-center gap-x-[30px] lg:flex-row">
         <div className="flex items-center justify-center gap-x-7">
           <Icon icon={IconType.LOGO} />
-          <span className="text-sm leading-[59px] hidden lg:inline-block">
+          <span className="hidden text-sm leading-[59px] lg:inline-block">
             © {new Date().getFullYear()}
           </span>
         </div>
-        <div className="bg-[#0000FF] h-[1px] flex-1 hidden lg:block"></div>
-        <ul className="text-sm leading-[30px] gap-x-[40px] hidden lg:flex">
+        <div className="hidden h-[1px] flex-1 bg-[#0000FF] lg:block"></div>
+        <ul className="hidden gap-x-[40px] text-sm leading-[30px] lg:flex">
           <li>Terms and Conditions</li>
           <li>Impressum</li>
         </ul>
-        <div className="flex items-center text-[10px] lg:hidden justify-between w-full gap-x-[10px] mt-[30px]">
+        <div className="mt-[30px] flex w-full items-center justify-between gap-x-[10px] text-[10px] lg:hidden">
           <span className="">© {new Date().getFullYear()}</span>
-          <div className="bg-[#0000FF] h-[1px] flex-1"></div>
-          <ul className="gap-x-[16px] flex">
+          <div className="h-[1px] flex-1 bg-[#0000FF]"></div>
+          <ul className="flex gap-x-[16px]">
             <li>Terms and Conditions</li>
             <li>Impressum</li>
           </ul>
