@@ -1,10 +1,10 @@
-import { ChallengeAndSolution, ProjectsBanner } from '@/components/projects';
-import { ProjectInteraction } from '@/components/projects/ProjectInteraction';
-import { Image } from '@/components/shared/image/Image';
-import { SocialMedia } from '@/components/shared/social-media/SocialMedia';
-import { projects } from '../../../../projects';
-import { notFound } from 'next/navigation';
-import AllProjects from '@/components/sections/AllProjects';
+import { ChallengeAndSolution, ProjectsBanner } from "@/components/projects";
+import { ProjectInteraction } from "@/components/projects/ProjectInteraction";
+import { Image } from "@/components/shared/image/Image";
+import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
+import { projects } from "../../../../projects";
+import { notFound } from "next/navigation";
+import AllProjects from "@/components/sections/AllProjects";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({

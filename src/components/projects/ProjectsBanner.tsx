@@ -1,11 +1,11 @@
-import { type FC } from 'react';
-import { ProjectInformations } from './ProjectInformations';
-import { Image } from '../shared/image/Image';
+import { ReactNode, type FC } from "react";
+import { ProjectInformations } from "./ProjectInformations";
+import { Image } from "../shared/image/Image";
 
-import { Button, Icon, IconType } from '../shared';
+import { Button, Icon, IconType } from "../shared";
 
 type ProjectsBannerProps = {
-  heroText: string;
+  heroText: ReactNode;
   heroImage: string;
   heroInsideImage: string;
   services: string[];
