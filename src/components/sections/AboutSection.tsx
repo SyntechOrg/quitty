@@ -1,19 +1,20 @@
-import React from 'react';
-import { Button, Icon, IconType } from '@/components/shared';
-import QuickCard from '@/components/cards/QuickCard';
-import BubbleAboutImage from '../../../public/assets/images/bubble-about-section.png';
-import Image from 'next/image';
+import React from "react";
+import { Button, Icon, IconType } from "@/components/shared";
+import QuickCard from "@/components/cards/QuickCard";
+import BubbleAboutImage from "../../../public/assets/images/bubble-about-section.png";
+import Image from "next/image";
 
 const quickCardData = [
-  { statistic: '+200', description: 'Completed projects' },
-  { statistic: '+10', description: 'Years of experience' },
-  { statistic: '10K', description: 'User reviews' },
-  { statistic: '+20', description: 'Team members' },
+  { statistic: "+200", description: "Completed projects" },
+  { statistic: "+10", description: "Years of experience" },
+  { statistic: "10K", description: "User reviews" },
+  { statistic: "+20", description: "Team members" },
 ];
 
 const AboutSection = () => {
   return (
     <div
+      data-aos="fade-up"
       className="container mt-[100px] flex flex-col justify-between gap-[40px] max-lg:text-center lg:mt-[150px] lg:flex-row
       lg:gap-[80px]"
     >

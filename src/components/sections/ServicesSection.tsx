@@ -1,10 +1,10 @@
-import React from 'react';
-import SectionHeader from '@/components/header/SectionHeader';
-import BasicServiceCard from '@/components/cards/BasicServiceCard';
-import WebDevImage from '../../../public/assets/images/web-dev-service-image.png';
-import MobileAppImage from '../../../public/assets/images/mobile-app-service-image.png';
-import BrandIdentityImage from '../../../public/assets/images/brand-identity-service-image.png';
-import DigitalMarketingImage from '../../../public/assets/images/digital-marketing-service-image.png';
+import React from "react";
+import SectionHeader from "@/components/header/SectionHeader";
+import BasicServiceCard from "@/components/cards/BasicServiceCard";
+import WebDevImage from "../../../public/assets/images/web-dev-service-image.png";
+import MobileAppImage from "../../../public/assets/images/mobile-app-service-image.png";
+import BrandIdentityImage from "../../../public/assets/images/brand-identity-service-image.png";
+import DigitalMarketingImage from "../../../public/assets/images/digital-marketing-service-image.png";
 
 const services = [
   {
@@ -15,12 +15,12 @@ const services = [
       </>
     ),
     description:
-      'Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of ' +
-      'your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of ' +
-      'a seamless online presence.',
+      "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of " +
+      "your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of " +
+      "a seamless online presence.",
     image: WebDevImage,
-    categories: ['Portfolio', 'eCommerce', 'Software'],
-    href: '/some-href',
+    categories: ["Portfolio", "eCommerce", "Software"],
+    href: "/some-href",
   },
   {
     title: (
@@ -31,11 +31,11 @@ const services = [
       </>
     ),
     description:
-      'Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design ' +
-      'architecture and create bespoke native applications for Apple iOS and Google Android.',
+      "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design " +
+      "architecture and create bespoke native applications for Apple iOS and Google Android.",
     image: MobileAppImage,
-    categories: ['React Native', 'FlutterJS', 'Kotlin'],
-    href: '/some-href',
+    categories: ["React Native", "FlutterJS", "Kotlin"],
+    href: "/some-href",
   },
   {
     title: (
@@ -47,10 +47,10 @@ const services = [
     ),
     description:
       "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, " +
-      'values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience',
+      "values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
     image: BrandIdentityImage,
-    categories: ['Logo', 'Brand Identity', 'Graphics & Illustration'],
-    href: '/some-href',
+    categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
+    href: "/some-href",
   },
   {
     title: (
@@ -61,16 +61,16 @@ const services = [
       </>
     ),
     description:
-      'In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and ' +
-      'engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), ' +
-      'social media marketing, content creation, email campaigns, and more.',
+      "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and " +
+      "engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), " +
+      "social media marketing, content creation, email campaigns, and more.",
     image: DigitalMarketingImage,
     categories: [
-      'Marketing Automation',
-      'PPC Advertising',
-      'Online Reputation',
+      "Marketing Automation",
+      "PPC Advertising",
+      "Online Reputation",
     ],
-    href: '/some-href',
+    href: "/some-href",
   },
 ];
 

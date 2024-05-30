@@ -40,7 +40,7 @@ export const ClientCard: FC<ClientCardProps> = ({
 }) => {
   return (
     <div
-      className={`${backgroundPrimary ? 'bg-primary' : 'bg-transparent'} relative flex h-[140px] w-full items-center justify-center
+      className={`${backgroundPrimary ? "bg-primary" : "bg-transparent"} relative flex h-[140px] w-full items-center justify-center
        border-y border-r border-[#35353C] font-medium last-of-type:border-l-0 lg:h-[180px]`}
     >
       <Icon icon={logo} className="h-[40px]" />
@@ -54,11 +54,11 @@ type ClientsProps = {
 
 export const Clients: FC<ClientsProps> = ({ backgroundPrimary }) => {
   return (
-    <div className="mx-auto max-w-[2100px]">
+    <div data-aos="fade-up" className="mx-auto max-w-[2100px]">
       <Carousel
         options={{
           slideClassName:
-            'flex-0 flex-shrink-0 flex-grow-0 min-w-0 w-2/3 md:w-1/2 lg:w-1/5',
+            "flex-0 flex-shrink-0 flex-grow-0 min-w-0 w-2/3 md:w-1/2 lg:w-1/5",
         }}
       >
         {CLIENTS.map((client) => (
