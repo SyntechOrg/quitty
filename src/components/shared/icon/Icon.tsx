@@ -1,14 +1,32 @@
-import {memo, type FC} from "react";
+import { memo, type FC } from "react";
 
-import {LogoIcon, ArrowIcon, DiamondIcon, LogoBackgroundIcon, QuittyLogoIcon, FacedripLogoIcon, EleUznachLogoIcon, SpandoekmanLogoIcon, ReputyLogoIcon, SoxeyLogoIcon, SyntechHeroText, HeroStar, HeroLeftArrow, HeroRightArrow, QonsultantLogoIcon} from "./icons";
-import {IconType} from "./icon-types";
+import {
+  LogoIcon,
+  ArrowIcon,
+  DiamondIcon,
+  LogoBackgroundIcon,
+  QuittyLogoIcon,
+  FacedripLogoIcon,
+  EleUznachLogoIcon,
+  SpandoekmanLogoIcon,
+  ReputyLogoIcon,
+  SoxeyLogoIcon,
+  SyntechHeroText,
+  HeroStar,
+  HeroLeftArrow,
+  HeroRightArrow,
+  QonsultantLogoIcon,
+  MenuIcon,
+  CloseIcon,
+} from "./icons";
+import { IconType } from "./icon-types";
 
 type IconProps = {
   icon: IconType;
   className?: string;
 };
 
-const Icon: FC<IconProps> = ({icon, ...props}) => {
+const Icon: FC<IconProps> = ({ icon, ...props }) => {
   switch (icon) {
     case IconType.LOGO:
       return <LogoIcon {...props} />;
@@ -40,7 +58,11 @@ const Icon: FC<IconProps> = ({icon, ...props}) => {
       return <SoxeyLogoIcon {...props} />;
     case IconType.QONSULTANT_LOGO:
       return <QonsultantLogoIcon {...props} />;
-    
+    case IconType.MENU:
+      return <MenuIcon {...props} />;
+    case IconType.CLOSE:
+      return <CloseIcon {...props} />;
+
     default:
       throw new Error("Invalid icon type");
   }

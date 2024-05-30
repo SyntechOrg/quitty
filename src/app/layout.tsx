@@ -7,6 +7,8 @@ import SynBackground from "@/components/background/syn-background";
 import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
+import classNames from "classnames";
+
 export const metadata: Metadata = {
   title: "Syn-Tech",
   description: "Welcome to Syn-Tech!",
@@ -18,7 +20,7 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-background text-white">
+      <body className={classNames("bg-background text-white")}>
         <SynBackground />
         <Blob />
         <Header />
