@@ -1,8 +1,8 @@
-import { type FC } from "react";
-import { ProjectInformations } from "./ProjectInformations";
-import { Image } from "../shared/image/Image";
+import { type FC } from 'react';
+import { ProjectInformations } from './ProjectInformations';
+import { Image } from '../shared/image/Image';
 
-import { Button, Icon, IconType } from "../shared";
+import { Button, Icon, IconType } from '../shared';
 
 type ProjectsBannerProps = {
   heroText: string;
@@ -25,8 +25,8 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
   services,
 }) => {
   return (
-    <div className="min-h-screen relative bg-background">
-      <div className="absolute inset-0 min-h-screen h-full w-full">
+    <div className="relative min-h-screen bg-background">
+      <div className="absolute inset-0 h-full min-h-screen w-full">
         <Image
           src={heroImage}
           alt="Banner Image"
@@ -35,13 +35,13 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
           loading="eager"
         />
       </div>
-      <div className="flex flex-col justify-between h-full w-full min-h-screen relative z-[2]">
-        <div className="container flex lg:flex-row flex-col gap-y-5 lg:gap-y-0 items-center inset-x-0  mt-[120px] lg:mt-[187px] gap-x-5 justify-between">
+      <div className="relative z-[2] flex h-full min-h-screen w-full flex-col justify-between">
+        <div className="container inset-x-0 mt-[120px] flex flex-col items-center justify-between gap-x-5  gap-y-5 lg:mt-[187px] lg:flex-row lg:gap-y-0">
           <div>
-            <h1 className="lg:text-[45px] text-[24px] leading-[34px] lg:leading-[62px] text-white w-full max-w-[522px]">
+            <h1 className="w-full max-w-[522px] text-[24px] leading-[34px] text-white lg:text-[45px] lg:leading-[62px]">
               {heroText}
             </h1>
-            <div className="flex mt-[25px] lg:mt-[50px] group w-max">
+            <div className="group mt-[25px] flex w-max lg:mt-[50px]">
               <Button to="/" variant="secondary">
                 See Live
               </Button>
@@ -50,10 +50,10 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
               </Button>
             </div>
           </div>
-          <div className="relative min-h-[231px] lg:h-[463px] w-full max-w-[680px] mb-5 lg:mb-0">
+          <div className="relative mb-5 h-[90vw] max-h-[400px] min-h-[231px] w-full max-w-[680px] overflow-hidden rounded-[30px] lg:mb-0 lg:h-[463px]">
             <Image
-              wrapperClassNames="w-full h-full overflow-hidden rounded-[30px]"
-              className="md:object-cover object-contain min-h-[231px]"
+              wrapperClassNames="w-full h-full"
+              className="w-full object-contain object-center"
               src={heroInsideImage}
               alt="Banner Image"
               fill
@@ -67,7 +67,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
           services={services}
         />
       </div>
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t z-[1] from-black/80 h-[440px]"></div>
+      <div className="absolute inset-x-0 bottom-0 z-[1] h-[440px] bg-gradient-to-t from-black/80"></div>
     </div>
   );
 };

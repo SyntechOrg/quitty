@@ -1,6 +1,6 @@
-import { type FC } from "react";
-import { default as NextImage, ImageProps as NextImageProps } from "next/image";
-import classNames from "classnames";
+import { type FC } from 'react';
+import { default as NextImage, ImageProps as NextImageProps } from 'next/image';
+import classNames from 'classnames';
 
 type ImageProps = {
   wrapperClassNames?: string;
@@ -8,9 +8,9 @@ type ImageProps = {
 
 export const Image: FC<ImageProps> = ({ wrapperClassNames, ...props }) => {
   return (
-    <div className={classNames("relative w-full h-full", wrapperClassNames)}>
+    <div className={classNames('relative w-full h-full', wrapperClassNames)}>
       <NextImage
-        className="w-full h-full object-cover"
+        className="h-full w-full object-cover"
         sizes="100%"
         fill
         {...props}

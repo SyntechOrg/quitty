@@ -38,18 +38,8 @@ const PostPage = async ({ params }: PostPageProps) => {
         }}
         solution={{ ...project.ourSolution }}
       />
-      {project?.projectViewImageOne && (
-        <div className="relative h-[460px] w-full lg:h-[929px]">
-          <Image
-            src={project.projectViewImageOne}
-            alt="Project Showcase 1"
-            wrapperClassNames="w-full h-full"
-            className="h-full w-full object-cover"
-          />
-        </div>
-      )}
       {project?.projectViewImageTwo && (
-        <div className="mt-[60px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
+        <div className="mt-[160px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
           <Image
             src={project?.projectViewImageTwo}
             alt="Project Showcase 1"
