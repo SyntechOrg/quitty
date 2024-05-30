@@ -1,23 +1,23 @@
-import { type FC } from 'react';
+import { type FC } from "react";
 
 const GENERAL_INFO = [
   {
-    label: 'PHONE NUMBER',
-    value: '+383 49 799 829',
+    label: "PHONE NUMBER",
+    value: "+383 49 799 829",
   },
   {
-    label: 'EMAIL ADDRESS',
-    value: 'info@syn-tech.ch',
+    label: "EMAIL ADDRESS",
+    value: "info@syn-tech.ch",
   },
   {
-    label: 'STUDIO ADDRESS',
-    value: 'Strase Switzerland',
+    label: "STUDIO ADDRESS",
+    value: "Strase Switzerland",
   },
 ];
 
 export const ContactPageBanner: FC = () => {
   return (
-    <div className="container mt-[210px]">
+    <div data-aos="fade-up" className="container mt-[210px]">
       <div className="flex flex-col items-center justify-center text-center lg:flex-row lg:items-start lg:justify-between lg:pr-[110px] lg:text-left">
         <div className="mt-[30px] text-[24px] tracking-[20%] text-primary">
           GET IN TOUCH

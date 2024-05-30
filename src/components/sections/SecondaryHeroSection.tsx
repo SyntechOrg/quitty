@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 interface SecondaryHeroSectionProps {
   title: string;
@@ -11,6 +11,7 @@ export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({
 }) => {
   return (
     <div
+      data-aos="fade-up"
       className={`container mx-auto grid
        min-h-[calc(100vh-106px)] w-10/12 items-center md:min-h-[calc(100vh-114px)]`}
     >
