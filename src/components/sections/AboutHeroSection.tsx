@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutHeroSection = () => {
   return (
-    <div className="mx-auto w-full max-w-[1300px]">
+    <div className="relative mx-auto w-full max-w-[1920px]">
       <video
         src="/videos/syntech-about-video.mp4"
-        className="max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:w-[70%] "
+        className="max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:mt-[-114px] lg:w-[70%]"
         loop
         muted
         autoPlay
