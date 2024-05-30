@@ -40,7 +40,7 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
   return (
     <div
       className={classNames(
-        "relative bottom-0 z-[3] inset-x-0 w-full",
+        "relative bottom-0 z-[3] inset-x-0 w-full mt-[25px] lg:mt-[50px]",
         className
       )}
     >

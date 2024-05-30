@@ -25,7 +25,7 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
         <div className="text-lg lg:text-2xl text-primary mb-[15px] lg:mb-[30px]">
           {isChallenge ? "MAIN CHALLENGE" : "OUR SOLUTION"}
         </div>
-        <div className="lg:leading-[70px] text-[25px] lg:text-[50px] max-w-[560px] mb-[25px] lg:mb-[50px]">
+        <div className="lg:leading-[60px] leading-[28px] text-[25px] lg:text-[50px] max-w-[560px] mb-[25px] lg:mb-[40px]">
           {title}
         </div>
         <p className="lg:text-[18px] lg:leading-[28px] max-w-[560px] w-full text-base">

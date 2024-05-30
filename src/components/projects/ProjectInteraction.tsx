@@ -9,7 +9,7 @@ type ProjectInteractionProps = {
   interactions: {
     name: string;
     avatar: string | IconType | null;
-    title: string;
+    subject: string;
     description: string;
     className?: string;
   }[];
@@ -57,6 +57,7 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
                     : "bg-primary text-white before:border-b-primary"
                 )}
               >
+                <b>{ interaction.subject}</b> <br />
                 {interaction.description}
               </div>
             </div>

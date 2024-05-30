@@ -12,10 +12,10 @@ export type Project = {
   expertise: string[];
   release: string[];
   interactions: Array<{
-    avatar: string | null;
-    description: string;
     name: string;
-    title: string;
+    subject: string;
+    description: string;
+    avatar: string | null;
   }>;
   mainChallenge: {
     title: string;
@@ -27,7 +27,7 @@ export type Project = {
     description: string;
     imageUrl: string | null;
   };
-  projectViewImageOne?: string;
+
   projectViewImageTwo?: string;
 };
 
@@ -35,7 +35,7 @@ export const projects: Array<Project> = [
   {
     slug: 'spandoekman',
     title: 'Spandoekman',
-    heroText: 'Brand identity, design & development for luxury cruise booking',
+    heroText: `Visual Presentation of Spandoekman.nl's Revamped Online Store`,
     date: '2024-05-22',
     heroImage: '/images/projects/spandoekman/banner.png',
     heroInsideImage: '/images/projects/spandoekman/bannerInnerImage.png',
@@ -46,47 +46,46 @@ export const projects: Array<Project> = [
     expertise: ['Frontend', 'Shopify'],
     release: ['2024', '2024'],
     mainChallenge: {
-      title: 'We are more than just a team',
+      title: 'Crafting a Standout Webshop in a Competitive Market',
       description:
-        'We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of every project step. We are Ministry',
+        'Spandoekman.nl, has been running since 2011 without any significant updates. Now it needs a major redesign to stand out in a crowded market. With a diverse range of products-from banners and scaffolding tubes to DIY furniture and advertising accessories-presenting everything without overwhelming visitors is key. We must carefully consider layout, categorization, and visual hierarchy to create an engaging and impactful.',
       imageUrl: '/images/projects/spandoekman/solutionAndChallenge-1.png',
     },
     ourSolution: {
-      title: 'We are more than just a team',
+      title: 'Comprehensive Redesign for Enhanced User Experience',
       description:
-        'We are listeners, because we hear and listen. We are genies, who will grant more, than 3 wishes. We are a bunch of specialists, who know how to take care of every project step. We are Ministry',
+        'To address the challenge, our approach focuses on creating a clean, intuitive layout that highlights our diverse product range without overwhelming visitors. We will implement a clear categorization system and a visually appealing hierarchy to ensure easy navigation. Additionally, we will emphasize our commitment to creativity and sustainability, streamlining the entire process from order to delivery to enhance the customer experience.',
       imageUrl: '/images/projects/spandoekman/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/spandoekman/showcase-1.png',
     projectViewImageTwo: '/images/projects/spandoekman/showcase-2.png',
     interactions: [
       {
         avatar: '/images/projects/spandoekman/client-avatar.png',
-        description: `Hi Syntech Team,
+        description: `
 We're in a bit of a bind! Our online shop has been running since 2011 without any significant updates. It's high time for a major redesign. To effectively engage with potential clients, we recognize the urgent need for a revamped and impactful webshop presence. Can you assist us in this endeavor?`,
         name: 'John Doe',
-        title: 'Designer',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Timo,
+        description: `
 Thanks for reaching out! It's with great pleasure that we assist you and the Spandoekman.nl Team with your vision. Your goal aligns perfectly with what we're great at here at Syntech Team.We've noted your request and wasted no time in executing your webshop vision. We're thrilled to unveil the results below. Brace yourselves for the excitement as we present your brand-new shop...`,
         name: 'John Doe 2',
-        title: 'Designer',
+        subject: 'Hi Timo,',
       },
       {
         avatar: '/images/projects/spandoekman/client-avatar.png',
         description: `Hi Syntech Team,
 Wow, it looks incredible! It far exceeds our expectations. Even though we had high hopes, you've surpassed them and delivered beyond what we could have imagined. Thank you for your exceptional work. We're all set to launch. Cheers to the entire Syntech Team!`,
         name: 'John Doe',
-        title: 'Designer',
+subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
         description: `Hi Timo,
 Thank you so much for your kind words! We're thrilled that you're pleased with the outcome. It was a pleasure working with you and exceeding your expectations. We're excited to see your project take off and we're here to support you every step of the way.Cheers to a successful launch and continued success for your Online-Shop!`,
         name: 'John Doe 2',
-        title: 'Designer',
+subject: 'Hi Timo,',
       },
     ],
   },
@@ -116,38 +115,33 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
         'High quality images and visually appealing graphics are used to attract attention. A clean and modern design has been implemented that reflects the brand identity prioritizing the user experience. Powerful filtering and sorting options have also been added to help customers narrow down their choices based on preferences such as size, color, material and style.',
       imageUrl: '/images/projects/soxey/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/soxey/showcase-1.png',
     interactions: [
       {
         avatar: '/images/projects/soxey/client-avatar.png',
-        description: `Hi Syntech Team,
-We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage!
+        description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage!
 To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: 'Soxey Team',
-        title: 'Designer',
+subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Soxey,
-Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
+        description: `Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
         name: 'Syntech AG',
-        title: 'Developer',
+subject: 'Hi Soxey,',
       },
       {
         avatar: '/images/projects/soxey/client-avatar.png',
-        description: `Hi Syntech Team,
-I wanted to take a moment to express my sincere appreciation for the outstanding work your team has done on the design of my online sock store website.
+        description: `I wanted to take a moment to express my sincere appreciation for the outstanding work your team has done on the design of my online sock store website.
 Having had the opportunity to review the design concepts and see the website come to life, I am thoroughly impressed with the level of creativity, attention to detail, and professionalism exhibited throughout the process. The website truly embodies the vision and brand identity that I had envisioned, and I couldn't be happier with the results.`,
         name: 'Soxey Team',
-        title: 'Designer',
+subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Soxey Team,
-Thank you so much for your kind words and positive feedback! We are thrilled to hear that you are satisfied with the design of your online sock store website.
+        description: `Thank you so much for your kind words and positive feedback! We are thrilled to hear that you are satisfied with the design of your online sock store website.
 It has been a pleasure working with you throughout this process, and we're delighted that the final result aligns with your vision and exceeds your expectations. Your enthusiasm for the project has been truly inspiring, and it's been a privilege to collaborate with you to bring your vision to life.`,
         name: 'Syntech AG',
-        title: 'Developer',
+subject: 'Hi Soxey Team,',
       },
     ],
   },
@@ -176,35 +170,30 @@ It has been a pleasure working with you throughout this process, and we're delig
         'Tailored Web Design: Qonsultant GmbH crafts custom websites for SMEs, ensuring user-friendly navigation and visual appeal. Expert Content: They curate informative content, empowering SMEs with valuable insights. Seamless Integration: Qonsultant GmbH integrates tailored solutions into their website, providing SMEs with easy access to expert guidance. Ongoing Support: Offering continuous assistance, they ensure their website remains a reliable resource for SMEs navigating challenges in the digital business environment.',
       imageUrl: '/images/projects/qonsultant/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/qonsultant/showcase-1.png',
     interactions: [
       {
         avatar: '/images/projects/qonsultant/client-avatar.png',
-        description: `Hi Syntech Team,
-We're in the process of launching a business consultancy firm called Qonsultant GmbH! Currently, all we have is the registration sorted. This means we're in need of branding, a website, and social media presence. Could you assist us with these essential components? Looking forward to your support.`,
+        description: `We're in the process of launching a business consultancy firm called Qonsultant GmbH! Currently, all we have is the registration sorted. This means we're in need of branding, a website, and social media presence. Could you assist us with these essential components? Looking forward to your support.`,
         name: 'Qonsultant Team',
-        title: 'Founder',
+subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Qonsultant GmbH,
-Congratulations on the launch of Qonsultant GmbH! We're thrilled to hear about your new venture and would be delighted to assist you with branding, website development, and establishing a strong social media presence.Let's schedule a meeting to discuss your concept and requirements in more detail, and how we can best support your goals.`,
+        description: `Congratulations on the launch of Qonsultant GmbH! We're thrilled to hear about your new venture and would be delighted to assist you with branding, website development, and establishing a strong social media presence.Let's schedule a meeting to discuss your concept and requirements in more detail, and how we can best support your goals.`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+subject: 'Hi Qonsultant GmbH',
       },
       {
         avatar: '/images/projects/qonsultant/client-avatar.png',
-        description: `Hi Syntech Team,
-Thanks for your quick response and willingness to help launch Qonsultant GmbH. We've seen the concept you sent over and we're impressed! Excited to keep working together!`,
+        description: `Thanks for your quick response and willingness to help launch Qonsultant GmbH. We've seen the concept you sent over and we're impressed! Excited to keep working together!`,
         name: 'Qonsultant Team',
-        title: 'Founder',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Qonsultant GmbH,
-Exciting news! Preparations are finished, and we're ready to launch Qonsultant GmbH. Thanks for trusting the Syntech Team. Best of luck with everything! Remember, we're one call away for you, if you need anything else.`,
+        description: `Exciting news! Preparations are finished, and we're ready to launch Qonsultant GmbH. Thanks for trusting the Syntech Team. Best of luck with everything! Remember, we're one call away for you, if you need anything else.`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+        subject: 'Hi Qonsultant GmbH',
       },
     ],
   },
@@ -233,35 +222,30 @@ Exciting news! Preparations are finished, and we're ready to launch Qonsultant G
         'Customization: We offer tailored solutions, allowing customers to choose from a variety of designs and styles to meet their unique preferences. Versatility: With options from awnings to blinds, we provide flexibility in adjusting shade levels and controlling natural light entry. Security and Aesthetics: Our garage doors ensure protection and enhance visual appeal, with various sizes, styles, and operational mechanisms available. Quality Assurance: Collaborating with experienced professionals and using high-quality materials ensures durable, reliable products, prioritizing customer satisfaction.',
       imageUrl: '/images/projects/ele-uznach/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/ele-uznach/showcase-1.png',
     interactions: [
       {
         avatar: '/images/projects/ele-uznach/client-avatar.png',
-        description: `Hi Syntech Team,
-We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
+        description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: 'ELE Uznach',
-        title: 'Team',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi ELE,
-Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
+        description: `Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
         name: 'Syntech AG',
-        title: 'Developer',
+        subject: 'Hi ELE Uznach',
       },
       {
         avatar: '/images/projects/ele-uznach/client-avatar.png',
-        description: `Hi Syntech Team,
-Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
+        description: `Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: 'ELE Uznach',
-        title: 'Team',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi ELE,
-Great news! We're delighted to hear that you're pleased with our proposal! Let's get started on bringing FACEDRIP's vision to life together!"`,
+        description: `Great news! We're delighted to hear that you're pleased with our proposal! Let's get started on bringing FACEDRIP's vision to life together!"`,
         name: 'Syntech AG',
-        title: 'Developer',
+        subject: 'Hi ELE Uznach,',
       },
     ],
   },
@@ -290,35 +274,30 @@ Great news! We're delighted to hear that you're pleased with our proposal! Let's
         "Strategic Brand Positioning: We crafted a unique identity for Reputy, emphasizing its commitment to excellence in reputation management. Targeted Online Presence: Through precise digital strategy, we optimized Reputy's online platforms to effectively engage its audience. Innovative Offerings: We developed creative solutions, setting Reputy apart as an industry leader. Continuous Improvement: Staying agile, we ensure Reputy remains at the forefront of reputation management.",
       imageUrl: '/images/projects/reputy-solutions/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/reputy-solutions/showcase-1.png',
     interactions: [
       {
         avatar: '/images/projects/reputy-solutions/client-avatar.png',
-        description: `Hi Syntech Team,
-Launching our exceptional reputation management services at Reputy, where excellence and innovation are paramount! Understanding the importance of a captivating online platform, can you guide us in crafting this experience?`,
+        description: `Launching our exceptional reputation management services at Reputy, where excellence and innovation are paramount! Understanding the importance of a captivating online platform, can you guide us in crafting this experience?`,
         name: 'Eldi Nazifi',
-        title: 'Reputy',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Eldi,
-Absolutely, we're thrilled about your reputation management venture with Reputy! Crafting a captivating online platform and building a strong branding strategy that reflects Reputy's excellence are pivotal. Let's collaborate closely to bring this vision to life and resonate with your discerning clientele.`,
+        description: `Absolutely, we're thrilled about your reputation management venture with Reputy! Crafting a captivating online platform and building a strong branding strategy that reflects Reputy's excellence are pivotal. Let's collaborate closely to bring this vision to life and resonate with your discerning clientele.`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+subject: 'Hi Eldi,',
       },
       {
         avatar: '/images/projects/reputy-solutions/client-avatar.png',
-        description: `Hi Syntech Team,
-We're impressed by your proposal for our case study and eager to showcase it online. Your expertise will undoubtedly elevate our reputation management efforts. Let's collaborate to bring this project to life!`,
+        description: `We're impressed by your proposal for our case study and eager to showcase it online. Your expertise will undoubtedly elevate our reputation management efforts. Let's collaborate to bring this project to life!`,
         name: 'Eldi Nasufi',
-        title: 'Reputy',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Eldi,
-Great news! Thank you for considering our proposal for your case study. We're excited about the opportunity to feature it online and demonstrate the impact of our reputation management solutions. Let's work together to share our success story with the world!"`,
+        description: `Great news! Thank you for considering our proposal for your case study. We're excited about the opportunity to feature it online and demonstrate the impact of our reputation management solutions. Let's work together to share our success story with the world!"`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+subject: 'Hi Eldi,',
       },
     ],
   },
@@ -347,35 +326,30 @@ Great news! Thank you for considering our proposal for your case study. We're ex
         "Distinctive Brand Identity: We crafted FACEDRIP's unique identity, emphasizing its enchanting wellness approach to stand out. Tailored Digital Strategy: We devised a custom marketing plan, targeting FACEDRIP's audience across online platforms for maximum engagement. Engaging Online Platform: Our precise web development created an intuitive, visually captivating experience for FACEDRIP, enhancing user interaction. Continuous Support: We provide ongoing assistance, ensuring FACEDRIP adapts to industry shifts for sustained growth.",
       imageUrl: '/images/projects/facedrip/solutionAndChallenge-2.png',
     },
-    projectViewImageOne: '/images/projects/facedrip/showcase-1.png',
     interactions: [
       {
         avatar: '/images/projects/facedrip/client-avatar.png',
-        description: `Hi Syntech Team,
-We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
+        description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: 'Merita Llumnica',
-        title: 'FACEDRIP',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Merita,
-Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
+        description: `Thanks for considering FACEDRIP! We're excited to bring FACEDRIP online andhelp you tackle any challenges ahead. While we may not sail the seas, our passion for beauty and wellness drives our commitment to top-notch web development.Let's create something magical together!`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+        subject: 'Hi Merita,',
       },
       {
         avatar: '/images/projects/facedrip/client-avatar.png',
-        description: `Hi Syntech Team,
-Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
+        description: `Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: 'Merita Llumnica',
-        title: 'FACEDRIP',
+        subject: 'Hi Syntech Team,',
       },
       {
         avatar: null,
-        description: `Hi Merita,
-Great news! We're delighted to hear that you're pleased with our proposal! Let's get started on bringing FACEDRIP's vision to life together!"`,
+        description: `Great news! We're delighted to hear that you're pleased with our proposal! Let's get started on bringing FACEDRIP's vision to life together!"`,
         name: 'Syntech AG',
-        title: 'Team Lead',
+subject: 'Hi Merita,',
       },
     ],
   },
