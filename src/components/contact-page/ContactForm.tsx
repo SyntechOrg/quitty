@@ -1,76 +1,74 @@
-"use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { type FC } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { InputField } from "@/components/shared";
-import { SelectField } from "../shared/select/Select";
-import { Button } from "@/components/shared";
+'use client';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { type FC } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { InputField } from '@/components/shared';
+import { SelectField } from '../shared/select/Select';
+import { Button } from '@/components/shared';
 
 const SERVICE_OPTIONS = [
-  "Informational Web",
-  "Web Application",
-  "Shop Online Web",
-  "Brand Identity",
-  "Social Media",
+  'Informational Web',
+  'Web Application',
+  'Shop Online Web',
+  'Brand Identity',
+  'Social Media',
 ];
 
 const BUDGET_OPTIONS = [
-  "up to CHF 5,000",
-  "CHF 5,000 - CHF 10,000",
-  "CHF 10,000 - CHF 20,000",
-  "CHF 20,000 - CHF 50,000",
-  "more than CHF 50,000",
+  'up to CHF 5,000',
+  'CHF 5,000 - CHF 10,000',
+  'CHF 10,000 - CHF 20,000',
+  'CHF 20,000 - CHF 50,000',
+  'more than CHF 50,000',
 ];
 
 const schema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
+  firstName: z.string().min(1, 'First name is required'),
+  lastName: z.string().min(1, 'Last name is required'),
   serviceType: z
     .enum([
-      "Informational Web",
-      "Web Application",
-      "Shop Online Web",
-      "Brand Identity",
-      "Social Media",
+      'Informational Web',
+      'Web Application',
+      'Shop Online Web',
+      'Brand Identity',
+      'Social Media',
     ])
     .refine((value) => {
       return SERVICE_OPTIONS.includes(value);
     }),
   budget: z.enum([
-    "up to CHF 5,000",
-    "CHF 5,000 - CHF 10,000",
-    "CHF 10,000 - CHF 20,000",
-    "CHF 20,000 - CHF 50,000",
-    "more than CHF 50,000",
+    'up to CHF 5,000',
+    'CHF 5,000 - CHF 10,000',
+    'CHF 10,000 - CHF 20,000',
+    'CHF 20,000 - CHF 50,000',
+    'more than CHF 50,000',
   ]),
-  email: z.string().email("Invalid email address"),
-  phoneNumber: z.string().min(1, "Phone number is required"),
-  projectDescription: z.string().min(1, "Project description is required"),
+  email: z.string().email('Invalid email address'),
+  phoneNumber: z.string().min(1, 'Phone number is required'),
+  projectDescription: z.string().min(1, 'Project description is required'),
 });
 
 type FormType = z.infer<typeof schema>;
 
-type ContactFormProps = {};
-
-export const ContactForm: FC<ContactFormProps> = () => {
+export const ContactForm: FC = () => {
   const formMethods = useForm<FormType>({
     resolver: zodResolver(schema),
   });
 
   const onSubmit = (data: FormType) => {
-    console.log("FormData::::", data);
+    console.log('FormData::::', data);
   };
 
   return (
     <div className="container">
       <form
-        className="mt-[130px] flex flex-col gap-y-[50px] w-full lg:px-[110px]"
+        className="mt-[130px] flex w-full flex-col gap-y-[50px] lg:px-[110px]"
         onSubmit={formMethods.handleSubmit(onSubmit)}
       >
         <div>
-          <p className="text-lg pl-[18px]">Hello, I am</p>
-          <div className="flex flex-col lg:flex-row gap-[70px] mt-[30px] w-full">
+          <p className="pl-[18px] text-lg">Hello, I am</p>
+          <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="firstName"
               placeholder="John"
@@ -86,8 +84,8 @@ export const ContactForm: FC<ContactFormProps> = () => {
           </div>
         </div>
         <div>
-          <p className="text-lg pl-[18px]">I am looking for help with a...</p>
-          <div className="flex flex-col lg:flex-row gap-[70px] mt-[30px]">
+          <p className="pl-[18px] text-lg">I am looking for help with a...</p>
+          <div className="mt-[30px] flex flex-col gap-[70px] lg:flex-row">
             <SelectField
               name="serviceType"
               error={formMethods.formState.errors.serviceType}
@@ -97,8 +95,8 @@ export const ContactForm: FC<ContactFormProps> = () => {
           </div>
         </div>
         <div>
-          <p className="text-lg pl-[18px]">My Budget is</p>
-          <div className="flex flex-col lg:flex-row gap-[70px] mt-[30px]">
+          <p className="pl-[18px] text-lg">My Budget is</p>
+          <div className="mt-[30px] flex flex-col gap-[70px] lg:flex-row">
             <SelectField
               name="budget"
               error={formMethods.formState.errors.budget}
@@ -108,11 +106,11 @@ export const ContactForm: FC<ContactFormProps> = () => {
           </div>
         </div>
         <div>
-          <div className="flex justify-evenly text-left gap-[70px]">
-            <p className="w-full text-lg pl-[18px]">Please contact me at</p>
-            <p className="w-full text-lg pl-[18px]">My phone number</p>
+          <div className="flex justify-evenly gap-[70px] text-left">
+            <p className="w-full pl-[18px] text-lg">Please contact me at</p>
+            <p className="w-full pl-[18px] text-lg">My phone number</p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-[70px] mt-[30px] w-full">
+          <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="email"
               placeholder="john@doe.com"
@@ -128,8 +126,8 @@ export const ContactForm: FC<ContactFormProps> = () => {
           </div>
         </div>
         <div>
-          <p className="w-full text-lg pl-[18px]">Description of Project</p>
-          <div className="flex flex-col lg:flex-row gap-[70px] mt-[30px] w-full">
+          <p className="w-full pl-[18px] text-lg">Description of Project</p>
+          <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="projectDescription"
               placeholder="Project Details"
