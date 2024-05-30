@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "../shared";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="lg:px-[100px] flex justify-between flex-1 lg:border-r lg:border-r-[#35353C] py-[50px] lg:py-[90px] border-y border-y-[#35353C]">
+          <div className="xl:px-[100px] gap-x-5 lg:px-[50px] flex justify-between flex-1 lg:border-r lg:border-r-[#35353C] py-[50px] lg:py-[90px] border-y border-y-[#35353C]">
             <ul className="flex flex-col gap-y-5">
               <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
                 <Icon icon={IconType.DIAMOND} />

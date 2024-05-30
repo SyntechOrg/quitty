@@ -1,11 +1,7 @@
 import {memo, type FC} from "react";
 
-import {LogoIcon, ArrowIcon, DiamondIcon, LogoBackgroundIcon} from "./icons";
+import {LogoIcon, ArrowIcon, DiamondIcon, LogoBackgroundIcon, QuittyLogoIcon, FacedripLogoIcon, EleUznachLogoIcon, SpandoekmanLogoIcon, ReputyLogoIcon, SoxeyLogoIcon, SyntechHeroText, HeroStar, HeroLeftArrow, HeroRightArrow, QonsultantLogoIcon} from "./icons";
 import {IconType} from "./icon-types";
-import {SyntechHeroText} from "@/components/shared/icon/icons/SyntechHeroText";
-import {HeroStar} from "@/components/shared/icon/icons/HeroStar";
-import {HeroLeftArrow} from "@/components/shared/icon/icons/HeroLeftArrow";
-import {HeroRightArrow} from "@/components/shared/icon/icons/HeroRightArrow";
 
 type IconProps = {
   icon: IconType;
@@ -30,6 +26,21 @@ const Icon: FC<IconProps> = ({icon, ...props}) => {
       return <HeroLeftArrow {...props} />;
     case IconType.HERO_ARROW_RIGHT:
       return <HeroRightArrow {...props} />;
+    case IconType.QUITTY_LOGO:
+      return <QuittyLogoIcon {...props} />;
+    case IconType.FACEDRIP_LOGO:
+      return <FacedripLogoIcon {...props} />;
+    case IconType.ELE_UZNACH_LOGO:
+      return <EleUznachLogoIcon {...props} />;
+    case IconType.SPANDOEKMAN_LOGO:
+      return <SpandoekmanLogoIcon {...props} />;
+    case IconType.REPUTY_LOGO:
+      return <ReputyLogoIcon {...props} />;
+    case IconType.SOXEY_LOGO:
+      return <SoxeyLogoIcon {...props} />;
+    case IconType.QONSULTANT_LOGO:
+      return <QonsultantLogoIcon {...props} />;
+    
     default:
       throw new Error("Invalid icon type");
   }
