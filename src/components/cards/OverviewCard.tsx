@@ -3,7 +3,7 @@ import { Button, Icon, IconType } from '@/components/shared';
 
 const OverviewCard = () => {
   return (
-    <div className="radial-gradient-background w-full rounded-[30px] border border-gray px-8 py-14 md:p-12 md:py-32">
+    <div className="w-full rounded-[30px] border border-gray bg-radial-gradient-background px-8 py-14 md:p-12 md:py-32">
       <div className="mx-auto w-11/12 max-w-[700px] text-center">
         <h4 className="mx-auto max-w-[600px] text-[24px] leading-[1.14] md:text-[32px] lg:text-[48px]">
           Unlock 30 minutes to dream together
