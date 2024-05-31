@@ -3,6 +3,7 @@ import { ProjectInformations } from "./ProjectInformations";
 import { Image } from "../shared/image/Image";
 
 import { Button, Icon, IconType } from "../shared";
+import { FadeIn } from "../fade-in/FadeIn";
 
 type ProjectsBannerProps = {
   heroText: ReactNode;
@@ -25,7 +26,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
   services,
 }) => {
   return (
-    <div data-aos="fade-up" className="relative min-h-screen bg-background">
+    <FadeIn className="relative min-h-screen bg-background">
       <div className="absolute inset-0 h-full min-h-screen w-full">
         <Image
           src={heroImage}
@@ -68,6 +69,6 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
         />
       </div>
       <div className="absolute inset-x-0 bottom-0 z-[1] h-[440px] bg-gradient-to-t from-black/80"></div>
-    </div>
+    </FadeIn>
   );
 };

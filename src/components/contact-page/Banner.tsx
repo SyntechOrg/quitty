@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const GENERAL_INFO = [
   {
@@ -17,7 +18,7 @@ const GENERAL_INFO = [
 
 export const ContactPageBanner: FC = () => {
   return (
-    <div data-aos="fade-up" className="container mt-[210px]">
+    <FadeIn className="container mt-[210px]">
       <div className="flex flex-col items-center justify-center text-center lg:flex-row lg:items-start lg:justify-between lg:pr-[110px] lg:text-left">
         <div className="mt-[30px] text-[24px] tracking-[20%] text-primary">
           GET IN TOUCH
@@ -46,6 +47,6 @@ export const ContactPageBanner: FC = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </FadeIn>
   );
 };

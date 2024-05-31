@@ -20,7 +20,7 @@ const Nav: FC<NavProps> = ({ className }) => {
   const localActive = useLocale();
 
   return (
-    <nav className={classNames("lg:block", className)}>
+    <nav className={classNames("lg:block relative z-10", className)}>
       <ul className="flex flex-col  gap-x-[60px] gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:gap-y-0 lg:text-base">
         {NAV_ITEMS.map((item) => {
           const lowerCaseItem = item.toLowerCase();
@@ -36,7 +36,7 @@ const Nav: FC<NavProps> = ({ className }) => {
                   "transition-all duration-150 ease-in-out cursor-pointer hover:text-primary",
                   isActive
                     ? "text-primary font-bold lg:font-normal"
-                    : "hover:text-primary",
+                    : "hover:text-primary"
                 )}
               >
                 {item}
@@ -58,7 +58,7 @@ const Header: FC = () => {
     <header
       className={classNames(
         "container flex items-center justify-between py-[33px]",
-        isProjectsPage && "absolute top-0 inset-x-0 z-20",
+        isProjectsPage && "absolute top-0 inset-x-0 z-20"
       )}
     >
       <Logo />

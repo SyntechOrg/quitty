@@ -2,6 +2,7 @@ import { type FC } from "react";
 import { Icon, IconType } from "../icon";
 import { Carousel } from "@/components/shared";
 import classNames from "classnames";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const SOCIAL_MEDIA = [
   {
@@ -29,7 +30,7 @@ type SocialMediaProps = {
 
 export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
   return (
-    <div data-aos="fade-up" className={classNames(className)}>
+    <FadeIn className={classNames(className)}>
       <div className="container text-center">
         <p className="category-text">04- SOCIAL MEDIA</p>
         <p className="mt-[18px] text-[24px] leading-[1.4] tracking-[0.02em] md:mt-[21px] md:text-[32px] lg:mt-[24px] lg:text-[48px]">
@@ -83,6 +84,6 @@ export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </FadeIn>
   );
 };

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { FadeIn } from "../fade-in/FadeIn";
 
 interface SecondaryHeroSectionProps {
   title: string;
@@ -10,8 +11,7 @@ export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({
   text,
 }) => {
   return (
-    <div
-      data-aos="fade-up"
+    <FadeIn
       className={`container mx-auto grid
        min-h-[calc(100vh-106px)] w-10/12 items-center md:min-h-[calc(100vh-114px)]`}
     >
@@ -29,6 +29,6 @@ export const SecondaryHeroSection: FC<SecondaryHeroSectionProps> = ({
           {text}
         </p>
       </div>
-    </div>
+    </FadeIn>
   );
 };

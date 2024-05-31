@@ -15,9 +15,7 @@ const PortfolioPage: FC = () => {
       />
       <AllProjectsHeader disableButton />
       <AllProjects />
-      <div className="mt-[60px] md:mt-[100px] lg:mt-[150px]">
-        <SocialMedia />
-      </div>
+      <SocialMedia className="mt-[60px] md:mt-[100px] lg:mt-[150px]" />
     </div>
   );
 };

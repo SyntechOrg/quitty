@@ -3,10 +3,11 @@ import { Button, Icon, IconType } from "@/components/shared";
 import AllProjects, {
   AllProjectsHeader,
 } from "@/components/sections/AllProjects";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const FeaturedWorksSection = () => {
   return (
-    <>
+    <FadeIn>
       <AllProjectsHeader />
       <AllProjects itemsToShow={6} />
       <div
@@ -18,7 +19,7 @@ const FeaturedWorksSection = () => {
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>
-    </>
+    </FadeIn>
   );
 };
 

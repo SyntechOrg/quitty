@@ -6,6 +6,7 @@ import MobileAppImage from "../../../../public/assets/images/mobile-app-service-
 import BrandIdentityImage from "../../../../public/assets/images/brand-identity-service-image.png";
 import DigitalMarketingImage from "../../../../public/assets/images/digital-marketing-service-image.png";
 import ServiceCard from "@/components/sections/ServiceCard";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const services = [
   {
@@ -163,7 +164,7 @@ const ServicesPage = () => {
         text="Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands,
          redesigning websites, building web applications, and delivering e-commerce solutions."
       />
-      <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
+      <FadeIn className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
         <h2 className="category-text text-center lg:text-[22px]">
           WE ARE EXPERTS IN
         </h2>
@@ -179,7 +180,7 @@ const ServicesPage = () => {
             />
           ))}
         </div>
-      </div>
+      </FadeIn>
       <SocialMedia />
     </div>
   );

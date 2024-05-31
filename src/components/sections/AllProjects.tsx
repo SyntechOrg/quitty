@@ -8,6 +8,7 @@ import SoxeyImage from "../../../public/assets/images/soxey-project.png";
 import EleUznachImage from "../../../public/assets/images/ele-uznach-project.png";
 import FacedripImage from "../../../public/assets/images/facedrip-project.png";
 import { Button, Icon, IconType } from "@/components/shared";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const projectData = [
   {
@@ -70,7 +71,7 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
 
   useEffect(() => {
     let shuffledProjects = projectData.filter(
-      (project) => project.slug !== slug,
+      (project) => project.slug !== slug
     );
 
     if (random) {
@@ -85,15 +86,14 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
   }, [itemsToShow, random, slug]);
 
   return (
-    <div
-      data-aos="fade-up"
+    <FadeIn
       className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
           lg:mt-[100px] lg:gap-y-[50px]"
     >
       {projectsToDisplay.map((project, index) => (
         <ProjectCard key={project.slug} {...project} index={index} />
       ))}
-    </div>
+    </FadeIn>
   );
 };
 export default AllProjects;
@@ -106,10 +106,7 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
   return (
-    <div
-      data-aos="fade-up"
-      className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between"
-    >
+    <FadeIn className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
       <div>
         <p className="category-text">01- PROJECTS</p>
         <h3 className="text-[24px] leading-[1.4] md:text-[32px] lg:text-[48px]">
@@ -124,6 +121,6 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
           </Button>
         </div>
       )}
-    </div>
+    </FadeIn>
   );
 };

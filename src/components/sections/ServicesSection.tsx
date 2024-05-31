@@ -5,6 +5,7 @@ import WebDevImage from "../../../public/assets/images/web-dev-service-image.png
 import MobileAppImage from "../../../public/assets/images/mobile-app-service-image.png";
 import BrandIdentityImage from "../../../public/assets/images/brand-identity-service-image.png";
 import DigitalMarketingImage from "../../../public/assets/images/digital-marketing-service-image.png";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const services = [
   {
@@ -76,7 +77,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
+    <FadeIn className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
       <SectionHeader
         title="Creating Impactful Digital Narratives"
         category="02- SERVICES"
@@ -93,7 +94,7 @@ const ServicesSection = () => {
           />
         ))}
       </div>
-    </div>
+    </FadeIn>
   );
 };
 
