@@ -63,12 +63,14 @@ const Header: FC = () => {
     >
       <Logo />
       <Nav className="hidden lg:block" />
-      <LocalSwitcher />
-      <div className="group hidden items-center lg:flex">
-        <Button to={`/${localActive}/contact`}>Get in Touch</Button>
-        <Button to={`/${localActive}/contact`}>
-          <Icon icon={IconType.ARROW} />
-        </Button>
+      <div className="flex  items-center gap-4 max-lg:ml-auto max-lg:mr-4">
+        <LocalSwitcher />
+        <div className="group hidden items-center lg:flex">
+          <Button to={`/${localActive}/contact`}>Get in Touch</Button>
+          <Button to={`/${localActive}/contact`}>
+            <Icon icon={IconType.ARROW} />
+          </Button>
+        </div>
       </div>
       <MobileMenu />
     </header>
