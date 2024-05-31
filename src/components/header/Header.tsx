@@ -54,7 +54,6 @@ const Header: FC = () => {
   const isProjectsPage = pathname.includes("projects");
   const localActive = useLocale();
 
-
   return (
     <header
       className={classNames(

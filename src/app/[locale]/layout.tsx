@@ -6,7 +6,6 @@ import SynBackground from "@/components/background/syn-background";
 import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
-import "./globals.css";
 import { AosTransition } from "@/components/shared/aos/aos-transition";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
