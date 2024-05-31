@@ -1,5 +1,12 @@
 {
   "Home": {
     "HeroSectionTitle": "The text in german"
+  },
+  "Header": {
+    "ContactButton": "Get DE touch",
+    "Home": "Home",
+    "About": "Über uns",
+    "Portfolio": "Portfolio",
+    "Services": "Dienstleistungen"
   }
 }

@@ -1,5 +1,12 @@
 {
   "Home": {
     "HeroSectionTitle": "We are a digital agency, specialized in immersive and experiential marketing"
+  },
+  "Header": {
+    "ContactButton": "Get in touch",
+    "Home":  "Home",
+    "About": "About",
+    "Portfolio":  "Portfolio",
+    "Services": "Services"
   }
 }
