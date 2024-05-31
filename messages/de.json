@@ -1,5 +1,12 @@
 {
   "Home": {
-    "HeroSectionTitle": "The text in german"
+    "HeroSectionTitle": "Wir sind eine Digitalagentur, spezialisiert auf virtuelle Technologie und erlebnisorientiertes Marketing"
+  },
+  "Header": {
+    "ContactButton": "Kontakt aufnehmen",
+    "Home": "Startseite",
+    "About": "Über uns",
+    "Portfolio": "Portfolio",
+    "Services": "Dienstleistungen"
   }
 }

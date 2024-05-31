@@ -28,30 +28,30 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
     <div className="lg:hidden">
       <button
         onClick={toggleMenu}
-        className="w-5 h-5 flex items-center justify-center"
+        className="flex h-5 w-5 items-center justify-center"
       >
         <Icon icon={open ? IconType.CLOSE : IconType.MENU} />
       </button>
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 bg-background min-h-screen p-8 z-[100] flex flex-col justify-between"
+            className="fixed inset-0 z-[100] flex min-h-screen flex-col justify-between bg-background p-8"
             initial={{ transform: "translateX(100%)", opacity: 0 }}
             animate={{ transform: "translateX(0%)", opacity: 1 }}
             exit={{ transform: "translateX(100%)", opacity: 0 }}
           >
-            <div className="flex justify-between items-center">
+            <div className="flex items-center justify-between">
               <Logo />
               <button className="mr-5" onClick={toggleMenu}>
                 <Icon icon={IconType.CLOSE} />
               </button>
             </div>
             <div>
-              <p className="text-[#2D2D31] text-sm mb-5">Menu</p>
+              <p className="mb-5 text-sm text-[#2D2D31]">Menu</p>
               <Nav />
             </div>
             <div className="pb-[105px]">
-              <p className="text-[#2D2D31] text-sm">Get in touch</p>
+              <p className="text-sm text-[#2D2D31]">Get in touch</p>
               <div className="text-lg text-[#D4D4D4]">info@syn-tech.ch</div>
             </div>
           </motion.div>

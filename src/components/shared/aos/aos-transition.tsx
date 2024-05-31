@@ -11,9 +11,9 @@ export const AosTransition: FC<AosTransitionProps> = ({ children }) => {
   useEffect(() => {
     AOS.init({
       easing: "ease-in",
-      duration: 600,
-      offset: 250,
-      delay: 150,
+      duration: 500,
+      offset: 200,
+      delay: 100,
       anchorPlacement: "center-center",
     });
   }, []);

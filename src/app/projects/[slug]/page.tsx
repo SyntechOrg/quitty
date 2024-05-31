@@ -5,6 +5,7 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { projects } from "../../../../projects";
 import { notFound } from "next/navigation";
 import AllProjects from "@/components/sections/AllProjects";
+import {Header} from "@/components";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({

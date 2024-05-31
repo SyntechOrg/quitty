@@ -10,6 +10,10 @@ const AboutHeroSection = () => {
         loop
         muted
         autoPlay
+        disablePictureInPicture
+        disableRemotePlayback
+        controls={false}
+
       />
       <div
         data-aos="fade-up"

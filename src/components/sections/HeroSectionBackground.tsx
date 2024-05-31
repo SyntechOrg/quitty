@@ -11,6 +11,7 @@ const HeroSectionBackground = () => {
   });
 
   const fullDisappear = useTransform(scrollY, [40, 500], [1, 0]);
+  const fullDisappearLater = useTransform(scrollY, [40, 800], [1, 0]);
   const almostDisappear = useTransform(scrollY, [40, 500], [1, 0.3]);
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
@@ -25,6 +26,7 @@ const HeroSectionBackground = () => {
           style={{
             maxWidth: changeMaxWidth,
             width: changeWidth,
+            opacity: fullDisappearLater,
             minWidth: 250,
           }}
           className="fixed left-[50%] top-[50%] z-[-1] translate-x-[-50%] translate-y-[-50%]"
