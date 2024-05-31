@@ -63,7 +63,7 @@ body {
 #blob {
   animation: blobAnimation 14s infinite;
   background: var(--blob-color);
-  filter: blur(calc(var(--blob-size) / 3));
+  filter: blur(calc(var(--blob-size) / 2.75));
   opacity: 0.5;
 
   width: var(--blob-size);
@@ -81,13 +81,9 @@ body {
     rotate: 0deg;
   }
   50% {
-    scale: 0.8 1.6;
+    scale: 1 1.6;
   }
   to {
     rotate: 360deg;
   }
-}
-
-* {
-  /* outline: 1px solid red; */
 }

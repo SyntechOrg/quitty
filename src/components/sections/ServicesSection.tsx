@@ -8,12 +8,8 @@ import DigitalMarketingImage from "../../../public/assets/images/digital-marketi
 
 const services = [
   {
-    title: (
-      <>
-        Web Design
-        <br />& Development
-      </>
-    ),
+    id: 1,
+    title: ["Web Design", " & Development"],
     description:
       "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of " +
       "your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of " +
@@ -23,13 +19,8 @@ const services = [
     href: "/some-href",
   },
   {
-    title: (
-      <>
-        Mobile
-        <br />
-        APP
-      </>
-    ),
+    id: 2,
+    title: ["Mobile", "APP"],
     description:
       "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design " +
       "architecture and create bespoke native applications for Apple iOS and Google Android.",
@@ -38,13 +29,8 @@ const services = [
     href: "/some-href",
   },
   {
-    title: (
-      <>
-        Brand
-        <br />
-        Identity
-      </>
-    ),
+    id: 3,
+    title: ["Brand", "Identity"],
     description:
       "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, " +
       "values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
@@ -53,13 +39,8 @@ const services = [
     href: "/some-href",
   },
   {
-    title: (
-      <>
-        Digital
-        <br />
-        Marketing
-      </>
-    ),
+    id: 4,
+    title: ["Digital", "Marketing"],
     description:
       "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and " +
       "engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), " +
@@ -85,6 +66,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <BasicServiceCard
             key={index}
+            id={service.id}
             title={service.title}
             description={service.description}
             image={service.image}

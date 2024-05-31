@@ -27,8 +27,8 @@ const Blob = () => {
         left: blobPosition.left,
         top: blobPosition.top,
         opacity: opacity,
-        transition: "opacity 1.4s"
-    }}
+        transition: "opacity 1.4s",
+      }}
     />
   );
 };
