@@ -1,6 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type FC } from "react";
+import { type FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { InputField } from "@/components/shared";
@@ -53,11 +53,13 @@ const schema = z.object({
 type FormType = z.infer<typeof schema>;
 
 export const ContactForm: FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formMethods = useForm<FormType>({
     resolver: zodResolver(schema),
   });
 
   const onSubmit = async (data: FormType) => {
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/email", {
         method: "POST",
@@ -77,6 +79,7 @@ export const ContactForm: FC = () => {
       toast.error("Error sending email");
     } finally {
       formMethods.reset();
+      setIsSubmitting(false);
     }
   };
 
@@ -126,13 +129,13 @@ export const ContactForm: FC = () => {
           </div>
         </div>
         <div>
-          <div className="justify-evenly gap-[70px] text-left hidden lg:flex">
+          <div className="hidden justify-evenly gap-[70px] text-left lg:flex">
             <p className="w-full pl-[18px] text-lg">Please contact me at</p>
             <p className="w-full pl-[18px] text-lg">My phone number</p>
           </div>
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <div className="w-full">
-              <p className="w-full pl-[18px] text-lg lg:hidden mb-[30px]">
+              <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
                 Please contact me at
               </p>
               <InputField
@@ -143,7 +146,7 @@ export const ContactForm: FC = () => {
               />
             </div>
             <div className="w-full">
-              <p className="w-full pl-[18px] text-lg lg:hidden mb-[30px]">
+              <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
                 My phone number
               </p>
               <InputField
@@ -170,6 +173,7 @@ export const ContactForm: FC = () => {
           type="submit"
           variant="secondary"
           className="max-w-[180px] rounded-2xl"
+          disabled={isSubmitting}
         >
           <span className="text-sm">SEND</span>
         </Button>
