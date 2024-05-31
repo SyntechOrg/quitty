@@ -34,13 +34,14 @@ export const Button: FC<ButtonProps> = ({
   variant = "primary",
   to,
   icon,
+  disabled,
   ...props
 }) => {
   const buttonClassNames = classNames(
-    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out gap-x-2",
+    "rounded-full flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed",
     sizeClasses[size],
     variantClasses[variant],
-    className
+    className,
   );
 
   if (to) {
@@ -53,7 +54,12 @@ export const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <button type="button" {...props} className={buttonClassNames}>
+    <button
+      type="button"
+      disabled={disabled}
+      {...props}
+      className={buttonClassNames}
+    >
       {children}
       {icon && <Icon icon={icon} />}
     </button>

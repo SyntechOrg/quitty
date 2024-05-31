@@ -1,21 +1,27 @@
 import classNames from "classnames";
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { Control, Controller, FieldError, FieldValues } from "react-hook-form";
 
 type SelectProps = {
   options: string[];
   // eslint-disable-next-line no-unused-vars
   onChange?: (option: string) => void;
-  value?: string;
+  value: string | null;
 };
 
 export const Select: FC<SelectProps> = (props) => {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string | null>(
+    props.value
+  );
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     props.onChange?.(option);
   };
+
+  useEffect(() => {
+    setSelectedOption(props.value);
+  }, [props.value]);
 
   return (
     <div className="flex w-full flex-1 flex-wrap gap-[30px] text-sm text-[#A3A2A7]">
@@ -54,9 +60,10 @@ export const SelectField: FC<SelectFieldProps> = ({ control, ...props }) => {
         return (
           <div className="w-full">
             <Select
+              key={props.name}
               {...props}
               onChange={(option) => field.onChange(option)}
-              value={field.value}
+              value={field.value ?? null}
             />
             {props.error && (
               <span className="text-xs font-medium text-red-500">
