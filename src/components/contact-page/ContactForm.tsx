@@ -6,6 +6,7 @@ import { z } from "zod";
 import { InputField } from "@/components/shared";
 import { SelectField } from "../shared/select/Select";
 import { Button } from "@/components/shared";
+import { toast } from "react-toastify";
 
 const SERVICE_OPTIONS = [
   "Informational Web",
@@ -56,8 +57,27 @@ export const ContactForm: FC = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FormType) => {
-    console.log("FormData::::", data);
+  const onSubmit = async (data: FormType) => {
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success("Email sent");
+      }
+
+      formMethods.reset();
+    } catch (error) {
+      console.error("Error sending email", error);
+      toast.error("Error sending email");
+    } finally {
+      formMethods.reset();
+    }
   };
 
   return (
@@ -106,23 +126,33 @@ export const ContactForm: FC = () => {
           </div>
         </div>
         <div>
-          <div className="flex justify-evenly gap-[70px] text-left">
+          <div className="justify-evenly gap-[70px] text-left hidden lg:flex">
             <p className="w-full pl-[18px] text-lg">Please contact me at</p>
             <p className="w-full pl-[18px] text-lg">My phone number</p>
           </div>
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
-            <InputField
-              name="email"
-              placeholder="john@doe.com"
-              error={formMethods.formState.errors.email}
-              register={formMethods.register}
-            />
-            <InputField
-              name="phoneNumber"
-              placeholder="(+383) XX - XXX XXX"
-              error={formMethods.formState.errors.phoneNumber}
-              register={formMethods.register}
-            />
+            <div className="w-full">
+              <p className="w-full pl-[18px] text-lg lg:hidden mb-[30px]">
+                Please contact me at
+              </p>
+              <InputField
+                name="email"
+                placeholder="john@doe.com"
+                error={formMethods.formState.errors.email}
+                register={formMethods.register}
+              />
+            </div>
+            <div className="w-full">
+              <p className="w-full pl-[18px] text-lg lg:hidden mb-[30px]">
+                My phone number
+              </p>
+              <InputField
+                name="phoneNumber"
+                placeholder="(+383) XX - XXX XXX"
+                error={formMethods.formState.errors.phoneNumber}
+                register={formMethods.register}
+              />
+            </div>
           </div>
         </div>
         <div>
