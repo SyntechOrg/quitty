@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Icon, IconType } from "@/components/shared";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   image: StaticImageData;
@@ -19,7 +20,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
   index,
 }) => {
   const animationDelay = (index * 100).toString();
-
+  const t = useTranslations("Shared");
+  
   return (
     <Link
       data-aos="fade-up"

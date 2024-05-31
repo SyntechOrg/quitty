@@ -9,6 +9,7 @@ import EleUznachImage from "../../../public/assets/images/ele-uznach-project.png
 import FacedripImage from "../../../public/assets/images/facedrip-project.png";
 import { Button, Icon, IconType } from "@/components/shared";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const projectData = [
   {
@@ -105,17 +106,18 @@ interface AllProjectsHeaderProps {
 export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
+  const t = useTranslations("Shared");
   return (
     <FadeIn className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
       <div>
-        <p className="category-text">01- PROJECTS</p>
+        <p className="category-text">{t("01- PROJECTS")}</p>
         <h3 className="text-[24px] leading-[1.4] md:text-[32px] lg:text-[48px]">
-          Our featured works
+          {t("Our featured works")}
         </h3>
       </div>
       {!disableButton && (
         <div className="group hidden items-center md:flex">
-          <Button to="/portfolio">All Cases</Button>
+          <Button to="/portfolio">{t("All Cases-2")}</Button>
           <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>
