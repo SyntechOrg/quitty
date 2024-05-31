@@ -16,8 +16,8 @@ type NavProps = {
 
 const Nav: FC<NavProps> = ({ className }) => {
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
   const localActive = useLocale();
+  const isHomePage = pathname === `/${localActive}`;
 
   return (
     <nav className={classNames("lg:block", className)}>
@@ -26,7 +26,7 @@ const Nav: FC<NavProps> = ({ className }) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =
             (isHomePage && lowerCaseItem === "home") ||
-            (!isHomePage && pathname === `/${lowerCaseItem}`);
+            (!isHomePage && pathname === `/${localActive}/${lowerCaseItem}`);
 
           return (
             <li key={item}>
