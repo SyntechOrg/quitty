@@ -3,13 +3,17 @@ import type { Metadata } from "next";
 import React, { ReactNode } from "react";
 
 import SynBackground from "@/components/background/syn-background";
+import { ToastContainer } from "react-toastify";
+
 import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
-import "./globals.css";
 import { AosTransition } from "@/components/shared/aos/aos-transition";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+
+import "react-toastify/dist/ReactToastify.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Syn-Tech",
@@ -32,6 +36,7 @@ export default async function LocaleLayout({
           <Header />
           <AosTransition>{children}</AosTransition>
           <Footer />
+          <ToastContainer />
         </NextIntlClientProvider>
       </body>
     </html>
