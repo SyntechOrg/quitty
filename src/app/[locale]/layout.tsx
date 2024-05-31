@@ -22,22 +22,19 @@ export const metadata: Metadata = {
 // eslint-disable-next-line react/function-component-definition
 export default async function LocaleLayout({
   children,
-  params: { locale },
 }: Readonly<{ children: ReactNode; params: { locale: string } }>) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="relative overflow-x-hidden bg-background text-white">
-        <SynBackground />
-        <Blob />
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <AosTransition>{children}</AosTransition>
-          <Footer />
-          <ToastContainer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <>
+      <SynBackground />
+      <Blob />
+      <NextIntlClientProvider messages={messages}>
+        <Header />
+        <AosTransition>{children}</AosTransition>
+        <Footer />
+        <ToastContainer />
+      </NextIntlClientProvider>
+    </>
   );
 }
