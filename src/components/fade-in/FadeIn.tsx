@@ -20,7 +20,7 @@ export const FadeIn: FC<FadeInProps> = ({ children, className }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 },
     );
 
     if (ref.current) {
@@ -37,8 +37,8 @@ export const FadeIn: FC<FadeInProps> = ({ children, className }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 75 }}
       transition={{ duration: 1 }}
       className={classNames(className)}
     >
