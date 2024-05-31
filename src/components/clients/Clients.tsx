@@ -30,6 +30,7 @@ const CLIENTS: {
 ];
 
 type ClientCardProps = {
+  key: string;
   logo: IconType;
   backgroundPrimary?: boolean;
 };

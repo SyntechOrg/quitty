@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "../shared";
 import Link from "next/link";
+import { useLocale } from "use-intl";
 
 export const Footer = () => {
+  const localActive = useLocale();
+
   return (
     <footer className="w-full pb-[26px] text-white lg:pb-[71px]">
       <div className="border-b border-b-[#35353C]">
@@ -28,7 +32,9 @@ export const Footer = () => {
               </li>
               {["About", "Portfolio", "Services", "Contact"].map((item) => (
                 <li key={item} className="mt-2 text-sm font-light text-text">
-                  <Link href={`/${item.toLowerCase()}`}>{item}</Link>
+                  <Link href={`/${localActive}/${item.toLowerCase()}`}>
+                    {item}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -39,7 +45,9 @@ export const Footer = () => {
               </li>
               {["Instagram", "Facebook", "LinkedIn", "Tiktok"].map((item) => (
                 <li key={item} className="mt-2 text-sm font-light text-text">
-                  <Link href={`/${item.toLowerCase()}`}>{item}</Link>
+                  <Link href={`/${localActive}/${item.toLowerCase()}`}>
+                    {item}
+                  </Link>
                 </li>
               ))}
             </ul>

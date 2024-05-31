@@ -18,7 +18,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
   slug,
   index,
 }) => {
-  const animationDelay = (index * 200).toString();
+  const animationDelay = (index * 100).toString();
+
   return (
     <Link
       data-aos="fade-up"

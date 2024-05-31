@@ -14,21 +14,21 @@ const cards = [
   {
     quote:
       "“Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, " +
-      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”.",
+      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”;",
     author: "Jan Muster2",
     authorPosition: "Custom Production",
   },
   {
     quote:
       "“Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, " +
-      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”.",
+      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”",
     author: "Jan Muster3",
     authorPosition: "Custom Production",
   },
   {
     quote:
       "“Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, " +
-      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”.",
+      "and visual elements, such as logos and color schemes, to leave a lasting impression on the audience”...",
     author: "Jan Muster4",
     authorPosition: "Custom Production",
   },
