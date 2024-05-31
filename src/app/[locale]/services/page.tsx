@@ -1,14 +1,15 @@
 import React from "react";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { SecondaryHeroSection } from "@/components/sections/SecondaryHeroSection";
-import WebDevImage from "../../../public/assets/images/web-dev-service-image.png";
-import MobileAppImage from "../../../public/assets/images/mobile-app-service-image.png";
-import BrandIdentityImage from "../../../public/assets/images/brand-identity-service-image.png";
-import DigitalMarketingImage from "../../../public/assets/images/digital-marketing-service-image.png";
+import WebDevImage from "../../../../public/assets/images/web-dev-service-image.png";
+import MobileAppImage from "../../../../public/assets/images/mobile-app-service-image.png";
+import BrandIdentityImage from "../../../../public/assets/images/brand-identity-service-image.png";
+import DigitalMarketingImage from "../../../../public/assets/images/digital-marketing-service-image.png";
 import ServiceCard from "@/components/sections/ServiceCard";
 
 const services = [
   {
+    id: 1,
     title: (
       <>
         Web Design
@@ -44,6 +45,7 @@ const services = [
     href: "/some-href",
   },
   {
+    id: 2,
     title: (
       <>
         Mobile
@@ -79,6 +81,7 @@ const services = [
     href: "/some-href",
   },
   {
+    id: 3,
     title: (
       <>
         Brand
@@ -114,6 +117,7 @@ const services = [
     href: "/some-href",
   },
   {
+    id: 4,
     title: (
       <>
         Digital
@@ -132,17 +136,17 @@ const services = [
     image: DigitalMarketingImage,
     FAQ: [
       {
-        question: "Portfolio",
+        question: "Portfolio1",
         answer:
           "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
       },
       {
-        question: "Portfolio",
+        question: "Portfolio2",
         answer:
           "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
       },
       {
-        question: "Portfolio",
+        question: "Portfolio3",
         answer:
           "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
       },
@@ -164,9 +168,9 @@ const ServicesPage = () => {
           WE ARE EXPERTS IN
         </h2>
         <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <ServiceCard
-              key={index}
+              key={service.id}
               title={service.title}
               description={service.description}
               image={service.image}

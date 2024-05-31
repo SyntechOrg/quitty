@@ -1,12 +1,14 @@
-import React, { FC, ReactNode } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Button, Icon, IconType } from '@/components/shared';
+"use client";
+import React, { FC, ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Button, Icon, IconType } from "@/components/shared";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/shared/accordion/Accordion';
+} from "@/components/shared/accordion/Accordion";
+import { useLocale } from "use-intl";
 
 interface ServiceCardProps {
   title: ReactNode;
@@ -23,6 +25,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
   FAQ,
   href,
 }) => {
+  const localActive = useLocale();
+
   return (
     <div
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border
@@ -62,8 +66,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
             className="group relative mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
             lg:top-[-20px]"
           >
-            <Button to="/portfolio">Choose service</Button>
-            <Button to="/portfolio">
+            <Button to={`/${localActive}/contact`}>Choose service</Button>
+            <Button to={`/${localActive}/contact`}>
               <Icon icon={IconType.ARROW} />
             </Button>
           </div>
