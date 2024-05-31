@@ -8,5 +8,8 @@
     "About": "About",
     "Portfolio": "Portfolio",
     "Services": "Services"
+  },
+  "Shared": {
+    "All Cases": "All Cases"
   }
 }
