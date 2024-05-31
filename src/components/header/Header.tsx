@@ -23,7 +23,7 @@ const Nav: FC<NavProps> = ({ className }) => {
 
   return (
     <nav className={classNames("lg:block", className)}>
-      <ul className="flex flex-col  items-center gap-x-[40px] gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:gap-y-0 lg:text-base">
+      <ul className="flex flex-col gap-x-[40px] gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:items-center lg:gap-y-0 lg:text-base">
         {NAV_ITEMS.map((item) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =
@@ -31,7 +31,7 @@ const Nav: FC<NavProps> = ({ className }) => {
             (!isHomePage && pathname === `/${localActive}/${lowerCaseItem}`);
 
           return (
-            <li key={item} className="text-center">
+            <li key={item} className="lg:text-center">
               <Link
                 href={`/${localActive}/${item === "Home" ? "" : lowerCaseItem}`}
                 className={classNames(
@@ -66,7 +66,7 @@ const Header: FC = () => {
     >
       <Logo />
       <Nav className="hidden lg:block" />
-      <div className="flex  items-center gap-2 max-lg:ml-auto max-lg:mr-4">
+      <div className="flex items-center gap-2 max-lg:ml-auto">
         <LocalSwitcher />
         <div className="group hidden items-center lg:flex">
           <Button to={`/${localActive}/contact`}>{t("ContactButton")}</Button>
