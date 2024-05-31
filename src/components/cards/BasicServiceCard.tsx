@@ -1,9 +1,10 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 
 interface BasicServiceCardProps {
-  title: ReactNode;
+  id: number;
+  title: string[];
   description: string;
   image: StaticImageData;
   categories: string[];
@@ -11,6 +12,7 @@ interface BasicServiceCardProps {
 }
 
 const BasicServiceCard: FC<BasicServiceCardProps> = ({
+  id,
   title,
   description,
   image,
@@ -18,6 +20,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
 }) => {
   return (
     <div
+      data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
       bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >

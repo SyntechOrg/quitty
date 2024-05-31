@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 import {
@@ -9,9 +9,10 @@ import {
   AccordionTrigger,
 } from "@/components/shared/accordion/Accordion";
 import { useLocale } from "use-intl";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 interface ServiceCardProps {
+  id: number;
   title: string[];
   description: string[];
   image: StaticImageData;
@@ -20,6 +21,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: FC<ServiceCardProps> = ({
+  id,
   title,
   description,
   image,
@@ -31,6 +33,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
 
   return (
     <div
+      data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border
       border-gray bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >
