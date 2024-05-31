@@ -1,4 +1,4 @@
-import SynTransparent from '../../../public/assets/images/syn-transparent.png';
+import SynTransparent from "../../../public/assets/images/syn-transparent.png";
 
 const SynBackground = () => {
   return (

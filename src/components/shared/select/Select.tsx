@@ -24,14 +24,14 @@ export const Select: FC<SelectProps> = (props) => {
   }, [props.value]);
 
   return (
-    <div className="flex gap-[30px] text-sm text-[#A3A2A7] w-full flex-1 flex-wrap">
+    <div className="flex w-full flex-1 flex-wrap gap-[30px] text-sm text-[#A3A2A7]">
       {props.options.map((option) => (
         <div
           key={option}
           className={classNames(
             "px-5 py-[15px] cursor-pointer hover:opacity-90 transition-all duration-150 ease-in-out max-h-[40px] border border-[#3F3D45] rounded-[16px] flex items-center justify-end",
             selectedOption === option &&
-              "bg-[#3F3D45] border-transparent text-white"
+              "bg-[#3F3D45] border-transparent text-white",
           )}
           onClick={() => handleOptionClick(option)}
         >
@@ -66,7 +66,7 @@ export const SelectField: FC<SelectFieldProps> = ({ control, ...props }) => {
               value={field.value ?? null}
             />
             {props.error && (
-              <span className="text-xs text-red-500 font-medium">
+              <span className="text-xs font-medium text-red-500">
                 {props.error?.message}
               </span>
             )}

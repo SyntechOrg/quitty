@@ -13,7 +13,6 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 import "react-toastify/dist/ReactToastify.css";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Syn-Tech",
