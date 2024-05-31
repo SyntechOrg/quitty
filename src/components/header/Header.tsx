@@ -69,7 +69,12 @@ const Header: FC = () => {
       <div className="flex items-center gap-2 max-lg:ml-auto">
         <LocalSwitcher />
         <div className="group hidden items-center lg:flex">
-          <Button to={`/${localActive}/contact`} className="text-center leading-[1.2]">{t("ContactButton")}</Button>
+          <Button
+            to={`/${localActive}/contact`}
+            className="text-center leading-[1.3]"
+          >
+            {t("ContactButton")}
+          </Button>
           <Button to={`/${localActive}/contact`}>
             <Icon icon={IconType.ARROW} />
           </Button>
