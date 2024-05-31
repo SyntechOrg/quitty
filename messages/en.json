@@ -4,9 +4,25 @@
   },
   "Header": {
     "ContactButton": "Get in touch",
-    "Home":  "Home",
+    "Home": "Home",
     "About": "About",
-    "Portfolio":  "Portfolio",
+    "Portfolio": "Portfolio",
     "Services": "Services"
+  },
+  "Services": {
+    "Title": "Our Services",
+    "Subtitle": "We offer a wide range of services to help you achieve your goals",
+    "Service1": {
+      "Title": "Web Development",
+      "Description": "We build websites that are fast, secure and easy to manage. We use the latest technologies to ensure your website is up to date with the latest trends."
+    },
+    "Service2": {
+      "Title": "Mobile Development",
+      "Description": "We build mobile apps that are fast, secure and easy to use. We use the latest technologies to ensure your app is up to date with the latest trends."
+    },
+    "Service3": {
+      "Title": "Digital Marketing",
+      "Description": "We help you reach your target audience and grow your business online. We use the latest marketing strategies to ensure your business is visible to your customers."
+    }
   }
 }

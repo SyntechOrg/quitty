@@ -23,7 +23,7 @@ const Nav: FC<NavProps> = ({ className }) => {
 
   return (
     <nav className={classNames("lg:block", className)}>
-      <ul className="flex flex-col  gap-x-[40px] gap-y-5 text-[32px] leading-[36px] items-center lg:flex-row lg:gap-y-0 lg:text-base">
+      <ul className="flex flex-col  items-center gap-x-[40px] gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:gap-y-0 lg:text-base">
         {NAV_ITEMS.map((item) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =

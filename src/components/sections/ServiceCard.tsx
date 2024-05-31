@@ -9,9 +9,10 @@ import {
   AccordionTrigger,
 } from "@/components/shared/accordion/Accordion";
 import { useLocale } from "use-intl";
+import {useTranslations} from "next-intl";
 
 interface ServiceCardProps {
-  title: ReactNode;
+  title: string[];
   description: string[];
   image: StaticImageData;
   FAQ: { question: string; answer: string }[];
@@ -26,6 +27,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   href,
 }) => {
   const localActive = useLocale();
+  const t = useTranslations("Services");
 
   return (
     <div
@@ -34,7 +36,16 @@ const ServiceCard: FC<ServiceCardProps> = ({
     >
       <div className="w-11/12 max-lg:mx-auto max-sm:text-center lg:w-[46%]">
         <h2 className="text-[24px] leading-[1.33] md:text-[36px] lg:min-h-[260px] lg:text-[50px]">
-          {title}
+          {title.map((title, index) => (
+            <span key={index}>
+              {title}
+              {index !== title.length - 1 && (
+                <>
+                  <br />
+                </>
+              )}
+            </span>
+          ))}
         </h2>
         <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[15px] md:mt-8 lg:mt-[40px]">
           {description.map((desc, index) => (
