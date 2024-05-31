@@ -8,9 +8,10 @@ import { ToastContainer } from "react-toastify";
 import { Footer, Header } from "@/components";
 import Blob from "@/components/blob/blob";
 
-import { AosTransition } from "@/components/shared/aos/aos-transition";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+
+import { PageTransition } from "@/components/page-transition/PageTransition";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,8 +34,10 @@ export default async function LocaleLayout({
         <Blob />
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <AosTransition>{children}</AosTransition>
-          <Footer />
+          <PageTransition>
+            {children}
+            <Footer />
+          </PageTransition>
           <ToastContainer />
         </NextIntlClientProvider>
       </body>

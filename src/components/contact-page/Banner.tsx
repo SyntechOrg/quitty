@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const GENERAL_INFO = [
   {
@@ -17,11 +18,8 @@ const GENERAL_INFO = [
 
 export const ContactPageBanner: FC = () => {
   return (
-    <div className="container mt-[210px]">
-      <div
-        data-aos="fade-up"
-        className="flex flex-col items-center justify-center text-center lg:flex-row lg:items-start lg:justify-between lg:pr-[110px] lg:text-left"
-      >
+    <FadeIn className="container mt-[210px]">
+      <div className="flex flex-col items-center justify-center text-center lg:flex-row lg:items-start lg:justify-between lg:pr-[110px] lg:text-left">
         <div className="mt-[30px] text-[24px] tracking-[20%] text-primary">
           GET IN TOUCH
         </div>
@@ -29,11 +27,7 @@ export const ContactPageBanner: FC = () => {
           Let&apos;s create something special together...
         </h1>
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-delay="400"
-        className="mt-[161px] flex flex-col justify-between gap-y-5 lg:flex-row lg:items-center lg:gap-y-0"
-      >
+      <div className="mt-[161px] flex flex-col justify-between gap-y-5 lg:flex-row lg:items-center lg:gap-y-0">
         <p className="w-full max-w-[340px] text-sm leading-[30px]">
           Have a project or want to talk?
           <br /> Here you&apos;ll find a few convenient <br />
@@ -53,6 +47,6 @@ export const ContactPageBanner: FC = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </FadeIn>
   );
 };

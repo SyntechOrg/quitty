@@ -40,7 +40,7 @@ const PostPage = async ({ params }: PostPageProps) => {
         solution={{ ...project.ourSolution }}
       />
       {project?.projectViewImageTwo && (
-        <div data-aos="fade-up" className="mt-[160px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
+        <div className="mt-[160px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
           <Image
             src={project?.projectViewImageTwo}
             alt="Project Showcase 1"

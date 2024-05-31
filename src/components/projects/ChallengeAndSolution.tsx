@@ -2,6 +2,7 @@ import { type FC } from "react";
 import { Image } from "../shared/image/Image";
 import classNames from "classnames";
 import { StaticImageData } from "next/image";
+import { FadeIn } from "../fade-in/FadeIn";
 
 type ItemProps = {
   title: string;
@@ -19,7 +20,7 @@ export const Item: FC<ItemProps> = ({ title, description, imageUrl, type }) => {
       className={classNames(
         "flex lg:flex-row flex-col gap-y-5 lg:gap-x-[80px]",
         !isChallenge && "lg:!flex-row-reverse",
-        !isChallenge && !imageUrl && "lg:mt-[-50px] mt-[-25px]",
+        !isChallenge && !imageUrl && "lg:mt-[-50px] mt-[-25px]"
       )}
     >
       <div className={classNames(imageUrl && "mt-[50px] lg:mt-[100px]")}>
@@ -60,11 +61,9 @@ export const ChallengeAndSolution: FC<ChallengeAndSolutionProps> = ({
   solution,
 }) => {
   return (
-    <div
-      className="container mt-[40px] flex flex-col gap-y-[100px] pb-[80px] lg:mt-[80px] lg:gap-y-[200px] lg:pb-[165px]"
-    >
+    <FadeIn className="container mt-[40px] flex flex-col gap-y-[100px] pb-[80px] lg:mt-[80px] lg:gap-y-[200px] lg:pb-[165px]">
       <Item {...challenge} type="challenge" />
       <Item {...solution} type="solution" />
-    </div>
+    </FadeIn>
   );
 };

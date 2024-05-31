@@ -7,6 +7,7 @@ import { InputField } from "@/components/shared";
 import { SelectField } from "../shared/select/Select";
 import { Button } from "@/components/shared";
 import { toast } from "react-toastify";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const SERVICE_OPTIONS = [
   "Informational Web",
@@ -84,7 +85,7 @@ export const ContactForm: FC = () => {
   };
 
   return (
-    <div data-aos="fade-up" className="container">
+    <FadeIn className="container">
       <form
         className="mt-[130px] flex w-full flex-col gap-y-[50px] lg:px-[110px]"
         onSubmit={formMethods.handleSubmit(onSubmit)}
@@ -178,6 +179,6 @@ export const ContactForm: FC = () => {
           <span className="text-sm">SEND</span>
         </Button>
       </form>
-    </div>
+    </FadeIn>
   );
 };

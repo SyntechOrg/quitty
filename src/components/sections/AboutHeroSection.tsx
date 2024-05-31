@@ -1,8 +1,9 @@
 import React from "react";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const AboutHeroSection = () => {
   return (
-    <div className="relative mx-auto w-full max-w-[1920px]">
+    <FadeIn className="relative mx-auto w-full max-w-[1920px]">
       <video
         src="/videos/syntech-about-video.mp4"
         className="max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:mt-[-114px] lg:w-[70%]"
@@ -35,7 +36,7 @@ const AboutHeroSection = () => {
           </p>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

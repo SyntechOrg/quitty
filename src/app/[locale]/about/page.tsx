@@ -5,6 +5,7 @@ import WhatWeDoSection from "@/components/sections/WhatWeDoSection";
 import OverviewCard from "@/components/cards/OverviewCard";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const AboutPage = () => {
   return (
@@ -12,9 +13,9 @@ const AboutPage = () => {
       <AboutHeroSection />
       <WhatWeDoSection />
       <Clients backgroundPrimary />
-      <div className="container grid h-screen max-h-[1000px] items-center">
+      <FadeIn className="container grid h-screen max-h-[1000px] items-center">
         <OverviewCard />
-      </div>
+      </FadeIn>
       <TestimonialsSection />
       <SocialMedia />
     </div>

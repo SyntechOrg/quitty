@@ -6,19 +6,19 @@ import AboutSection from "@/components/sections/AboutSection";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { Clients } from "@/components";
 
+import { Fragment } from "react";
+
 const Home = () => {
   return (
-    <>
+    <Fragment>
       <HeroSectionBackground />
       <HeroSection />
       <FeaturedWorksSection />
       <ServicesSection />
       <AboutSection />
-      <div className="py-[100px] lg:py-[200px]">
-        <Clients />
-      </div>
+      <Clients className="py-[100px] lg:py-[200px]" />
       <SocialMedia />
-    </>
+    </Fragment>
   );
 };
 

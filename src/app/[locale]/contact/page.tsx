@@ -7,9 +7,7 @@ const ContactPage: FC = () => (
   <>
     <ContactPageBanner />
     <ContactForm />
-    <div className="py-[100px] lg:py-[200px]">
-      <Clients />
-    </div>
+    <Clients className="py-[100px] lg:py-[200px]" />
     <SocialMedia />
   </>
 );

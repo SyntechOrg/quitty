@@ -1,5 +1,7 @@
 import { type FC } from "react";
 import { Carousel, Icon, IconType } from "../shared";
+import classNames from "classnames";
+import { FadeIn } from "../fade-in/FadeIn";
 
 const CLIENTS: {
   name: string;
@@ -51,11 +53,12 @@ export const ClientCard: FC<ClientCardProps> = ({
 
 type ClientsProps = {
   backgroundPrimary?: boolean;
+  className?: string;
 };
 
-export const Clients: FC<ClientsProps> = ({ backgroundPrimary }) => {
+export const Clients: FC<ClientsProps> = ({ backgroundPrimary, className }) => {
   return (
-    <div data-aos="fade-up" className="mx-auto max-w-[2100px]">
+    <FadeIn className={classNames("mx-auto max-w-[2100px]", className)}>
       <Carousel
         options={{
           slideClassName:
@@ -70,6 +73,6 @@ export const Clients: FC<ClientsProps> = ({ backgroundPrimary }) => {
           />
         ))}
       </Carousel>
-    </div>
+    </FadeIn>
   );
 };
