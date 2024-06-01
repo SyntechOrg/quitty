@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 const services = [
   {
     id: 1,
-    title: ["Web Design", " & Development"],
+    title: ["Service card-title-1", "Service card-title-1.1"],
     description:
       "Serivce card-description-1",
     image: WebDevImage,
@@ -20,7 +20,7 @@ const services = [
   },
   {
     id: 2,
-    title: ["Mobile", "APP"],
+    title: ["Service card-title-2", "Service card-title-2.1"],
     description:
       "Serivce card-description-2",
     image: MobileAppImage,
@@ -29,7 +29,7 @@ const services = [
   },
   {
     id: 3,
-    title: ["Brand", "Identity"],
+    title: ["Service card-title-3", "Service card-title-3.1"],
     description:
       "Serivce card-description-3",
     image: BrandIdentityImage,
@@ -38,7 +38,7 @@ const services = [
   },
   {
     id: 4,
-    title: ["Digital", "Marketing"],
+    title: ["Service card-title-4", "Service card-title-4.1"],
     description:
       "Serivce card-description-4",
     image: DigitalMarketingImage,

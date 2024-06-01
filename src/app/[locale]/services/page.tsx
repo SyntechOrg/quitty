@@ -7,6 +7,7 @@ import BrandIdentityImage from "../../../../public/assets/images/brand-identity-
 import DigitalMarketingImage from "../../../../public/assets/images/digital-marketing-service-image.png";
 import ServiceCard from "@/components/sections/ServiceCard";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const services = [
   {
@@ -134,16 +135,16 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const t = useTranslations("Services");
   return (
     <div>
       <SecondaryHeroSection
-        title="Expertise"
-        text="Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands,
-         redesigning websites, building web applications, and delivering e-commerce solutions."
+        title={t("Services first-title")}
+        text={t("Services first-text")}
       />
       <FadeIn className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
         <h2 className="category-text text-center lg:text-[22px]">
-          WE ARE EXPERTS IN
+          {t("Services second-title")}
         </h2>
         <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
           {services.map((service) => (

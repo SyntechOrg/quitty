@@ -16,10 +16,14 @@
     "All Cases-2": "Alle Produkte",
     "Services title-1": "Erstellung wirkungsvoller digitaler Erzählungen",
     "Services category-1": "02- DIENSTLEISTUNGEN",
-    "Service card-title-1": ["Webdesign", " & Entwicklung"],
-    "Service card-title-2": ["Mobile", "App"],
-    "Service card-title-3": ["Markenidentität"],
-    "Service card-title-4": ["Digital", "Marketing"],
+    "Service card-title-1": "Webdesign",
+    "Service card-title-1.1": "& Entwicklung",
+    "Service card-title-2": "Mobile",
+    "Service card-title-2.1": "App",
+    "Service card-title-3": "Markenidentität",
+    "Service card-title-3.1": "M",
+    "Service card-title-4": "Digital",
+    "Service card-title-4.1": "Marketing",
     "Serivce card-description-1": "Bei unseren Webdesign-Dienstleistungen trifft Kunst auf Effizienz. Wir gestalten robuste Websites, die das Fundament Ihrer digitalen Identität bilden. Unsere Webentwicklung, von Backend-Funktionalität bis hin zu benutzerfreundlichen Schnittstellen, ist das Rückgrat einer nahtlosen Online-Präsenz.",
     "Serivce card-description-2": "Entfesseln Sie die Kraft der Mobilität mit Syntech. Jahrelange Expertise in der mobilen Entwicklung ermöglichen es uns, Architekturen zu entwerfen und massgeschneiderte native Anwendungen für Apple iOS und Google Android zu erstellen.",
     "Serivce card-description-3": "Strategischer Prozess zur Schaffung einer einzigartigen Identität für Unternehmen. Er umfasst die Definition der Markenpersönlichkeit, -werte und visuellen Elemente wie Logos und Farbschemata, um einen bleibenden Eindruck beim Publikum zu hinterlassen.",
@@ -65,5 +69,19 @@
   "Portfolio": {
     "Portfolio first-title": "Wir wählen eine andere → Ausgangsposition",
     "Portfolio first-text": "Jedes Projekt ist eine Gelegenheit, etwas Neues auszuprobieren. Etwas aus einer anderen Perspektive zu betrachten. Etwas zum ersten Mal zu tun."
-  }
+  },
+  "Services": {
+    "Services first-title": "Fachwissen",
+    "Services first-text": "Wir konzentrieren uns auf Kernbereiche und kombinieren unser kreatives und technisches Fachwissen, um die Essenz von Marken herauszuarbeiten, Websites neu zu gestalten, Webanwendungen zu erstellen und E-Commerce-Lösungen zu liefern.",
+    "Services second-title": "WIR SIND EXPERTEN FÜR",
+    "Services FAQ-a-1": "Marken müssen mit der Zeit gehen. Eine progressive Corporate Identity schafft die Balance zwischen frischem Design und dem bewahrten Markenkern. Ein wahrer Drahtseilakt des Designs."
+    },
+    "Contact": {
+      "Contact first-text": "Kontakt aufnehmen",
+      "Contact first-title": "Gemeinsam etwas Besonderes schaffen...",
+      "Contact first-list-text": "Haben Sie ein Projekt oder wollen Sie reden? Hier finden Sie ein paar bequeme Möglichkeiten, uns zu erreichen.",
+      "Contact phone-number": "TELEFON",
+      "Contact email": "E-MAIL ADRESSE",
+      "Contact address": "ADRESSE"
+    }
 }

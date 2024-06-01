@@ -16,10 +16,14 @@
     "All Cases-2": "All Cases",
     "Services title-1": "Creating Impactful Digital Narratives",
     "Services category-1": "02- SERVICES",
-    "Service card-title-1": ["Web Design", " & Development"],
-    "Service card-title-2": ["Mobile", "APP"],
-    "Service card-title-3": ["Brand", "Identity"],
-    "Service card-title-4": ["Digital", "Marketing"],
+    "Service card-title-1": "Web Design",
+    "Service card-title-1.1": "& Development",
+    "Service card-title-2": "Mobile",
+    "Service card-title-2.1":"App",
+    "Service card-title-3": "Brand",
+    "Service card-title-3.1": "Identity",
+    "Service card-title-4": "Digital",
+    "Service card-title-4.1": "Marketing",
     "Serivce card-description-1": "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of a seamless online presence.",
     "Serivce card-description-2": "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design architecture and create bespoke native applications for Apple iOS and Google Android.",
     "Serivce card-description-3": "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
@@ -64,5 +68,19 @@
   "Portfolio": {
     "Portfolio first-title": "We choose a different → starting point",
     "Portfolio first-text": "Every project is a chance to try something new. Look at something with a fresh perspective. Do something for the first time."
+  },
+  "Services": {
+    "Services first-title": "Expertise",
+    "Services first-text": "Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands, redesigning websites, building web applications, and delivering e-commerce solutions.",
+    "Services second-title": "WE ARE EXPERTS IN",
+    "Services FAQ-a-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design."
+  },
+  "Contact": {
+    "Contact first-text": "Get in touch",
+    "Contact first-title": "Let's create something special together...",
+    "Contact first-list-text": "Have a project or want to talk? Here you'll find a few convenient ways to reach us.",
+    "Contact phone-number": "PHONE NUMBER",
+    "Contact email": "EMAIL ADDRESS",
+    "Contact address": "STUDIO ADRESS"
   }
 }
