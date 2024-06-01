@@ -60,5 +60,9 @@
     "About overview-title": "Unlock 30 minutes to dream together ",
     "About overview-text": "Join us for a 30-minute conversation where we can explore your ideas, collaborate on possibilities, and shape your vision into reality!",
     "About overview-button": "Book the journey"
+  },
+  "Portfolio": {
+    "Portfolio first-title": "We choose a different → starting point",
+    "Portfolio first-text": "Every project is a chance to try something new. Look at something with a fresh perspective. Do something for the first time."
   }
 }

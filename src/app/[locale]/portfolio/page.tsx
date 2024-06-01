@@ -4,14 +4,15 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import AllProjects, {
   AllProjectsHeader,
 } from "@/components/sections/AllProjects";
+import { useTranslations } from "next-intl";
 
 const PortfolioPage: FC = () => {
+  const t = useTranslations("Portfolio");
   return (
     <div>
       <SecondaryHeroSection
-        title="We choose a different → starting point"
-        text="Every project is a chance to try something new. Look at something with a fresh perspective.
-      Do something for the first time."
+        title={t("Portfolio first-title")}
+        text={t("Portfolio first-text")}
       />
       <AllProjectsHeader disableButton />
       <AllProjects />
