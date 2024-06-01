@@ -6,15 +6,14 @@ import MobileAppImage from "../../../public/assets/images/mobile-app-service-ima
 import BrandIdentityImage from "../../../public/assets/images/brand-identity-service-image.png";
 import DigitalMarketingImage from "../../../public/assets/images/digital-marketing-service-image.png";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const services = [
   {
     id: 1,
     title: ["Web Design", " & Development"],
     description:
-      "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of " +
-      "your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of " +
-      "a seamless online presence.",
+      "Serivce card-description-1",
     image: WebDevImage,
     categories: ["Portfolio", "eCommerce", "Software"],
     href: "/some-href",
@@ -23,8 +22,7 @@ const services = [
     id: 2,
     title: ["Mobile", "APP"],
     description:
-      "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design " +
-      "architecture and create bespoke native applications for Apple iOS and Google Android.",
+      "Serivce card-description-2",
     image: MobileAppImage,
     categories: ["React Native", "FlutterJS", "Kotlin"],
     href: "/some-href",
@@ -33,8 +31,7 @@ const services = [
     id: 3,
     title: ["Brand", "Identity"],
     description:
-      "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, " +
-      "values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
+      "Serivce card-description-3",
     image: BrandIdentityImage,
     categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
     href: "/some-href",
@@ -43,9 +40,7 @@ const services = [
     id: 4,
     title: ["Digital", "Marketing"],
     description:
-      "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and " +
-      "engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), " +
-      "social media marketing, content creation, email campaigns, and more.",
+      "Serivce card-description-4",
     image: DigitalMarketingImage,
     categories: [
       "Marketing Automation",
@@ -57,11 +52,12 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const t = useTranslations("Shared");
   return (
     <FadeIn className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
       <SectionHeader
-        title="Creating Impactful Digital Narratives"
-        category="02- SERVICES"
+        title={t("Services title-1")}
+        category={t("Services category-1")}
       />
       <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
         {services.map((service, index) => (
@@ -69,7 +65,7 @@ const ServicesSection = () => {
             key={index}
             id={service.id}
             title={service.title}
-            description={service.description}
+            description={t(service.description)}
             image={service.image}
             categories={service.categories}
             href={service.href}

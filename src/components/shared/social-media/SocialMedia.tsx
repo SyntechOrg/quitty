@@ -3,6 +3,7 @@ import { Icon, IconType } from "../icon";
 import { Carousel } from "@/components/shared";
 import classNames from "classnames";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const SOCIAL_MEDIA = [
   {
@@ -29,12 +30,13 @@ type SocialMediaProps = {
 };
 
 export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
+  const t = useTranslations("Shared");
   return (
     <FadeIn className={classNames(className)}>
       <div className="container text-center">
         <p className="category-text">04- SOCIAL MEDIA</p>
         <p className="mt-[18px] text-[24px] leading-[1.4] tracking-[0.02em] md:mt-[21px] md:text-[32px] lg:mt-[24px] lg:text-[48px]">
-          Follow us on social media
+          {t("Social media-title-1")}
         </p>
       </div>
       <ul className="mt-[88px]">

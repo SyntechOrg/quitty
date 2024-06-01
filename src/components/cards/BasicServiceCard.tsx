@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
+import { useTranslations } from "next-intl";
 
 interface BasicServiceCardProps {
   id: number;
@@ -18,6 +19,8 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
   image,
   categories,
 }) => {
+const t = useTranslations("Shared");
+
   return (
     <div
       // data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
@@ -62,7 +65,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to="/portfolio">Read More</Button>
+          <Button to="/portfolio">{t("Service card-button-1")}</Button>
           <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>

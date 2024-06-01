@@ -4,15 +4,17 @@ import QuickCard from "@/components/cards/QuickCard";
 import BubbleAboutImage from "../../../public/assets/images/bubble-about-section.png";
 import Image from "next/image";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const quickCardData = [
-  { statistic: "+200", description: "Completed projects" },
-  { statistic: "+10", description: "Years of experience" },
-  { statistic: "10K", description: "User reviews" },
-  { statistic: "+20", description: "Team members" },
+  { statistic: "+200", description: "AboutUs quickcard-1" },
+  { statistic: "+10", description: "AboutUs quickcard-2" },
+  { statistic: "10K", description: "AboutUs quickcard-3" },
+  { statistic: "+20", description: "AboutUs quickcard-4" },
 ];
 
 const AboutSection = () => {
+  const t = useTranslations("Shared");
   return (
     <FadeIn
       className="container mt-[100px] flex flex-col justify-between gap-[40px] max-lg:text-center lg:mt-[150px] lg:flex-row
@@ -26,25 +28,21 @@ const AboutSection = () => {
         />
       </div>
       <div className="w-full max-lg:mx-auto lg:w-1/2">
-        <p className="category-text">03- ABOUT US</p>
+        <p className="category-text">{t("AboutUs category-1")}</p>
         <h4
           className="mt-[14px] w-11/12 text-[24px] leading-[1.4] tracking-[0.02em] max-lg:mx-auto md:mt-[16px]
         md:text-[32px] lg:mt-[20px] lg:text-[48px]"
         >
-          We Strive To Innovate
+          {t("AboutUs heading-1")}
         </h4>
         <p
           className="mt-[12px] text-[15px] leading-[1.666] text-text max-lg:mx-auto sm:w-[80%] md:mt-[14px]
           lg:mt-[18px] lg:text-[18px]"
         >
-          We are a hyper-creative collective with multifaceted experience
-          partnering exclusively with the ambitiously bold. We craft custom
-          brands, websites and Apps for companies who dare to be different. We
-          embody our values and design using our tried and tested approach to
-          deliver truly magnetic and disruptive design.
+          {t("AboutUs text-1")}
         </p>
         <div className="group mt-[20px] flex items-center max-lg:justify-center md:mt-[24px] lg:mt-[32px]">
-          <Button to="/about">More about us</Button>
+          <Button to="/about">{t("AboutUs button-1")}</Button>
           <Button to="/about" className="px-[21px]">
             <Icon icon={IconType.ARROW} />
           </Button>
@@ -54,7 +52,7 @@ const AboutSection = () => {
             <QuickCard
               key={index}
               statistic={card.statistic}
-              description={card.description}
+              description={t(card.description)}
             />
           ))}
         </div>
