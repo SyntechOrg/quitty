@@ -46,7 +46,7 @@ export const projects: Array<Project> = [
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
-    release: ["2024", "2024"],
+    release: ["May", "2024"],
     mainChallenge: {
       title: "Crafting a Standout Webshop in a Competitive Market",
       description:
