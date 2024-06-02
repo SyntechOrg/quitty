@@ -72,7 +72,7 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
 
   useEffect(() => {
     let shuffledProjects = projectData.filter(
-      (project) => project.slug !== slug
+      (project) => project.slug !== slug,
     );
 
     if (random) {
@@ -91,8 +91,8 @@ const AllProjects: FC<AllProjectsProps> = ({ itemsToShow, random, slug }) => {
       className="container mt-[40px] grid grid-cols-auto-fit gap-x-5 gap-y-10 md:grid-cols-auto-fit-lg
           lg:mt-[100px] lg:gap-y-[50px]"
     >
-      {projectsToDisplay.map((project, index) => (
-        <ProjectCard key={project.slug} {...project} index={index} />
+      {projectsToDisplay.map((project) => (
+        <ProjectCard key={project.slug} {...project} />
       ))}
     </FadeIn>
   );
@@ -107,6 +107,7 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
   const t = useTranslations("Shared");
+
   return (
     <FadeIn className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
       <div>

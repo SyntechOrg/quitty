@@ -3,30 +3,21 @@ import Image, { StaticImageData } from "next/image";
 import { Icon, IconType } from "@/components/shared";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import {useLocale} from "use-intl";
 
 interface ProjectCardProps {
   image: StaticImageData;
   title: string;
   year: string;
   slug: string;
-  index: number;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({
-  image,
-  title,
-  year,
-  slug,
-  index,
-}) => {
-  const animationDelay = (index * 100).toString();
-  const t = useTranslations("Shared");
-  
+const ProjectCard: FC<ProjectCardProps> = ({ image, title, year, slug }) => {
+  const localActive = useLocale();
+
   return (
     <Link
-      data-aos="fade-up"
-      data-aos-delay={animationDelay}
-      href="" // href={`/projects/${slug}`}
+      href={`/${localActive}/projects/${slug}`}
       className="mx-auto w-full max-w-[410px] transform overflow-clip rounded-[30px] border border-gray
       transition-all duration-300 ease-in-out hover:-translate-y-5 hover:scale-105 active:opacity-75"
     >

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 
 const AboutHeroSection = () => {
   const t = useTranslations("About Us");
+
   return (
     <FadeIn className="relative mx-auto w-full max-w-[1920px]">
       <video
@@ -15,7 +16,6 @@ const AboutHeroSection = () => {
         disablePictureInPicture
         disableRemotePlayback
         controls={false}
-
       />
       <div
         data-aos="fade-up"
@@ -29,7 +29,7 @@ const AboutHeroSection = () => {
             {t("About first-title")}
           </h1>
           <p className="mt-6 leading-[1.666] tracking-[0.02em] max-sm:text-[15px] lg:mt-8 lg:text-[18px]">
-           {t("About first-text-2")}
+            {t("About first-text-2")}
           </p>
         </div>
       </div>
