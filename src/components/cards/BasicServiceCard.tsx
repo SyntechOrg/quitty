@@ -18,12 +18,10 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
   description,
   image,
   categories,
-  
 }) => {
-const t = useTranslations("Shared");
+  const t = useTranslations("Shared");
   return (
     <div
-    
       // data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
       data-aos="fade-up"
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
@@ -31,16 +29,14 @@ const t = useTranslations("Shared");
     >
       <div className="mx-auto w-11/12 max-sm:text-center lg:w-[55%]">
         <h4 className="text-[24px] leading-[1.16] md:text-[36px] lg:text-[48px]">
-          
           {title.map((title, index) => (
             <span key={index}>
               {t(title)}
-              
+
               {index !== title.length - 1 && (
                 <>
                   <br />
                 </>
-                
               )}
             </span>
           ))}
@@ -76,7 +72,6 @@ const t = useTranslations("Shared");
         </div>
       </div>
     </div>
-    
   );
 };
 
