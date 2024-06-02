@@ -87,21 +87,18 @@
     "Services FAQ-a1-1": "Marken müssen mit der Zeit gehen. Eine progressive Corporate Identity schafft die Balance zwischen frischem Design und dem bewahrten Markenkern. Ein wahrer Drahtseilakt des Designs.",
     "Services FAQ-a1-2": "Optimieren Sie Ihre E-Commerce-Abläufe mit unseren maßgeschneiderten Softwarelösungen, kompatibel mit Plattformen wie Shopify, Shopware und WooCommerce. Von der sicheren Zahlungsabwicklung bis zum reibungslosen Produktmanagement unterstützt unsere Software Ihren Online-Shop. Vertrauen Sie auf unsere Expertise, um Ihr E-Commerce-Geschäft auf die nächste Stufe zu bringen!",
     "Services FAQ-a1-3": "Optimieren Sie Ihre Geschäftsprozesse mit unseren massgeschneiderten Softwarelösungen. Von der sicheren Zahlungsabwicklung bis zum umfassenden Produktmanagement unterstützt unsere Software den reibungslosen Betrieb Ihrer Website, sei es ein Online-Shop oder eine allgemeine Website. Vertrauen Sie auf unsere Erfahrung und bringen Sie Ihr Unternehmen auf die nächste Stufe!",
-
     "Services FAQ-q2-1": "Benutzerzentriertes Design",
     "Services FAQ-q2-2": "Leistung und Reaktionsfähigkeit",
     "Services FAQ-q2-3": "Sicherheit und Datenschutz",
     "Services FAQ-a2-1": "Intuitive UI/UX: Schaffe eine nahtlose und intuitive Benutzeroberfläche mit leichter Navigation, angepasst an Android- und iOS-Richtlinien. Plattformspezifische Funktionen: Nutze Material Design und Human Interface Guidelines. Barrierefreiheit: Berücksichtige Zugänglichkeit für Nutzer mit Behinderungen.",
     "Services FAQ-a2-2": "Leistung und Reaktionsfähigkeit: Optimierung: Optimiere die App für schnelle Ladezeiten, reibungslose Leistung und minimalen Ressourcenverbrauch auf Android- und iOS-Geräten.",
     "Services FAQ-a2-3": "Sicherheit und Datenschutz: Starke Protokolle zum Schutz von Benutzerdaten, Einhaltung von Datenschutzbestimmungen und regelmäßige Updates für Vertrauen und Integrität.",
-
     "Services FAQ-q3-1": "Logo",
     "Services FAQ-q3-2": "Markenidentität",
     "Services FAQ-q3-3": "Klarheit und Relevanz",
     "Services FAQ-a3-1": "Wir analysieren das Wesen einer Marke. In Kombination mit unserer klaren Sprache und unserer Affinität für Zeitgeist und Designs arbeiten wir am Markenzeichen - dem Logo.",
     "Services FAQ-a3-2": "Visuelle Elemente: Einheitliche Verwendung von Farben, Schriftarten und Logos zur Markenwiedererkennung. Ton und Sprache: Einheitlicher Ton und Sprache zur Vermittlung der Markenpersönlichkeit. Benutzererfahrung: Schaffung einer einprägsamen Nutzererfahrung, die die Markenwerte widerspiegelt.",
     "Services FAQ-a3-3": "Klare, unterstützende Grafiken, die zum Markenstil passen und die Einzigartigkeit mit benutzerdefinierten Illustrationen hervorheben.",
-
     "Services FAQ-q4-1": "Marketing-Automatisierung",
     "Services FAQ-q4-2": "Gezielte Kampagnen",
     "Services FAQ-q4-3": "Monitoring",
@@ -110,31 +107,52 @@
     "Services FAQ-a4-3": "Überwachung: Social Listening, Benachrichtigungen. Engagement: Schnelle Antworten, Negativität ansprechen, Positivität fördern. Transparenz: Ehrlichkeit, Konsistenz. Management: Content-Strategie, SEO, Krisenplan."
   },
   "Contact": {
-      "Contact first-text": "Kontakt aufnehmen",
-      "Contact first-title": "Gemeinsam etwas Besonderes schaffen...",
-      "Contact first-list-text": "Haben Sie ein Projekt oder wollen Sie reden? Hier finden Sie ein paar bequeme Möglichkeiten, uns zu erreichen.",
-      "Contact phone-number": "TELEFON",
-      "Contact email": "E-MAIL ADRESSE",
-      "Contact address": "ADRESSE",
-      "Contact form-t-1": "Hallo, ich bin",
-      "Contact form-t-2": "Ich suche Hilfe bei ...",
-      "Contact form-s-1": "Informationelles Web",
-      "Contact form-s-2": "Web- Applikation",
-      "Contact form-s-3": "Online-Shop",
-      "Contact form-s-4": "Markenidentität",
-      "Contact form-s-5": "Soziale Medien",
-      "Contact form-b-1": "bis zu CHF 5'000",
-      "Contact form-b-2": "CHF 5'000 -  CHF 10'000",
-      "Contact form-b-3": "CHF 10'000 - CHF 20'000",
-      "Contact form-b-4": "CHF 20'000 - CHF 50'000",
-      "Contact form-b-5": "mehr als CHF 50'000",
-      "Contact form-t-3": "Mein Budget ist",
-      "Contact form-t-4": "Bitte kontaktieren Sie mich unter",
-      "Contact form-t-5": "Meine Telefonnummer",
-      "Contact form-t-6": "Beschreibung des Projekts",
-      "Contact form-t-7": "Details zum Projekt",
-      "Contact form-bt-1": "Senden",
-      "EmailSuccessMessage": "Email gesendet erfolgreich.",
-      "EmailErrorMessage": "Email konnte nicht gesendet werden."
+    "Contact first-text": "Kontakt aufnehmen",
+    "Contact first-title": "Gemeinsam etwas Besonderes schaffen...",
+    "Contact first-list-text": "Haben Sie ein Projekt oder wollen Sie reden? Hier finden Sie ein paar bequeme Möglichkeiten, uns zu erreichen.",
+    "Contact phone-number": "TELEFON",
+    "Contact email": "E-MAIL ADRESSE",
+    "Contact address": "ADRESSE",
+    "Contact form-t-1": "Hallo, ich bin",
+    "Contact form-t-2": "Ich suche Hilfe bei ...",
+    "Contact form-s-1": "Informationelles Web",
+    "Contact form-s-2": "Web- Applikation",
+    "Contact form-s-3": "Online-Shop",
+    "Contact form-s-4": "Markenidentität",
+    "Contact form-s-5": "Soziale Medien",
+    "Contact form-b-1": "bis zu CHF 5'000",
+    "Contact form-b-2": "CHF 5'000 -  CHF 10'000",
+    "Contact form-b-3": "CHF 10'000 - CHF 20'000",
+    "Contact form-b-4": "CHF 20'000 - CHF 50'000",
+    "Contact form-b-5": "mehr als CHF 50'000",
+    "Contact form-t-3": "Mein Budget ist",
+    "Contact form-t-4": "Bitte kontaktieren Sie mich unter",
+    "Contact form-t-5": "Meine Telefonnummer",
+    "Contact form-t-6": "Beschreibung des Projekts",
+    "Contact form-t-7": "Details zum Projekt",
+    "Contact form-bt-1": "Senden",
+    "EmailSuccessMessage": "Email gesendet erfolgreich.",
+    "EmailErrorMessage": "Email konnte nicht gesendet werden."
+  },
+  "StepCards": {
+    "ProcessHeader": {
+      "Title": "So funktioniert es: Prozess"
+    },
+    "Card1": {
+      "Title": "Überprüfung",
+      "Description": "In unserem ersten Treffen erkunden wir Ihre Ideen, lernen Ihr Unternehmen kennen und wie wir Sie voranbringen können. Dies markiert den Beginn der Umsetzung Ihrer Ideen. Ob Sie eine App, ein CRM- oder ERP-System benötigen oder Ihr Geschäft mit einer Website oder Social Media ausbauen möchten, Syntech Solutions AG bietet massgeschneiderte Lösungen für Ihre Bedürfnisse. Wir sind darauf spezialisiert, die beste Lösung für Ihr Unternehmen zu finden, die einzigartig ist."
+    },
+    "Card2": {
+      "Title": "Planung",
+      "Description": "Erfolg beginnt mit einem soliden Plan. Deshalb stürzen wir uns nicht kopflos ins Geschehen - wir planen sorgfältig. Jedes Projekt beginnt mit einer gründlichen Planung. Wir identifizieren potenzielle Herausforderungen und Chancen und nutzen unsere Expertise, um uns zu orientieren. Durch Forschung und Analyse decken wir Einblicke und Trends auf und arbeiten eng mit Ihnen zusammen, um unseren Ansatz zu verfeinern."
+    },
+    "Card3": {
+      "Title": "Kreation",
+      "Description": "Der kreative Prozess ist der spannende Teil. Hier ist alles möglich! Wir skizzieren verschiedene Ideen und geben Ihnen einen Einblick in die Möglichkeiten. Nachdem wir Ihr Feedback erhalten haben, verfeinern und entwickeln wir die ausgewählten Richtungen zu greifbaren Designs."
+    },
+    "Card4": {
+      "Title": "Umsetzung",
+      "Description": "Ihre Meinung ist entscheidend, während wir die Website an Ihre Bedürfnisse anpassen. Sobald Sie zufrieden sind, optimieren und starten wir die Website, in dem Wissen, dass sie bereit ist. Und denken Sie daran, wir sind immer für Sie da, um bei Änderungen oder Unterstützung entlang des Weges zu helfen"
     }
+  }
 }

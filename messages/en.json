@@ -19,7 +19,7 @@
     "Service card-title-1": "Web Design",
     "Service card-title-1-1": "& Development",
     "Service card-title-2": "Mobile",
-    "Service card-title-2-1":"App",
+    "Service card-title-2-1": "App",
     "Service card-title-3": "Brand",
     "Service card-title-3-1": "Identity",
     "Service card-title-4": "Digital",
@@ -87,21 +87,18 @@
     "Services FAQ-a1-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design..",
     "Services FAQ-a1-2": "Elevate your e-commerce operations with our tailored software solutions, compatible with platforms like Shopify, Shopware, and WooCommerce. From secure payment processing to streamlined product management, trust our expertise to optimize your online store's functionality and take it to the next level!",
     "Services FAQ-a1-3": "Optimize your business processes with our customized software solutions. From secure payment processing to comprehensive product management, our software supports the smooth operation of your website, whether it's an online store or a general website. Trust our expertise to take your business to the next level!",
-
     "Services FAQ-q2-1": "User-Centric Design",
     "Services FAQ-q2-2": "Performance and Responsiveness",
     "Services FAQ-q2-3": "Security and Data Privacy",
     "Services FAQ-a2-1": "Intuitive UI/UX: Create seamless, intuitive interfaces with easy navigation following Android and iOS guidelines. Platform-Specific Features: Utilize Material Design and Human Interface Guidelines. Accessibility: Ensure inclusivity for users with disabilities.",
     "Services FAQ-a2-2": "Performance and Responsiveness: Optimization: Optimize app for fast load times, smooth performance, and minimal resource consumption on Android and iOS.",
     "Services FAQ-a2-3": "Security and Data Privacy: Robust measures: Strong security protocols protect user data, comply with regulations, and ensure regular updates for integrity.",
-
     "Services FAQ-q3-1": "Logo",
     "Services FAQ-q3-2": "Visual Elements",
     "Services FAQ-q3-3": "Clarity and Relevance",
     "Services FAQ-a3-1": "We analyze the essence of a brand. Combined with our straightforward language and affinity for zeitgeist and designs, we tinker on the hallmark - the logo.",
     "Services FAQ-a3-2": "Visual Elements: Use consistent colors, fonts, and logos for brand recognition.Tone and Language: Maintain a uniform tone and language to convey brand personality. User Experience: Create a memorable user experience reflecting brand values.",
     "Services FAQ-a3-3": "Clarity and Relevance: Use clear, supportive graphics. Brand Cohesion: Ensure graphics align with brand style. Customization: Highlight uniqueness with custom illustrations.",
-
     "Services FAQ-q4-1": "Marketing Automation",
     "Services FAQ-q4-2": "Targeted Campaigns",
     "Services FAQ-q4-3": "Monitoring",
@@ -136,5 +133,26 @@
     "Contact form-bt-1": "Send",
     "EmailSuccessMessage": "Email sent successfully.",
     "EmailErrorMessage": "Email could not be sent."
+  },
+  "StepCards": {
+    "ProcessHeader": {
+      "Title": "How it works: Process"
+    },
+    "Card1": {
+      "Title": "Assessment:",
+      "Description": "In our first meeting, we explore your ideas, getting to know your business and how we can help you move forward. This marks the start of turning your ideas into reality. Whether you need an App, a CRM or ERP system, or want to boost your business with a website or social media, Syntech Solutions AG offers all-in-one solutions tailored to your needs. We're dedicated to finding the best solution for your business, ensuring it's unique to you."
+    },
+    "Card2": {
+      "Title": "Planning:",
+      "Description": "Success starts with a solid plan. That's why we don't just jump into things – we strategize first. Each project begins with careful planning. We identify potential challenges and opportunities, using our expertise to guide us. Through research and analysis, we uncover insights and trends, working closely with you to refine our approach."
+    },
+    "Card3": {
+      "Title": "Creation:",
+      "Description": "The creative process is where things get exciting. Here, anything is possible! We sketch out different ideas, giving you a glimpse of what's possible. After gathering your feedback, we refine and develop the chosen directions into tangible designs."
+    },
+    "Card4": {
+      "Title": "Execution:",
+      "Description": "Your input is key as we fine-tune the website to meet your needs. Once you're happy, we optimize and launch the website, confident it's ready to go. And remember, we're always here to help with any changes or support you may need along"
+    }
   }
 }
