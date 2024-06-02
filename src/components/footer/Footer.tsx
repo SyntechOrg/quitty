@@ -130,21 +130,20 @@ export const Footer = () => {
           <div className="py-[90px] lg:pl-[34px]">
             <p className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
               <Icon icon={IconType.DIAMOND} />
-              <span>STAY IN THE LOOP</span>
+              <span>{t("Footer info").toUpperCase()}</span>
             </p>
             <p className="text-sm font-light leading-[70px] text-text">
-              Subscribe to our newsletter
+              {t("Footer number")}
             </p>
-            <div className="flex w-full items-center border-b border-b-[#35353C] p-1 pl-4">
-              <input
-                type="text"
-                className="bg-transparent text-text focus:outline-none"
-                placeholder="Enter your e-mail"
-              />
-              <Button className="ml-auto">
-                <Icon icon={IconType.ARROW} />
-              </Button>
-            </div>
+            <a href="tel:+383 49 799 829" className="text-md font-bold leading-[20px] text-text">
+            +383 49 799 829
+            </a>
+            <p className="text-sm font-light leading-[70px] text-text">
+              {t("Footer address")}
+            </p>
+            <a href="mailto:info@syn-tech.ch" className="text-mds font-bold leading-[20px] text-text">
+            info@syn-tech.ch
+            </a>
           </div>
         </div>
       </div>
