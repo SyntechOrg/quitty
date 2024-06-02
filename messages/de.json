@@ -46,8 +46,14 @@
     "Footer sitemap-text-2": "Portfolio",
     "Footer sitemap-text-3": "Dienstleistungen",
     "Footer sitemap-text-4": "Kontakt",
-    "Footer follow-us": "FOLGEN SIE UNS",
-    "Footer terms": "AGB's"
+    "Footer legal": "RECHTLICHES",
+    "Footer sitemap": "SEITENVERZEICHNIS",
+    "Footer terms": "AGB's",
+    "Footer privacy-p": "Datenschutz",
+    "Footer cookies": "Cookies",
+    "Footer rights": "Alle Rechte vorbehalten",
+    "Footer impressum": "Impressum"
+    
   },
   "About Us": {
     "About first-text": "Wenn Innovation auf Kreativität trifft",
