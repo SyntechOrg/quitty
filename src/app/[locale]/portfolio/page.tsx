@@ -9,9 +9,8 @@ const PortfolioPage: FC = () => {
   return (
     <div>
       <SecondaryHeroSection
-        title="We choose a different → starting point"
-        text="Every project is a chance to try something new. Look at something with a fresh perspective.
-      Do something for the first time."
+        title={"Portfolio.Portfolio first-title"}
+        text={"Portfolio.Portfolio first-text"}
       />
       <AllProjectsHeader disableButton />
       <AllProjects />

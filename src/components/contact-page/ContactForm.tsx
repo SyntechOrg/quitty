@@ -8,21 +8,22 @@ import { SelectField } from "../shared/select/Select";
 import { Button } from "@/components/shared";
 import { toast } from "react-toastify";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const SERVICE_OPTIONS = [
-  "Informational Web",
-  "Web Application",
-  "Shop Online Web",
-  "Brand Identity",
-  "Social Media",
+  "Contact form-s-1",
+  "Contact form-s-2",
+  "Contact form-s-3",
+  "Contact form-s-4",
+  "Contact form-s-5",
 ];
 
 const BUDGET_OPTIONS = [
-  "up to CHF 5,000",
-  "CHF 5,000 - CHF 10,000",
-  "CHF 10,000 - CHF 20,000",
-  "CHF 20,000 - CHF 50,000",
-  "more than CHF 50,000",
+  "Contact form-b-1",
+  "Contact form-b-2",
+  "Contact form-b-3",
+  "Contact form-b-4",
+  "Contact form-b-5",
 ];
 
 const schema = z.object({
@@ -30,21 +31,21 @@ const schema = z.object({
   lastName: z.string().min(1, "Last name is required"),
   serviceType: z
     .enum([
-      "Informational Web",
-      "Web Application",
-      "Shop Online Web",
-      "Brand Identity",
-      "Social Media",
+      "Contact form-s-1",
+      "Contact form-s-2",
+      "Contact form-s-3",
+      "Contact form-s-4",
+      "Contact form-s-5",
     ])
     .refine((value) => {
       return SERVICE_OPTIONS.includes(value);
     }),
   budget: z.enum([
-    "up to CHF 5,000",
-    "CHF 5,000 - CHF 10,000",
-    "CHF 10,000 - CHF 20,000",
-    "CHF 20,000 - CHF 50,000",
-    "more than CHF 50,000",
+    "Contact form-b-1",
+    "Contact form-b-2",
+    "Contact form-b-3",
+    "Contact form-b-4",
+    "Contact form-b-5",
   ]),
   email: z.string().email("Invalid email address"),
   phoneNumber: z.string().min(1, "Phone number is required"),
@@ -54,6 +55,7 @@ const schema = z.object({
 type FormType = z.infer<typeof schema>;
 
 export const ContactForm: FC = () => {
+  const t = useTranslations("Contact");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formMethods = useForm<FormType>({
     resolver: zodResolver(schema),
@@ -62,22 +64,32 @@ export const ContactForm: FC = () => {
   const onSubmit = async (data: FormType) => {
     setIsSubmitting(true);
     try {
+      const payload = JSON.stringify({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        serviceType: t(data.serviceType),
+        budget: t(data.budget),
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+        projectDescription: data.projectDescription,
+      });
+
       const response = await fetch("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: payload,
       });
 
       if (response.ok) {
-        toast.success("Email sent");
+        toast.success(t("EmailSuccessMessage"));
       }
 
       formMethods.reset();
     } catch (error) {
       console.error("Error sending email", error);
-      toast.error("Error sending email");
+      toast.error(t("EmailErrorMessage"));
     } finally {
       formMethods.reset();
       setIsSubmitting(false);
@@ -91,7 +103,7 @@ export const ContactForm: FC = () => {
         onSubmit={formMethods.handleSubmit(onSubmit)}
       >
         <div>
-          <p className="pl-[18px] text-lg">Hello, I am</p>
+          <p className="pl-[18px] text-lg">{t("Contact form-t-1")}</p>
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="firstName"
@@ -108,7 +120,7 @@ export const ContactForm: FC = () => {
           </div>
         </div>
         <div>
-          <p className="pl-[18px] text-lg">I am looking for help with a...</p>
+          <p className="pl-[18px] text-lg">{t("Contact form-t-2")}</p>
           <div className="mt-[30px] flex flex-col gap-[70px] lg:flex-row">
             <SelectField
               name="serviceType"
@@ -119,7 +131,7 @@ export const ContactForm: FC = () => {
           </div>
         </div>
         <div>
-          <p className="pl-[18px] text-lg">My Budget is</p>
+          <p className="pl-[18px] text-lg">{t("Contact form-t-3")}</p>
           <div className="mt-[30px] flex flex-col gap-[70px] lg:flex-row">
             <SelectField
               name="budget"
@@ -131,13 +143,13 @@ export const ContactForm: FC = () => {
         </div>
         <div>
           <div className="hidden justify-evenly gap-[70px] text-left lg:flex">
-            <p className="w-full pl-[18px] text-lg">Please contact me at</p>
-            <p className="w-full pl-[18px] text-lg">My phone number</p>
+            <p className="w-full pl-[18px] text-lg">{t("Contact form-t-4")}</p>
+            <p className="w-full pl-[18px] text-lg">{t("Contact form-t-5")}</p>
           </div>
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <div className="w-full">
               <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
-                Please contact me at
+                {t("Contact form-t-4")}
               </p>
               <InputField
                 name="email"
@@ -148,7 +160,7 @@ export const ContactForm: FC = () => {
             </div>
             <div className="w-full">
               <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
-                My phone number
+                {t("Contact form-t-5")}
               </p>
               <InputField
                 name="phoneNumber"
@@ -160,11 +172,11 @@ export const ContactForm: FC = () => {
           </div>
         </div>
         <div>
-          <p className="w-full pl-[18px] text-lg">Description of Project</p>
+          <p className="w-full pl-[18px] text-lg">{t("Contact form-t-6")}</p>
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="projectDescription"
-              placeholder="Project Details"
+              placeholder={t("Contact form-t-7")}
               error={formMethods.formState.errors.projectDescription}
               register={formMethods.register}
             />
@@ -176,7 +188,7 @@ export const ContactForm: FC = () => {
           className="max-w-[180px] rounded-2xl"
           disabled={isSubmitting}
         >
-          <span className="text-sm">SEND</span>
+          <span className="text-sm">{t("Contact form-bt-1")}</span>
         </Button>
       </form>
     </FadeIn>

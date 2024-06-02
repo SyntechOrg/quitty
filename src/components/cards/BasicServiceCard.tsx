@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
+import { useTranslations } from "next-intl";
 
 interface BasicServiceCardProps {
-  id: number;
   title: string[];
   description: string;
   image: StaticImageData;
@@ -12,16 +12,15 @@ interface BasicServiceCardProps {
 }
 
 const BasicServiceCard: FC<BasicServiceCardProps> = ({
-  id,
   title,
   description,
   image,
   categories,
 }) => {
+  const t = useTranslations("Shared");
+
   return (
     <div
-      // data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
-      data-aos="fade-up"
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
       bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >
@@ -29,7 +28,8 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
         <h4 className="text-[24px] leading-[1.16] md:text-[36px] lg:text-[48px]">
           {title.map((title, index) => (
             <span key={index}>
-              {title}
+              {t(title)}
+
               {index !== title.length - 1 && (
                 <>
                   <br />
@@ -62,7 +62,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to="/portfolio">Read More</Button>
+          <Button to="/portfolio">{t("Service card-button-1")}</Button>
           <Button to="/portfolio">
             <Icon icon={IconType.ARROW} />
           </Button>

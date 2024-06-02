@@ -3,43 +3,33 @@ import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import InformativeCard from "@/components/cards/InformativeCard";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const cards = [
   {
     increment: "01",
-    title: "Innovative Solutions",
-    description:
-      "As visionaries and digital artisans, we specialize in crafting innovative solutions tailored to your unique " +
-      "needs and goals. Leveraging cutting-edge technologies and creative thinking, we develop bespoke strategies and digital " +
-      "products that set you apart from the competition and drive tangible results.",
+    title: "About card-title-1",
+    description: "About card-description-1",
   },
   {
     increment: "02",
-    title: "Strategic Partnerships",
-    description:
-      "We believe in building lasting partnerships based on trust and collaboration, working hand in hand to achieve success " +
-      "together. By deeply understanding your business objectives and challenges, we align our strategies and efforts with " +
-      "your long-term goals, ensuring mutual growth and prosperity.",
+    title: "About card-title-2",
+    description: "About card-description-2",
   },
   {
     increment: "03",
-    title: "Boundary-Pushing Collaboration",
-    description:
-      "Our team thrives on collaboration, pushing boundaries to deliver impactful digital experiences that exceed expectations. " +
-      "Through seamless communication and synergy, we harness the collective expertise of our team to tackle complex challenges " +
-      "and innovate at every turn, delivering solutions that make a meaningful difference.",
+    title: "About card-title-3",
+    description: "About card-description-3",
   },
   {
     increment: "04",
-    title: "Trusted Allies",
-    description:
-      "We're more than just a team – we're your trusted allies in the digital realm, dedicated to your success every step of " +
-      "the way. With a commitment to transparency, reliability, and excellence, we strive to be your go-to partner for all your digital needs, " +
-      "providing unwavering support and guidance to help you navigate the ever-evolving digital landscape.",
+    title: "About card-title-4",
+    description: "About card-description-4",
   },
 ];
 
 const WhatWeDoSection = () => {
+  const t = useTranslations("About Us");
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -55,7 +45,7 @@ const WhatWeDoSection = () => {
       >
         <div className="relative top-[12vh] flex  max-lg:mx-auto max-lg:text-center  lg:sticky lg:top-0 lg:h-screen lg:items-center lg:justify-end">
           <p className="w-[220px] text-[28px] leading-[1.5] tracking-[0.02em] lg:text-[38px]">
-            What we can do
+            {t("About second-title")}
           </p>
         </div>
         <div
@@ -67,8 +57,8 @@ const WhatWeDoSection = () => {
               <InformativeCard
                 key={card.increment}
                 increment={card.increment}
-                title={card.title}
-                description={card.description}
+                title={t(card.title)}
+                description={t(card.description)}
               />
             ))}
           </motion.div>

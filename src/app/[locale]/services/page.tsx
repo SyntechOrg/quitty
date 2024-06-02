@@ -7,126 +7,89 @@ import BrandIdentityImage from "../../../../public/assets/images/brand-identity-
 import DigitalMarketingImage from "../../../../public/assets/images/digital-marketing-service-image.png";
 import ServiceCard from "@/components/sections/ServiceCard";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const services = [
   {
     id: 1,
-    title: ["Web Design", " & Development"],
-    description: [
-      "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of " +
-        "your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of " +
-        "a seamless online presence.",
-      "In our approach to web design and development, we seamlessly blend creativity with functionality to create digital " +
-        "experiences that resonate with your audience and drive tangible results. From conceptualization to execution, " +
-        "we prioritize the user journey, ensuring intuitive navigation and engaging interactions at every touchpoint.",
-    ],
+    title: ["Service card-title-1", "Service card-title-1-1"],
+    description: ["Service card-description-1", "Service card-description-1-1"],
     image: WebDevImage,
     FAQ: [
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q1-1",
+        answer: "Services FAQ-a1-1",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q1-2",
+        answer: "Services FAQ-a1-1",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q1-3",
+        answer: "Services FAQ-a1-3",
       },
     ],
     href: "/some-href",
   },
   {
     id: 2,
-    title: ["Mobile", "APP"],
-    description: [
-      "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design " +
-        "architecture and create bespoke native applications for Apple iOS and Google Android.",
-      "Our team combines technical expertise with creative innovation to craft mobile apps that deliver seamless user experiences " +
-        "and drive engagement. Whether you're targeting the iOS or Android market, we ensure that your app stands out with intuitive design, " +
-        "robust functionality, and optimal performance.",
-    ],
+    title: ["Service card-title-2", "Service card-title-2-1"],
+    description: ["Service card-description-2", "Service card-description-2-1"],
     image: MobileAppImage,
     FAQ: [
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q2-1",
+        answer: "Services FAQ-a2-1",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q2-2",
+        answer: "Services FAQ-a2-2",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q2-3",
+        answer: "Services FAQ-a2-3",
       },
     ],
     href: "/some-href",
   },
   {
     id: 3,
-    title: ["Brand", "Identity"],
-    description: [
-      "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, " +
-        "values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
-      "At our agency, we understand the importance of crafting a brand identity that resonates with your target audience and " +
-        "sets you apart from competitors. Our approach involves defining a brand's personality, values, and visual elements, " +
-        "such as logos and color schemes, to leave a lasting impression on the audience.",
-    ],
+    title: ["Service card-title-3", "Service card-title-3-1"],
+    description: ["Service card-description-3"],
     image: BrandIdentityImage,
     FAQ: [
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q3-1",
+        answer: "Services FAQ-a3-1",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q3-2",
+        answer: "Services FAQ-a3-2",
       },
       {
-        question: "Portfolio",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q3-3",
+        answer: "Services FAQ-a3-3",
       },
     ],
     href: "/some-href",
   },
   {
     id: 4,
-    title: ["Digital", "Marketing"],
-    description: [
-      "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and " +
-        "engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), " +
-        "social media marketing, content creation, email campaigns, and more.",
-      "At our agency, we understand the nuances of digital marketing and tailor our approach to suit your unique goals and target " +
-        "audience. Whether you're looking to increase brand awareness, generate leads, or drive sales, we develop customized digital " +
-        "marketing strategies that deliver measurable results.",
-    ],
+    title: ["Service card-title-4", "Service card-title-4-1"],
+    description: ["Service card-description-4", "Service card-description-4-1"],
     image: DigitalMarketingImage,
     FAQ: [
       {
-        question: "Portfolio1",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q4-1",
+        answer: "Services FAQ-a4-1",
       },
       {
-        question: "Portfolio2",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q4-2",
+        answer: "Services FAQ-a4-2",
       },
       {
-        question: "Portfolio3",
-        answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        question: "Services FAQ-q4-3",
+        answer: "Services FAQ-a4-3",
       },
     ],
     href: "/some-href",
@@ -134,17 +97,19 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const t = useTranslations("Services");
   return (
     <div>
       <SecondaryHeroSection
-        title="Expertise"
-        text="Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands,
-         redesigning websites, building web applications, and delivering e-commerce solutions."
+        title={"Services.Services first-title"}
+        text={"Services.Services first-text"}
       />
-      <FadeIn className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
-        <h2 className="category-text text-center lg:text-[22px]">
-          WE ARE EXPERTS IN
-        </h2>
+      <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
+        <FadeIn>
+          <h2 className="category-text text-center lg:text-[22px]">
+            {t("Services second-title")}
+          </h2>
+        </FadeIn>
         <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
           {services.map((service) => (
             <ServiceCard
@@ -158,7 +123,7 @@ const ServicesPage = () => {
             />
           ))}
         </div>
-      </FadeIn>
+      </div>
       <SocialMedia />
     </div>
   );

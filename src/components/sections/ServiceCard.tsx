@@ -10,6 +10,7 @@ import {
 } from "@/components/shared/accordion/Accordion";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 interface ServiceCardProps {
   id: number;
@@ -30,11 +31,11 @@ const ServiceCard: FC<ServiceCardProps> = ({
 }) => {
   const localActive = useLocale();
   // const t = useTranslations("Services");
+  const tt = useTranslations("Services");
+  const t = useTranslations("Shared");
 
   return (
-    <div
-      // data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
-      data-aos="fade-up"
+    <FadeIn
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border
       border-gray bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >
@@ -42,7 +43,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <h2 className="text-[24px] leading-[1.33] md:text-[36px] lg:min-h-[260px] lg:text-[50px]">
           {title.map((title, index) => (
             <span key={index}>
-              {title}
+              {t(title)}
               {index !== title.length - 1 && (
                 <>
                   <br />
@@ -54,7 +55,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[15px] md:mt-8 lg:mt-[40px]">
           {description.map((desc, index) => (
             <span key={index}>
-              {desc}
+              {tt(desc)}
               {index !== description.length - 1 && (
                 <>
                   <br />
@@ -81,7 +82,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
             className="group relative mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
             lg:top-[-20px]"
           >
-            <Button to={`/${localActive}/contact`}>Choose service</Button>
+            <Button to={`/${localActive}/contact`}>{t("Service card-button-1")}</Button>
             <Button to={`/${localActive}/contact`}>
               <Icon icon={IconType.ARROW} />
             </Button>
@@ -92,14 +93,14 @@ const ServiceCard: FC<ServiceCardProps> = ({
             {FAQ.map((faq, index) => (
               // eslint-disable-next-line react/jsx-key
               <AccordionItem value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionTrigger>{tt(faq.question)}</AccordionTrigger>
+                <AccordionContent>{tt(faq.answer)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

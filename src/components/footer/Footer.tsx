@@ -3,9 +3,18 @@ import React from "react";
 import { Button, Icon, IconType } from "../shared";
 import Link from "next/link";
 import { useLocale } from "use-intl";
+import { useTranslations } from "next-intl";
+
+const footerLinks = [
+  { text: "Footer sitemap-text-1", href: "about" },
+  { text: "Footer sitemap-text-2", href: "portfolio" },
+  { text: "Footer sitemap-text-3", href: "services" },
+  { text: "Footer sitemap-text-4", href: "contact" },
+];
 
 export const Footer = () => {
   const localActive = useLocale();
+  const t = useTranslations("Footer");
 
   return (
     <footer className="w-full pb-[26px] text-white lg:pb-[71px]">
@@ -13,11 +22,11 @@ export const Footer = () => {
         <div className="container flex flex-col justify-center lg:flex-row">
           <div className="py-[46px] lg:border-r lg:border-r-[#35353C] lg:px-0 lg:py-[90px]">
             <p className="max-w-[410px] text-[30px] leading-[45px] lg:text-[36px] lg:leading-[56px]">
-              Let’s talk about your Digital Experience
+              {t("Footer heading-1")}
             </p>
             <div className="mt-8 flex">
               <div className="group flex items-center">
-                <Button to="/contact">Get in Touch</Button>
+                <Button to="/contact">{t("Footer button-1")}</Button>
                 <Button to="/contact">
                   <Icon icon={IconType.ARROW} />
                 </Button>
@@ -30,10 +39,13 @@ export const Footer = () => {
                 <Icon icon={IconType.DIAMOND} />
                 <span>SITEMAP</span>
               </li>
-              {["About", "Portfolio", "Services", "Contact"].map((item) => (
-                <li key={item} className="mt-2 text-sm font-light text-text">
-                  <Link href={`/${localActive}/${item.toLowerCase()}`}>
-                    {item}
+              {footerLinks.map((item) => (
+                <li
+                  key={item.text}
+                  className="mt-2 text-sm font-light text-text"
+                >
+                  <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
+                    {t(item.text)}
                   </Link>
                 </li>
               ))}
@@ -41,7 +53,7 @@ export const Footer = () => {
             <ul className="flex flex-col gap-y-5">
               <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
                 <Icon icon={IconType.DIAMOND} />
-                <span>GET IN TOUCH</span>
+                <span>{t("Footer follow-us")}</span>
               </li>
               {["Instagram", "Facebook", "LinkedIn", "Tiktok"].map((item) => (
                 <li key={item} className="mt-2 text-sm font-light text-text">
@@ -88,14 +100,14 @@ export const Footer = () => {
         </div>
         <div className="hidden h-[1px] flex-1 bg-[#0000FF] lg:block"></div>
         <ul className="hidden gap-x-[40px] text-sm leading-[30px] lg:flex">
-          <li>Terms and Conditions</li>
+          <li>{t("Footer terms")}</li>
           <li>Impressum</li>
         </ul>
         <div className="mt-[30px] flex w-full items-center justify-between gap-x-[10px] text-[10px] lg:hidden">
           <span className="">© {new Date().getFullYear()}</span>
           <div className="h-[1px] flex-1 bg-[#0000FF]"></div>
           <ul className="flex gap-x-[16px]">
-            <li>Terms and Conditions</li>
+            <li>{t("Footer terms")}</li>
             <li>Impressum</li>
           </ul>
         </div>

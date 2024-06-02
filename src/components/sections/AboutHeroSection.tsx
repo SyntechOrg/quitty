@@ -1,7 +1,10 @@
 import React from "react";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const AboutHeroSection = () => {
+  const t = useTranslations("About Us");
+
   return (
     <FadeIn className="relative mx-auto w-full max-w-[1920px]">
       <video
@@ -13,7 +16,6 @@ const AboutHeroSection = () => {
         disablePictureInPicture
         disableRemotePlayback
         controls={false}
-
       />
       <div
         data-aos="fade-up"
@@ -21,18 +23,13 @@ const AboutHeroSection = () => {
       >
         <div className="w-full max-w-[520px] max-lg:mx-auto max-lg:text-center lg:w-1/2">
           <p className="category-text max-sm:text-[12px]">
-            WHERE INNOVATION MEETS CREATIVITY
+            {t("About first-text")}
           </p>
           <h1 className="mt-3 w-10/12 max-w-[500px] text-[30px] leading-[1.666] text-white max-lg:mx-auto lg:mt-4 lg:text-[52px] lg:leading-[1.16]">
-            We are more than just a team
+            {t("About first-title")}
           </h1>
           <p className="mt-6 leading-[1.666] tracking-[0.02em] max-sm:text-[15px] lg:mt-8 lg:text-[18px]">
-            We are visionaries, strategists, and digital artisans. At Syntech,
-            we believe in building lasting partnerships as innovative as the
-            solutions we create. Our team thrives on the synergy of
-            collaboration, pushing boundaries to deliver impactful digital
-            experiences. We are not just a team but your trusted allies in the
-            digital realm.
+            {t("About first-text-2")}
           </p>
         </div>
       </div>
