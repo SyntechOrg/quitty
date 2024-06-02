@@ -46,8 +46,16 @@
     "Footer sitemap-text-2": "Portfolio",
     "Footer sitemap-text-3": "Services",
     "Footer sitemap-text-4": "Contact",
-    "Footer follow-us": "FOLLOW US",
-    "Footer terms": "Terms and Conditions"
+    "Footer legal": "LEGAL",
+    "Footer sitemap": "SITEMAP",
+    "Footer terms": "Terms and Conditions",
+    "Footer privacy-p": "Privacy Policy",
+    "Footer cookies": "Cookies",
+    "Footer impressum": "Impressum",
+    "Footer rights": "All rights Reserved",
+    "Footer info": "Get in touch",
+    "Footer number": "Phone Number",
+    "Footer address": "E-mail Address"
   },
   "About Us": {
     "About first-text": "Where Innovation Meets Creativity",
