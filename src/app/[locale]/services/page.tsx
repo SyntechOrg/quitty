@@ -20,19 +20,19 @@ const services = [
     image: WebDevImage,
     FAQ: [
       {
-        question: "Portfolio",
+        question: "Services FAQ-q1-1",
         answer:
-        "Services FAQ-a-1",
+        "Services FAQ-a1-1",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q1-2",
         answer:
-        "Services FAQ-a-1",
+        "Services FAQ-a1-1",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q1-3",
         answer:
-        "Services FAQ-a-3",
+        "Services FAQ-a1-3",
       },
     ],
     href: "/some-href",
@@ -47,19 +47,19 @@ const services = [
     image: MobileAppImage,
     FAQ: [
       {
-        question: "Portfolio",
+        question: "Services FAQ-q2-1",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a2-1",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q2-2",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a2-2",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q2-3",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a2-3",
       },
     ],
     href: "/some-href",
@@ -73,19 +73,19 @@ const services = [
     image: BrandIdentityImage,
     FAQ: [
       {
-        question: "Portfolio",
+        question: "Services FAQ-q3-1",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+          "Services FAQ-a3-1",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q3-2",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+          "Services FAQ-a3-2",
       },
       {
-        question: "Portfolio",
+        question: "Services FAQ-q3-3",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+          "Services FAQ-a3-3",
       },
     ],
     href: "/some-href",
@@ -100,19 +100,19 @@ const services = [
     image: DigitalMarketingImage,
     FAQ: [
       {
-        question: "Portfolio1",
+        question: "Services FAQ-q4-1",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a4-1",
       },
       {
-        question: "Portfolio2",
+        question: "Services FAQ-q4-2",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a4-2",
       },
       {
-        question: "Portfolio3",
+        question: "Services FAQ-q4-3",
         answer:
-          "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+        "Services FAQ-a4-3",
       },
     ],
     href: "/some-href",

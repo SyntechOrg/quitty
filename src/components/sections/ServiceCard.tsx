@@ -83,7 +83,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
             className="group relative mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
             lg:top-[-20px]"
           >
-            <Button to={`/${localActive}/contact`}>Choose service</Button>
+            <Button to={`/${localActive}/contact`}>{t("Service card-button-1")}</Button>
             <Button to={`/${localActive}/contact`}>
               <Icon icon={IconType.ARROW} />
             </Button>
@@ -94,7 +94,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
             {FAQ.map((faq, index) => (
               // eslint-disable-next-line react/jsx-key
               <AccordionItem value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionTrigger>{tt(faq.question)}</AccordionTrigger>
                 <AccordionContent>{tt(faq.answer)}</AccordionContent>
               </AccordionItem>
             ))}

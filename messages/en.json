@@ -29,6 +29,7 @@
     "Serivce card-description-3": "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
     "Serivce card-description-4": "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), social media marketing, content creation, email campaigns, and more.",
     "Service card-button-1": "Choose Service",
+    "AboutUs category-1": "03- ABOUT US",
     "AboutUs heading-1": "We Strive to Innovate",
     "AboutUs text-1": "We are a hyper-creative collective with multifaceted experience partnering exclusively with the ambitiously bold. We craft custom brands, websites and Apps for companies who dare to be different. We embody our values and design using our tried and tested approach to deliver truly magnetic and disruptive design.",
     "AboutUs button-1": "More About Us",
@@ -84,8 +85,29 @@
     "Services FAQ-q1-2": "E-Commerce",
     "Services FAQ-q1-3": "Website",
     "Services FAQ-a1-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design..",
-    "Services FAQ-a1-2": "Expand your customer base and boost sales with our user-friendly online store. Benefit from efficient product and order management, offering a premium shopping experience. Start your successful e-commerce journey now!",
-    "Services FAQ-a1-3": "Optimize your business processes with our customized software solutions. From secure payment processing to comprehensive product management, our software supports the smooth operation of your website, whether it's an online store or a general website. Trust our expertise to take your business to the next level!"
+    "Services FAQ-a1-2": "Elevate your e-commerce operations with our tailored software solutions, compatible with platforms like Shopify, Shopware, and WooCommerce. From secure payment processing to streamlined product management, trust our expertise to optimize your online store's functionality and take it to the next level!",
+    "Services FAQ-a1-3": "Optimize your business processes with our customized software solutions. From secure payment processing to comprehensive product management, our software supports the smooth operation of your website, whether it's an online store or a general website. Trust our expertise to take your business to the next level!",
+
+    "Services FAQ-q2-1": "User-Centric Design",
+    "Services FAQ-q2-2": "Performance and Responsiveness",
+    "Services FAQ-q2-3": "Security and Data Privacy",
+    "Services FAQ-a2-1": "Intuitive UI/UX: Create seamless, intuitive interfaces with easy navigation following Android and iOS guidelines. Platform-Specific Features: Utilize Material Design and Human Interface Guidelines. Accessibility: Ensure inclusivity for users with disabilities.",
+    "Services FAQ-a2-2": "Performance and Responsiveness: Optimization: Optimize app for fast load times, smooth performance, and minimal resource consumption on Android and iOS.",
+    "Services FAQ-a2-3": "Security and Data Privacy: Robust measures: Strong security protocols protect user data, comply with regulations, and ensure regular updates for integrity.",
+
+    "Services FAQ-q3-1": "Logo",
+    "Services FAQ-q3-2": "Visual Elements",
+    "Services FAQ-q3-3": "Clarity and Relevance",
+    "Services FAQ-a3-1": "We analyze the essence of a brand. Combined with our straightforward language and affinity for zeitgeist and designs, we tinker on the hallmark - the logo.",
+    "Services FAQ-a3-2": "Visual Elements: Use consistent colors, fonts, and logos for brand recognition.Tone and Language: Maintain a uniform tone and language to convey brand personality. User Experience: Create a memorable user experience reflecting brand values.",
+    "Services FAQ-a3-3": "Clarity and Relevance: Use clear, supportive graphics. Brand Cohesion: Ensure graphics align with brand style. Customization: Highlight uniqueness with custom illustrations.",
+
+    "Services FAQ-q4-1": "Marketing Automation",
+    "Services FAQ-q4-2": "Targeted Campaigns",
+    "Services FAQ-q4-3": "Monitoring",
+    "Services FAQ-a4-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design.",
+    "Services FAQ-a4-2": "Targeted Campaigns: Keyword Research, Audience Segmentation, Ad Copy Optimization. Conversion Optimization: Landing Page Optimization, A/B Testing, Conversion Tracking. Budget Management: Cost Control, Bid Strategy, Performance Analysis.",
+    "Services FAQ-a4-3": "Monitoring: Social Listening, Alerts, Tools for tracking. Engagement: Timely Responses, Address Negativity, Encourage Positivity. Transparency: Honesty, Consistency, Trust Building. Proactive Management: Content Strategy, SEO, Crisis Plan.."
   },
   "Contact": {
     "Contact first-text": "Get in touch",
