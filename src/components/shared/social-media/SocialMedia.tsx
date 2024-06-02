@@ -31,6 +31,7 @@ type SocialMediaProps = {
 
 export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
   const t = useTranslations("Shared");
+
   return (
     <FadeIn className={classNames(className)}>
       <div className="container text-center">

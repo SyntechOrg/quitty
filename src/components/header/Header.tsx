@@ -38,7 +38,7 @@ const Nav: FC<NavProps> = ({ className }) => {
                   "transition-all duration-150 ease-in-out cursor-pointer hover:text-primary",
                   isActive
                     ? "text-primary font-bold lg:font-normal"
-                    : "hover:text-primary"
+                    : "hover:text-primary",
                 )}
               >
                 {t(item)}
@@ -61,7 +61,7 @@ const Header: FC = () => {
     <header
       className={classNames(
         "container flex gap-4 items-center justify-between py-[33px]",
-        isProjectsPage && "absolute top-0 inset-x-0 z-20"
+        isProjectsPage && "absolute top-0 inset-x-0 z-20",
       )}
     >
       <Logo />
