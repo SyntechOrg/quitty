@@ -133,7 +133,8 @@
       "Contact form-t-5": "Meine Telefonnummer",
       "Contact form-t-6": "Beschreibung des Projekts",
       "Contact form-t-7": "Details zum Projekt",
-      "Contact form-bt-1": "Senden"
-      
+      "Contact form-bt-1": "Senden",
+      "EmailSuccessMessage": "Email gesendet erfolgreich.",
+      "EmailErrorMessage": "Email konnte nicht gesendet werden."
     }
 }
