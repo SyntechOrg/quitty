@@ -1,17 +1,10 @@
 "use client";
-import React, { ChangeEvent, useTransition } from "react";
+import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "use-intl";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/shared/select/basicSelect";
-
 const LocalSwitcher = () => {
   const [isPending, startTransition] = useTransition();
+  const [isLanguageSubMenuOpen, setIsLanguageSubMenuOpen] = useState(false);
   const router = useRouter();
   const localActive = useLocale();
 
@@ -20,30 +13,41 @@ const LocalSwitcher = () => {
       router.replace(`/${value}`);
     });
   };
+
   return (
-    <Select
-      defaultValue={localActive}
-      onValueChange={onSelectChange}
-      disabled={isPending}
-    >
-      <SelectTrigger className="z-[10] w-16 rounded-[30px] border-none bg-transparent px-3.5 hover:opacity-75 active:opacity-50">
-        <SelectValue />
-      </SelectTrigger>
-      <SelectContent className="min-w-[60px] rounded-xl border-none">
-        <SelectItem
-          className="cursor-pointer rounded-lg hover:opacity-60 active:opacity-75"
-          value="en"
-        >
-          En
-        </SelectItem>
-        <SelectItem
-          className="cursor-pointer rounded-lg hover:opacity-60 active:opacity-75"
-          value="de"
-        >
-          De{" "}
-        </SelectItem>
-      </SelectContent>
-    </Select>
+    <div className="relative text-center text-[14px] text-text lg:mr-4 lg:pr-1">
+      <span
+        className={`${isLanguageSubMenuOpen ? "bg-primary/50" : ""} 
+        flex cursor-pointer items-center justify-center rounded-[30px] border border-primary px-4 py-2 leading-[1] hover:bg-primary/75 active:bg-primary/30`}
+        onClick={() => setIsLanguageSubMenuOpen(!isLanguageSubMenuOpen)}
+      >
+        {localActive}
+      </span>
+      {isLanguageSubMenuOpen && (
+        <div className="absolute top-8 flex flex-col items-center justify-center gap-1 rounded-xl border border-gray bg-background p-1">
+          <button
+            onClick={() => {
+              onSelectChange("en");
+              setIsLanguageSubMenuOpen(false);
+            }}
+            className={`${localActive === "en" ? "bg-primary/90" : ""} cursor-pointer rounded-lg px-4 py-1 duration-150 hover:bg-primary/75 active:bg-primary/50`}
+            disabled={isPending}
+          >
+            en
+          </button>
+          <button
+            onClick={() => {
+              onSelectChange("de");
+              setIsLanguageSubMenuOpen(false);
+            }}
+            className={`${localActive === "de" ? "bg-primary/90" : ""} cursor-pointer rounded-lg px-4 py-1 duration-150 hover:bg-primary/75 active:bg-primary/50`}
+            disabled={isPending}
+          >
+            de
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 

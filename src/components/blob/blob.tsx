@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Blob = () => {
   const [blobPosition, setBlobPosition] = useState({ left: 0, top: 0 });
@@ -26,10 +26,9 @@ const Blob = () => {
         clearTimeout(timeoutId.current);
       }
 
-      // Set a timeout to reset opacity
       timeoutId.current = setTimeout(() => {
         setOpacity(0);
-      }, 5000);
+      }, 4500);
     };
 
     document.body.addEventListener("pointermove", handlePointerMove);
