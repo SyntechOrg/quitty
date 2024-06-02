@@ -64,22 +64,32 @@ export const ContactForm: FC = () => {
   const onSubmit = async (data: FormType) => {
     setIsSubmitting(true);
     try {
+      const payload = JSON.stringify({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        serviceType: t(data.serviceType),
+        budget: t(data.budget),
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+        projectDescription: data.projectDescription,
+      });
+
       const response = await fetch("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: payload,
       });
 
       if (response.ok) {
-        toast.success("Email sent");
+        toast.success(t("EmailSuccessMessage"));
       }
 
       formMethods.reset();
     } catch (error) {
       console.error("Error sending email", error);
-      toast.error("Error sending email");
+      toast.error(t("EmailErrorMessage"));
     } finally {
       formMethods.reset();
       setIsSubmitting(false);
@@ -139,7 +149,7 @@ export const ContactForm: FC = () => {
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <div className="w-full">
               <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
-              {t("Contact form-t-4")}
+                {t("Contact form-t-4")}
               </p>
               <InputField
                 name="email"
@@ -150,7 +160,7 @@ export const ContactForm: FC = () => {
             </div>
             <div className="w-full">
               <p className="mb-[30px] w-full pl-[18px] text-lg lg:hidden">
-              {t("Contact form-t-5")}
+                {t("Contact form-t-5")}
               </p>
               <InputField
                 name="phoneNumber"

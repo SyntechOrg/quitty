@@ -15,6 +15,7 @@ const quickCardData = [
 
 const AboutSection = () => {
   const t = useTranslations("Shared");
+
   return (
     <FadeIn
       className="container mt-[100px] flex flex-col justify-between gap-[40px] max-lg:text-center lg:mt-[150px] lg:flex-row

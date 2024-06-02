@@ -5,6 +5,13 @@ import Link from "next/link";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
 
+const footerLinks = [
+  { text: "Footer sitemap-text-1", href: "about" },
+  { text: "Footer sitemap-text-2", href: "portfolio" },
+  { text: "Footer sitemap-text-3", href: "services" },
+  { text: "Footer sitemap-text-4", href: "contact" },
+];
+
 export const Footer = () => {
   const localActive = useLocale();
   const t = useTranslations("Footer");
@@ -32,10 +39,13 @@ export const Footer = () => {
                 <Icon icon={IconType.DIAMOND} />
                 <span>SITEMAP</span>
               </li>
-              {["Footer sitemap-text-1", "Footer sitemap-text-2", "Footer sitemap-text-3", "Footer sitemap-text-4"].map((item) => (
-                <li key={item} className="mt-2 text-sm font-light text-text">
-                  <Link href={`/${localActive}/${item.toLowerCase()}`}>
-                    {t(item)}
+              {footerLinks.map((item) => (
+                <li
+                  key={item.text}
+                  className="mt-2 text-sm font-light text-text"
+                >
+                  <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
+                    {t(item.text)}
                   </Link>
                 </li>
               ))}
@@ -90,7 +100,7 @@ export const Footer = () => {
         </div>
         <div className="hidden h-[1px] flex-1 bg-[#0000FF] lg:block"></div>
         <ul className="hidden gap-x-[40px] text-sm leading-[30px] lg:flex">
-        <li>{t("Footer terms")}</li>
+          <li>{t("Footer terms")}</li>
           <li>Impressum</li>
         </ul>
         <div className="mt-[30px] flex w-full items-center justify-between gap-x-[10px] text-[10px] lg:hidden">

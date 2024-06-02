@@ -1,4 +1,4 @@
-"Use Client";
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "@/components/shared";
 import AllProjects, {

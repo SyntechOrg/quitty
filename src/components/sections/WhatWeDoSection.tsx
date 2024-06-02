@@ -9,26 +9,22 @@ const cards = [
   {
     increment: "01",
     title: "About card-title-1",
-    description:
-    "About card-description-1",
+    description: "About card-description-1",
   },
   {
     increment: "02",
     title: "About card-title-2",
-    description:
-    "About card-description-2",
+    description: "About card-description-2",
   },
   {
     increment: "03",
     title: "About card-title-3",
-    description:
-    "About card-description-3",
+    description: "About card-description-3",
   },
   {
     increment: "04",
     title: "About card-title-4",
-    description:
-    "About card-description-4",
+    description: "About card-description-4",
   },
 ];
 

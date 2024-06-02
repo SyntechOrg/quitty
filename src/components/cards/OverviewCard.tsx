@@ -3,12 +3,10 @@ import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
 
 const OverviewCard = () => {
-  const t = useTranslations("About Us")
+  const t = useTranslations("About Us");
+
   return (
-    <div
-      data-aos="fade-up"
-      className="w-full rounded-[30px] border border-gray bg-radial-gradient-background px-8 py-14 md:p-12 md:py-32"
-    >
+    <div className="w-full rounded-[30px] border border-gray bg-radial-gradient-background px-8 py-14 md:p-12 md:py-32">
       <div className="mx-auto w-11/12 max-w-[700px] text-center">
         <h4 className="mx-auto max-w-[600px] text-[24px] leading-[1.14] md:text-[32px] lg:text-[48px]">
           {t("About overview-title")}
