@@ -18,13 +18,13 @@ const LocalSwitcher = () => {
     <div className="relative text-center text-[14px] text-text lg:mr-4 lg:pr-1">
       <span
         className={`${isLanguageSubMenuOpen ? "bg-primary/50" : ""} 
-        flex cursor-pointer items-center justify-center rounded-[30px] border border-primary px-4 py-2 leading-[1] hover:bg-primary/75 active:bg-primary/30`}
+        flex cursor-pointer items-center justify-center rounded-[30px] border border-primary px-5 py-2 leading-[1] hover:bg-primary/75 active:bg-primary/30`}
         onClick={() => setIsLanguageSubMenuOpen(!isLanguageSubMenuOpen)}
       >
         {localActive}
       </span>
       {isLanguageSubMenuOpen && (
-        <div className="absolute top-8 flex flex-col items-center justify-center gap-1 rounded-xl border border-gray bg-background p-1">
+        <div className="absolute top-9 flex flex-col items-center justify-center gap-1 rounded-xl border border-gray bg-background p-1">
           <button
             onClick={() => {
               onSelectChange("en");
