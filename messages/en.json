@@ -81,6 +81,24 @@
     "Contact first-list-text": "Have a project or want to talk? Here you'll find a few convenient ways to reach us.",
     "Contact phone-number": "PHONE NUMBER",
     "Contact email": "EMAIL ADDRESS",
-    "Contact address": "STUDIO ADRESS"
+    "Contact address": "STUDIO ADRESS",
+    "Contact form-t-1": "Hello, I am",
+    "Contact form-t-2": "I am looking for help with a...",
+    "Contact form-s-1": "Informational Web",
+    "Contact form-s-2": "Web Application",
+    "Contact form-s-3": "Shop Online Web",
+    "Contact form-s-4": "Brand Identity",
+    "Contact form-s-5": "Social Media",
+    "Contact form-b-1": "up to CHF 5'000",
+    "Contact form-b-2": "CHF 5'000 -  CHF 10'000",
+    "Contact form-b-3": "CHF 10'000 - CHF 20'000",
+    "Contact form-b-4": "CHF 20'000 - CHF 50'000",
+    "Contact form-b-5": "more than CHF 50'000",
+    "Contact form-t-3": "My Budget Is",
+    "Contact form-t-4": "Please contact me at",
+    "Contact form-t-5": "My phone number",
+    "Contact form-t-6": "Description of Project",
+    "Contact form-t-7": "Project Details",
+    "Contact form-bt-1": "Send"
   }
 }

@@ -75,13 +75,32 @@
     "Services first-text": "Wir konzentrieren uns auf Kernbereiche und kombinieren unser kreatives und technisches Fachwissen, um die Essenz von Marken herauszuarbeiten, Websites neu zu gestalten, Webanwendungen zu erstellen und E-Commerce-Lösungen zu liefern.",
     "Services second-title": "WIR SIND EXPERTEN FÜR",
     "Services FAQ-a-1": "Marken müssen mit der Zeit gehen. Eine progressive Corporate Identity schafft die Balance zwischen frischem Design und dem bewahrten Markenkern. Ein wahrer Drahtseilakt des Designs."
-    },
-    "Contact": {
+  },
+  "Contact": {
       "Contact first-text": "Kontakt aufnehmen",
       "Contact first-title": "Gemeinsam etwas Besonderes schaffen...",
       "Contact first-list-text": "Haben Sie ein Projekt oder wollen Sie reden? Hier finden Sie ein paar bequeme Möglichkeiten, uns zu erreichen.",
       "Contact phone-number": "TELEFON",
       "Contact email": "E-MAIL ADRESSE",
-      "Contact address": "ADRESSE"
+      "Contact address": "ADRESSE",
+      "Contact form-t-1": "Hallo, ich bin",
+      "Contact form-t-2": "Ich suche Hilfe bei ...",
+      "Contact form-s-1": "Informationelles Web",
+      "Contact form-s-2": "Web- Applikation",
+      "Contact form-s-3": "Online-Shop",
+      "Contact form-s-4": "Markenidentität",
+      "Contact form-s-5": "Soziale Medien",
+      "Contact form-b-1": "bis zu CHF 5'000",
+      "Contact form-b-2": "CHF 5'000 -  CHF 10'000",
+      "Contact form-b-3": "CHF 10'000 - CHF 20'000",
+      "Contact form-b-4": "CHF 20'000 - CHF 50'000",
+      "Contact form-b-5": "mehr als CHF 50'000",
+      "Contact form-t-3": "Mein Budget ist",
+      "Contact form-t-4": "Bitte kontaktieren Sie mich unter",
+      "Contact form-t-5": "Meine Telefonnummer",
+      "Contact form-t-6": "Beschreibung des Projekts",
+      "Contact form-t-7": "Details zum Projekt",
+      "Contact form-bt-1": "Senden"
+      
     }
 }

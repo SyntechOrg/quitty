@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 import { useEffect, useState, type FC } from "react";
 import { Control, Controller, FieldError, FieldValues } from "react-hook-form";
 
@@ -10,6 +11,7 @@ type SelectProps = {
 };
 
 export const Select: FC<SelectProps> = (props) => {
+  const t = useTranslations("Contact");
   const [selectedOption, setSelectedOption] = useState<string | null>(
     props.value
   );
@@ -35,7 +37,7 @@ export const Select: FC<SelectProps> = (props) => {
           )}
           onClick={() => handleOptionClick(option)}
         >
-          {option}
+          {t(option)}
         </div>
       ))}
     </div>

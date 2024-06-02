@@ -30,6 +30,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
 }) => {
   const localActive = useLocale();
   // const t = useTranslations("Services");
+  const t = useTranslations("Shared");
 
   return (
     <div
@@ -42,7 +43,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <h2 className="text-[24px] leading-[1.33] md:text-[36px] lg:min-h-[260px] lg:text-[50px]">
           {title.map((title, index) => (
             <span key={index}>
-              {title}
+              {t(title)}
               {index !== title.length - 1 && (
                 <>
                   <br />
