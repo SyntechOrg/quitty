@@ -37,7 +37,7 @@ export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
       </FadeIn>
       <ul className="mt-[88px]">
         {SOCIAL_MEDIA.map((media) => (
-          <FadeIn>
+          <FadeIn key={media.name}>
             <li
               key={media.name}
               className="group flex h-[90px] max-h-[90px] items-center border-x border-t border-[#35353C] transition-all duration-150 ease-in-out last-of-type:border-b hover:bg-primary lg:h-[200px] lg:max-h-[200px]"
