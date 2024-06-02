@@ -30,6 +30,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
 }) => {
   const localActive = useLocale();
   // const t = useTranslations("Services");
+  const tt = useTranslations("Services");
   const t = useTranslations("Shared");
 
   return (
@@ -55,7 +56,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[15px] md:mt-8 lg:mt-[40px]">
           {description.map((desc, index) => (
             <span key={index}>
-              {desc}
+              {tt(desc)}
               {index !== description.length - 1 && (
                 <>
                   <br />
@@ -94,7 +95,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
               // eslint-disable-next-line react/jsx-key
               <AccordionItem value={`item-${index}`}>
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent>{tt(faq.answer)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

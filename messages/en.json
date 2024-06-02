@@ -73,7 +73,19 @@
     "Services first-title": "Expertise",
     "Services first-text": "Focusing on core areas, we combine our creative and technical expertise to reveal the essence of brands, redesigning websites, building web applications, and delivering e-commerce solutions.",
     "Services second-title": "WE ARE EXPERTS IN",
-    "Services FAQ-a-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design."
+    "Serivce card-description-1": "Art meets efficiency in our web design services. We architect robust websites that serve as the cornerstone of your digital identity. Our web development, from backend functionality to user-friendly interfaces, is the backbone of a seamless online presence.",
+    "Serivce card-description-2": "Unlock the power of mobility with Syntech. Many years of expertise in mobile development allow us to design architecture and create bespoke native applications for Apple iOS and Google Android.",
+    "Serivce card-description-3": "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
+    "Serivce card-description-4": "In the realm of Digital Marketing, we excel at leveraging the power of online channels to drive growth and engagement for businesses. Our expertise encompasses a wide range of strategies, including search engine optimization (SEO), social media marketing, content creation, email campaigns, and more.",
+    "Serivce card-description-1.1": "In our approach to web design and development, we seamlessly blend creativity with functionality to create digital experiences that resonate with your audience and drive tangible results. From conceptualization to execution, we prioritize the user journey, ensuring intuitive navigation and engaging interactions at every touchpoint.",
+    "Serivce card-description-2.1": "Our team combines technical expertise with creative innovation to craft mobile apps that deliver seamless user experiences and drive engagement. Whether you're targeting the iOS or Android market, we ensure that your app stands out with intuitive design, robust functionality, and optimal performance.",
+    "Serivce card-description-4.1": "At our agency, we understand the nuances of digital marketing and tailor our approach to suit your unique goals and target audience. Whether you're looking to increase brand awareness, generate leads, or drive sales, we develop customized digital marketing strategies that deliver measurable results.",
+    "Services FAQ-q1-1": "Portfolio",
+    "Services FAQ-q1-2": "E-Commerce",
+    "Services FAQ-q1-3": "Website",
+    "Services FAQ-a1-1": "Brands need to keep up with the times. A progressive corporate identity manages the balance between fresh designs and the preserved core of the brand. A real high-wire act of design..",
+    "Services FAQ-a1-2": "Expand your customer base and boost sales with our user-friendly online store. Benefit from efficient product and order management, offering a premium shopping experience. Start your successful e-commerce journey now!",
+    "Services FAQ-a1-3": "Optimize your business processes with our customized software solutions. From secure payment processing to comprehensive product management, our software supports the smooth operation of your website, whether it's an online store or a general website. Trust our expertise to take your business to the next level!"
   },
   "Contact": {
     "Contact first-text": "Get in touch",
