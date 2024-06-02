@@ -10,7 +10,7 @@ import {
 } from "@/components/shared/accordion/Accordion";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 interface ServiceCardProps {
   id: number;
@@ -30,9 +30,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   href,
 }) => {
   const localActive = useLocale();
-  // const t = useTranslations("Services");
-  const tt = useTranslations("Services");
-  const t = useTranslations("Shared");
+  const t = useTranslations();
 
   return (
     <FadeIn
@@ -42,8 +40,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
       <div className="w-11/12 max-lg:mx-auto max-sm:text-center lg:w-[46%]">
         <h2 className="text-[24px] leading-[1.33] md:text-[36px] lg:min-h-[260px] lg:text-[50px]">
           {title.map((title, index) => (
-            <span key={index}>
-              {t(title)}
+            <span key={`${id}-title-${index}`}>
+              {t(`Shared.${title}`)}
               {index !== title.length - 1 && (
                 <>
                   <br />
@@ -54,8 +52,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
         </h2>
         <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[15px] md:mt-8 lg:mt-[40px]">
           {description.map((desc, index) => (
-            <span key={index}>
-              {tt(desc)}
+            <span key={`${id}-description-${index}`}>
+              {t(`Services.${desc}`)}
               {index !== description.length - 1 && (
                 <>
                   <br />
@@ -82,7 +80,9 @@ const ServiceCard: FC<ServiceCardProps> = ({
             className="group relative mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
             lg:top-[-20px]"
           >
-            <Button to={`/${localActive}/contact`}>{t("Service card-button-1")}</Button>
+            <Button to={`/${localActive}/contact`}>
+              {t("Shared.Service card-button-1")}
+            </Button>
             <Button to={`/${localActive}/contact`}>
               <Icon icon={IconType.ARROW} />
             </Button>
@@ -92,9 +92,13 @@ const ServiceCard: FC<ServiceCardProps> = ({
           <Accordion type="single" className="space-y-4" defaultValue="item-0">
             {FAQ.map((faq, index) => (
               // eslint-disable-next-line react/jsx-key
-              <AccordionItem value={`item-${index}`}>
-                <AccordionTrigger>{tt(faq.question)}</AccordionTrigger>
-                <AccordionContent>{tt(faq.answer)}</AccordionContent>
+              <AccordionItem key={`${id}-faq-${index}`} value={`item-${index}`}>
+                <AccordionTrigger>
+                  {t(`Services.${faq.question}`)}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t(`Services.${faq.answer}`)}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

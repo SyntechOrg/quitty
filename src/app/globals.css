@@ -30,11 +30,6 @@
   font-style: normal;
 }
 
-:root {
-  --blob-color: #00f;
-  --blob-size: 160px;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -61,11 +56,12 @@ body {
 }
 
 #blob {
+  --blob-color: #00f;
+  --blob-size: 160px;
+
   animation: blobAnimation 14s infinite;
   background: var(--blob-color);
-  filter: blur(calc(var(--blob-size) / 2.75));
-  opacity: 0.5;
-
+  filter: blur(calc(var(--blob-size) / 2.4));
   width: var(--blob-size);
   height: var(--blob-size);
   position: fixed;
