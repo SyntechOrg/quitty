@@ -4,15 +4,13 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import AllProjects, {
   AllProjectsHeader,
 } from "@/components/sections/AllProjects";
-import { useTranslations } from "next-intl";
 
 const PortfolioPage: FC = () => {
-  const t = useTranslations("Portfolio");
   return (
     <div>
       <SecondaryHeroSection
-        title={t("Portfolio first-title")}
-        text={t("Portfolio first-text")}
+        title={"Portfolio.Portfolio first-title"}
+        text={"Portfolio.Portfolio first-text"}
       />
       <AllProjectsHeader disableButton />
       <AllProjects />

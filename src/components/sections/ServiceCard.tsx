@@ -10,6 +10,7 @@ import {
 } from "@/components/shared/accordion/Accordion";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 interface ServiceCardProps {
   id: number;
@@ -34,9 +35,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   const t = useTranslations("Shared");
 
   return (
-    <div
-      // data-aos={`${id % 2 === 0 ? "fade-left" : "fade-right"}`}
-      data-aos="fade-up"
+    <FadeIn
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border
       border-gray bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >
@@ -101,7 +100,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
           </Accordion>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

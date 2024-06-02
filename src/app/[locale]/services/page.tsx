@@ -101,13 +101,15 @@ const ServicesPage = () => {
   return (
     <div>
       <SecondaryHeroSection
-        title={t("Services first-title")}
-        text={t("Services first-text")}
+        title={"Services.Services first-title"}
+        text={"Services.Services first-text"}
       />
-      <FadeIn className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
-        <h2 className="category-text text-center lg:text-[22px]">
-          {t("Services second-title")}
-        </h2>
+      <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px]">
+        <FadeIn>
+          <h2 className="category-text text-center lg:text-[22px]">
+            {t("Services second-title")}
+          </h2>
+        </FadeIn>
         <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
           {services.map((service) => (
             <ServiceCard
@@ -121,7 +123,7 @@ const ServicesPage = () => {
             />
           ))}
         </div>
-      </FadeIn>
+      </div>
       <SocialMedia />
     </div>
   );
