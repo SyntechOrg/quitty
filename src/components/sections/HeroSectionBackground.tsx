@@ -20,7 +20,7 @@ const HeroSectionBackground = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation(false);
-    }, 3500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,11 +36,11 @@ const HeroSectionBackground = () => {
           translateX: "-50%",
         }}
         initial={initialAnimation ? { scale: 0 } : false}
-        animate={initialAnimation ? { scale: 1 } : { scale: [1, 1.04, 1] }}
+        animate={initialAnimation ? { scale: 1 } : { scale: [1, 1.05, 1] }}
         transition={
           initialAnimation
-            ? { duration: 3.5 }
-            : { duration: 5, repeat: Infinity, repeatType: "reverse" }
+            ? { duration: 2 }
+            : { duration: 4, repeat: Infinity, repeatType: "reverse" }
         }
         className="fixed left-[50%] top-[50%] z-[-1]"
       >

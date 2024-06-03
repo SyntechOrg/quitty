@@ -8,7 +8,7 @@ import { MobileMenu } from "./MobileMenu";
 import LocalSwitcher from "@/components/language/LocalSwitcher";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
-import {useScrollYPosition} from "@/hooks/useScrollYPosition";
+import { useScrollYPosition } from "@/hooks/useScrollYPosition";
 
 const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
 
@@ -54,7 +54,7 @@ const Nav: FC<NavProps> = ({ className }) => {
 
 const Header: FC = () => {
   const pathname = usePathname();
-  const isProjectsPage = pathname.includes("projects");
+  const isHomePage = ["en", "de"].includes(pathname.split("/").pop() || "");
   const localActive = useLocale();
   const t = useTranslations("Header");
   const scrollPosition = useScrollYPosition();
@@ -65,11 +65,11 @@ const Header: FC = () => {
     <header
       className={classNames(
         "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/20 backdrop-blur-sm",
-        isProjectsPage
-          ? "translate-y-0"
-          : isAtTop
+        isHomePage
+          ? isAtTop
             ? "translate-y-0"
-            : "-translate-y-[150%]",
+            : "-translate-y-[150%]"
+          : "translate-y-0",
       )}
     >
       <div className="container flex  items-center justify-between gap-4 ">
