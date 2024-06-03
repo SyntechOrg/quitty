@@ -60,7 +60,6 @@ export const StatisticItem: FC<StatisticItemProps> = ({
       <div className="absolute right-[10%] top-[10%] hidden items-center group-hover:flex">
         <Button size="sm" to={`/${localActive}/contact`}>
           {t("Button")}
-          Work
         </Button>
         <Button size="sm" to={`/${localActive}/contact`}>
           <Icon icon={IconType.ARROW} />
