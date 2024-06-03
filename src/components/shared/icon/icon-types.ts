@@ -16,4 +16,5 @@ export enum IconType {
   ELE_UZNACH_LOGO = "ele_uznach_logo",
   MENU = "menu",
   CLOSE = "close",
+  DROPDOWN = "dropdown",
 }
