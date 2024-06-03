@@ -72,7 +72,33 @@
     "About card-description-4": "We're more than just a team - we're your trusted allies in the digital realm, dedicated to your success every step of the way. With a commitment to transparency, reliability, and excellence, we strive to be your go-to partner for all your digital needs, providing unwavering support and guidance to help you navigate the ever-evolving digital landscape.",
     "About overview-title": "Unlock 30 minutes to dream together ",
     "About overview-text": "Join us for a 30-minute conversation where we can explore your ideas, collaborate on possibilities, and shape your vision into reality!",
-    "About overview-button": "Book the journey"
+    "About overview-button": "Book the journey",
+    "Statistics": {
+      "Title": "Simply put, we dare what others don't",
+      "Description": "Strategic process of creating a unique identity for businesses. It involves defining a brand's personality, values, and visual elements, such as logos and color schemes, to leave a lasting impression on the audience",
+      "Cards": {
+        "Card1": {
+          "Statistic": "200+",
+          "Title": "Completed projects",
+          "Description": "We have  successfully completed a total of 200+ projects"
+        },
+        "Card2": {
+          "Statistic": "10+",
+          "Title": "Years of experience",
+          "Description": "More than a decade of experience shaping industry trends"
+        },
+        "Card3": {
+          "Statistic": "1,000+",
+          "Title": "Reviews from their users",
+          "Description": "We have completed over 1,000 projects for clients all over the world."
+        },
+        "Card4": {
+          "Statistic": "20+",
+          "Title": "Team members",
+          "Description": "A family of over 20 team members, each bringing unique skills"
+        }
+      }
+    }
   },
   "Portfolio": {
     "Portfolio first-title": "We choose a different → starting point",
