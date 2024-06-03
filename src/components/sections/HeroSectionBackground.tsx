@@ -2,9 +2,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Icon, IconType } from "@/components/shared";
-import { FadeIn } from "../fade-in/FadeIn";
 
 const HeroSectionBackground = () => {
+  const [initialAnimation, setInitialAnimation] = useState(true);
   const ref = useRef(null);
   const { scrollY } = useScroll({
     target: ref,
@@ -16,7 +16,6 @@ const HeroSectionBackground = () => {
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
-  const [initialAnimation, setInitialAnimation] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
