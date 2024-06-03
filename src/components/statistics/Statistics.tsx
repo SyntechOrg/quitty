@@ -22,11 +22,6 @@ const STATISTICS = [
     title: "Cards.Card3.Title",
     description: "Cards.Card3.Description",
   },
-  {
-    statistic: "Cards.Card4.Statistic",
-    title: "Cards.Card4.Title",
-    description: "Cards.Card4.Description",
-  },
 ];
 
 type StatisticItemProps = {
@@ -44,6 +39,7 @@ export const StatisticItem: FC<StatisticItemProps> = ({
   index,
 }) => {
   const localActive = useLocale();
+  const t = useTranslations("About Us.Statistics");
 
   return (
     <div
@@ -55,7 +51,7 @@ export const StatisticItem: FC<StatisticItemProps> = ({
       <div className="text-[24px] font-bold leading-[1.4] lg:text-[32px]">
         {statistic}
       </div>
-      <div className="mt-2 text-[24px] font-light leading-[1.4] lg:h-[90px] lg:text-[32px]">
+      <div className="mt-2 text-[24px] font-light leading-[1.4] lg:h-[50px] lg:text-[32px]">
         {title}
       </div>
       <p className="mt-6 text-[14px] leading-[1.4] text-[#8F8F8F] max-lg:mx-auto max-lg:max-w-[420px] lg:mt-14 lg:text-[16px]">
@@ -63,6 +59,7 @@ export const StatisticItem: FC<StatisticItemProps> = ({
       </p>
       <div className="absolute right-[10%] top-[10%] hidden items-center group-hover:flex">
         <Button size="sm" to={`/${localActive}/contact`}>
+          {t("Button")}
           Work
         </Button>
         <Button size="sm" to={`/${localActive}/contact`}>
@@ -90,7 +87,7 @@ export const Statistics: FC<StatisticsProps> = () => {
           {t("Description")}
         </p>
       </div>
-      <div className="grid w-full grid-cols-1 border border-[#35353C] max-lg:mx-auto max-lg:max-w-[600px] lg:grid-cols-2">
+      <div className="grid w-full grid-cols-1 max-lg:mx-auto max-lg:max-w-[600px] lg:grid-cols-2">
         {STATISTICS.map((statistic, index) => (
           <StatisticItem
             key={index}
