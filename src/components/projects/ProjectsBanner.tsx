@@ -14,7 +14,7 @@ type ProjectsBannerProps = {
   productType: string[];
   expertise: string[];
   release: string[];
-  liveUrl: string;
+  liveUrl?: string;
   className?: string;
 };
 

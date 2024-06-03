@@ -62,7 +62,7 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
                 key={`${item}-${i}`}
                 className="mt-2 text-base font-light text-white"
               >
-                <Link href={`/${item.toLowerCase()}`}>{item}</Link>
+                <p>{item}</p>
               </li>
             ))}
           </ul>
