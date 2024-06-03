@@ -15,7 +15,7 @@ const services = [
     description: "Service card-description-1",
     image: WebDevImage,
     categories: ["Portfolio", "eCommerce", "Software"],
-    href: "/some-href",
+    href: "/services#1",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const services = [
     description: "Service card-description-2",
     image: MobileAppImage,
     categories: ["React Native", "FlutterJS", "Kotlin"],
-    href: "/some-href",
+    href: "/services#2",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const services = [
     description: "Service card-description-3",
     image: BrandIdentityImage,
     categories: ["Logo", "Brand Identity", "Graphics & Illustration"],
-    href: "/some-href",
+    href: "/services#3",
   },
   {
     id: 4,
@@ -43,12 +43,13 @@ const services = [
       "PPC Advertising",
       "Online Reputation",
     ],
-    href: "/some-href",
+    href: "/services#4",
   },
 ];
 
 const ServicesSection = () => {
   const t = useTranslations("Shared");
+
   return (
     <div className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
       <FadeIn>

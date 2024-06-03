@@ -6,9 +6,10 @@ import classNames from "classnames";
 type FadeInProps = {
   children: ReactNode;
   className?: string;
+  id?: string;
 };
 
-export const FadeIn: FC<FadeInProps> = ({ children, className }) => {
+export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -41,6 +42,7 @@ export const FadeIn: FC<FadeInProps> = ({ children, className }) => {
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 75 }}
       transition={{ duration: 1 }}
       className={classNames(className)}
+      id={id}
     >
       {children}
     </motion.div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "@/components/shared";
 import QuickCard from "@/components/cards/QuickCard";
@@ -5,6 +6,7 @@ import BubbleAboutImage from "../../../public/assets/images/bubble-about-section
 import Image from "next/image";
 import { FadeIn } from "../fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const quickCardData = [
   { statistic: "+200", description: "AboutUs quickcard-1" },
@@ -15,6 +17,7 @@ const quickCardData = [
 
 const AboutSection = () => {
   const t = useTranslations("Shared");
+  const localActive = useLocale();
 
   return (
     <FadeIn
@@ -43,8 +46,8 @@ const AboutSection = () => {
           {t("AboutUs text-1")}
         </p>
         <div className="group mt-[20px] flex items-center max-lg:justify-center md:mt-[24px] lg:mt-[32px]">
-          <Button to="/about">{t("AboutUs button-1")}</Button>
-          <Button to="/about" className="px-[21px]">
+          <Button to={`/${localActive}/about`}>{t("AboutUs button-1")}</Button>
+          <Button to={`/${localActive}/about`} className="px-[21px]">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

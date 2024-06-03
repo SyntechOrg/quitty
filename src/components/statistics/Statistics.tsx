@@ -62,10 +62,10 @@ export const StatisticItem: FC<StatisticItemProps> = ({
         {description}
       </p>
       <div className="absolute right-[10%] top-[10%] hidden items-center group-hover:flex">
-        <Button size="sm" to={`${localActive}/contact`}>
+        <Button size="sm" to={`/${localActive}/contact`}>
           Work
         </Button>
-        <Button size="sm" to={`${localActive}/contact`}>
+        <Button size="sm" to={`/${localActive}/contact`}>
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>

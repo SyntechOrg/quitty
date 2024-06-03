@@ -8,7 +8,7 @@ export type Project = {
   heroImage: string;
   heroInsideImage: string;
   heroTitle: string;
-  liveUrl: string;
+  liveUrl?: string;
   services: string[];
   productType: string[];
   expertise: string[];
@@ -42,7 +42,6 @@ export const projectsEnglish: Array<Project> = [
     heroImage: "/images/projects/spandoekman/banner.png",
     heroInsideImage: "/images/projects/spandoekman/bannerInnerImage.png",
     heroTitle: "Brand identity, design & development for luxury cruise booking",
-    liveUrl: "liveURL",
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
@@ -102,7 +101,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
     heroInsideImage: "/images/projects/soxey/bannerInnerImage.png",
     heroTitle:
       "Visual presentation of the website for the online sale of socks",
-    liveUrl: "liveURL",
+    liveUrl: "https://soxey.ch/",
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
@@ -159,7 +158,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     heroImage: "/images/projects/qonsultant/banner.png",
     heroInsideImage: "/images/projects/qonsultant/bannerInnerImage.png",
     heroTitle: "Brand identity, design & development for business consultancy",
-    liveUrl: "liveURL",
+    liveUrl: "https://qonsultant.ch/",
     services: ["Design", "Development"],
     productType: ["Website", "Onepage"],
     expertise: ["Brand Identity", "UI design", "UX design"],
@@ -211,7 +210,6 @@ It has been a pleasure working with you throughout this process, and we're delig
     heroImage: "/images/projects/ele-uznach/banner.png",
     heroInsideImage: "/images/projects/ele-uznach/bannerInnerImage.png",
     heroTitle: "Where Technology Meets Creativity",
-    liveUrl: "liveURL",
     services: ["UI Design", "Development"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
@@ -263,7 +261,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     heroImage: "/images/projects/reputy-solutions/banner.png",
     heroInsideImage: "/images/projects/reputy-solutions/bannerInnerImage.png",
     heroTitle: "Reputy Solutions: Transforming Digital Reputations",
-    liveUrl: "liveURL",
+    liveUrl: "https://reputy.ch/",
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
@@ -319,7 +317,6 @@ It has been a pleasure working with you throughout this process, and we're delig
     heroImage: "/images/projects/facedrip/banner.png",
     heroInsideImage: "/images/projects/facedrip/bannerInnerImage.png",
     heroTitle: "Where Technology Meets Creativity",
-    liveUrl: "liveURL",
     services: ["Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
@@ -375,7 +372,6 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/spandoekman/banner.png",
     heroInsideImage: "/images/projects/spandoekman/bannerInnerImage.png",
     heroTitle: "Brand identity, design & development for luxury cruise booking",
-    liveUrl: "Direkt sehen",
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Webseite", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
@@ -434,7 +430,7 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/soxey/banner.png",
     heroInsideImage: "/images/projects/soxey/bannerInnerImage.png",
     heroTitle:"Visuelle Präsentation der Website für den Online-Verkauf von Socken",
-    liveUrl: "Direkt sehen",
+    liveUrl: "https://soxey.ch/",
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
@@ -491,7 +487,7 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/qonsultant/banner.png",
     heroInsideImage: "/images/projects/qonsultant/bannerInnerImage.png",
     heroTitle: "Beratung von Qonsultant für den Erfolg im Digitalen Zeitalter",
-    liveUrl: "Direkt sehen",
+    liveUrl: "https://qonsultant.ch/",
     services: ["Design", "Entwicklung"],
     productType: ["Website", "Onepage"],
     expertise: ["Markenidentität", "UI design", "UX design"],
@@ -545,7 +541,6 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/ele-uznach/banner.png",
     heroInsideImage: "/images/projects/ele-uznach/bannerInnerImage.png",
     heroTitle: "Premium-Sonnenschutz und Garagentore: Die Lösung für Ihr Zuhause",
-    liveUrl: "Direkt sehen",
     services: ["UI Design", "Entwicklung"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
@@ -600,7 +595,7 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/reputy-solutions/banner.png",
     heroInsideImage: "/images/projects/reputy-solutions/bannerInnerImage.png",
     heroTitle: "Reputy Solutions: Digitale Rufbildungen transformieren",
-    liveUrl: "Direkt sehen",
+    liveUrl: "https://reputy.ch/",
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
@@ -658,7 +653,6 @@ export const projectsDeutsch: Array<Project> = [
     heroImage: "/images/projects/facedrip/banner.png",
     heroInsideImage: "/images/projects/facedrip/bannerInnerImage.png",
     heroTitle: "Facedrip Lass sie tröpfeln! Beauty-Face-eCommerce",
-    liveUrl: "Direkt sehen",
     services: ["Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],

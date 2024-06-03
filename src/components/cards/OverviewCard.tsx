@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const OverviewCard = () => {
   const t = useTranslations("About Us");
+  const localActive = useLocale();
 
   return (
     <div className="w-full rounded-[30px] border border-gray bg-radial-gradient-background px-8 py-14 md:p-12 md:py-32">
@@ -15,8 +18,10 @@ const OverviewCard = () => {
           {t("About overview-text")}
         </p>
         <div className="group mx-auto mt-6 flex w-fit items-center md:mt-10 ">
-          <Button to="/contact">{t("About overview-button")}</Button>
-          <Button to="/contact">
+          <Button to={`/${localActive}/contact`}>
+            {t("About overview-button")}
+          </Button>
+          <Button to={`/${localActive}/contact`}>
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
