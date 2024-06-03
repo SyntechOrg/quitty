@@ -46,7 +46,7 @@ export const Footer = () => {
                 {footerLinks.map((item) => (
                   <li
                     key={item.text}
-                    className="mt-2 text-sm font-light text-text"
+                    className="text-sm font-light text-text"
                   >
                     <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
                       {t(item.text)}
@@ -61,7 +61,7 @@ export const Footer = () => {
                     <Icon icon={IconType.DIAMOND} />
                     <span>{t("Footer legal")}</span>
                   </li>
-                  <li className="mt-2 text-sm font-light text-text">
+                  <li className="text-sm font-light text-text">
                     <Link
                       href=""
                       onClick={() =>
@@ -83,7 +83,7 @@ export const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-2 text-sm font-light text-text">
+                  <li className="text-sm font-light text-text">
                     <Link
                       href=""
                       onClick={() => window.open("/PDFs/termsDe.pdf", "_blank")}
@@ -92,8 +92,13 @@ export const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-2 text-sm font-light text-text">
-                    <Link href="" onClick={() => window.open("/PDFs/imprintDe.pdf", "_blank")}>
+                  <li className="text-sm font-light text-text">
+                    <Link
+                      href=""
+                      onClick={() =>
+                        window.open("/PDFs/imprintDe.pdf", "_blank")
+                      }
+                    >
                       {t("Footer impressum")}
                     </Link>
                   </li>
@@ -106,7 +111,7 @@ export const Footer = () => {
                     <Icon icon={IconType.DIAMOND} />
                     <span>{t("Footer legal")}</span>
                   </li>
-                  <li className="mt-2 text-sm font-light text-text">
+                  <li className="text-sm font-light text-text">
                     <Link
                       href=""
                       onClick={() =>
@@ -117,7 +122,7 @@ export const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-2 text-sm font-light text-text">
+                  <li className="text-sm font-light text-text">
                     <Link
                       href=""
                       onClick={() =>
@@ -128,7 +133,7 @@ export const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-2 text-sm font-light text-text">
+                  <li className="text-sm font-light text-text">
                     <Link
                       href=""
                       onClick={() => window.open("/PDFs/termsEn.pdf", "_blank")}
@@ -137,8 +142,13 @@ export const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-2 text-sm font-light text-text">
-                    <Link href="" onClick={() => window.open("/PDFs/imprintEn.pdf", "_blank")}>
+                  <li className="text-sm font-light text-text">
+                    <Link
+                      href=""
+                      onClick={() =>
+                        window.open("/PDFs/imprintEn.pdf", "_blank")
+                      }
+                    >
                       {t("Footer impressum")}
                     </Link>
                   </li>
@@ -150,21 +160,21 @@ export const Footer = () => {
                 <Icon icon={IconType.DIAMOND} />
                 <span>{t("Footer info").toUpperCase()}</span>
               </p>
-              <p className="text-sm font-light leading-[70px] text-text">
+              <p className="mt-7 text-sm font-light text-text">
                 {t("Footer number")}
               </p>
               <a
-                href="tel:+383 49 799 829"
-                className="text-md font-bold leading-[20px] text-text"
+                href="tel:+41 76 573 24 07"
+                className="text-md mt-3 block font-bold leading-[20px] text-text"
               >
-                +383 49 799 829
+                +41 76 573 24 07
               </a>
-              <p className="text-sm font-light leading-[70px] text-text">
+              <p className="mt-7 text-sm font-light text-text">
                 {t("Footer address")}
               </p>
               <a
                 href="mailto:info@syn-tech.ch"
-                className="text-mds font-bold leading-[20px] text-text"
+                className="text-mds mt-3 block font-bold  leading-[20px] text-text"
               >
                 info@syn-tech.ch
               </a>
