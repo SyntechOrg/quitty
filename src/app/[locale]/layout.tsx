@@ -34,10 +34,8 @@ export default async function LocaleLayout({
         <Blob />
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <PageTransition>
-            {children}
-            <Footer />
-          </PageTransition>
+          {children}
+          <Footer />
           <ToastContainer />
         </NextIntlClientProvider>
       </body>
