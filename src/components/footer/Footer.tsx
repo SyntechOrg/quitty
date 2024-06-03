@@ -173,10 +173,10 @@ export const Footer = () => {
                 {t("Footer address")}
               </p>
               <a
-                href="mailto:info@syn-tech.ch"
+                href="mailto:office@syn-tech.ch"
                 className="text-mds mt-3 block font-bold  leading-[20px] text-text"
               >
-                info@syn-tech.ch
+                office@syn-tech.ch
               </a>
             </div>
           </div>

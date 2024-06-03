@@ -9,7 +9,7 @@ const GENERAL_INFO = [
   },
   {
     label: "Contact email",
-    value: "info@syn-tech.ch",
+    value: "office@syn-tech.ch",
   },
   {
     label: "Contact address",
