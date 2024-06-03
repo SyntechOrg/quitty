@@ -93,7 +93,7 @@ export const Footer = () => {
                   </li>
 
                   <li className="mt-2 text-sm font-light text-text">
-                    <Link href="" onClick={() => window.open("", "_blank")}>
+                    <Link href="" onClick={() => window.open("/PDFs/imprintDe.pdf", "_blank")}>
                       {t("Footer impressum")}
                     </Link>
                   </li>
@@ -138,7 +138,7 @@ export const Footer = () => {
                   </li>
 
                   <li className="mt-2 text-sm font-light text-text">
-                    <Link href="" onClick={() => window.open("", "_blank")}>
+                    <Link href="" onClick={() => window.open("/PDFs/imprintEn.pdf", "_blank")}>
                       {t("Footer impressum")}
                     </Link>
                   </li>
