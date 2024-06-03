@@ -10,6 +10,7 @@ import FacedripImage from "../../../public/assets/images/facedrip-project.png";
 import { Button, Icon, IconType } from "@/components/shared";
 import { FadeIn } from "../fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import {useLocale} from "use-intl";
 
 const projectData = [
   {
@@ -107,6 +108,7 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
   disableButton,
 }) => {
   const t = useTranslations("Shared");
+  const localActive = useLocale();
 
   return (
     <FadeIn className="mx-auto flex w-10/12 max-w-[1000px] items-center justify-between">
@@ -118,8 +120,8 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
       </div>
       {!disableButton && (
         <div className="group hidden items-center md:flex">
-          <Button to="/portfolio">{t("All Cases-2")}</Button>
-          <Button to="/portfolio">
+          <Button to={`/${localActive}/portfolio`}>{t("All Cases-2")}</Button>
+          <Button to={`/${localActive}/portfolio`}>
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

@@ -119,7 +119,6 @@ const ServicesPage = () => {
               description={service.description}
               image={service.image}
               FAQ={service.FAQ}
-              href={service.href}
             />
           ))}
         </div>
