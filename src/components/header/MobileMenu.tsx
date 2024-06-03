@@ -35,9 +35,9 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[100] flex min-h-screen flex-col justify-between bg-background p-8"
+            className="fixed inset-0 z-[100] flex min-h-screen w-[100vw] flex-col justify-between bg-background p-8"
             initial={{ transform: "translateX(100%)", opacity: 0 }}
-            animate={{ transform: "translateX(0%)", opacity: 1 }}
+            animate={{ transform: "translateX(0)", opacity: 1 }}
             exit={{ transform: "translateX(100%)", opacity: 0 }}
           >
             <div className="flex items-center justify-between">

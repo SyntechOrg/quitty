@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import { Button, Icon, IconType, Logo } from "../shared";
 import { usePathname } from "next/navigation";
@@ -56,33 +56,60 @@ const Header: FC = () => {
   const isProjectsPage = pathname.includes("projects");
   const localActive = useLocale();
   const t = useTranslations("Header");
+  const scrollPosition = useScrollPosition();
+
+  const isAtTop = scrollPosition > 150;
 
   return (
     <header
+      // box-shadow: 0 0 20px rgba(60, 60, 60, .6);
       className={classNames(
-        "container flex gap-4 items-center justify-between py-[33px]",
-        isProjectsPage && "absolute top-0 inset-x-0 z-20",
+        "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/20 backdrop-blur-sm",
+        isProjectsPage
+          ? "translate-y-0"
+          : isAtTop
+            ? "translate-y-0"
+            : "-translate-y-[150%]",
       )}
     >
-      <Logo />
-      <Nav className="hidden lg:block" />
-      <div className="flex items-center gap-2 max-lg:ml-auto">
-        <LocalSwitcher />
-        <div className="group hidden items-center lg:flex">
-          <Button
-            to={`/${localActive}/contact`}
-            className="text-center leading-[1.3]"
-          >
-            {t("ContactButton")}
-          </Button>
-          <Button to={`/${localActive}/contact`}>
-            <Icon icon={IconType.ARROW} />
-          </Button>
+      <div className="container flex  items-center justify-between gap-4 ">
+        <Logo />
+        <Nav className="hidden lg:block" />
+        <div className="flex items-center gap-2 max-lg:ml-auto">
+          <LocalSwitcher />
+          <div className="group hidden items-center lg:flex">
+            <Button
+              to={`/${localActive}/contact`}
+              className="text-center leading-[1.3]"
+            >
+              {t("ContactButton")}
+            </Button>
+            <Button to={`/${localActive}/contact`}>
+              <Icon icon={IconType.ARROW} />
+            </Button>
+          </div>
         </div>
+        <MobileMenu />
       </div>
-      <MobileMenu />
     </header>
   );
 };
 
 export { Nav, Header };
+
+const useScrollPosition = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return scrollPosition;
+};
