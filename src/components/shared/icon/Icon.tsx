@@ -20,6 +20,7 @@ import {
   CloseIcon,
 } from "./icons";
 import { IconType } from "./icon-types";
+import { DropdownIcon } from "@/components/shared/icon/icons/DropdownIcon";
 
 type IconProps = {
   icon: IconType;
@@ -60,6 +61,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <QonsultantLogoIcon {...props} />;
     case IconType.MENU:
       return <MenuIcon {...props} />;
+    case IconType.DROPDOWN:
+      return <DropdownIcon {...props} />;
     case IconType.CLOSE:
       return <CloseIcon {...props} />;
 
