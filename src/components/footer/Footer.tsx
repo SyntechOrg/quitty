@@ -37,7 +37,7 @@ export const Footer = () => {
             <ul className="flex flex-col gap-y-5">
               <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
                 <Icon icon={IconType.DIAMOND} />
-                <span>SITEMAP</span>
+                <span>{t("Footer sitemap")}</span>
               </li>
               {footerLinks.map((item) => (
                 <li
@@ -50,38 +50,111 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-            <ul className="flex flex-col gap-y-5">
-              <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
-                <Icon icon={IconType.DIAMOND} />
-                <span>{t("Footer follow-us")}</span>
-              </li>
-              {["Instagram", "Facebook", "LinkedIn", "Tiktok"].map((item) => (
-                <li key={item} className="mt-2 text-sm font-light text-text">
-                  <Link href={`/${localActive}/${item.toLowerCase()}`}>
-                    {item}
+            {localActive === "de" && (
+              <ul className="flex flex-col gap-y-5">
+                <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
+                  <Icon icon={IconType.DIAMOND} />
+                  <span>{t("Footer legal")}</span>
+                </li>
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/privacyDe.pdf", "_blank")}
+                  >
+                    {t("Footer privacy-p")}
                   </Link>
                 </li>
-              ))}
-            </ul>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/cookiesDe.pdf", "_blank")}
+                  >
+                    {t("Footer cookies")}
+                  </Link>
+                </li>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/termsDe.pdf", "_blank")}
+                  >
+                    {t("Footer terms")}
+                  </Link>
+                </li>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link href="" onClick={() => window.open("", "_blank")}>
+                    {t("Footer impressum")}
+                  </Link>
+                </li>
+              </ul>
+            )}
+
+            {localActive === "en" && (
+              <ul className="flex flex-col gap-y-5">
+                <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
+                  <Icon icon={IconType.DIAMOND} />
+                  <span>{t("Footer legal")}</span>
+                </li>
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/privacyEn.pdf", "_blank")}
+                  >
+                    {t("Footer privacy-p")}
+                  </Link>
+                </li>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/cookiesEn.pdf", "_blank")}
+                  >
+                    {t("Footer cookies")}
+                  </Link>
+                </li>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link
+                    href=""
+                    onClick={() => window.open("/PDFs/termsEn.pdf", "_blank")}
+                  >
+                    {t("Footer terms")}
+                  </Link>
+                </li>
+
+                <li className="mt-2 text-sm font-light text-text">
+                  <Link href="" onClick={() => window.open("", "_blank")}>
+                    {t("Footer impressum")}
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
           <div className="py-[90px] lg:pl-[34px]">
             <p className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
               <Icon icon={IconType.DIAMOND} />
-              <span>STAY IN THE LOOP</span>
+              <span>{t("Footer info").toUpperCase()}</span>
             </p>
             <p className="text-sm font-light leading-[70px] text-text">
-              Subscribe to our newsletter
+              {t("Footer number")}
             </p>
-            <div className="flex w-full items-center border-b border-b-[#35353C] p-1 pl-4">
-              <input
-                type="text"
-                className="bg-transparent text-text focus:outline-none"
-                placeholder="Enter your e-mail"
-              />
-              <Button className="ml-auto">
-                <Icon icon={IconType.ARROW} />
-              </Button>
-            </div>
+            <a
+              href="tel:+383 49 799 829"
+              className="text-md font-bold leading-[20px] text-text"
+            >
+              +383 49 799 829
+            </a>
+            <p className="text-sm font-light leading-[70px] text-text">
+              {t("Footer address")}
+            </p>
+            <a
+              href="mailto:info@syn-tech.ch"
+              className="text-mds font-bold leading-[20px] text-text"
+            >
+              info@syn-tech.ch
+            </a>
           </div>
         </div>
       </div>
@@ -100,17 +173,8 @@ export const Footer = () => {
         </div>
         <div className="hidden h-[1px] flex-1 bg-[#0000FF] lg:block"></div>
         <ul className="hidden gap-x-[40px] text-sm leading-[30px] lg:flex">
-          <li>{t("Footer terms")}</li>
-          <li>Impressum</li>
+          <li>{t("Footer rights")}</li>
         </ul>
-        <div className="mt-[30px] flex w-full items-center justify-between gap-x-[10px] text-[10px] lg:hidden">
-          <span className="">© {new Date().getFullYear()}</span>
-          <div className="h-[1px] flex-1 bg-[#0000FF]"></div>
-          <ul className="flex gap-x-[16px]">
-            <li>{t("Footer terms")}</li>
-            <li>Impressum</li>
-          </ul>
-        </div>
       </div>
     </footer>
   );
