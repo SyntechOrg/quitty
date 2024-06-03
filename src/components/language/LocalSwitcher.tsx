@@ -18,7 +18,6 @@ const LocalSwitcher = () => {
 
   const localActive = useLocale();
 
-  console.log(pathname);
   const onSelectChange = (value: string) => {
     startTransition(() => {
       router.replace(`/${value}/${pathnameArray.join("/")}`);

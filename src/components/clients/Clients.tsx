@@ -15,7 +15,6 @@ const CLIENTS: {
     name: "Reputy",
     logo: IconType.REPUTY_LOGO,
   },
-  { name: "Quitty", logo: IconType.QUITTY_LOGO },
   {
     name: "Soxey",
     logo: IconType.SOXEY_LOGO,

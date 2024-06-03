@@ -118,6 +118,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
         "High quality images and visually appealing graphics are used to attract attention. A clean and modern design has been implemented that reflects the brand identity prioritizing the user experience. Powerful filtering and sorting options have also been added to help customers narrow down their choices based on preferences such as size, color, material and style.",
       imageUrl: "/images/projects/soxey/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/soxey/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/soxey/client-avatar.png",
@@ -175,6 +176,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         "Tailored Web Design: Qonsultant GmbH crafts custom websites for SMEs, ensuring user-friendly navigation and visual appeal. Expert Content: They curate informative content, empowering SMEs with valuable insights. Seamless Integration: Qonsultant GmbH integrates tailored solutions into their website, providing SMEs with easy access to expert guidance. Ongoing Support: Offering continuous assistance, they ensure their website remains a reliable resource for SMEs navigating challenges in the digital business environment.",
       imageUrl: "/images/projects/qonsultant/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/qonsultant/client-avatar.png",
@@ -226,6 +228,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         "Customization: We offer tailored solutions, allowing customers to choose from a variety of designs and styles to meet their unique preferences. Versatility: With options from awnings to blinds, we provide flexibility in adjusting shade levels and controlling natural light entry. Security and Aesthetics: Our garage doors ensure protection and enhance visual appeal, with various sizes, styles, and operational mechanisms available. Quality Assurance: Collaborating with experienced professionals and using high-quality materials ensures durable, reliable products, prioritizing customer satisfaction.",
       imageUrl: "/images/projects/ele-uznach/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/ele-uznach/client-avatar.png",
@@ -278,6 +281,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         "Strategic Brand Positioning: We crafted a unique identity for Reputy, emphasizing its commitment to excellence in reputation management. Targeted Online Presence: Through precise digital strategy, we optimized Reputy's online platforms to effectively engage its audience. Innovative Offerings: We developed creative solutions, setting Reputy apart as an industry leader. Continuous Improvement: Staying agile, we ensure Reputy remains at the forefront of reputation management.",
       imageUrl: "/images/projects/reputy-solutions/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/reputy-solutions/client-avatar.png",
@@ -333,6 +337,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         "Distinctive Brand Identity: We crafted FACEDRIP's unique identity, emphasizing its enchanting wellness approach to stand out. Tailored Digital Strategy: We devised a custom marketing plan, targeting FACEDRIP's audience across online platforms for maximum engagement. Engaging Online Platform: Our precise web development created an intuitive, visually captivating experience for FACEDRIP, enhancing user interaction. Continuous Support: We provide ongoing assistance, ensuring FACEDRIP adapts to industry shifts for sustained growth.",
       imageUrl: "/images/projects/facedrip/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/facedrip/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/facedrip/client-avatar.png",
@@ -451,6 +456,7 @@ export const projectsDeutsch: Array<Project> = [
         "Hochwertige Bilder und visuell ansprechende Grafiken werden verwendet, um Aufmerksamkeit zu erregen. Es wurde ein sauberes und modernes Design implementiert, das die Markenidentität widerspiegelt und die Benutzerfreundlichkeit in den Vordergrund stellt. Ausserdem wurden leistungsstarke Filter- und Sortieroptionen hinzugefügt, um den Kunden dabei zu helfen, ihre Auswahl nach Präferenzen wie Grösse, Farbe, Material und Stil einzugrenzen.",
       imageUrl: "/images/projects/soxey/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/soxey/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/soxey/client-avatar.png",
@@ -509,6 +515,7 @@ export const projectsDeutsch: Array<Project> = [
         "Massgeschneidertes Web-Design: Die Qonsultant GmbH entwirft massgeschneiderte Websites für KMUs und sorgt für eine benutzerfreundliche Navigation und ansprechende Optik.    Fachkundiger Inhalt: Qonsultant GmbH kuratiert informative Inhalte, die KMUs wertvolle Einblicke gewähren. Nahtlose Integration: Die Qonsultant GmbH integriert assgeschneiderte Lösungen in ihre Website und bietet KMUs so einen einfachen Zugang zu Expertenrat. Laufende Unterstützung: Durch kontinuierliche Unterstützung stellen sie sicher, dass ihre Website eine verlässliche Ressource für KMU bleibt, die sich den Herausforderungen des digitalen Geschäftsumfelds stellen.",
       imageUrl: "/images/projects/qonsultant/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/qonsultant/client-avatar.png",
@@ -565,6 +572,7 @@ export const projectsDeutsch: Array<Project> = [
         "Individuelle Anpassung: Wir bieten massgeschneiderte Lösungen an, die es unseren Kunden ermöglichen, aus einer Vielzahl von Designs und Stilen zu wählen, um ihre individuellen Wünsche zu erfüllen. Vielseitigkeit: Mit Optionen von Markisen bis zu Jalousien bieten wir Flexibilität bei der Anpassung der Beschattung und der Steuerung des natürlichen Lichteinfalls. Sicherheit und Ästhetik: Unsere Garagentore bieten Schutz und ein ansprechendes Erscheinungsbild und sind in verschiedenen Grössen, Stilen und mit unterschiedlichen Funktionsmechanismen erhältlich. Sicherung der Qualität: Die Zusammenarbeit mit erfahrenen Fachleuten und die Verwendung hochwertiger Materialien gewährleisten langlebige, zuverlässige Produkte, bei denen die Kundenzufriedenheit im Vordergrund steht.",
       imageUrl: "/images/projects/ele-uznach/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/ele-uznach/client-avatar.png",
@@ -621,6 +629,7 @@ export const projectsDeutsch: Array<Project> = [
         "Strategische Markenpositionierung: Wir haben eine einzigartige Identität für Reputy geschaffen und dabei den Schwerpunkt auf sein Engagement für Exzellenz im Reputation Management gelegt. Gezielte Online-Präsenz: Durch eine präzise digitale Strategie haben wir Reputys Online-Plattformen optimiert, um effektiv mit seinem Publikum zu interagieren. Innovative Angebote: Wir haben kreative Lösungen entwickelt, um Reputy als Branchenführer hervorzuheben. Kontinuierliche Verbesserung: Durch unsere agile Vorgehensweise stellen wir sicher, dass Reputy stets an vorderster Front im Reputation Management bleibt.",
       imageUrl: "/images/projects/reputy-solutions/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/reputy-solutions/client-avatar.png",
@@ -678,6 +687,7 @@ export const projectsDeutsch: Array<Project> = [
         "Unverwechselbare Markenidentität: Wir haben die einzigartige Identität von FACEDRIP entwickelt und dabei den verzaubernden Wellness-Ansatz betont, um herauszustechen.        Massgeschneiderte digitale Strategie: Wir haben einen individuellen Marketingplan erstellt, der die Zielgruppe von FACEDRIP auf verschiedenen Online-Plattformen anspricht und maximales Engagement erzielt. Fesselnde Online-Plattform: Unsere präzise Webentwicklung hat ein intuitives, visuell ansprechendes Erlebnis für FACEDRIP geschaffen und die Benutzerinteraktion verbessert. Kontinuierliche Unterstützung: Wir bieten fortlaufende Unterstützung, damit FACEDRIP sich an Veränderungen in der Branche anpassen und nachhaltiges Wachstum erzielen kann.",
       imageUrl: "/images/projects/facedrip/solutionAndChallenge-2.png",
     },
+    projectViewImageTwo: "/images/projects/facedrip/showcase-1.png",
     interactions: [
       {
         avatar: "/images/projects/facedrip/client-avatar.png",
