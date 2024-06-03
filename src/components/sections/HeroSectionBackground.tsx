@@ -16,11 +16,10 @@ const HeroSectionBackground = () => {
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation(false);
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,7 +38,7 @@ const HeroSectionBackground = () => {
         animate={initialAnimation ? { scale: 1 } : { scale: [1, 1.05, 1] }}
         transition={
           initialAnimation
-            ? { duration: 2 }
+            ? { duration: 1.5 }
             : { duration: 4, repeat: Infinity, repeatType: "reverse" }
         }
         className="fixed left-[50%] top-[50%] z-[-1]"

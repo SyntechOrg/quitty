@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const GENERAL_INFO = [
   {
     label: "Contact phone-number",
-    value: "+383 49 799 829",
+    value: "+41 76 573 24 07",
   },
   {
     label: "Contact email",
@@ -13,7 +13,7 @@ const GENERAL_INFO = [
   },
   {
     label: "Contact address",
-    value: "Strase Switzerland",
+    value: "Rotzbergstrasse 1 6362 Stansstad",
   },
 ];
 
@@ -29,20 +29,20 @@ export const ContactPageBanner: FC = () => {
           {t("Contact first-title")}
         </h1>
       </div>
-      <div className="mt-[161px] flex flex-col justify-between gap-y-5 lg:flex-row lg:items-center lg:gap-y-0">
-        <p className="w-full max-w-[340px] text-sm leading-[30px]">
+      <div className="mt-[150px] flex flex-col justify-between gap-y-12 max-lg:text-center lg:flex-row lg:items-center">
+        <p className="mx-auto w-full max-w-[320px] text-[14px] leading-[2] lg:mr-10 lg:max-w-[220px]">
           {t("Contact first-list-text")}
         </p>
-        <ul className="flex w-full flex-col justify-between lg:flex-row">
+        <ul className="flex w-full flex-col items-center justify-between lg:flex-row">
           {GENERAL_INFO.map((info) => (
             <li
               key={info.label}
-              className="border-l border-l-[#3F3D45] py-3 pl-[30px] last-of-type:border-r-[#3F3D45] lg:pl-[60px] lg:last-of-type:border-r lg:last-of-type:pr-[60px]"
+              className="mx-auto max-w-[250px] px-4 max-lg:py-8 max-lg:border-t max-lg:border-t-[#3F3D45] lg:border-l lg:border-l-[#3F3D45] lg:px-8 lg:last-of-type:border-r lg:last-of-type:border-r-[#3F3D45]"
             >
-              <div className="mb-[30px] text-sm font-bold text-[#B0B0B0]">
+              <div className="lg:mb-6 mb-2 text-sm font-bold text-[#B0B0B0]">
                 {t(info.label)}
               </div>
-              <div className="text-xl font-bold">{info.value}</div>
+              <div className="text-[19px] font-bold">{info.value}</div>
             </li>
           ))}
         </ul>
