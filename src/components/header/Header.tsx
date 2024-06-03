@@ -8,6 +8,7 @@ import { MobileMenu } from "./MobileMenu";
 import LocalSwitcher from "@/components/language/LocalSwitcher";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
+import {useScrollYPosition} from "@/hooks/useScrollYPosition";
 
 const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
 
@@ -56,13 +57,12 @@ const Header: FC = () => {
   const isProjectsPage = pathname.includes("projects");
   const localActive = useLocale();
   const t = useTranslations("Header");
-  const scrollPosition = useScrollPosition();
+  const scrollPosition = useScrollYPosition();
 
-  const isAtTop = scrollPosition > 150;
+  const isAtTop = scrollPosition > 100;
 
   return (
     <header
-      // box-shadow: 0 0 20px rgba(60, 60, 60, .6);
       className={classNames(
         "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/20 backdrop-blur-sm",
         isProjectsPage
@@ -96,20 +96,3 @@ const Header: FC = () => {
 };
 
 export { Nav, Header };
-
-const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return scrollPosition;
-};

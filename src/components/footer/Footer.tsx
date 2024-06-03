@@ -52,6 +52,7 @@ export const Footer = () => {
                   </li>
                 ))}
               </ul>
+
               {localActive === "de" && (
                 <ul className="flex flex-col gap-y-5">
                   <li className="flex items-center gap-x-[10px] text-sm lg:-mr-5">
@@ -168,11 +169,8 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="container flex flex-col items-center justify-center pb-[30px] pt-5 lg:flex-row lg:px-[30px] lg:pt-[50px]">
-          <Icon
-            icon={IconType.LOGO_BACKGROUND}
-            className="h-[41px] w-full lg:h-auto"
-          />
+        <div className="container flex flex-col items-center justify-center pb-[30px] pt-5 lg:flex-row lg:pt-[50px]">
+          <Icon icon={IconType.LOGO_BACKGROUND} className="h-auto w-full" />
         </div>
         <div className="container flex flex-col items-center gap-x-[30px] lg:flex-row">
           <div className="flex items-center justify-center gap-x-7">
@@ -181,8 +179,19 @@ export const Footer = () => {
               © {new Date().getFullYear()}
             </span>
           </div>
-          <div className="hidden h-[1px] flex-1 bg-[#0000FF] lg:block"></div>
-          <ul className="hidden gap-x-[40px] text-sm leading-[30px] lg:flex">
+          <div className="block h-[1px] flex-1 bg-[#0000FF]"></div>
+          <ul className="hidden text-sm leading-[30px] lg:flex">
+            <li>{t("Footer rights")}</li>
+          </ul>
+        </div>
+        <div className="container mt-7 flex items-center gap-x-2.5 lg:hidden">
+          <div className="flex items-center justify-center gap-x-7">
+            <span className=" inline-block text-[10px]">
+              © {new Date().getFullYear()}
+            </span>
+          </div>
+          <div className="block h-[1px] flex-1 bg-[#0000FF]"></div>
+          <ul className="text-[10px]">
             <li>{t("Footer rights")}</li>
           </ul>
         </div>
