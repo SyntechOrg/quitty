@@ -25,7 +25,7 @@ export const ContactPageBanner: FC = () => {
         <div className="mt-[30px] text-[24px] tracking-[20%] text-primary">
           {t("Contact first-text")}
         </div>
-        <h1 className="w-full max-w-[650px] text-[30px] leading-[40px] lg:text-[70px] lg:leading-[80px]">
+        <h1 className="w-full max-w-[650px] text-[30px] leading-[40px] max-lg:mt-5 lg:text-[70px] lg:leading-[80px]">
           {t("Contact first-title")}
         </h1>
       </div>
@@ -37,9 +37,9 @@ export const ContactPageBanner: FC = () => {
           {GENERAL_INFO.map((info) => (
             <li
               key={info.label}
-              className="mx-auto max-w-[250px] px-4 max-lg:py-8 max-lg:border-t max-lg:border-t-[#3F3D45] lg:border-l lg:border-l-[#3F3D45] lg:px-8 lg:last-of-type:border-r lg:last-of-type:border-r-[#3F3D45]"
+              className="mx-auto max-w-[250px] px-4 max-lg:border-t max-lg:border-t-[#3F3D45] max-lg:py-8 lg:border-l lg:border-l-[#3F3D45] lg:px-8 lg:last-of-type:border-r lg:last-of-type:border-r-[#3F3D45]"
             >
-              <div className="lg:mb-6 mb-2 text-sm font-bold text-[#B0B0B0]">
+              <div className="mb-2 text-sm font-bold text-[#B0B0B0] lg:mb-6">
                 {t(info.label)}
               </div>
               <div className="text-[19px] font-bold">{info.value}</div>

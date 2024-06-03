@@ -28,8 +28,10 @@ export const Footer = () => {
               </p>
               <div className="mt-8 flex">
                 <div className="group flex items-center">
-                  <Button to="/contact">{t("Footer button-1")}</Button>
-                  <Button to="/contact">
+                  <Button to={`/${localActive}/contact`}>
+                    {t("Footer button-1")}
+                  </Button>
+                  <Button to={`/${localActive}/contact`}>
                     <Icon icon={IconType.ARROW} />
                   </Button>
                 </div>

@@ -172,9 +172,9 @@
     "Email": "E-mail Address",
     "PhonePlaceholder": "+(383) XX - XXX XXX",
     "First name is required": "First name is required",
-    "Last name is required" : "Last name is required",
+    "Last name is required": "Last name is required",
     "Invalid email address": "Invalid email address",
-    "Phone number is required":"Phone number is required",
+    "Phone number is required": "Phone number is required",
     "Project description is required": "Project description is required",
     "Required": "Required"
   },
@@ -198,5 +198,14 @@
       "Title": "Execution:",
       "Description": "Your input is key as we fine-tune the website to meet your needs. Once you're happy, we optimize and launch the website, confident it's ready to go. And remember, we're always here to help with any changes or support you may need along"
     }
+  },
+  "Projects": {
+    "SeeLive": "See live",
+    "Services": "Services",
+    "Product type": "Product type",
+    "Expertise": "Expertise",
+    "Release": "Release",
+    "MAIN CHALLENGE": "MAIN CHALLENGE",
+    "OUR SOLUTION": "OUR SOLUTION"
   }
 }

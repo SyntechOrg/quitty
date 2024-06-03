@@ -198,5 +198,14 @@
       "Title": "Umsetzung",
       "Description": "Ihre Meinung ist entscheidend, während wir die Website an Ihre Bedürfnisse anpassen. Sobald Sie zufrieden sind, optimieren und starten wir die Website, in dem Wissen, dass sie bereit ist. Und denken Sie daran, wir sind immer für Sie da, um bei Änderungen oder Unterstützung entlang des Weges zu helfen"
     }
+  },
+  "Projects": {
+    "SeeLive": "Direkt sehen",
+    "Services": "Dienstleistungen",
+    "Product type": "Produkttyp",
+    "Expertise": "Expertise",
+    "Release": "Freigabe",
+    "MAIN CHALLENGE": "HAUPTANFORDERUNG",
+    "OUR SOLUTION": "UNSERE LÖSUNG"
   }
 }

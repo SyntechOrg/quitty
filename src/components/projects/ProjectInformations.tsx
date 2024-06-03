@@ -1,7 +1,8 @@
-import classNames from 'classnames';
-import { type FC } from 'react';
-import { Icon, IconType } from '../shared';
-import Link from 'next/link';
+import classNames from "classnames";
+import { type FC } from "react";
+import { Icon, IconType } from "../shared";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type ProjectInformationsProps = {
   expertise: string[];
@@ -18,21 +19,23 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
   services,
   className,
 }) => {
+  const t = useTranslations("Projects");
+
   const data = [
     {
-      title: 'Services',
+      title: "Services",
       items: services,
     },
     {
-      title: 'Product type',
+      title: "Product type",
       items: productType,
     },
     {
-      title: 'Expertise',
+      title: "Expertise",
       items: expertise,
     },
     {
-      title: 'Release',
+      title: "Release",
       items: release,
     },
   ];
@@ -40,7 +43,7 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
   return (
     <div
       className={classNames(
-        'relative bottom-0 z-[3] inset-x-0 w-full mt-[25px] lg:mt-[50px]',
+        "relative bottom-0 z-[3] inset-x-0 w-full mt-[25px] lg:mt-[50px]",
         className,
       )}
     >
@@ -52,7 +55,7 @@ export const ProjectInformations: FC<ProjectInformationsProps> = ({
           >
             <li className="flex w-full items-center gap-x-[10px] text-xl text-[#A6A6AE] lg:-mr-5">
               <Icon icon={IconType.DIAMOND} />
-              <span>{information.title}</span>
+              <span>{t(information.title)}</span>
             </li>
             {information.items.map((item, i) => (
               <li

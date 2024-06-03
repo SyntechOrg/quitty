@@ -4,6 +4,7 @@ import { Image } from "../shared/image/Image";
 
 import { Button, Icon, IconType } from "../shared";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 type ProjectsBannerProps = {
   heroText: ReactNode;
@@ -25,6 +26,8 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
   release,
   services,
 }) => {
+  const t = useTranslations("Projects");
+
   return (
     <FadeIn className="relative min-h-screen bg-background">
       <div className="absolute inset-0 h-full min-h-screen w-full">
@@ -44,7 +47,7 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
             </h1>
             <div className="group mt-[25px] flex w-max lg:mt-[50px]">
               <Button to="/" variant="secondary">
-                See Live
+                {t("SeeLive")}
               </Button>
               <Button to="/" variant="secondary">
                 <Icon icon={IconType.ARROW} />
