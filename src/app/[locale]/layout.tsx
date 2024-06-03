@@ -10,9 +10,6 @@ import Blob from "@/components/blob/blob";
 
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-
-import { PageTransition } from "@/components/page-transition/PageTransition";
-
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
