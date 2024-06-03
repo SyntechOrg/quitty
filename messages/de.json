@@ -76,23 +76,19 @@
     "Statistics": {
       "Title": "Einfach gesagt: Wir wagen, was andere nicht wagen.",
       "Description": "Strategischer Prozess zur Schaffung einer einzigartigen Identität für Unternehmen. Er umfasst die Definition der Markenpersönlichkeit, der Werte und der visuellen Elemente, wie Logos und Farbschemata, um einen bleibenden Eindruck beim Publikum zu hinterlassen.",
+      "Button": "Werken",
       "Cards": {
         "Card1": {
-          "Statistic": "200+",
-          "Title": "Abgeschlossene Projekte",
-          "Description": "Wir haben insgesamt mehr als 200 Projekte erfolgreich abgeschlossen."
+          "Statistic": "15+",
+          "Title": "Jahre Erfahrung",
+          "Description": "Mehr als ein Jahrzehnt Erfahrung bei der Gestaltung von Branchentrends."
         },
         "Card2": {
-          "Statistic": "10+",
-          "Title": "Jahre Erfahrung",
-          "Description": "Mehr als ein Jahrzehnt Erfahrung bei der Gestaltung\nvon Branchentrends."
+          "Statistic": "50+",
+          "Title": "Abgeschlossene Projekte",
+          "Description": "Wir haben insgesamt mehr als 50 Projekte erfolgreich abgeschlossen."
         },
         "Card3": {
-          "Statistic": "1,000+",
-          "Title": "Bewertungen von ihren Nutzern",
-          "Description": "Begeistert von 1000+ Nutzerbewertungen, die unser Engagement für hervorragende Leistungen bestätigen."
-        },
-        "Card4": {
           "Statistic": "20+",
           "Title": "Teammitglieder",
           "Description": "Eine Familie von über 20 Teammitgliedern, von denen jedes neinzigartige Fähigkeiten mitbringt."

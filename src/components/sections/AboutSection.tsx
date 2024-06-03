@@ -9,9 +9,8 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "use-intl";
 
 const quickCardData = [
-  { statistic: "+200", description: "AboutUs quickcard-1" },
-  { statistic: "+10", description: "AboutUs quickcard-2" },
-  { statistic: "10K", description: "AboutUs quickcard-3" },
+  { statistic: "+50", description: "AboutUs quickcard-1" },
+  { statistic: "+15", description: "AboutUs quickcard-2" },
   { statistic: "+20", description: "AboutUs quickcard-4" },
 ];
 

@@ -15,7 +15,14 @@ const CLIENTS: {
     name: "Reputy",
     logo: IconType.REPUTY_LOGO,
   },
-  { name: "Quitty", logo: IconType.QUITTY_LOGO },
+  {
+    name: "Netwrk",
+    logo: IconType.NETWRK_LOGO,
+  },
+  {
+    name: "luneCadeau",
+    logo: IconType.LUNE_CADEAU_LOGO,
+  },
   {
     name: "Soxey",
     logo: IconType.SOXEY_LOGO,

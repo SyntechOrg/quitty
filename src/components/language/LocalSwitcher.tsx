@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "use-intl";
 import { Icon, IconType } from "@/components/shared";
 import Image from "next/image";
@@ -11,11 +11,16 @@ const LocalSwitcher = () => {
   const [isPending, startTransition] = useTransition();
   const [isLanguageSubMenuOpen, setIsLanguageSubMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const pathnameArray = pathname
+    .split("/")
+    .filter((path) => path !== "de" && path !== "en" && path !== "");
+
   const localActive = useLocale();
 
   const onSelectChange = (value: string) => {
     startTransition(() => {
-      router.replace(`/${value}`);
+      router.replace(`/${value}/${pathnameArray.join("/")}`);
     });
   };
 

@@ -52,7 +52,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
             </div>
             <div className="pb-[105px]">
               <p className="text-sm text-[#2D2D31]">Get in touch</p>
-              <div className="text-lg text-[#D4D4D4]">info@syn-tech.ch</div>
+              <div className="text-lg text-[#D4D4D4]">office@syn-tech.ch</div>
             </div>
           </motion.div>
         )}
