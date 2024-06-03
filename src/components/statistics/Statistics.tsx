@@ -1,32 +1,31 @@
+"use client";
 import { type FC } from "react";
 import { FadeIn } from "../fade-in/FadeIn";
 import { Button, Icon, IconType } from "../shared";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const STATISTICS = [
   {
-    statistic: "1,000+",
-    title: "Projects Completed",
-    description:
-      "We have completed over 1,000 projects for clients all over the world.",
+    statistic: "Cards.Card1.Statistic",
+    title: "Cards.Card1.Title",
+    description: "Cards.Card1.Description",
   },
   {
-    statistic: "1,000+",
-    title: "Projects Completed",
-    description:
-      "We have completed over 1,000 projects for clients all over the world.",
+    statistic: "Cards.Card2.Statistic",
+    title: "Cards.Card2.Title",
+    description: "Cards.Card2.Description",
   },
   {
-    statistic: "1,000+",
-    title: "Projects Completed",
-    description:
-      "We have completed over 1,000 projects for clients all over the world.",
+    statistic: "Cards.Card3.Statistic",
+    title: "Cards.Card3.Title",
+    description: "Cards.Card3.Description",
   },
   {
-    statistic: "1,000+",
-    title: "Projects Completed",
-    description:
-      "We have completed over 1,000 projects for clients all over the world.",
+    statistic: "Cards.Card4.Statistic",
+    title: "Cards.Card4.Title",
+    description: "Cards.Card4.Description",
   },
 ];
 
@@ -44,21 +43,29 @@ export const StatisticItem: FC<StatisticItemProps> = ({
   description,
   index,
 }) => {
+  const localActive = useLocale();
+
   return (
     <div
       className={classNames(
-        "p-[51px] pt-[80px] relative group lg:odd:border-r lg:odd:border-r-[#35353C] border-b border-b-[#35353C] lg:border-b-0 last-of-type:border-b-0",
-        index === 2 || index === 3 ? "lg:border-t lg:border-t-[#35353C]" : ""
+        "p-10 pt-12 relative group lg:odd:border-r lg:odd:border-r-[#35353C] border-b border-b-[#35353C] lg:border-b-0 last-of-type:border-b-0",
+        index === 2 || index === 3 ? "lg:border-t lg:border-t-[#35353C]" : "",
       )}
     >
-      <div className="text-[32px] font-bold leading-[56px]">{statistic}</div>
-      <div className="font-light text-[32px] leading-[56px]">{title}</div>
-      <p className="mt-[58px] lg:mt-[116px] text-base text-[#8F8F8F]">
+      <div className="text-[24px] font-bold leading-[1.4] lg:text-[32px]">
+        {statistic}
+      </div>
+      <div className="mt-2 text-[24px] font-light leading-[1.4] lg:h-[90px] lg:text-[32px]">
+        {title}
+      </div>
+      <p className="mt-6 text-[14px] leading-[1.4] text-[#8F8F8F] max-lg:mx-auto max-lg:max-w-[420px] lg:mt-14 lg:text-[16px]">
         {description}
       </p>
-      <div className="absolute top-[50px] right-[50px] items-center hidden group-hover:flex">
-        <Button size="sm">Work</Button>
-        <Button size="sm">
+      <div className="absolute right-[10%] top-[10%] hidden items-center group-hover:flex">
+        <Button size="sm" to={`${localActive}/contact`}>
+          Work
+        </Button>
+        <Button size="sm" to={`${localActive}/contact`}>
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>
@@ -71,22 +78,27 @@ type StatisticsProps = {
 };
 
 export const Statistics: FC<StatisticsProps> = () => {
+  const t = useTranslations("About Us.Statistics");
+
   return (
-    <FadeIn className="container flex lg:flex-row flex-col gap-y-[44px] lg:gap-y-0 lg:gap-x-[88px] mt-[90px] lg:mt-[180px]">
-      <div className="mt-[70px] max-w-[350px] w-full">
-        <h2 className="text-[40px] leading-[60px]">
-          Simply put, we dare what others don't
+    <FadeIn className="container mt-[90px] flex flex-col gap-y-[44px] max-lg:text-center lg:mt-[180px] lg:flex-row lg:justify-between lg:gap-x-10 lg:gap-y-0">
+      <div className="mt-[70px] w-full max-w-[420px] max-lg:mx-auto lg:w-[40%]">
+        <h2 className="text-[26px] leading-[1.5] sm:text-[30px] lg:text-[38px]">
+          {t("Title")}
         </h2>
-        <p className="mt-[48px] text-base leading-[26x]">
-          Strategic process of creating a unique identity for businesses. It
-          involves defining a brand's personality, values, and visual elements,
-          such as logos and color schemes, to leave a lasting impression on the
-          audience
+        <p className="mt-5 leading-[1.625] max-sm:text-[14px] lg:mt-10">
+          {t("Description")}
         </p>
       </div>
-      <div className="grid lg:grid-cols-2 border border-[#35353C] grid-cols-1">
+      <div className="grid w-full grid-cols-1 border border-[#35353C] max-lg:mx-auto max-lg:max-w-[600px] lg:grid-cols-2">
         {STATISTICS.map((statistic, index) => (
-          <StatisticItem key={index} index={index} {...statistic} />
+          <StatisticItem
+            key={index}
+            index={index}
+            title={t(statistic.title)}
+            statistic={t(statistic.statistic)}
+            description={t(statistic.description)}
+          />
         ))}
       </div>
     </FadeIn>
