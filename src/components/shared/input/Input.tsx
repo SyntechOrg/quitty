@@ -1,5 +1,6 @@
 import { ComponentProps, Fragment, type FC } from "react";
 import { FieldError, FieldValues, UseFormRegister } from "react-hook-form";
+import { useTranslations } from "next-intl";
 
 type InputProps<T extends FieldValues = any> = {
   register?: UseFormRegister<T>;
@@ -9,7 +10,7 @@ export const Input: FC<InputProps> = ({ register, ...props }) => {
   return (
     <label htmlFor={props.name} className="w-full">
       <input
-        className="border-b border-b-[#3F3D45] bg-transparent pb-5 pl-[35px] text-base w-full focus:outline-primary"
+        className="w-full border-b border-b-[#3F3D45] bg-transparent pb-5 pl-[35px] text-base focus:outline-primary"
         type="text"
         {...props}
         {...register?.(props?.name ?? "name")}
@@ -25,12 +26,14 @@ type InputFieldProps<T extends FieldValues = any> = {
 } & ComponentProps<"input">;
 
 export const InputField: FC<InputFieldProps> = ({ error, ...props }) => {
+  const t = useTranslations();
+
   return (
     <div className="w-full">
       <Input {...props} />
       {error && (
-        <span className="text-xs text-red-500 font-medium">
-          {error?.message}
+        <span className="text-xs font-medium text-red-500">
+          {t(error?.message)}
         </span>
       )}
     </div>

@@ -5,6 +5,7 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { projectsEnglish, projectsDeutsch } from "../../../../../projects";
 import { notFound } from "next/navigation";
 import AllProjects from "@/components/sections/AllProjects";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 type PostPageProps = {
   params: {
@@ -37,14 +38,14 @@ const PostPage = async ({ params }: PostPageProps) => {
         solution={{ ...project.ourSolution }}
       />
       {project?.projectViewImageTwo && (
-        <div className="mt-[160px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
+        <FadeIn className="mt-[160px] h-[700px] w-full lg:mt-[136px] lg:h-[1440px]">
           <Image
             src={project?.projectViewImageTwo}
             alt="Project Showcase 1"
             wrapperClassNames="w-full h-full"
             className="h-full w-full object-cover"
           />
-        </div>
+        </FadeIn>
       )}
       <ProjectInteraction interactions={secondInteractions} />
       <AllProjects itemsToShow={3} slug={params.slug} random />
