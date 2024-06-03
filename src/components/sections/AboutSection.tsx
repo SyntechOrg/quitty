@@ -50,7 +50,7 @@ const AboutSection = () => {
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
-        <div className="lg:mt:[40px] mt-[21px] flex flex-wrap items-center gap-1.5 text-left max-lg:justify-center md:mt-[28px]">
+        <div className="lg:mt:[40px] mt-[21px] flex flex-wrap gap-1.5 text-left max-lg:justify-center md:mt-[28px]">
           {quickCardData.map((card, index) => (
             <QuickCard
               key={index}
