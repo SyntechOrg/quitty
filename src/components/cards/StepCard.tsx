@@ -17,7 +17,7 @@ const StepCard: FC<TestimonialCardProps> = ({ title, description }) => {
       <p className="text-[15px] font-bold leading-[1.5] tracking-[0.02em] md:text-[18px]">
         {t(title)}
       </p>
-      <p className="mt-4 text-[14px] leading-[1.666] md:mt-7 md:text-[16px]">
+      <p className="text-[14px] leading-[1.666] sm:mt-5 md:mt-7 md:text-[16px]">
         {t(description)}
       </p>
     </div>
