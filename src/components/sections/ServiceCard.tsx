@@ -76,13 +76,13 @@ const ServiceCard: FC<ServiceCardProps> = ({
         </div>
         <div>
           <div
-            className="group relative mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
+            className="group relative z-[50] mt-10 flex w-fit items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0
             lg:top-[-20px]"
           >
             <Button to={`/${localActive}/contact`}>
               {t("Shared.Service card-button-1")}
             </Button>
-            <Button to={`/${localActive}/contact`}>
+            <Button to={`/${localActive}/contact`} className="btn2">
               <Icon icon={IconType.ARROW} />
             </Button>
           </div>

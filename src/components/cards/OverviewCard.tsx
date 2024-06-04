@@ -21,7 +21,7 @@ const OverviewCard = () => {
           <Button to={`/${localActive}/contact`}>
             {t("About overview-button")}
           </Button>
-          <Button to={`/${localActive}/contact`}>
+          <Button to={`/${localActive}/contact`} className="btn2">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

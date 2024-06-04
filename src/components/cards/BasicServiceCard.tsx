@@ -94,7 +94,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
           <Button to={`/${localActive}${href}`} className="text-center leading-[1]">
             {t("Service card-button-1")}
           </Button>
-          <Button to={`/${localActive}${href}`}>
+          <Button to={`/${localActive}${href}`} className="btn2">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

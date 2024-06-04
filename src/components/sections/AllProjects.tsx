@@ -121,7 +121,7 @@ export const AllProjectsHeader: FC<AllProjectsHeaderProps> = ({
       {!disableButton && (
         <div className="group hidden items-center md:flex">
           <Button to={`/${localActive}/portfolio`}>{t("All Cases-2")}</Button>
-          <Button to={`/${localActive}/portfolio`}>
+          <Button to={`/${localActive}/portfolio`} className="btn2">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

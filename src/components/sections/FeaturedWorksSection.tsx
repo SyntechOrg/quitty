@@ -19,7 +19,7 @@ const FeaturedWorksSection = () => {
         className="mt-[40px] flex items-center justify-center md:hidden"
       >
         <Button to="/portfolio">{t("All Cases")}</Button>
-        <Button to="/portfolio">
+        <Button to="/portfolio" className="btn2">
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>

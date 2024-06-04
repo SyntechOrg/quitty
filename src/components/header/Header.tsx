@@ -77,7 +77,7 @@ const Header: FC = () => {
         <Nav className="hidden lg:block" />
         <div className="flex items-center gap-2 max-lg:ml-auto">
           <LocalSwitcher />
-          <div className="relative group hidden items-center lg:flex">
+          <div className="group hidden items-center lg:flex">
             <Button
               to={`/${localActive}/contact`}
               className="text-center leading-[1.3]"
