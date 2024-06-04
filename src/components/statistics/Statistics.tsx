@@ -61,7 +61,7 @@ export const StatisticItem: FC<StatisticItemProps> = ({
         <Button size="sm" to={`/${localActive}/contact`}>
           {t("Button")}
         </Button>
-        <Button size="sm" to={`/${localActive}/contact`}>
+        <Button size="sm" to={`/${localActive}/contact`} className="btn2">
           <Icon icon={IconType.ARROW} />
         </Button>
       </div>

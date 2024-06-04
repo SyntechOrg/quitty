@@ -46,7 +46,7 @@ const AboutSection = () => {
         </p>
         <div className="group mt-[20px] flex items-center max-lg:justify-center md:mt-[24px] lg:mt-[32px]">
           <Button to={`/${localActive}/about`}>{t("AboutUs button-1")}</Button>
-          <Button to={`/${localActive}/about`} className="px-[21px]">
+          <Button to={`/${localActive}/about`} className="px-[21px]" className="btn2">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>

@@ -31,7 +31,7 @@ export const Footer = () => {
                   <Button to={`/${localActive}/contact`}>
                     {t("Footer button-1")}
                   </Button>
-                  <Button to={`/${localActive}/contact`}>
+                  <Button to={`/${localActive}/contact`} className="btn2">
                     <Icon icon={IconType.ARROW} />
                   </Button>
                 </div>
