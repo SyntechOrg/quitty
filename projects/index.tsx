@@ -105,7 +105,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
-    release: ["2024", "Feb"],
+    release: ["Feb", "2024"],
     mainChallenge: {
       title: "Crafting a standout website in a competitive market.",
       description:
@@ -163,7 +163,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["Design", "Development"],
     productType: ["Website", "Onepage"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["2024", "2024"],
+    release: ["May", "2024"],
     mainChallenge: {
       title: "Empowering SMEs with Effective Online Representation",
       description:
@@ -215,7 +215,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["UI Design", "Development"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
-    release: ["May 2024", "2024"],
+    release: ["May", "2024"],
     mainChallenge: {
       title: "Meeting Diverse Needs in Service Offerings",
       description:
@@ -268,7 +268,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["March 2024"],
+    release: ["March", "2024"],
     mainChallenge: {
       title: "Positioning Reputy as a Reputation Management Leader",
       description:
@@ -324,7 +324,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["April 2024"],
+    release: ["April", "2024"],
     mainChallenge: {
       title: "Differentiating in the Competitive Beauty Market",
       description:
@@ -442,7 +442,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
-    release: ["2024", "Feb"],
+    release: ["Februar", "2024"],
     mainChallenge: {
       title:
         "Entwicklung einer herausragenden Website in einem wettbewerbsintensiven Markt.",
@@ -559,7 +559,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI Design", "Entwicklung"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
-    release: ["May", "2024"],
+    release: ["Mai", "2024"],
     mainChallenge: {
       title: "Erfüllung vielfältiger Bedürfnisse in unserem Serviceangebot",
       description:
@@ -615,7 +615,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
-    release: ["March 2024"],
+    release: ["März 2024"],
     mainChallenge: {
       title:
         "Die Positionierung von Reputy als führendes Unternehmen im Reputation Management",
@@ -664,7 +664,7 @@ export const projectsDeutsch: Array<Project> = [
     title: "FACEDRIP",
     heroText: (
       <>
-        Facedrip <br /> Lass sie tröpfeln! <br /> Beauty-Face-eCommerce
+        Facedrip <br /> Let them drip! <br /> Beauty face eCommerce
       </>
     ),
     date: "2024-04",

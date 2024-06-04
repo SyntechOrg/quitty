@@ -16,6 +16,7 @@ const SERVICE_OPTIONS = [
   "Contact form-s-3",
   "Contact form-s-4",
   "Contact form-s-5",
+  "Contact form-s-6",
 ];
 
 const BUDGET_OPTIONS = [
@@ -36,6 +37,7 @@ const schema = z.object({
       "Contact form-s-3",
       "Contact form-s-4",
       "Contact form-s-5",
+      "Contact form-s-6",
     ])
     .refine((value) => {
       return SERVICE_OPTIONS.includes(value);
