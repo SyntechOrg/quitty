@@ -5,7 +5,29 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { projectsEnglish, projectsDeutsch } from "../../../../../projects";
 import { notFound } from "next/navigation";
 import AllProjects from "@/components/sections/AllProjects";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
+import { Metadata } from "next";
+
+interface Props {
+  params: { slug: string; locale: string };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug;
+
+  const isEnglish = params.locale === "en";
+
+  const product = isEnglish
+    ? projectsEnglish.find((project) => project.slug === slug)
+    : projectsDeutsch.find((project) => project.slug === slug);
+
+  return {
+    title: `Syntech Solutions AG | ${product?.title}`,
+    openGraph: {
+      images: product?.heroImage ? [product.heroImage] : [],
+    },
+  };
+}
 
 type PostPageProps = {
   params: {

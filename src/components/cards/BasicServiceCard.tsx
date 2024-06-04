@@ -1,12 +1,12 @@
 "use client";
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
 import { useLocale } from "use-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 interface BasicServiceCardProps {
   index: number;
@@ -40,7 +40,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
   const scaleReduction = useTransform(
     scrollYProgress,
     [0.6, 0],
-    [1, isLargeScreen ? scaleEndValue : 1],
+    [1, isLargeScreen ? scaleEndValue : 1]
   );
 
   return (
@@ -91,7 +91,10 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to={`/${localActive}${href}`} className="text-center leading-[1]">
+          <Button
+            to={`/${localActive}${href}`}
+            className="text-center leading-[1]"
+          >
             {t("Service card-button-1")}
           </Button>
           <Button to={`/${localActive}${href}`} className="btn2">

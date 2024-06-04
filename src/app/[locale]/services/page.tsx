@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import { SecondaryHeroSection } from "@/components/sections/SecondaryHeroSection";
 import WebDevImage from "../../../../public/assets/images/web-dev-service-image.png";
@@ -8,6 +8,7 @@ import DigitalMarketingImage from "../../../../public/assets/images/digital-mark
 import ServiceCard from "@/components/sections/ServiceCard";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
 
 const services = [
   {
@@ -95,6 +96,11 @@ const services = [
     href: "/some-href",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Syntech Solutions AG | Services",
+  description: "Discover the diverse range of services we offer!",
+};
 
 const ServicesPage = () => {
   const t = useTranslations("Services");
