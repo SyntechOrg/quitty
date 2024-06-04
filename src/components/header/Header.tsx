@@ -72,19 +72,19 @@ const Header: FC = () => {
           : "translate-y-0",
       )}
     >
-      <div className="container flex  items-center justify-between gap-4 ">
+      <div className="container flex items-center justify-between gap-4 ">
         <Logo />
         <Nav className="hidden lg:block" />
         <div className="flex items-center gap-2 max-lg:ml-auto">
           <LocalSwitcher />
-          <div className="group hidden items-center lg:flex">
+          <div className="relative group hidden items-center lg:flex">
             <Button
               to={`/${localActive}/contact`}
               className="text-center leading-[1.3]"
             >
               {t("ContactButton")}
             </Button>
-            <Button to={`/${localActive}/contact`}>
+            <Button to={`/${localActive}/contact`} className="btn2">
               <Icon icon={IconType.ARROW} />
             </Button>
           </div>
