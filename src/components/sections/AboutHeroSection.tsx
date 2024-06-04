@@ -9,13 +9,14 @@ const AboutHeroSection = () => {
     <div className="relative mx-auto w-full max-w-[1920px]">
       <video
         src="/videos/syntech-about-video.mp4"
-        className="max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:w-[70%]"
+        className="pointer-events-none max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:w-[70%]"
         loop
         muted
         autoPlay
         disablePictureInPicture
         disableRemotePlayback
         controls={false}
+        playsInline
       />
       <FadeIn className="container relative flex max-h-[850px] items-center max-lg:my-32 lg:h-[calc(100vh-114px)]">
         <div className="w-full max-w-[520px] max-lg:mx-auto max-lg:text-center lg:w-1/2">
