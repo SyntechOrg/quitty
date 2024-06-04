@@ -9,7 +9,7 @@ const AboutHeroSection = () => {
     <div className="relative mx-auto w-full max-w-[1920px]">
       <video
         src="/videos/syntech-about-video.mp4"
-        className="pointer-events-none max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:w-[70%]"
+        className="pointer-events-none pt-[90px] max-h-[780px] w-full max-w-[1300px] mix-blend-lighten lg:absolute lg:right-0 lg:top-0 lg:z-[-1] lg:w-[70%]"
         loop
         muted
         autoPlay
