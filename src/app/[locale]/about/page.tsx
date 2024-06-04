@@ -6,6 +6,7 @@ import OverviewCard from "@/components/cards/OverviewCard";
 import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import ProcessSection from "@/components/sections/ProcessSection";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { Statistics } from "@/components/statistics/Statistics";
 
 const AboutPage = () => {
   return (
@@ -13,6 +14,7 @@ const AboutPage = () => {
       <AboutHeroSection />
       <WhatWeDoSection />
       <Clients backgroundPrimary />
+      <Statistics />
       <FadeIn className="container grid h-screen max-h-[1000px] items-center">
         <OverviewCard />
       </FadeIn>

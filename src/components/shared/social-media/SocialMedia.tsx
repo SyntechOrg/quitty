@@ -1,3 +1,4 @@
+"use client";
 import { type FC } from "react";
 import { Icon, IconType } from "../icon";
 import { Carousel } from "@/components/shared";
@@ -8,20 +9,16 @@ import { useTranslations } from "next-intl";
 const SOCIAL_MEDIA = [
   {
     name: "Instagram",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/syntech_solutions_ag/",
   },
   {
     name: "Facebook",
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/profile.php?id=61560277445736",
   },
 
   {
     name: "LINKEDIN",
-    url: "https://linkedin.com/",
-  },
-  {
-    name: "tiktok",
-    url: "https://www.tiktok.com/",
+    url: "https://www.linkedin.com/company/syntech-solutions-ag/",
   },
 ];
 
@@ -40,7 +37,9 @@ export const SocialMedia: FC<SocialMediaProps> = ({ className }) => {
           <FadeIn key={media.name}>
             <li
               key={media.name}
-              className="group flex h-[90px] max-h-[90px] items-center border-x border-t border-[#35353C] transition-all duration-150 ease-in-out last-of-type:border-b hover:bg-primary lg:h-[200px] lg:max-h-[200px]"
+              className="group flex h-[90px] max-h-[90px] items-center border-x border-t border-[#35353C] transition-all
+              duration-150 ease-in-out last-of-type:border-b hover:bg-primary lg:h-[200px] lg:max-h-[200px] hover:cursor-pointer active:opacity-90"
+              onClick={() => window.open(media.url, "_blank")}
             >
               <div className="h-full w-full bg-transparent">
                 <div className="container flex h-full w-full items-center justify-between transition-all duration-150 ease-in-out group-hover:hidden">

@@ -27,8 +27,8 @@ const BUDGET_OPTIONS = [
 ];
 
 const schema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
+  firstName: z.string().min(1, "Contact.First name is required"),
+  lastName: z.string().min(1, "Contact.Last name is required"),
   serviceType: z
     .enum([
       "Contact form-s-1",
@@ -47,9 +47,11 @@ const schema = z.object({
     "Contact form-b-4",
     "Contact form-b-5",
   ]),
-  email: z.string().email("Invalid email address"),
-  phoneNumber: z.string().min(1, "Phone number is required"),
-  projectDescription: z.string().min(1, "Project description is required"),
+  email: z.string().email("Contact.Invalid email address"),
+  phoneNumber: z.string().min(1, "Contact.Phone number is required"),
+  projectDescription: z
+    .string()
+    .min(1, "Contact.Project description is required"),
 });
 
 type FormType = z.infer<typeof schema>;
@@ -107,13 +109,13 @@ export const ContactForm: FC = () => {
           <div className="mt-[30px] flex w-full flex-col gap-[70px] lg:flex-row">
             <InputField
               name="firstName"
-              placeholder="John"
+              placeholder={t("FirstName")}
               error={formMethods.formState.errors.firstName}
               register={formMethods.register}
             />
             <InputField
               name="lastName"
-              placeholder="Doe"
+              placeholder={t("LastName")}
               error={formMethods.formState.errors.lastName}
               register={formMethods.register}
             />
@@ -153,7 +155,7 @@ export const ContactForm: FC = () => {
               </p>
               <InputField
                 name="email"
-                placeholder="john@doe.com"
+                placeholder={t("Email")}
                 error={formMethods.formState.errors.email}
                 register={formMethods.register}
               />
@@ -164,7 +166,7 @@ export const ContactForm: FC = () => {
               </p>
               <InputField
                 name="phoneNumber"
-                placeholder="(+383) XX - XXX XXX"
+                placeholder={t("PhonePlaceholder")}
                 error={formMethods.formState.errors.phoneNumber}
                 register={formMethods.register}
               />

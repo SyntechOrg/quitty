@@ -1,50 +1,86 @@
 "use client";
 import React, { useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "use-intl";
+import { Icon, IconType } from "@/components/shared";
+import Image from "next/image";
+import UKFlag from "../../../public/assets/images/uk-flag.png";
+import CHFlag from "../../../public/assets/images/ch-flag.png";
+
 const LocalSwitcher = () => {
   const [isPending, startTransition] = useTransition();
   const [isLanguageSubMenuOpen, setIsLanguageSubMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const pathnameArray = pathname
+    .split("/")
+    .filter((path) => path !== "de" && path !== "en" && path !== "");
+
   const localActive = useLocale();
 
   const onSelectChange = (value: string) => {
     startTransition(() => {
-      router.replace(`/${value}`);
+      router.replace(`/${value}/${pathnameArray.join("/")}`);
     });
   };
 
   return (
     <div className="relative text-center text-[14px] text-text lg:mr-4 lg:pr-1">
-      <span
-        className={`${isLanguageSubMenuOpen ? "bg-primary/50" : ""} 
-        flex cursor-pointer items-center justify-center rounded-[30px] border border-primary px-5 py-2 leading-[1] hover:bg-primary/75 active:bg-primary/30`}
+      <div
         onClick={() => setIsLanguageSubMenuOpen(!isLanguageSubMenuOpen)}
+        className={`${isLanguageSubMenuOpen ? "opacity-60" : "opacity-100 hover:opacity-70 active:opacity-60"} 
+          flex cursor-pointer items-center `}
       >
-        {localActive}
-      </span>
+        <span className="flex items-center justify-center px-2">
+          {localActive === "en" ? (
+            <Image
+              src={UKFlag}
+              alt="uk-flag"
+              className="h-full max-h-[22px] w-full max-w-[32px] rounded-md object-contain"
+            />
+          ) : (
+            <Image
+              src={CHFlag}
+              alt="ch-flag"
+              className="h-full max-h-[22px] w-full max-w-[32px] rounded-md object-contain"
+            />
+          )}
+        </span>
+        <Icon icon={IconType.DROPDOWN} />
+      </div>
       {isLanguageSubMenuOpen && (
-        <div className="absolute top-9 flex flex-col items-center justify-center gap-1 rounded-xl border border-gray bg-background p-1">
-          <button
-            onClick={() => {
-              onSelectChange("en");
-              setIsLanguageSubMenuOpen(false);
-            }}
-            className={`${localActive === "en" ? "bg-primary/90" : ""} cursor-pointer rounded-lg px-4 py-1 duration-150 hover:bg-primary/75 active:bg-primary/50`}
-            disabled={isPending}
-          >
-            en
-          </button>
-          <button
-            onClick={() => {
-              onSelectChange("de");
-              setIsLanguageSubMenuOpen(false);
-            }}
-            className={`${localActive === "de" ? "bg-primary/90" : ""} cursor-pointer rounded-lg px-4 py-1 duration-150 hover:bg-primary/75 active:bg-primary/50`}
-            disabled={isPending}
-          >
-            de
-          </button>
+        <div className="absolute left-[8px] top-10 flex flex-col items-center justify-center rounded-md">
+          {localActive === "en" ? (
+            <button
+              className="hover:opacity-70 active:opacity-60"
+              onClick={() => {
+                onSelectChange("de");
+                setIsLanguageSubMenuOpen(false);
+              }}
+              disabled={isPending}
+            >
+              <Image
+                src={CHFlag}
+                alt="ch-flag"
+                className="h-full max-h-[22px] w-full max-w-[32px] rounded-md object-contain"
+              />
+            </button>
+          ) : (
+            <button
+              className="hover:opacity-70 active:opacity-60"
+              onClick={() => {
+                onSelectChange("en");
+                setIsLanguageSubMenuOpen(false);
+              }}
+              disabled={isPending}
+            >
+              <Image
+                src={UKFlag}
+                alt="uk-flag"
+                className="h-full max-h-[22px] w-full max-w-[32px] rounded-md object-contain"
+              />
+            </button>
+          )}
         </div>
       )}
     </div>

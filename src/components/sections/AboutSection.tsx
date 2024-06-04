@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button, Icon, IconType } from "@/components/shared";
 import QuickCard from "@/components/cards/QuickCard";
@@ -5,16 +6,17 @@ import BubbleAboutImage from "../../../public/assets/images/bubble-about-section
 import Image from "next/image";
 import { FadeIn } from "../fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const quickCardData = [
-  { statistic: "+200", description: "AboutUs quickcard-1" },
-  { statistic: "+10", description: "AboutUs quickcard-2" },
-  { statistic: "10K", description: "AboutUs quickcard-3" },
+  { statistic: "+50", description: "AboutUs quickcard-1" },
+  { statistic: "+15", description: "AboutUs quickcard-2" },
   { statistic: "+20", description: "AboutUs quickcard-4" },
 ];
 
 const AboutSection = () => {
   const t = useTranslations("Shared");
+  const localActive = useLocale();
 
   return (
     <FadeIn
@@ -43,12 +45,12 @@ const AboutSection = () => {
           {t("AboutUs text-1")}
         </p>
         <div className="group mt-[20px] flex items-center max-lg:justify-center md:mt-[24px] lg:mt-[32px]">
-          <Button to="/about">{t("AboutUs button-1")}</Button>
-          <Button to="/about" className="px-[21px]">
+          <Button to={`/${localActive}/about`}>{t("AboutUs button-1")}</Button>
+          <Button to={`/${localActive}/about`} className="px-[21px]">
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
-        <div className="lg:mt:[40px] mt-[21px] flex flex-wrap items-center gap-1.5 text-left max-lg:justify-center md:mt-[28px]">
+        <div className="lg:mt:[40px] mt-[21px] flex flex-wrap gap-1.5 text-left max-lg:justify-center md:mt-[28px]">
           {quickCardData.map((card, index) => (
             <QuickCard
               key={index}

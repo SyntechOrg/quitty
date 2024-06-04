@@ -1,7 +1,10 @@
+"use client";
 import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useLocale } from "use-intl";
 
 interface BasicServiceCardProps {
   title: string[];
@@ -16,11 +19,13 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
   description,
   image,
   categories,
+  href,
 }) => {
   const t = useTranslations("Shared");
+  const localActive = useLocale();
 
   return (
-    <div
+    <FadeIn
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
       bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
     >
@@ -62,13 +67,15 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to="/portfolio">{t("Service card-button-1")}</Button>
-          <Button to="/portfolio">
+          <Button to={`/${localActive}${href}`}>
+            {t("Service card-button-1")}
+          </Button>
+          <Button to={`/${localActive}${href}`}>
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

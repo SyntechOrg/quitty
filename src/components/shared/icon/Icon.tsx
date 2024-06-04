@@ -5,7 +5,6 @@ import {
   ArrowIcon,
   DiamondIcon,
   LogoBackgroundIcon,
-  QuittyLogoIcon,
   FacedripLogoIcon,
   EleUznachLogoIcon,
   SpandoekmanLogoIcon,
@@ -18,8 +17,11 @@ import {
   QonsultantLogoIcon,
   MenuIcon,
   CloseIcon,
+  DropdownIcon,
 } from "./icons";
 import { IconType } from "./icon-types";
+import { LuneCadeauLogoIcon } from "@/components/shared/icon/icons/LuneCadeauLogo";
+import { NetwrkLogoIcon } from "@/components/shared/icon/icons/NetwrkLogo";
 
 type IconProps = {
   icon: IconType;
@@ -44,8 +46,10 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <HeroLeftArrow {...props} />;
     case IconType.HERO_ARROW_RIGHT:
       return <HeroRightArrow {...props} />;
-    case IconType.QUITTY_LOGO:
-      return <QuittyLogoIcon {...props} />;
+    case IconType.LUNE_CADEAU_LOGO:
+      return <LuneCadeauLogoIcon {...props} />;
+    case IconType.NETWRK_LOGO:
+      return <NetwrkLogoIcon {...props} />;
     case IconType.FACEDRIP_LOGO:
       return <FacedripLogoIcon {...props} />;
     case IconType.ELE_UZNACH_LOGO:
@@ -60,6 +64,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <QonsultantLogoIcon {...props} />;
     case IconType.MENU:
       return <MenuIcon {...props} />;
+    case IconType.DROPDOWN:
+      return <DropdownIcon {...props} />;
     case IconType.CLOSE:
       return <CloseIcon {...props} />;
 

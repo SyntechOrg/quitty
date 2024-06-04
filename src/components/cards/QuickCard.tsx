@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 interface QuickCardProps {
   statistic: string;
@@ -11,7 +11,7 @@ const QuickCard: FC<QuickCardProps> = ({ statistic, description }) => {
       <p className="font-bold leading-[1] text-[#F2E7FF] sm:text-[20px] md:text-[28px]">
         {statistic}
       </p>
-      <p className="mt-[12px] text-[12px] leading-[1] text-[#8C8C9E] md:mt-[21px]">
+      <p className="mt-[12px] text-[12px] text-[#8C8C9E] md:mt-[21px]">
         {description}
       </p>
     </div>

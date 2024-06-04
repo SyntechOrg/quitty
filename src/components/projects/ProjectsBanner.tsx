@@ -4,6 +4,7 @@ import { Image } from "../shared/image/Image";
 
 import { Button, Icon, IconType } from "../shared";
 import { FadeIn } from "../fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 type ProjectsBannerProps = {
   heroText: ReactNode;
@@ -13,6 +14,7 @@ type ProjectsBannerProps = {
   productType: string[];
   expertise: string[];
   release: string[];
+  liveUrl?: string;
   className?: string;
 };
 
@@ -24,7 +26,10 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
   productType,
   release,
   services,
+  liveUrl,
 }) => {
+  const t = useTranslations("Projects");
+
   return (
     <FadeIn className="relative min-h-screen bg-background">
       <div className="absolute inset-0 h-full min-h-screen w-full">
@@ -42,14 +47,16 @@ export const ProjectsBanner: FC<ProjectsBannerProps> = ({
             <h1 className="w-full max-w-[522px] text-[24px] leading-[34px] text-white lg:text-[45px] lg:leading-[62px]">
               {heroText}
             </h1>
-            <div className="group mt-[25px] flex w-max lg:mt-[50px]">
-              <Button to="/" variant="secondary">
-                See Live
-              </Button>
-              <Button to="/" variant="secondary">
-                <Icon icon={IconType.ARROW} />
-              </Button>
-            </div>
+            {liveUrl && (
+              <div className="group mt-[25px] flex w-max lg:mt-[50px]">
+                <Button to={liveUrl} variant="secondary">
+                  {t("SeeLive")}
+                </Button>
+                <Button to={liveUrl} variant="secondary">
+                  <Icon icon={IconType.ARROW} />
+                </Button>
+              </div>
+            )}
           </div>
           <div className="relative mb-5 h-[90vw] max-h-[400px] min-h-[231px] w-full max-w-[680px] overflow-hidden rounded-[30px] lg:mb-0 lg:h-[463px]">
             <Image

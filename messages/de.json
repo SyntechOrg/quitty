@@ -72,7 +72,29 @@
     "About card-description-4": "Wir sind mehr als nur ein Team - wir sind Ihre vertrauenswürdigen Verbündeten in der digitalen Welt, die sich bei jedem Schritt für Ihren Erfolg einsetzen. Mit unserem Engagement für Transparenz, Zuverlässigkeit und Exzellenz wollen wir Ihr bevorzugter Partner für alle Ihre digitalen Anforderungen sein und Ihnen durch die sich ständig verändernde digitale Landschaft mit Rat und Tat zur Seite stehen.",
     "About overview-title": "30 Minuten zum gemeinsamen Träumen freischalten",
     "About overview-text": "Nehmen Sie an einem 30-minütigen Gespräch teil, in dem wir Ihre Ideen erkunden, gemeinsam nach Möglichkeiten suchen und Ihre Vision in die Realität umsetzen können!",
-    "About overview-button": "Die Reise Buchen"
+    "About overview-button": "Die Reise Buchen",
+    "Statistics": {
+      "Title": "Einfach gesagt: Wir wagen, was andere nicht wagen.",
+      "Description": "Strategischer Prozess zur Schaffung einer einzigartigen Identität für Unternehmen. Er umfasst die Definition der Markenpersönlichkeit, der Werte und der visuellen Elemente, wie Logos und Farbschemata, um einen bleibenden Eindruck beim Publikum zu hinterlassen.",
+      "Button": "Werken",
+      "Cards": {
+        "Card1": {
+          "Statistic": "15+",
+          "Title": "Jahre Erfahrung",
+          "Description": "Mehr als ein Jahrzehnt Erfahrung bei der Gestaltung von Branchentrends."
+        },
+        "Card2": {
+          "Statistic": "50+",
+          "Title": "Abgeschlossene Projekte",
+          "Description": "Wir haben insgesamt mehr als 50 Projekte erfolgreich abgeschlossen."
+        },
+        "Card3": {
+          "Statistic": "20+",
+          "Title": "Teammitglieder",
+          "Description": "Eine Familie von über 20 Teammitgliedern, von denen jedes neinzigartige Fähigkeiten mitbringt."
+        }
+      }
+    }
   },
   "Portfolio": {
     "Portfolio first-title": "Wir wählen eine andere → Ausgangsposition",
@@ -140,7 +162,17 @@
     "Contact form-t-7": "Details zum Projekt",
     "Contact form-bt-1": "Senden",
     "EmailSuccessMessage": "Email gesendet erfolgreich.",
-    "EmailErrorMessage": "Email konnte nicht gesendet werden."
+    "EmailErrorMessage": "Email konnte nicht gesendet werden.",
+    "FirstName": "Vorname",
+    "LastName": "Nachname",
+    "Email": "E-Mailadresse",
+    "PhonePlaceholder": "+41 - ...",
+    "First name is required": "Vorname ist erforderlich",
+    "Last name is required": "Nachname ist erforderlich",
+    "Invalid email address": "Ungültige E-Mail-Adresse",
+    "Phone number is required": "Telefonnummer ist erforderlich",
+    "Project description is required": "Projektbeschreibung ist erforderlich",
+    "Required": "Erforderlich"
   },
   "StepCards": {
     "ProcessHeader": {
@@ -162,5 +194,14 @@
       "Title": "Umsetzung",
       "Description": "Ihre Meinung ist entscheidend, während wir die Website an Ihre Bedürfnisse anpassen. Sobald Sie zufrieden sind, optimieren und starten wir die Website, in dem Wissen, dass sie bereit ist. Und denken Sie daran, wir sind immer für Sie da, um bei Änderungen oder Unterstützung entlang des Weges zu helfen"
     }
+  },
+  "Projects": {
+    "SeeLive": "Direkt sehen",
+    "Services": "Dienstleistungen",
+    "Product type": "Produkttyp",
+    "Expertise": "Expertise",
+    "Release": "Freigabe",
+    "MAIN CHALLENGE": "HAUPTANFORDERUNG",
+    "OUR SOLUTION": "UNSERE LÖSUNG"
   }
 }

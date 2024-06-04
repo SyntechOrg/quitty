@@ -18,7 +18,6 @@ interface ServiceCardProps {
   description: string[];
   image: StaticImageData;
   FAQ: { question: string; answer: string }[];
-  href: string;
 }
 
 const ServiceCard: FC<ServiceCardProps> = ({
@@ -27,7 +26,6 @@ const ServiceCard: FC<ServiceCardProps> = ({
   description,
   image,
   FAQ,
-  href,
 }) => {
   const localActive = useLocale();
   const t = useTranslations();
@@ -36,6 +34,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
     <FadeIn
       className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border
       border-gray bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
+      id={id.toString()}
     >
       <div className="w-11/12 max-lg:mx-auto max-sm:text-center lg:w-[46%]">
         <h2 className="text-[24px] leading-[1.33] md:text-[36px] lg:min-h-[260px] lg:text-[50px]">
