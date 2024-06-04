@@ -13,7 +13,7 @@ import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
-  title: "Syn-Tech",
+  title: "Syntech Solutions AG | Home",
   description: "Welcome to Syn-Tech!",
 };
 
