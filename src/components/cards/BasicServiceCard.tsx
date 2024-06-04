@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
@@ -40,7 +40,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
   const scaleReduction = useTransform(
     scrollYProgress,
     [0.6, 0],
-    [1, isLargeScreen ? scaleEndValue : 1],
+    [1, isLargeScreen ? scaleEndValue : 1]
   );
 
   return (

@@ -64,7 +64,7 @@ const Header: FC = () => {
   return (
     <header
       className={classNames(
-        "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/20 backdrop-blur-sm",
+        "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/50 backdrop-blur-sm",
         isHomePage
           ? isAtTop
             ? "translate-y-0"

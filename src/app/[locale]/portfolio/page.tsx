@@ -4,6 +4,12 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import AllProjects, {
   AllProjectsHeader,
 } from "@/components/sections/AllProjects";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Syntech Solutions AG | Portfolio",
+  description: "Explore our impressive projects and works!",
+};
 
 const PortfolioPage: FC = () => {
   return (

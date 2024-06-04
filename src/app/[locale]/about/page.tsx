@@ -7,6 +7,12 @@ import { SocialMedia } from "@/components/shared/social-media/SocialMedia";
 import ProcessSection from "@/components/sections/ProcessSection";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { Statistics } from "@/components/statistics/Statistics";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Syntech Solutions AG | About Us",
+  description: "Learn more about Syn-Tech and our mission!",
+};
 
 const AboutPage = () => {
   return (
