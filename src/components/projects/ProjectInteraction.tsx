@@ -35,7 +35,6 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
             <div
               className={classNames(
                 "lg:w-[90px] w-[45px] min-w-[45px] lg:min-w-[90px] h-[45px] lg:h-[90px] rounded-full overflow-hidden",
-                isEven ? "bg-white text-[#121217]" : "bg-primary text-white",
               )}
             >
               {interaction.avatar ? (
@@ -59,6 +58,7 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
                   isEven
                     ? "bg-white text-[#121217] before:border-b-white"
                     : "bg-primary text-white before:border-b-primary",
+
                 )}
               >
                 <b>{interaction.subject}</b> <br />
