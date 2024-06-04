@@ -12,6 +12,7 @@ const HeroSectionBackground = () => {
 
   const fullDisappear = useTransform(scrollY, [40, 500], [1, 0]);
   const fullDisappearLater = useTransform(scrollY, [400, 1000], [1, 0]);
+  const fullDisappearEarly = useTransform(scrollY, [10, 150], [0.8, 0]);
   const almostDisappear = useTransform(scrollY, [40, 500], [1, 0.3]);
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
@@ -87,6 +88,17 @@ const HeroSectionBackground = () => {
             className="relative mx-auto max-h-[65vh] w-[90%] max-w-[1031px]"
           />
         </motion.div>
+      </motion.div>
+      <motion.div
+        style={{
+          opacity: fullDisappearEarly,
+        }}
+        className="absolute left-[50%] top-[90vh] translate-x-[-50%]"
+      >
+        <Icon
+          icon={IconType.MOUSE}
+          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px]"
+        />
       </motion.div>
     </div>
   );

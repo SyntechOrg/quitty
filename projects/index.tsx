@@ -61,7 +61,7 @@ export const projectsEnglish: Array<Project> = [
     projectViewImageTwo: "/images/projects/spandoekman/showcase-2.png",
     interactions: [
       {
-        avatar: "/images/projects/spandoekman/client-avatar.png",
+        avatar: "/images/projects/spandoekman/client-avatar.svg",
         description: `
 We're in a bit of a bind! Our online shop has been running since 2011 without any significant updates. It's high time for a major redesign. To effectively engage with potential clients, we recognize the urgent need for a revamped and impactful webshop presence. Can you assist us in this endeavor?`,
         name: "Timo, Spandoekman",
@@ -75,7 +75,7 @@ Thanks for reaching out! It's with great pleasure that we assist you and the Spa
         subject: "Hi Timo,",
       },
       {
-        avatar: "/images/projects/spandoekman/client-avatar.png",
+        avatar: "/images/projects/spandoekman/client-avatar.svg",
         description: `Hi Syntech Team,
 Wow, it looks incredible! It far exceeds our expectations. Even though we had high hopes, you've surpassed them and delivered beyond what we could have imagined. Thank you for your exceptional work. We're all set to launch. Cheers to the entire Syntech Team!`,
         name: "Timo, Spandoekman",
@@ -105,7 +105,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
-    release: ["2024", "Feb"],
+    release: ["Feb", "2024"],
     mainChallenge: {
       title: "Crafting a standout website in a competitive market.",
       description:
@@ -121,7 +121,7 @@ Thank you so much for your kind words! We're thrilled that you're pleased with t
     projectViewImageTwo: "/images/projects/soxey/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/soxey/client-avatar.png",
+        avatar: "/images/projects/soxey/client-avatar.svg",
         description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage!
 To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: "Soxey Team",
@@ -134,7 +134,7 @@ To resonate with our clientele, we understand the significance of a captivating 
         subject: "Hi Soxey,",
       },
       {
-        avatar: "/images/projects/soxey/client-avatar.png",
+        avatar: "/images/projects/soxey/client-avatar.svg",
         description: `I wanted to take a moment to express my sincere appreciation for the outstanding work your team has done on the design of my online sock store website.
 Having had the opportunity to review the design concepts and see the website come to life, I am thoroughly impressed with the level of creativity, attention to detail, and professionalism exhibited throughout the process. The website truly embodies the vision and brand identity that I had envisioned, and I couldn't be happier with the results.`,
         name: "Soxey Team",
@@ -163,7 +163,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["Design", "Development"],
     productType: ["Website", "Onepage"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["2024", "2024"],
+    release: ["May", "2024"],
     mainChallenge: {
       title: "Empowering SMEs with Effective Online Representation",
       description:
@@ -179,7 +179,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     projectViewImageTwo: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/qonsultant/client-avatar.png",
+        avatar: "/images/projects/qonsultant/client-avatar.svg",
         description: `We're in the process of launching a business consultancy firm called Qonsultant GmbH! Currently, all we have is the registration sorted. This means we're in need of branding, a website, and social media presence. Could you assist us with these essential components? Looking forward to your support.`,
         name: "Qonsultant Team",
         subject: "Hi Syntech Team,",
@@ -191,7 +191,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         subject: "Hi Qonsultant GmbH",
       },
       {
-        avatar: "/images/projects/qonsultant/client-avatar.png",
+        avatar: "/images/projects/qonsultant/client-avatar.svg",
         description: `Thanks for your quick response and willingness to help launch Qonsultant GmbH. We've seen the concept you sent over and we're impressed! Excited to keep working together!`,
         name: "Qonsultant Team",
         subject: "Hi Syntech Team,",
@@ -215,7 +215,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["UI Design", "Development"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
-    release: ["May 2024", "2024"],
+    release: ["May", "2024"],
     mainChallenge: {
       title: "Meeting Diverse Needs in Service Offerings",
       description:
@@ -231,7 +231,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     projectViewImageTwo: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/ele-uznach/client-avatar.png",
+        avatar: "/images/projects/ele-uznach/client-avatar.svg",
         description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: "ELE Uznach",
         subject: "Hi Syntech Team,",
@@ -243,7 +243,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         subject: "Hi ELE Uznach",
       },
       {
-        avatar: "/images/projects/ele-uznach/client-avatar.png",
+        avatar: "/images/projects/ele-uznach/client-avatar.svg",
         description: `Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: "ELE Uznach",
         subject: "Hi Syntech Team,",
@@ -268,7 +268,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["UI UX Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["March 2024"],
+    release: ["March", "2024"],
     mainChallenge: {
       title: "Positioning Reputy as a Reputation Management Leader",
       description:
@@ -284,7 +284,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     projectViewImageTwo: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/reputy-solutions/client-avatar.png",
+        avatar: "/images/projects/reputy-solutions/client-avatar.svg",
         description: `Launching our exceptional reputation management services at Reputy, where excellence and innovation are paramount! Understanding the importance of a captivating online platform, can you guide us in crafting this experience?`,
         name: "Eldi.N, Reputy",
         subject: "Hi Syntech Team,",
@@ -296,7 +296,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         subject: "Hi Eldi,",
       },
       {
-        avatar: "/images/projects/reputy-solutions/client-avatar.png",
+        avatar: "/images/projects/reputy-solutions/client-avatar.svg",
         description: `We're impressed by your proposal for our case study and eager to showcase it online. Your expertise will undoubtedly elevate our reputation management efforts. Let's collaborate to bring this project to life!`,
         name: "Eldi.N, Reputy",
         subject: "Hi Syntech Team,",
@@ -324,7 +324,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     services: ["Design", "Development"],
     productType: ["Website", "E-commerce"],
     expertise: ["Brand Identity", "UI design", "UX design"],
-    release: ["April 2024"],
+    release: ["April", "2024"],
     mainChallenge: {
       title: "Differentiating in the Competitive Beauty Market",
       description:
@@ -340,7 +340,7 @@ It has been a pleasure working with you throughout this process, and we're delig
     projectViewImageTwo: "/images/projects/facedrip/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/facedrip/client-avatar.png",
+        avatar: "/images/projects/facedrip/client-avatar.svg",
         description: `We're in the process of launching our exceptional beauty and wellness services at FACEDRIP, where enchantment and self-care take center stage! To resonate with our clientele, we understand the significance of a captivating online platform. Can you guide us in crafting this experience?`,
         name: "Merita Llumnica",
         subject: "Hi Syntech Team,",
@@ -352,7 +352,7 @@ It has been a pleasure working with you throughout this process, and we're delig
         subject: "Hi Merita,",
       },
       {
-        avatar: "/images/projects/facedrip/client-avatar.png",
+        avatar: "/images/projects/facedrip/client-avatar.svg",
         description: `Thank you for presenting your proposal. We're thrilled with your approach and expertise. Let's move forward with bringing FACEDRIP's vision to life!`,
         name: "Merita Llumnica",
         subject: "Hi Syntech Team,",
@@ -398,7 +398,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/spandoekman/showcase-2.png",
     interactions: [
       {
-        avatar: "/images/projects/spandoekman/client-avatar.png",
+        avatar: "/images/projects/spandoekman/client-avatar.svg",
         description: `wir sind in einer Zwickmühle! Unser Online Shop läuft seit 2011 ohne nennenswerte Updates. Es ist höchste Zeit für ein umfassendes Redesign. Um effektiv mit potenziellen Kunden in Kontakt zu treten, benötigen wir dringend einen überarbeiteten und wirkungsvollen Webshop-Auftritt. Können Sie uns bei diesem Unterfangen helfen?`,
         name: "Timo, Spandoekman",
         subject: "Hallo Syntech-Team,",
@@ -410,7 +410,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo Timo,",
       },
       {
-        avatar: "/images/projects/spandoekman/client-avatar.png",
+        avatar: "/images/projects/spandoekman/client-avatar.svg",
         description: `Hallo Syntech-Team,
         Wow, das sieht unglaublich aus! Es übertrifft unsere Erwartungen bei weitem. Obwohl wir große Hoffnungen hatten, habt ihr diese übertroffen und mehr geliefert, als wir uns vorstellen konnten. Vielen Dank für eure außergewöhnliche Arbeit. Wir sind bereit für den Start. Ein Hoch auf das gesamte Syntech-Team!
         Beste Grüße,`,
@@ -442,7 +442,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-Commerce"],
     expertise: ["Frontend", "Shopify"],
-    release: ["2024", "Feb"],
+    release: ["Februar", "2024"],
     mainChallenge: {
       title:
         "Entwicklung einer herausragenden Website in einem wettbewerbsintensiven Markt.",
@@ -459,7 +459,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/soxey/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/soxey/client-avatar.png",
+        avatar: "/images/projects/soxey/client-avatar.svg",
         description: `
         Wir stehen kurz davor, unseren aussergewöhnlichen Service für massgefertigte Socken bei Soxey zu launchen, wo Komfort und Stil im Mittelpunkt stehen! Um bei unserer Kundschaft Anklang zu finden, ist uns bewusst, wie wichtig eine ansprechende Online-Plattform ist. Könnt ihr uns dabei unterstützen, dieses Erlebnis zu gestalten?`,
         name: "Soxey Team",
@@ -473,7 +473,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo Soxey,",
       },
       {
-        avatar: "/images/projects/soxey/client-avatar.png",
+        avatar: "/images/projects/soxey/client-avatar.svg",
         description: `
         ich möchte mich kurz bei Ihnen für die hervorragende Arbeit bedanken, die Ihr Team bei der Gestaltung der Website meines Online-Sockengeschäfts geleistet hat. Nachdem ich die Gelegenheit hatte, die Designkonzepte zu überprüfen und zu sehen, wie die Website zum Leben erweckt wurde, bin ich sehr beeindruckt von der Kreativität, der Liebe zum Detail und der Professionalität, die während des gesamten Prozesses gezeigt wurde. Die Website verkörpert wirklich die Vision und Markenidentität, die ich mir vorgestellt hatte, und ich könnte mit dem Ergebnis nicht zufriedener sein.`,
         name: "Soxey Team",
@@ -518,7 +518,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/qonsultant/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/qonsultant/client-avatar.png",
+        avatar: "/images/projects/qonsultant/client-avatar.svg",
         description: `Wir sind gerade dabei, eine Unternehmensberatung namens Qonsultant GmbH zu gründen! Momentan haben wir nur die Registrierung geregelt. Das heisst, wir brauchen ein Branding, eine Website und eine Social Media Präsenz. Könnten Sie uns bei diesen wesentlichen Komponenten helfen? Wir freuen uns auf Ihre Unterstützung`,
         name: "Qonsultant Team",
         subject: "Hallo Syntech Team,",
@@ -530,7 +530,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo Qonsultant GmbH,",
       },
       {
-        avatar: "/images/projects/qonsultant/client-avatar.png",
+        avatar: "/images/projects/qonsultant/client-avatar.svg",
         description: `
         Vielen Dank für Ihre schnelle Antwort und Ihre Bereitschaft, bei der Gründung der Qonsultant GmbH zu helfen. Wir haben das Konzept gesehen, das Sie uns geschickt haben, und wir sind beeindruckt! Wir freuen uns auf die weitere Zusammenarbeit!`,
         name: "Qonsultant Team",
@@ -559,7 +559,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI Design", "Entwicklung"],
     productType: ["Redesign", "E-commerce"],
     expertise: ["UI design", "Wordpress"],
-    release: ["May", "2024"],
+    release: ["Mai", "2024"],
     mainChallenge: {
       title: "Erfüllung vielfältiger Bedürfnisse in unserem Serviceangebot",
       description:
@@ -575,7 +575,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/ele-uznach/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/ele-uznach/client-avatar.png",
+        avatar: "/images/projects/ele-uznach/client-avatar.svg",
         description: `
         Wir sind dabei, unsere aussergewöhnlichen Schönheits- und Wellness-Dienstleistungen bei ELE Uznach zu lancieren, wo Verzauberung und Selbstfürsorge im Mittelpunkt stehen! Um bei unseren Kunden Anklang zu finden, wissen wir um die Bedeutung einer fesselnden Online-Plattform. Können Sie uns dabei helfen, dieses Erlebnis zu gestalten?`,
         name: "ELE Uznach",
@@ -589,7 +589,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo ELE Uznach",
       },
       {
-        avatar: "/images/projects/ele-uznach/client-avatar.png",
+        avatar: "/images/projects/ele-uznach/client-avatar.svg",
         description: `Vielen Dank für die Präsentation Ihrer Offerte. Wir sind von Ihrem Ansatz und Ihrer Expertise begeistert. Lassen Sie uns die Vision von ELE UZNACH in die Tat umsetzen!`,
         name: "ELE Uznach",
         subject: "Hallo Syntech Team,",
@@ -615,7 +615,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
-    release: ["March 2024"],
+    release: ["März", "2024"],
     mainChallenge: {
       title:
         "Die Positionierung von Reputy als führendes Unternehmen im Reputation Management",
@@ -632,7 +632,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/reputy-solutions/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/reputy-solutions/client-avatar.png",
+        avatar: "/images/projects/reputy-solutions/client-avatar.svg",
         description: `
         Wir freuen uns, unsere herausragenden Reputation Management Dienstleistungen bei Reputy zu launchen, wo Exzellenz und Innovation oberste Priorität haben! Da wir die Bedeutung einer ansprechenden Online-Plattform verstehen, könnt ihr uns bei der Gestaltung dieses Erlebnisses unterstützen?`,
         name: "Eldi.N, Reputy",
@@ -646,7 +646,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo Eldi,",
       },
       {
-        avatar: "/images/projects/reputy-solutions/client-avatar.png",
+        avatar: "/images/projects/reputy-solutions/client-avatar.svg",
         description: `Wir sind beeindruckt von Ihrem Vorschlag für unsere Fallstudie und freuen uns darauf, sie online zu präsentieren. Ihre Expertise wird zweifellos unsere Bemühungen im Reputation Management verbessern. Lassen Sie uns gemeinsam daran arbeiten, dieses Projekt zum Leben zu erwecken!`,
         name: "Eldi.N, Reputy",
         subject: "Hallo Team Syntech,",
@@ -664,7 +664,7 @@ export const projectsDeutsch: Array<Project> = [
     title: "FACEDRIP",
     heroText: (
       <>
-        Facedrip <br /> Lass sie tröpfeln! <br /> Beauty-Face-eCommerce
+        Facedrip <br /> Let them drip! <br /> Beauty face eCommerce
       </>
     ),
     date: "2024-04",
@@ -674,7 +674,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
-    release: ["April 2024"],
+    release: ["April", "2024"],
     mainChallenge: {
       title: "Sich im wettbewerbsintensiven Schönheitsmarkt abheben",
       description:
@@ -690,7 +690,7 @@ export const projectsDeutsch: Array<Project> = [
     projectViewImageTwo: "/images/projects/facedrip/showcase-1.png",
     interactions: [
       {
-        avatar: "/images/projects/facedrip/client-avatar.png",
+        avatar: "/images/projects/facedrip/client-avatar.svg",
         description: `Wir stehen kurz vor dem Launch unserer aussergewöhnlichen Schönheits- und Wellness-Dienstleistungen bei FACEDRIP, wo Verzauberung und Selbstpflege im Mittelpunkt stehen! Um unsere Kunden anzusprechen, wissen wir, wie wichtig eine fesselnde Online-Plattform ist. Können Sie uns dabei unterstützen, dieses Erlebnis zu gestalten?`,
         name: "Merita Llumnica",
         subject: "Hallo Syntech-Team,",
@@ -702,7 +702,7 @@ export const projectsDeutsch: Array<Project> = [
         subject: "Hallo Merita,",
       },
       {
-        avatar: "/images/projects/facedrip/client-avatar.png",
+        avatar: "/images/projects/facedrip/client-avatar.svg",
         description: `Vielen Dank für die Präsentation Ihres Vorschlags. Wir sind begeistert von Ihrem Ansatz und Ihrer Expertise. Lassen Sie uns gemeinsam damit beginnen, die Vision von FACEDRIP Wirklichkeit werden zu lassen!`,
         name: "Merita Llumnica",
         subject: "Hallo Syntech-Team,",

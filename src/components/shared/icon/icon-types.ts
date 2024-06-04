@@ -18,4 +18,5 @@ export enum IconType {
   MENU = "menu",
   CLOSE = "close",
   DROPDOWN = "dropdown",
+  MOUSE = "mouse",
 }

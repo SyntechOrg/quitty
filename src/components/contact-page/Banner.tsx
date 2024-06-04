@@ -13,14 +13,14 @@ const GENERAL_INFO = [
   },
   {
     label: "Contact address",
-    value: "Rotzbergstrasse 1 6362 Stansstad",
+    value: "Rotzbergstrasse 1, 6362 Stansstad",
   },
 ];
 
 export const ContactPageBanner: FC = () => {
   const t = useTranslations("Contact");
   return (
-    <FadeIn className="container mt-[210px]">
+    <FadeIn className="container pt-[220px]">
       <div className="flex flex-col items-center justify-center text-center lg:flex-row lg:items-start lg:justify-between lg:pr-[110px] lg:text-left">
         <div className="mt-[30px] text-[24px] tracking-[20%] text-primary">
           {t("Contact first-text")}

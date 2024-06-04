@@ -91,7 +91,7 @@
         "Card3": {
           "Statistic": "20+",
           "Title": "Teammitglieder",
-          "Description": "Eine Familie von über 20 Teammitgliedern, von denen jedes neinzigartige Fähigkeiten mitbringt."
+          "Description": "Eine Familie von über 20 Teammitgliedern, von denen jedes einzigartige Fähigkeiten mitbringt."
         }
       }
     }
@@ -150,6 +150,7 @@
     "Contact form-s-3": "Online-Shop",
     "Contact form-s-4": "Markenidentität",
     "Contact form-s-5": "Soziale Medien",
+    "Contact form-s-6": "Mobile App",
     "Contact form-b-1": "bis zu CHF 5'000",
     "Contact form-b-2": "CHF 5'000 -  CHF 10'000",
     "Contact form-b-3": "CHF 10'000 - CHF 20'000",
