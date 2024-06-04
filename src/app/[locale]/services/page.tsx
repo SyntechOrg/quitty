@@ -110,10 +110,11 @@ const ServicesPage = () => {
             {t("Services second-title")}
           </h2>
         </FadeIn>
-        <div className="mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
-          {services.map((service) => (
+        <div className="relative mt-[50px] space-y-[50px] md:mt-[70px] lg:mt-[90px]">
+          {services.map((service, index) => (
             <ServiceCard
               key={service.id}
+              index={index}
               id={service.id}
               title={service.title}
               description={service.description}

@@ -90,7 +90,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to={`/${localActive}${href}`} className="text-center leading-[1]">
+          <Button to={`/${localActive}${href}`} className="text-center leading-[1Z]">
             {t("Service card-button-1")}
           </Button>
           <Button to={`/${localActive}${href}`}>

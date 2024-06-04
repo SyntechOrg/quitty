@@ -58,7 +58,7 @@ const ServicesSection = () => {
           category={t("Services category-1")}
         />
       </FadeIn>
-      <div className="relative mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
+      <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
         {services.map((service, index) => (
           <BasicServiceCard
             key={index}
