@@ -35,9 +35,9 @@ export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      exit={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
       className={classNames(className)}
       id={id}
