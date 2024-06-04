@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 const SOCIAL_MEDIA = [
   {
     name: "Instagram",
-    url: "https://www.instagram.com/syntech.ag/",
+    url: "https://www.instagram.com/syntech_solutions_ag/",
   },
   {
     name: "Facebook",
