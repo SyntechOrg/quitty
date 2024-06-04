@@ -17,6 +17,8 @@ const HeroSectionBackground = () => {
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
+  const vh = typeof window !== "undefined" && window.innerHeight;
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation(false);
@@ -92,8 +94,10 @@ const HeroSectionBackground = () => {
       <motion.div
         style={{
           opacity: fullDisappearEarly,
+          top: "90dvh",
         }}
-        className="absolute left-[50%] top-[90vh] translate-x-[-50%]"
+        className="absolute left-[50%] top-[90dvh] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+        onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
       >
         <Icon
           icon={IconType.MOUSE}

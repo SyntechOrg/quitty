@@ -17,7 +17,8 @@ import {
   QonsultantLogoIcon,
   MenuIcon,
   CloseIcon,
-  DropdownIcon, MouseIcon,
+  DropdownIcon,
+  MouseIcon,
 } from "./icons";
 import { IconType } from "./icon-types";
 import { LuneCadeauLogoIcon } from "@/components/shared/icon/icons/LuneCadeauLogo";
