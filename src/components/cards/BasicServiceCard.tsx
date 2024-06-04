@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "use-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 interface BasicServiceCardProps {
   index: number;
@@ -52,7 +53,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
         scale: scaleReduction,
       }}
     >
-      <div className="mx-auto w-11/12 max-sm:text-center lg:w-[55%]">
+      <FadeIn className="mx-auto w-11/12 max-sm:text-center lg:w-[55%]">
         <h4 className="text-[24px] leading-[1.16] md:text-[36px] lg:text-[48px]">
           {title.map((title, index) => (
             <span key={index}>
@@ -81,8 +82,8 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
             </div>
           ))}
         </div>
-      </div>
-      <div className="relative mx-auto w-[75%] max-lg:flex max-lg:flex-col-reverse lg:w-[45%]">
+      </FadeIn>
+      <FadeIn className="relative mx-auto w-[75%] max-lg:flex max-lg:flex-col-reverse lg:w-[45%]">
         <Image
           src={image}
           alt="service"
@@ -90,14 +91,14 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to={`/${localActive}${href}`} className="text-center leading-[1Z]">
+          <Button to={`/${localActive}${href}`} className="text-center leading-[1]">
             {t("Service card-button-1")}
           </Button>
           <Button to={`/${localActive}${href}`}>
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
-      </div>
+      </FadeIn>
     </motion.div>
   );
 };
