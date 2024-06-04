@@ -8,6 +8,7 @@ export { SyntechHeroText } from "./SyntechHeroText";
 export { NetwrkLogoIcon } from "./NetwrkLogo";
 export { LuneCadeauLogoIcon } from "./LuneCadeauLogo";
 export { DropdownIcon } from "./DropdownIcon";
+export { MouseIcon } from "./MouseIcon";
 export { HeroStar } from "./HeroStar";
 export { HeroLeftArrow } from "./HeroLeftArrow";
 export { HeroRightArrow } from "./HeroRightArrow";

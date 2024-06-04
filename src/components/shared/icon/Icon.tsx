@@ -17,7 +17,7 @@ import {
   QonsultantLogoIcon,
   MenuIcon,
   CloseIcon,
-  DropdownIcon,
+  DropdownIcon, MouseIcon,
 } from "./icons";
 import { IconType } from "./icon-types";
 import { LuneCadeauLogoIcon } from "@/components/shared/icon/icons/LuneCadeauLogo";
@@ -66,6 +66,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <MenuIcon {...props} />;
     case IconType.DROPDOWN:
       return <DropdownIcon {...props} />;
+    case IconType.MOUSE:
+      return <MouseIcon {...props} />;
     case IconType.CLOSE:
       return <CloseIcon {...props} />;
 

@@ -615,7 +615,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["UI UX Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
-    release: ["März 2024"],
+    release: ["März", "2024"],
     mainChallenge: {
       title:
         "Die Positionierung von Reputy als führendes Unternehmen im Reputation Management",
@@ -674,7 +674,7 @@ export const projectsDeutsch: Array<Project> = [
     services: ["Design", "Entwicklung"],
     productType: ["Website", "E-commerce"],
     expertise: ["Markenidentität", "UI design", "UX design"],
-    release: ["April 2024"],
+    release: ["April", "2024"],
     mainChallenge: {
       title: "Sich im wettbewerbsintensiven Schönheitsmarkt abheben",
       description:
