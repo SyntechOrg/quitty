@@ -1,12 +1,15 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button, Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
-import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useLocale } from "use-intl";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 interface BasicServiceCardProps {
+  index: number;
   title: string[];
   description: string;
   image: StaticImageData;
@@ -15,6 +18,7 @@ interface BasicServiceCardProps {
 }
 
 const BasicServiceCard: FC<BasicServiceCardProps> = ({
+  index,
   title,
   description,
   image,
@@ -23,13 +27,33 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
 }) => {
   const t = useTranslations("Shared");
   const localActive = useLocale();
+  const isLargeScreen = useMediaQuery("(min-width: 768px)");
+
+  const topPosition = 70 + (index + 1) * (isLargeScreen ? 30 : 22);
+  const scaleEndValue = 0.8 + (index + 1) * 0.04;
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
+
+  const scaleReduction = useTransform(
+    scrollYProgress,
+    [0.6, 0],
+    [1, isLargeScreen ? scaleEndValue : 1],
+  );
 
   return (
-    <FadeIn
-      className="relative flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
-      bg-[#0F0F13] px-0 py-8 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
+    <motion.div
+      ref={ref}
+      className="sticky flex w-full max-w-[1300px] flex-col justify-between overflow-clip rounded-[30px] border border-gray
+      bg-[#0F0F13] px-0 pb-0 pt-5 sm:p-[50px] md:p-[60px] lg:flex-row lg:px-[90px] lg:py-[55px]"
+      style={{
+        top: `${topPosition}px`,
+        scale: scaleReduction,
+      }}
     >
-      <div className="mx-auto w-11/12 max-sm:text-center lg:w-[55%]">
+      <FadeIn className="mx-auto w-11/12 max-sm:text-center lg:w-[55%]">
         <h4 className="text-[24px] leading-[1.16] md:text-[36px] lg:text-[48px]">
           {title.map((title, index) => (
             <span key={index}>
@@ -43,7 +67,7 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
             </span>
           ))}
         </h4>
-        <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[15px] md:mt-8 lg:mt-[40px]">
+        <p className="mt-5 max-w-[630px] text-[17px] leading-[1.5] text-[#a6a6b1] max-sm:text-[14px] md:mt-8 lg:mt-[40px]">
           {description}
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-2 max-sm:justify-center md:mt-[50px] lg:mt-[100px]">
@@ -58,24 +82,24 @@ const BasicServiceCard: FC<BasicServiceCardProps> = ({
             </div>
           ))}
         </div>
-      </div>
-      <div className="relative w-full max-lg:flex max-lg:flex-col-reverse lg:w-[45%]">
+      </FadeIn>
+      <FadeIn className="relative mx-auto w-[75%] max-lg:flex max-lg:flex-col-reverse lg:w-[45%]">
         <Image
           src={image}
           alt="service"
-          className="relative right-0 top-[45px] h-full max-h-[340px] w-11/12 max-w-[380px] object-contain max-lg:mx-auto
+          className="relative right-0 top-[15px] h-full max-h-[340px] w-11/12 max-w-[380px] object-contain max-lg:mx-auto
            sm:top-[65px] md:top-[75px] lg:absolute lg:top-[100px]"
         />
         <div className="group relative mt-10 flex items-center max-sm:mx-auto sm:ml-auto lg:absolute lg:right-0">
-          <Button to={`/${localActive}${href}`}>
+          <Button to={`/${localActive}${href}`} className="text-center leading-[1]">
             {t("Service card-button-1")}
           </Button>
           <Button to={`/${localActive}${href}`}>
             <Icon icon={IconType.ARROW} />
           </Button>
         </div>
-      </div>
-    </FadeIn>
+      </FadeIn>
+    </motion.div>
   );
 };
 

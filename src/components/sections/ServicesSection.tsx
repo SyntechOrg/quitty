@@ -51,17 +51,18 @@ const ServicesSection = () => {
   const t = useTranslations("Shared");
 
   return (
-    <div className="container mt-[60px] md:mt-[120px] lg:mt-[150px]">
+    <div className="container mt-[60px] max-sm:w-full md:mt-[120px] lg:mt-[150px]">
       <FadeIn>
         <SectionHeader
           title={t("Services title-1")}
           category={t("Services category-1")}
         />
       </FadeIn>
-      <div className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
+      <FadeIn className="mt-[50px] space-y-[50px] md:mt-[80px] lg:mt-[100px]">
         {services.map((service, index) => (
           <BasicServiceCard
             key={index}
+            index={index}
             title={service.title}
             description={t(service.description)}
             image={service.image}
@@ -69,7 +70,7 @@ const ServicesSection = () => {
             href={service.href}
           />
         ))}
-      </div>
+      </FadeIn>
     </div>
   );
 };
