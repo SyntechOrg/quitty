@@ -114,7 +114,6 @@ const ServicesPage = () => {
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}
-              index={index}
               id={service.id}
               title={service.title}
               description={service.description}
