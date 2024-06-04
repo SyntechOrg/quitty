@@ -39,7 +39,7 @@ const ProcessSection = () => {
         ref={targetRef}
         className="relative mx-auto flex h-[250vh] max-w-[2100px] flex-col"
       >
-        <div data-aos="fade-up" className="container mb-[-20vh] w-fit">
+        <div data-aos="fade-up" className="container mb-[-18vh] w-fit">
           <h5 className="w-fit text-center text-[20px] leading-[1.25] tracking-[0.02em] sm:text-[32px] lg:text-[40px]">
             {t("Title")}
           </h5>
