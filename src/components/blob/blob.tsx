@@ -56,10 +56,6 @@ const Blob = () => {
         top: blobPosition.top,
         opacity: opacity,
         transition: "opacity 2s",
-
-        // filter: blur(calc(var(--blob-size) / 2.4));
-        // width: var(--blob-size);
-        // height: var(--blob-size);
         filter: `blur(calc(${blobSize} / 2.4))`,
         width: `${blobSize}`,
         height: `${blobSize}`,
