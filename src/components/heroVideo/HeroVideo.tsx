@@ -1,4 +1,5 @@
 import React from "react";
+import PosterImage from "../../../public/assets/images/video-background-poster-image.jpg"
 
 const HeroVideo = () => {
   return (
@@ -13,7 +14,7 @@ const HeroVideo = () => {
       controls={false}
       playsInline
       preload="auto"
-      poster="../../../public/assets/images/video-background-poster-image.jpg"
+      poster="/assets/images/video-background-poster-image.jpg"
     />
   );
 };
