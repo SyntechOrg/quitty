@@ -1,5 +1,4 @@
 import React from "react";
-import PosterImage from "../../../public/assets/images/video-background-poster-image.jpg"
 
 const HeroVideo = () => {
   return (
