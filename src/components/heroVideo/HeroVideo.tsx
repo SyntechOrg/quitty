@@ -13,7 +13,7 @@ const HeroVideo = () => {
       controls={false}
       playsInline
       preload="auto"
-      poster="/assets/images/video-background-poster-image.jpg"
+      poster="/assets/images/about-video-background-poster-image.png"
     />
   );
 };
