@@ -5,6 +5,7 @@ import classNames from "classnames";
 import companyLogo from "@/assets/images/interaction-company-logo.png";
 import { FadeIn } from "../fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { ScaleUp } from "../scale-up/scaleUp";
 
 type ProjectInteractionProps = {
   className?: string;
@@ -23,7 +24,7 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
   const t = useTranslations("Projects");
 
   return (
-    <FadeIn className="container mx-auto mt-[90px] flex max-w-[1040px] flex-col gap-y-5 lg:mt-[180px] lg:gap-y-[60px]">
+    <ScaleUp className="container mx-auto mt-[90px] flex max-w-[1040px] flex-col gap-y-5 lg:mt-[180px] lg:gap-y-[60px]">
       {interactions.map((interaction, index) => {
         const isEven = index % 2 === 0;
 
@@ -68,6 +69,6 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
           </div>
         );
       })}
-    </FadeIn>
+    </ScaleUp>
   );
 };
