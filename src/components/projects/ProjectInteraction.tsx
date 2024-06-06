@@ -24,12 +24,12 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
   const t = useTranslations("Projects");
 
   return (
-    <ScaleUp className="container mx-auto mt-[90px] flex max-w-[1040px] flex-col gap-y-5 lg:mt-[180px] lg:gap-y-[60px]">
+    <FadeIn className="container mx-auto mt-[90px] flex max-w-[1040px] flex-col gap-y-5 lg:mt-[180px] lg:gap-y-[60px]">
       {interactions.map((interaction, index) => {
         const isEven = index % 2 === 0;
 
         return (
-          <div
+          <ScaleUp
             key={`interaction-${index}-${interaction.name}`}
             className="flex gap-x-[25px] lg:gap-x-[50px]"
           >
@@ -66,9 +66,9 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
                 {interaction.description}
               </div>
             </div>
-          </div>
+          </ScaleUp>
         );
       })}
-    </ScaleUp>
+    </FadeIn>
   );
 };
