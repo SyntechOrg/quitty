@@ -5,7 +5,7 @@ import SpandoekmanImage from "../../../public/assets/images/spandoekman-project.
 import ReputyImage from "../../../public/assets/images/reputy-project.png";
 import QonsultantImage from "../../../public/assets/images/qonsultant-project.png";
 import SoxeyImage from "../../../public/assets/images/soxey-project.png";
-import EleUznachImage from "../../../public/assets/images/ele-uznach-project.png";
+import EleUznachImage from "../../../public/assets/images/ele-uznach-project.gif";
 import FacedripImage from "../../../public/assets/images/facedrip-project.png";
 import { Button, Icon, IconType } from "@/components/shared";
 import { FadeIn } from "../fade-in/FadeIn";
