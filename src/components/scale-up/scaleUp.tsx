@@ -22,7 +22,7 @@ export const ScaleUp: FC<FadeInProps> = ({ children, className, id }) => {
           setHasAnimated(true);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (ref.current) {
