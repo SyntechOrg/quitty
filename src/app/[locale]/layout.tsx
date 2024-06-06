@@ -29,7 +29,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      {/* <head><title>Hello</title></head> */}
       <body className="relative overflow-x-hidden bg-background text-white">
         <SynBackground />
         <Blob />
