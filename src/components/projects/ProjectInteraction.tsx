@@ -5,6 +5,7 @@ import classNames from "classnames";
 import companyLogo from "@/assets/images/interaction-company-logo.png";
 import { FadeIn } from "../fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { ScaleUp } from "../scale-up/scaleUp";
 
 type ProjectInteractionProps = {
   className?: string;
@@ -28,7 +29,7 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
         const isEven = index % 2 === 0;
 
         return (
-          <div
+          <ScaleUp
             key={`interaction-${index}-${interaction.name}`}
             className="flex gap-x-[25px] lg:gap-x-[50px]"
           >
@@ -65,7 +66,7 @@ export const ProjectInteraction: FC<ProjectInteractionProps> = ({
                 {interaction.description}
               </div>
             </div>
-          </div>
+          </ScaleUp>
         );
       })}
     </FadeIn>
