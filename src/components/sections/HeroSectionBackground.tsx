@@ -89,7 +89,7 @@ const HeroSectionBackground = () => {
         >
           <Icon
             icon={IconType.SYNTECH_HERO_TEXT}
-            className="relative mx-auto max-h-[65vh] w-[90%] max-w-[1031px]"
+            className="relative mx-auto h-full max-h-[65vh] w-[90%] max-w-[1031px]"
           />
         </motion.div>
       </motion.div>
@@ -98,9 +98,9 @@ const HeroSectionBackground = () => {
           opacity: fullDisappearEarly,
           top: "90dvh",
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 1.5 }}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1 }}
         className="absolute left-[50%] top-[90dvh] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
         onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
       >
