@@ -106,7 +106,7 @@ const HeroSectionBackground = () => {
       >
         <Icon
           icon={IconType.MOUSE}
-          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px]"
+          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px] translate-x-[-15px] lg:translate-x-[-18px]"
         />
       </motion.div>
     </div>
