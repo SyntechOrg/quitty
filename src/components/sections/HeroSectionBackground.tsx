@@ -100,7 +100,7 @@ const HeroSectionBackground = () => {
         }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5, delay: 1.25 }}
         className="absolute left-[50%] top-[90dvh] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
         onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
       >
