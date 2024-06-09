@@ -15,6 +15,9 @@ import "react-toastify/dist/ReactToastify.css";
 export const metadata: Metadata = {
   title: "Syntech Solutions AG | Home",
   description: "Welcome to Syn-Tech!",
+  openGraph: {
+    images: ["/assets/images/web-dev-service-image.png"],
+  },
 };
 
 // eslint-disable-next-line react/function-component-definition
