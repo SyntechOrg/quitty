@@ -17,6 +17,8 @@ const HeroSectionBackground = () => {
   const changeMaxWidth = useTransform(scrollY, [40, 1000], [1179, 1600]);
   const changeWidth = useTransform(scrollY, [40, 700], ["55vw", "95vw"]);
 
+  const vh = typeof window !== "undefined" && window.innerHeight;
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation(false);
@@ -35,8 +37,10 @@ const HeroSectionBackground = () => {
           minWidth: 250,
           translateX: "-50%",
         }}
-        initial={initialAnimation ? { scale: 0 } : false}
-        animate={initialAnimation ? { scale: 1 } : { scale: [1, 1.05, 1] }}
+        initial={initialAnimation ? { scale: 0, opacity: 0 } : false}
+        animate={
+          initialAnimation ? { scale: 1, opacity: 1 } : { scale: [1, 1.05, 1] }
+        }
         transition={
           initialAnimation
             ? { duration: 1.5 }
@@ -85,19 +89,24 @@ const HeroSectionBackground = () => {
         >
           <Icon
             icon={IconType.SYNTECH_HERO_TEXT}
-            className="relative mx-auto max-h-[65vh] w-[90%] max-w-[1031px]"
+            className="relative mx-auto h-full max-h-[65vh] w-[90%] max-w-[1031px]"
           />
         </motion.div>
       </motion.div>
       <motion.div
         style={{
           opacity: fullDisappearEarly,
+          top: "90dvh",
         }}
-        className="absolute left-[50%] top-[90vh] translate-x-[-50%]"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 1.25 }}
+        className="absolute left-[50%] top-[90dvh] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+        onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
       >
         <Icon
           icon={IconType.MOUSE}
-          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px]"
+          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px] translate-x-[-15px] lg:translate-x-[-18px]"
         />
       </motion.div>
     </div>

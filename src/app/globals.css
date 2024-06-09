@@ -56,14 +56,8 @@ body {
 }
 
 #blob {
-  --blob-color: #00f;
-  --blob-size: 160px;
-
   animation: blobAnimation 14s infinite;
-  background: var(--blob-color);
-  filter: blur(calc(var(--blob-size) / 2.4));
-  width: var(--blob-size);
-  height: var(--blob-size);
+  background: #00f;
   position: fixed;
   z-index: -2;
   left: 50%;

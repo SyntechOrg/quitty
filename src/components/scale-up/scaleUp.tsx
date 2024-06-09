@@ -9,14 +9,18 @@ type FadeInProps = {
   id?: string;
 };
 
-export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
+export const ScaleUp: FC<FadeInProps> = ({ children, className, id }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+        }
       },
       { threshold: 0.15 },
     );
@@ -30,14 +34,12 @@ export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
         observer.unobserve(ref.current);
       }
     };
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      exit={{ opacity: 0 }}
+      animate={{ scale: isVisible ? 1 : 0.25 }}
       transition={{ duration: 1 }}
       className={classNames(className)}
       id={id}

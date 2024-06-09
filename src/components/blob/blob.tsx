@@ -1,10 +1,14 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const Blob = () => {
   const [blobPosition, setBlobPosition] = useState({ left: 0, top: 0 });
   const [opacity, setOpacity] = useState(0);
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
+
+  const isLargeScreen = useMediaQuery("(min-width: 768px)");
+  const blobSize = isLargeScreen ? "160px" : "100px";
 
   useEffect(() => {
     const handlePointerMove = (event: PointerEvent | TouchEvent) => {
@@ -52,6 +56,9 @@ const Blob = () => {
         top: blobPosition.top,
         opacity: opacity,
         transition: "opacity 2s",
+        filter: `blur(calc(${blobSize} / 2.4))`,
+        width: `${blobSize}`,
+        height: `${blobSize}`,
       }}
     />
   );

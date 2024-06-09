@@ -14,10 +14,7 @@ const FeaturedWorksSection = () => {
     <FadeIn>
       <AllProjectsHeader />
       <AllProjects itemsToShow={6} />
-      <div
-        data-aos="fade-up"
-        className="mt-[40px] flex items-center justify-center md:hidden"
-      >
+      <div className="group mt-[40px] flex items-center justify-center md:hidden">
         <Button to="/portfolio">{t("All Cases")}</Button>
         <Button to="/portfolio" className="btn2">
           <Icon icon={IconType.ARROW} />
