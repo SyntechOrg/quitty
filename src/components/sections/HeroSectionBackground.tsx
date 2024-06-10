@@ -98,8 +98,8 @@ const HeroSectionBackground = () => {
           opacity: fullDisappearEarly,
           top: "90dvh",
         }}
-        initial={{ top: "120vh" || "120vh" }}
-        animate={{ top: "90vh" || "90vh" }}
+        initial={{ top: "120dvh" || "120vh" }}
+        animate={{ top: "90dvh" || "90vh" }}
         transition={{ duration: 1.0, delay: 1.0 }}
         className="absolute left-[50%] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
         onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
