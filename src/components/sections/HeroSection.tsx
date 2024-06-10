@@ -7,7 +7,7 @@ const HeroSection = () => {
 
   return (
     <div
-      style={{ minHeight: "100dvh" }}
+      id="hero-text"
       className="container mx-auto flex min-h-screen w-10/12 max-w-[850px] items-center justify-center"
     >
       <FadeIn className="h-fit">
