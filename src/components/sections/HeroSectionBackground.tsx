@@ -98,15 +98,23 @@ const HeroSectionBackground = () => {
           opacity: fullDisappearEarly,
           top: "90dvh",
         }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 1.25 }}
-        className="absolute left-[50%] top-[90dvh] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
-        onClick={() => window.scrollTo({ top: vh || 300, behavior: "smooth" })}
+        initial={{ top: "120dvh" || "120vh" }}
+        animate={{ top: "90dvh" || "90vh" }}
+        transition={{ duration: 1.0, delay: 1.0 }}
+        className="absolute left-[50%] translate-x-[-50%] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+        onClick={() => {
+          const element = document.getElementById("hero-text");
+          if (element) {
+            window.scrollTo({
+              top: element.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        }}
       >
         <Icon
           icon={IconType.MOUSE}
-          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px] translate-x-[-15px] lg:translate-x-[-18px]"
+          className="relative mx-auto max-h-[30px] w-[90%] max-w-[30px] lg:max-h-[36px] lg:max-w-[36px]"
         />
       </motion.div>
     </div>
