@@ -29,7 +29,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="relative overflow-x-hidden bg-background text-white scroll-smooth">
+      <body className="relative overflow-x-hidden scroll-smooth bg-background text-white">
         <SynBackground />
         <Blob />
         <NextIntlClientProvider messages={messages}>
