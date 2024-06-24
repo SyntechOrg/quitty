@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Syntech Solutions AG | Home",
   description: "Welcome to Syn-Tech!",
   openGraph: {
-    images: ["/assets/images/web-dev-service-image.png"],
+    images: ["https://www.syn-tech.ch/thumbnail.png"],
   },
 };
 
