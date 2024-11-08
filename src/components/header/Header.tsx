@@ -53,23 +53,13 @@ const Nav: FC<NavProps> = ({ className }) => {
 };
 
 const Header: FC = () => {
-  const pathname = usePathname();
-  const isHomePage = ["en", "de"].includes(pathname.split("/").pop() || "");
   const localActive = useLocale();
   const t = useTranslations("Header");
-  const scrollPosition = useScrollYPosition();
-
-  const isAtTop = scrollPosition > 100;
 
   return (
     <header
       className={classNames(
         "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/50 backdrop-blur-sm",
-        isHomePage
-          ? isAtTop
-            ? "translate-y-0"
-            : "-translate-y-[150%]"
-          : "translate-y-0",
       )}
     >
       <div className="container flex items-center justify-between gap-4 ">
@@ -83,9 +73,6 @@ const Header: FC = () => {
               className="text-center leading-[1.3]"
             >
               {t("ContactButton")}
-            </Button>
-            <Button to={`/${localActive}/contact`} className="btn2">
-              <Icon icon={IconType.ARROW} />
             </Button>
           </div>
         </div>

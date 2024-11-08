@@ -1,5 +1,5 @@
 {
-  "name": "syntech",
+  "name": "quitty",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,6 +26,7 @@
     "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
+    "react-globe.gl": "^2.27.2",
     "react-hook-form": "^7.51.4",
     "react-toastify": "^10.0.5",
     "remark": "^15.0.1",
@@ -33,6 +34,7 @@
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.165.0",
     "zod": "^3.23.8",
     "zustand": "^4.5.2"
   },

@@ -30,7 +30,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
         onClick={toggleMenu}
         className="flex h-5 w-5 items-center justify-center"
       >
-        <Icon icon={open ? IconType.CLOSE : IconType.MENU} />
+        {/*<Icon icon={open ? IconType.CLOSE : IconType.MENU} />*/}
       </button>
       <AnimatePresence>
         {open && (
@@ -43,7 +43,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
             <div className="flex items-center justify-between">
               <Logo />
               <button className="mr-5" onClick={toggleMenu}>
-                <Icon icon={IconType.CLOSE} />
+                {/*<Icon icon={IconType.CLOSE} />*/}
               </button>
             </div>
             <div>

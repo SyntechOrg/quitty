@@ -14,7 +14,7 @@ export const Logo: FC<LogoProps> = ({ className }) => {
         icon={IconType.LOGO}
         className={classNames(
           "w-full max-w-[200px] lg:max-w-[240px]",
-          className
+          className,
         )}
       />
     </Link>

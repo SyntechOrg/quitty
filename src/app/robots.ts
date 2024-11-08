@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://www.syn-tech.ch/sitemap.xml",
+    sitemap: "https://www.quitty.ch/sitemap.xml",
   };
 }

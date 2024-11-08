@@ -46,7 +46,7 @@ const LocalSwitcher = () => {
             />
           )}
         </span>
-        <Icon icon={IconType.DROPDOWN} />
+        {/*<Icon icon={IconType.DROPDOWN} />*/}
       </div>
       {isLanguageSubMenuOpen && (
         <div className="absolute left-[8px] top-10 flex flex-col items-center justify-center rounded-md">

@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
 
 import React, { ReactNode } from "react";
-
-import SynBackground from "@/components/background/syn-background";
 import { ToastContainer } from "react-toastify";
 
 import { Footer, Header } from "@/components";
-import Blob from "@/components/blob/blob";
 
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
-  title: "Syntech Solutions AG | Home",
-  description: "Welcome to Syn-Tech!",
+  title: "Quitty | Home",
+  description: "Welcome to Quitty!",
   openGraph: {
-    images: ["https://www.syn-tech.ch/thumbnail.png"],
+    images: ["https://www.quitty.ch/thumbnail.png"],
   },
 };
 
@@ -29,9 +26,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="relative overflow-x-hidden scroll-smooth bg-background text-white">
-        <SynBackground />
-        <Blob />
+      <body className="relative scroll-smooth bg-background">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

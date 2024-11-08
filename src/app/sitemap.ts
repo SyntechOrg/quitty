@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { projectsDeutsch, projectsEnglish } from "projects";
 
-const BASE_URL = "https://www.syn-tech.ch";
+const BASE_URL = "https://www.quitty.ch";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

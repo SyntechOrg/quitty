@@ -2,8 +2,8 @@ import { redirect } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Syntech Solutions AG | Home",
-  description: "Welcome to Syn-Tech!",
+  title: "Quitty | Home",
+  description: "Welcome to Quitty!",
 };
 
 const Page = () => {
