@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,9 +22,9 @@
 }
 
 body {
-  font-family: 'Questrial', sans-serif;
-}
+  font-family: 'Instrument Sans', sans-serif;
 
+}
 .category-text {
   @apply lg:text-[16px] md:text-[15px] text-[14px] font-bold text-primary leading-[1.25] tracking-[0.2em];
 }
