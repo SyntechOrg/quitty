@@ -9,14 +9,8 @@ type LogoProps = {
 
 export const Logo: FC<LogoProps> = ({ className }) => {
   return (
-    <Link href="/">
-      <Icon
-        icon={IconType.LOGO}
-        className={classNames(
-          "w-full max-w-[200px] lg:max-w-[240px]",
-          className,
-        )}
-      />
+    <Link href="/" className="w-full max-w-[130px] lg:max-w-[140px]">
+      <Icon icon={IconType.LOGO} className={classNames("w-full", className)} />
     </Link>
   );
 };

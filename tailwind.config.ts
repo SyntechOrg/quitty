@@ -13,22 +13,16 @@ const config: Config = {
         "auto-fit": "repeat(auto-fit, minmax(285px, 1fr))",
       },
       colors: {
-        primary: "#0000FF",
-        text: "#D1CCD7",
-        background: "#111114",
-        gray: "#36363e",
+        primary: "#00C9A5",
+        text: "#0C1726",
+        background: "#F1FAFB",
       },
-      backgroundImage: {
-        "dark-gradient": "linear-gradient(180deg, #111115 0%, #161618 100%)",
-        "radial-gradient-background":
-          "radial-gradient(circle at 10% 100%, rgba(0, 0, 255, 0.5) 0%, transparent 25%), " +
-          "radial-gradient(circle at 90% 10%, rgba(0, 0, 255, 0.5) 0%, transparent 25%)",
-      },
+      backgroundImage: {},
       container: {
         center: true,
         padding: "1rem",
         screens: {
-          lg: "1290px",
+          lg: "1280px",
         },
       },
     },

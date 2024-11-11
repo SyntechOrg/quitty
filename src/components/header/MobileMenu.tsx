@@ -28,9 +28,11 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
     <div className="lg:hidden">
       <button
         onClick={toggleMenu}
-        className="flex h-5 w-5 items-center justify-center"
+        className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#90919c0f] p-[22px]"
       >
-        {/*<Icon icon={open ? IconType.CLOSE : IconType.MENU} />*/}
+        <div>
+          <Icon icon={IconType.BURGER_MENU} />
+        </div>
       </button>
       <AnimatePresence>
         {open && (
@@ -42,17 +44,19 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
           >
             <div className="flex items-center justify-between">
               <Logo />
-              <button className="mr-5" onClick={toggleMenu}>
-                {/*<Icon icon={IconType.CLOSE} />*/}
+              <button
+                className="mr-2.5 rounded-full bg-[#90919c0f] p-[22px]"
+                onClick={toggleMenu}
+              >
+                <div>
+                  <Icon icon={IconType.CLOSE} />
+                </div>
               </button>
             </div>
-            <div>
-              <p className="mb-5 text-sm text-[#2D2D31]">Menu</p>
-              <Nav />
-            </div>
+            <Nav />
             <div className="pb-[105px]">
               <p className="text-sm text-[#2D2D31]">Get in touch</p>
-              <div className="text-lg text-[#D4D4D4]">office@syn-tech.ch</div>
+              <div className="text-lg text-[#D4D4D4]">email@placeholder.ch</div>
             </div>
           </motion.div>
         )}

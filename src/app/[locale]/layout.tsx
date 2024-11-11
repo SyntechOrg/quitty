@@ -8,6 +8,7 @@ import { Footer, Header } from "@/components";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
+import GradientBackground from "@/components/shared/background/GradientBackground";
 
 export const metadata: Metadata = {
   title: "Quitty | Home",
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
       <body className="relative scroll-smooth bg-background">
         <NextIntlClientProvider messages={messages}>
           <Header />
+          <GradientBackground />
           {children}
           <Footer />
           <ToastContainer />
