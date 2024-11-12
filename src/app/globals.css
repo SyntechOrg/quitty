@@ -12,7 +12,7 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 16px;
-  background-color: #00f9;
+  background-color: #00C9A580;
 }
 
 @layer components {
