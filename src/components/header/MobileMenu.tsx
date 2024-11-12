@@ -28,7 +28,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
     <div className="lg:hidden">
       <button
         onClick={toggleMenu}
-        className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#90919c0f] p-[22px]"
+        className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#90919c0f] p-[22px] hover:opacity-80 active:opacity-90"
       >
         <div>
           <Icon icon={IconType.BURGER_MENU} />
@@ -37,7 +37,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[100] flex min-h-screen w-[100vw] flex-col justify-between bg-background p-8"
+            className="fixed inset-0 z-[100] flex min-h-screen w-[100vw] flex-col justify-between bg-background px-10 py-[30px]"
             initial={{ transform: "translateX(100%)", opacity: 0 }}
             animate={{ transform: "translateX(0)", opacity: 1 }}
             exit={{ transform: "translateX(100%)", opacity: 0 }}
@@ -45,7 +45,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
             <div className="flex items-center justify-between">
               <Logo />
               <button
-                className="mr-2.5 rounded-full bg-[#90919c0f] p-[22px]"
+                className="rounded-full bg-[#90919c0f] p-[22px] hover:opacity-80 active:opacity-90"
                 onClick={toggleMenu}
               >
                 <div>
@@ -55,8 +55,8 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
             </div>
             <Nav />
             <div className="pb-[105px]">
-              <p className="text-sm text-[#2D2D31]">Get in touch</p>
-              <div className="text-lg text-[#D4D4D4]">email@placeholder.ch</div>
+              <p className="text-sm text-primary">Get in touch</p>
+              <div className="text-lg text-text">email@placeholder.ch</div>
             </div>
           </motion.div>
         )}
