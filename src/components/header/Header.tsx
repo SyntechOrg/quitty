@@ -64,10 +64,10 @@ const Header: FC = () => {
   return (
     <header
       className={classNames(
-        "fixed w-screen top-0 right-0 left-0 transition-transform py-[30px] duration-500 z-20 backdrop-blur-sm",
+        "fixed w-screen top-0 right-0 left-0 transition-transform py-[20px] duration-500 z-20 backdrop-blur-sm bg-white/30",
       )}
     >
-      <div className="container flex items-center justify-between gap-4 ">
+      <div className="container flex items-center justify-between gap-4 h-[50px]">
         <Logo />
         <Nav className="hidden lg:block" />
         <div className="flex items-center gap-2 max-lg:ml-auto">

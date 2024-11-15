@@ -7,9 +7,8 @@ import { Icon, IconType } from "@/components/shared";
 const variantClasses = {
   contact:
     "bg-text text-white rounded-[16px] h-10 px-[16px] text-[16px] leading-[24px] text-center hover:text-background hover:bg-primary",
-  primary: "",
-  secondary:
-    "bg-primary text-white hover:bg-primary/80 active:bg-primary/50 border border-primary duration-200 group-hover:bg-primary/80 group-active:bg-primary/50 hover:text-white",
+  primary:
+    "bg-[rgba(0,201,165,0.10)] text-white leading-[20px] text-[20px] h-[64px] px-8 rounded-[100px] bg-blur-[10px] border border-primary hover:bg-primary",
 };
 
 type ButtonProps = {
@@ -38,7 +37,7 @@ export const Button: FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <Link href={to} className="group flex items-center gap-x-2">
+      <Link href={to} className="group flex items-center gap-x-2.5">
         <span className={buttonClassNames}>{children}</span>
         {icon && <Icon icon={icon as unknown as IconType} />}
       </Link>
