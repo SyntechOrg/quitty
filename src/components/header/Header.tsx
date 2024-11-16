@@ -64,19 +64,16 @@ const Header: FC = () => {
   return (
     <header
       className={classNames(
-        "fixed w-screen top-0 right-0 left-0 transition-transform py-[20px] duration-500 z-20 backdrop-blur-sm bg-white/30",
+        "fixed w-screen top-0 right-0 left-0 transition-transform py-5 duration-500 z-20 backdrop-blur-[5px] bg-background/40",
       )}
     >
-      <div className="container flex items-center justify-between gap-4 h-[50px]">
+      <div className="container flex h-[50px] items-center justify-between gap-4">
         <Logo />
         <Nav className="hidden lg:block" />
         <div className="flex items-center gap-2 max-lg:ml-auto">
           <LocalSwitcher />
           <div className="group hidden items-center lg:flex">
-            <Button
-              to={`/${localActive}/contact`}
-              variant="contact"
-            >
+            <Button to={`/${localActive}/contact`} variant="contact">
               {t("ContactButton")}
             </Button>
           </div>

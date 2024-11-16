@@ -7,12 +7,12 @@ import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.pn
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 import IphoneMockup from "../../../../public/assets/images/iphone-mockup.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const HomeHero = () => {
   const { scrollYProgress, scrollY } = useScroll();
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-35%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
 
   const mainY = useTransform(scrollYProgress, [0, 1.2], ["0%", "80%"]);
@@ -21,12 +21,12 @@ const HomeHero = () => {
   const mockUpTop = useTransform(
     scrollY,
     [0, 400, 800, 1100, 1400],
-    ["50px", "100px", "400px", "700px", "200px"],
+    ["50px", "100px", "375px", "675px", "200px"],
   );
   const mockUpScale = useTransform(
     scrollY,
     [0, 300, 1100, 1400],
-    [1, 0.7, 0.95, 1.3],
+    [1, 0.7, 0.9, 1.3],
   );
 
   return (
@@ -38,7 +38,7 @@ const HomeHero = () => {
         <Image
           src={HomeHeroImage}
           alt="background image"
-          className="rounded-[45px] object-cover min-h-[600px]"
+          className="min-h-[600px] rounded-[45px] object-cover"
         />
       </motion.div>
       <motion.div
@@ -73,12 +73,12 @@ const HomeHero = () => {
       </motion.div>
       <motion.div
         style={{ top: mockUpTop, scale: mockUpScale }}
-        className="relative mx-auto w-fit"
+        className="relative mx-auto h-[85vh] max-h-[950px] w-full max-w-[300px] lg:max-w-[360px] "
       >
         <Image
           src={IphoneMockup}
           alt="background image"
-          className="w-full max-w-[360px]  object-contain"
+          className="h-full w-full object-contain"
         />
       </motion.div>
     </FadeIn>
