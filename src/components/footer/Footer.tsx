@@ -21,8 +21,8 @@ const footerNavLinks = [
 ];
 
 const footerLegalLinks = [
-  { text: "Terms of Service", href: "terms-of-service" },
-  { text: "Privacy Policy", href: "privacy-policy" },
+  { text: "Terms", href: "terms-of-service" },
+  { text: "Privacy", href: "privacy-policy" },
   { text: "Impressum", href: "impressum" },
 ];
 
@@ -45,7 +45,7 @@ export const Footer = () => {
               <div className="flex items-center gap-4 max-lg:flex-col  lg:gap-5">
                 <Icon icon={IconType.LOGO_ONLY} className="w-[50px]" />
                 <p className="flex-1 text-[16px] leading-[25px] text-[#e1e3e7] max-lg:text-center lg:text-[20px] lg:leading-[30px]">
-                  The future of Digital Receipts
+                  {t('CardText')}
                 </p>
               </div>
               <div className="flex items-center justify-end gap-2">
@@ -76,15 +76,15 @@ export const Footer = () => {
               </div>
             </div>
             <p className="mt-8 text-[16px] leading-[24px] text-[#b7babf] max-lg:text-center lg:ml-6 lg:text-[18px] lg:leading-[30px]">
-              ©{new Date().getFullYear()} Quitty. Created by{" "}
-              <span className="text-primary">Syntech</span>
+              ©{new Date().getFullYear()} {t('Copyright')}{" "}
+              <span className="text-primary"><a href="https://syn-tech.ch/">Syntech Solutions AG</a></span>
             </p>
           </div>
           <div className="flex w-full justify-between gap-5 lg:w-1/2">
             <div className="flex w-1/2 flex-col max-lg:items-center">
               <ul className="flex flex-col gap-y-5">
                 <p className="pb-2 text-[16px] font-medium leading-[1.4] text-white">
-                  Quick Links
+                  {t('QuickLinks')}
                 </p>
                 {footerNavLinks.map((item) => (
                   <li
@@ -92,7 +92,7 @@ export const Footer = () => {
                     className="text-[16px] leading-[1.4] text-[#b7babf] duration-150 hover:text-white"
                   >
                     <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
-                      {item.text}
+                    {t(item.text)}
                     </Link>
                   </li>
                 ))}
@@ -101,7 +101,7 @@ export const Footer = () => {
             <div className="flex w-1/2 flex-col max-lg:items-center">
               <ul className="flex flex-col gap-y-5">
                 <p className="pb-2 text-[16px] font-medium leading-[1.4] text-white">
-                  Legal
+                {t('Legal')}
                 </p>
                 {footerLegalLinks.map((item) => (
                   <li
@@ -109,7 +109,7 @@ export const Footer = () => {
                     className="text-[16px] leading-[1.4] text-[#b7babf] duration-150 hover:text-white"
                   >
                     <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
-                      {item.text}
+                    {t(item.text)}
                     </Link>
                   </li>
                 ))}
