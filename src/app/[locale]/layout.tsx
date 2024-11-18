@@ -9,6 +9,8 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 import GradientBackground from "@/components/shared/background/GradientBackground";
+import Partners from "@/components/shared/partners/Partners";
+import Transform from "@/components/shared/transform/Transform";
 
 export const metadata: Metadata = {
   title: "Quitty | Home",
@@ -32,6 +34,8 @@ export default async function LocaleLayout({
           <Header />
           <GradientBackground />
           {children}
+          <Partners />
+          <Transform />
           <Footer />
           <ToastContainer />
         </NextIntlClientProvider>

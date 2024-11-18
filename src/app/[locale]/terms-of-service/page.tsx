@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
 import React from "react";
+import Partners from "@/components/shared/partners/Partners";
 
 const TermsPage = () =>{
     const t = useTranslations("Terms");
     return(
+        <>
         <div className="container lg:mt-[200px] mt-[150px]">
             <h1 className="font-bold lg:text-[60px] text-[50px]">{t('Title')}</h1>
             <h5 className="lg:text-[18px] text-[16px]">{t('UnderText')}</h5>
@@ -24,6 +26,9 @@ const TermsPage = () =>{
             <p className="lg:text-[16px] text-[14px] lg:mt-[25px] mt-[15px]">{t('Paragraph1-8')}</p>
             <p className="lg:text-[16px] text-[14px] lg:mt-[25px] mt-[15px]">{t('Paragraph1-9')}</p>
         </div>
+
+        
+        </>
     )
 }
 

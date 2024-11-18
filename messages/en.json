@@ -9,7 +9,13 @@
     "Blog": "Blog",
     "ContactButton": "Let's talk"
   },
-  "Shared": {},
+  "Shared": {
+    "PartnersTitle": "Trusted by local businesses everywhere",
+    "TransformTitle": "Ready to transform your rentail experience",
+    "TransformP1": "Go paperless and reduce waste with digital receipts.",
+    "TransformP2": "Earn rewards with every purchase from partnered brands.",
+    "TransformP3": "Easily track spending and manage receipts in one place."
+  },
   "Footer": {
     "QuickLinks": "Quick Links",
     "Product": "Product",
