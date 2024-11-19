@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { motion, useScroll, useTransform } from "framer-motion";
+import InsightRow from "@/components/insight-row/InsightRow";
 
 const InsightsSection = () => {
   const targetRef = useRef(null);
@@ -22,13 +23,13 @@ const InsightsSection = () => {
 
   const firstTextLineHeight = useTransform(
     scrollYProgress,
-    [0, 0.2],
-    [2.0, 1.4],
+    [0, 0.2, 0.3, 0.5],
+    [2.0, 1.4, 1.4, 1],
   );
   const secondTextLineHeight = useTransform(
     scrollYProgress,
-    [0.5, 0.7],
-    [2.0, 1.4],
+    [0.5, 0.7, 0.8, 1],
+    [2.0, 1.4, 1.4, 1],
   );
 
   const firstTextTop = useTransform(
@@ -42,13 +43,19 @@ const InsightsSection = () => {
     ["60vh", "50vh", "50vh", "30vh"],
   );
 
+  const divContentTranslateY = useTransform(
+    scrollYProgress,
+    [0.1, 0.5],
+    ["0%", "-40%"],
+  );
+
   return (
     <FadeIn>
       <section
         ref={targetRef}
-        className="container relative flex h-[400vh] justify-between gap-6 max-lg:flex-col-reverse"
+        className="container relative flex h-[400vh] justify-between gap-6 max-lg:w-full max-lg:flex-col-reverse"
       >
-        <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden lg:w-1/2">
+        <div className="sticky top-[45px] flex h-screen w-full items-center overflow-hidden lg:w-1/2">
           <div>
             <motion.div
               style={{
@@ -71,7 +78,7 @@ const InsightsSection = () => {
                 lineHeight: secondTextLineHeight,
                 top: secondTextTop,
               }}
-              className="absolute top-[50vh]  translate-y-[-50%]"
+              className="absolute top-[50vh] translate-y-[-50%]"
             >
               <p className="text-[16px] font-medium text-primary">
                 See Your Spending at a Glance
@@ -82,8 +89,23 @@ const InsightsSection = () => {
             </motion.div>
           </div>
         </div>
-        <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden lg:w-1/2">
-          image
+        <div className="sticky top-[45px] flex h-screen w-full items-center overflow-hidden lg:w-1/2">
+          <div className="relative h-[70vh] max-h-[720px] w-full overflow-hidden rounded-[40px] bg-[#d2f4f0] lg:rounded-[80px]">
+            <motion.div
+              className="h-full space-y-3"
+              style={{
+                translateY: divContentTranslateY,
+              }}
+            >
+              <InsightRow />
+              <InsightRow />
+              <InsightRow />
+              <InsightRow />
+              <InsightRow />
+              <InsightRow />
+              <InsightRow />
+            </motion.div>
+          </div>
         </div>
       </section>
     </FadeIn>

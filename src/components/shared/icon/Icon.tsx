@@ -1,6 +1,12 @@
 import { type FC, memo } from "react";
 
-import {BurgerMenuIcon, CloseIcon, LogoIcon, LogoIconOnly} from "./icons";
+import {
+  BurgerMenuIcon,
+  CloseIcon,
+  KleidungOutline,
+  LogoIcon,
+  LogoIconOnly,
+} from "./icons";
 import { IconType } from "./icon-types";
 
 type IconProps = {
@@ -18,6 +24,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <CloseIcon {...props} />;
     case IconType.LOGO_ONLY:
       return <LogoIconOnly {...props} />;
+    case IconType.KLEIDUNG_OUTLINE:
+      return <KleidungOutline {...props} />;
     default:
       throw new Error("Invalid icon type");
   }
