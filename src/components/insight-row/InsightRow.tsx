@@ -5,11 +5,10 @@ import { Icon, IconType } from "@/components/shared";
 
 interface InsightRowProps {
   index?: number;
-  img?: string;
+  icon?: IconType;
   name?: string;
   percentage?: number;
   color?: string;
-  top?: string;
 }
 
 const InsightRow: FC<InsightRowProps> = (props) => {
@@ -22,21 +21,21 @@ const InsightRow: FC<InsightRowProps> = (props) => {
 
   const overlayRadius = useTransform(
     scrollYProgress,
-    [0.4, 0.8],
+    [0.6, 0.8],
     ["40px", "36px"],
   );
 
   const overlayBackground = useTransform(
     scrollYProgress,
-    [0.5, 0.6, 0.75],
+    [0.6, 0.7, 0.8],
     [
-      "linear-gradient(90deg, rgba(220, 0, 0, 1) 0%, rgba(220, 0, 0, 1) 100%)",
-      "linear-gradient(90deg, rgba(220, 0, 0, 1) 0%, rgba(220, 0, 0, 0.6) 60%)",
-      "linear-gradient(90deg, rgba(220, 0, 0, 0.40) 0%, rgba(220, 0, 0, 0.00) 22%)",
+      `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 1) 100%)`,
+      `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 0.5) 50%)`,
+      `linear-gradient(90deg, rgba(${props.color}, 0.40) 0%, rgba(${props.color}, 0.00) 22%)`,
     ],
   );
 
-  const overlayTextOpacity = useTransform(scrollYProgress, [0.5, 0.6], [1, 0]);
+  const overlayTextOpacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
 
   const rowMarginTop = useTransform(
     scrollYProgress,
@@ -61,20 +60,20 @@ const InsightRow: FC<InsightRowProps> = (props) => {
           style={{ opacity: overlayTextOpacity }}
           className="text-[26px] font-semibold leading-[1.4] text-white lg:text-[32px]"
         >
-          Restaurant
+          {props.name}
         </motion.p>
       </motion.div>
       <div className="flex items-center gap-5">
         <div className="px-5">
-          <Icon icon={IconType.KLEIDUNG_OUTLINE} className="h-12 w-12" />
+          <Icon icon={props.icon} className="h-12 w-12" />
         </div>
         <p className="text-[26px] font-semibold leading-[1.4] text-[#373A40] lg:text-[32px]">
-          Restaurant
+          {props.name}
         </p>
       </div>
       <div className="pr-6">
         <p className="text-[22px] font-medium leading-[1.4] text-[#212424] lg:text-[26px]">
-          30%
+          {props.percentage}%
         </p>
       </div>
     </motion.div>
