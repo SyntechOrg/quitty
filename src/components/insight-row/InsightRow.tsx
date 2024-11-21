@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Icon, IconType } from "@/components/shared";
 
 interface InsightRowProps {
+  index?: number;
   img?: string;
   name?: string;
   percentage?: number;
@@ -27,17 +28,27 @@ const InsightRow: FC<InsightRowProps> = (props) => {
 
   const overlayBackground = useTransform(
     scrollYProgress,
-    [0.5, 0.75],
+    [0.5, 0.6, 0.75],
     [
       "linear-gradient(90deg, rgba(220, 0, 0, 1) 0%, rgba(220, 0, 0, 1) 100%)",
+      "linear-gradient(90deg, rgba(220, 0, 0, 1) 0%, rgba(220, 0, 0, 0.6) 60%)",
       "linear-gradient(90deg, rgba(220, 0, 0, 0.40) 0%, rgba(220, 0, 0, 0.00) 22%)",
     ],
   );
 
   const overlayTextOpacity = useTransform(scrollYProgress, [0.5, 0.6], [1, 0]);
 
+  const rowMarginTop = useTransform(
+    scrollYProgress,
+    [0.2, 0.5],
+    [`${props.index * -40}px`, "10px"],
+  );
+
   return (
-    <div className="relative mx-auto flex h-[calc(20%-11px)] w-[85%] items-center justify-between rounded-[40px] bg-white p-4">
+    <motion.div
+      style={{ marginTop: rowMarginTop }}
+      className="relative mx-auto flex h-[calc(20%-11px)] w-[85%] items-center justify-between rounded-[40px] bg-white p-4"
+    >
       <motion.div
         className="absolute flex items-center justify-center"
         style={{
@@ -66,7 +77,7 @@ const InsightRow: FC<InsightRowProps> = (props) => {
           30%
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
