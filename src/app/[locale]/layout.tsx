@@ -31,7 +31,9 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className="relative scroll-smooth bg-background">
         <NextIntlClientProvider messages={messages}>
-          <Header />
+          <div className="mb-[90px]">
+            <Header />
+          </div>
           <GradientBackground />
           {children}
           <Partners />

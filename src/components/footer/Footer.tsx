@@ -32,7 +32,7 @@ export const Footer = () => {
 
   return (
     <FadeIn>
-      <footer className="mt-[100vh] w-full bg-text pt-[60px] text-white lg:pt-[120px]">
+      <footer className="w-full bg-text pt-[60px] text-white lg:pt-[120px]">
         <div className="container flex gap-14 max-lg:flex-col-reverse lg:justify-between lg:gap-20">
           <div className="relative w-full lg:w-1/2">
             <div
