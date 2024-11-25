@@ -1,0 +1,35 @@
+import { useTranslations } from "next-intl";
+import React from "react";
+
+const ImpressumPage = () => {
+  const t = useTranslations("Impressum");
+
+  return (
+    <div
+      className="container mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px]
+     [&>p]:text-[14px] [&>p]:leading-[23px] md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
+    >
+      <p>{t("Paragraph1-1")}</p>
+      <p>{t("Paragraph1-2")}</p>
+      <p>{t("Paragraph1-3")}</p>
+
+      <h2 className="max-w-[700px] text-[30px] font-bold leading-[35px] md:text-[38px] md:leading-[43px]">
+        {t("UnderTitle")}
+      </h2>
+
+      <p>{t("Paragraph1-4")}</p>
+      <p>{t("Paragraph1-5")}</p>
+      <p>{t("Paragraph1-6")}</p>
+      <p>{t("Paragraph1-7")}</p>
+
+      <h3 className="text-[25px] leading-[27px] md:text-[30px] md:leading-[36px]">
+        {t("Paragraph-title")}
+      </h3>
+
+      <p>{t("Paragraph1-8")}</p>
+      <p>{t("Paragraph1-9")}</p>
+    </div>
+  );
+};
+
+export default ImpressumPage;
