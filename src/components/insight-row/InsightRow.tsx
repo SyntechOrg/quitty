@@ -5,9 +5,9 @@ import { Icon, IconType } from "@/components/shared";
 
 interface InsightRowProps {
   index: number;
-  icon: IconType;
+  icon?: IconType;
   name: string;
-  percentage: number;
+  percentage?: number;
   color: string;
 }
 
@@ -58,23 +58,29 @@ const InsightRow: FC<InsightRowProps> = (props) => {
       >
         <motion.p
           style={{ opacity: overlayTextOpacity }}
-          className="text-[26px] font-semibold leading-[1.4] text-white lg:text-[32px]"
+          className="text-[22px] font-semibold leading-[1.4] text-white sm:text-[32px]"
         >
           {props.name}
         </motion.p>
       </motion.div>
-      <div className="flex items-center gap-1.5 md:gap-4">
-        <div className="pr-1 md:pl-3">
-          <Icon icon={props.icon} className="h-8 w-8 md:h-11 md:w-11" />
-        </div>
-        <p className="text-[21px] font-semibold leading-[1.4] text-[#373A40] md:text-[28px]">
-          {props.name}
-        </p>
+      <div className="flex items-center gap-2 sm:gap-4">
+        {props.icon && (
+          <>
+            <div className="px-1 sm:pl-3">
+              <Icon icon={props.icon} className="h-7 w-7 sm:h-11 sm:w-11" />
+            </div>
+            <p className="text-[21px] font-semibold leading-[1.4] text-[#373A40] sm:text-[28px]">
+              {props.name}
+            </p>
+          </>
+        )}
       </div>
-      <div className="pl-1 md:pr-5">
-        <p className="text-[17px] font-medium leading-[1.4] text-[#212424] md:text-[24px]">
-          {props.percentage}%
-        </p>
+      <div className="pl-1 sm:pr-5">
+        {props.percentage && (
+          <p className="text-[17px] font-medium leading-[1.4] text-[#212424] sm:text-[24px]">
+            {props.percentage}%
+          </p>
+        )}
       </div>
     </motion.div>
   );

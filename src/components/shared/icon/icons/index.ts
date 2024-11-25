@@ -3,3 +3,7 @@ export { BurgerMenuIcon } from "./BurgerMenuIcon";
 export { CloseIcon } from "./CloseIcon";
 export { LogoIconOnly } from "./LogoIconOnly";
 export { KleidungOutline } from "./KleidungOutline";
+export { MoebelOutline } from "./MoebelOutline";
+export { LebensmittelOutline } from "./LebensmittelOutline";
+export { RestaurantOutline } from "./RestaurantOutline";
+export { SportOutline } from "./SportOutline";

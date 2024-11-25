@@ -6,26 +6,22 @@ import { IconType } from "@/components/shared";
 const insightRows = [
   {
     name: "Travel",
-    percentage: 30,
-    icon: IconType.KLEIDUNG_OUTLINE,
     color: "113, 238, 56",
   },
   {
     name: "Auto",
-    percentage: 20,
-    icon: IconType.KLEIDUNG_OUTLINE,
     color: "255, 199, 0",
   },
   {
     name: "Möbel",
     percentage: 50,
-    icon: IconType.KLEIDUNG_OUTLINE,
+    icon: IconType.MOEBEL_OUTLINE,
     color: "0, 201, 137",
   },
   {
     name: "Lebensmittel",
     percentage: 20,
-    icon: IconType.KLEIDUNG_OUTLINE,
+    icon: IconType.LEBENSMITTEL_OUTLINE,
     color: "58, 69, 241",
   },
   {
@@ -37,13 +33,13 @@ const insightRows = [
   {
     name: "Restaurant",
     percentage: 20,
-    icon: IconType.KLEIDUNG_OUTLINE,
+    icon: IconType.RESTAURANT_OUTLINE,
     color: "112, 48, 193",
   },
   {
     name: "Sport",
     percentage: 20,
-    icon: IconType.KLEIDUNG_OUTLINE,
+    icon: IconType.SPORT_OUTLINE,
     color: "77, 193, 240",
   },
 ];
