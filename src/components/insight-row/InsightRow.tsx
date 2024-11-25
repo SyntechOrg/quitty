@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Icon, IconType } from "@/components/shared";
 
 interface InsightRowProps {
-  index?: number;
-  icon?: IconType;
-  name?: string;
-  percentage?: number;
-  color?: string;
+  index: number;
+  icon: IconType;
+  name: string;
+  percentage: number;
+  color: string;
 }
 
 const InsightRow: FC<InsightRowProps> = (props) => {
@@ -63,16 +63,16 @@ const InsightRow: FC<InsightRowProps> = (props) => {
           {props.name}
         </motion.p>
       </motion.div>
-      <div className="flex items-center gap-5">
-        <div className="px-5">
-          <Icon icon={props.icon} className="h-12 w-12" />
+      <div className="flex items-center gap-1.5 md:gap-4">
+        <div className="pr-1 md:pl-3">
+          <Icon icon={props.icon} className="h-8 w-8 md:h-11 md:w-11" />
         </div>
-        <p className="text-[26px] font-semibold leading-[1.4] text-[#373A40] lg:text-[32px]">
+        <p className="text-[21px] font-semibold leading-[1.4] text-[#373A40] md:text-[28px]">
           {props.name}
         </p>
       </div>
-      <div className="pr-6">
-        <p className="text-[22px] font-medium leading-[1.4] text-[#212424] lg:text-[26px]">
+      <div className="pl-1 md:pr-5">
+        <p className="text-[17px] font-medium leading-[1.4] text-[#212424] md:text-[24px]">
           {props.percentage}%
         </p>
       </div>

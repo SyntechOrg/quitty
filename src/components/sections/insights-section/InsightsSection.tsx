@@ -15,13 +15,15 @@ const InsightsSection = () => {
     <FadeIn>
       <section
         ref={targetRef}
-        className="container relative flex h-[400vh] justify-between gap-6 max-lg:w-full max-lg:flex-col-reverse"
+        className="container relative flex h-[400vh] w-full"
       >
-        <div className="sticky top-[45px] flex h-screen w-full items-center overflow-hidden lg:w-1/2">
-          <InsightsLeft scrollYProgress={scrollYProgress} />
-        </div>
-        <div className="sticky top-[45px] flex h-screen w-full items-center overflow-hidden lg:w-1/2">
-          <InsightsRight scrollYProgress={scrollYProgress} />
+        <div className="relative w-full max-lg:w-full lg:flex lg:justify-between lg:gap-6">
+          <div className="sticky top-[115px] flex h-[45vh] w-full items-center overflow-hidden lg:top-[45px] lg:h-screen lg:w-1/2">
+            <InsightsLeft scrollYProgress={scrollYProgress} />
+          </div>
+          <div className="sticky top-[43vh] flex h-[53vh] w-full items-center overflow-hidden lg:top-[45px] lg:h-screen lg:w-1/2">
+            <InsightsRight scrollYProgress={scrollYProgress} />
+          </div>
         </div>
       </section>
     </FadeIn>
