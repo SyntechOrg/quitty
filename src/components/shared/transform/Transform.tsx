@@ -12,7 +12,7 @@ const Transform = () => {
     const t = useTranslations("Shared");
     return(
         <>
-        <div className="relative border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] p-4 lg:mt-[120px] mt-[80px] container flex lg:flex-row flex-col lg:justify-center justify-end lg:items-end items-center lg:gap-[5%] bg-[#E6F2F4] rounded-[80px] lg:pt-[100px] h-[auto] pt-[50px]">
+        <div className="relative pb-[0px] border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] p-4 lg:mt-[120px] mt-[80px] container flex lg:flex-row flex-col lg:justify-center justify-end lg:items-end items-center lg:gap-[5%] bg-[#E6F2F4] rounded-[80px] lg:pt-[100px] h-[auto] pt-[50px]">
             <Image 
                 src={bgBlur}
                 alt=""
