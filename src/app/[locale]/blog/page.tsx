@@ -95,9 +95,12 @@ const BlogPage = () => {
     <>
       <div className="container lg:mt-[200px] mt-[150px]">
         <h1 className="font-bold lg:text-[60px] text-[50px]">Blog</h1>
-        <h5 className="lg:text-[18px] text-[16px] mb-[50px]">
+        <h5 className="lg:text-[18px] text-[16px] lg:mb-[200px] mb-[100px]">
           Discover insights and ideas—dive in and get inspired!
         </h5>
+        <p className="text-[16px] mb-[20px]">
+          <span className="font-[600]">Home /</span> Blog
+        </p>
 
         <div className="lg:gap-[2%] sm:pb-[150px] pb-[200px] md:gap-[2%] gap-[0.5%] justify-between grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1s">
           {blogPosts.map((post) => (
