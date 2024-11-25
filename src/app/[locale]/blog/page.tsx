@@ -89,34 +89,34 @@ const BlogPage = () => {
   const t = useTranslations("Blog");
   return (
     <>
-      <div className="container lg:mt-[200px] mt-[150px]">
-        <h1 className="font-bold lg:text-[60px] text-[50px]">{t("Title")}</h1>
-        <h5 className="lg:text-[18px] text-[16px] lg:mb-[200px] mb-[100px]">
+      <div className="container mt-[150px] lg:mt-[200px]">
+        <h1 className="text-[50px] font-bold lg:text-[60px]">{t("Title")}</h1>
+        <h5 className="mb-[100px] text-[16px] lg:mb-[200px] lg:text-[18px]">
           {t("UnderTitle")}
         </h5>
-        <p className="text-[16px] mb-[20px]">
+        <p className="mb-[20px] text-[16px]">
           <span className="font-[600]">{t("Pagination1")}</span>{" "}
           {t("Pagination2")}
         </p>
 
-        <div className="lg:gap-[2%] sm:pb-[150px] pb-[200px] md:gap-[2%] gap-[0.5%] justify-between grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1s">
+        <div className="grid-cols-1s grid justify-between gap-[0.5%] pb-[200px] sm:pb-[150px] md:grid-cols-2 md:gap-[2%] lg:grid-cols-3 lg:gap-[2%]">
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className={`relative h-[410px] flex items-end justify-start ${
+              className={`relative flex h-[410px] items-end justify-start ${
                 post.span ? "lg:col-span-2" : ""
               }`}
             >
               <Image
                 src={post.image}
                 alt=""
-                className="absolute z-[-1] object-cover h-[100%]"
+                className="absolute z-[-1] h-[100%] object-cover"
               />
-              <div className="pl-[20px] pt-[30px] pb-[20px] w-[100%] bg-gradient-to-t from-[#101018] to-[#101018]/0">
-                <p className="lg:leading-[16px] max-w-[90%] text-white opacity-[75%] text-[14px]">
+              <div className="w-[100%] bg-gradient-to-t from-[#101018] to-[#101018]/0 pb-[20px] pl-[20px] pt-[30px]">
+                <p className="max-w-[90%] text-[14px] text-white opacity-[75%] lg:leading-[16px]">
                   {t(post.text)}
                 </p>
-                <h1 className="leading-[31px] max-w-[90%] text-white font-[600] text-[24px]">
+                <h1 className="max-w-[90%] text-[24px] font-[600] leading-[31px] text-white">
                   {t(post.title)}
                 </h1>
               </div>
