@@ -2,74 +2,76 @@ import React from "react";
 import Image from "next/image";
 import phone from "public/assets/images/TransformPhone.png";
 import flame from "public/assets/images/flameIcon.png";
-import apple from "public/assets/images/apple-icon.png"
-import play from "public/assets/images/google-play-icon.png"
+import apple from "public/assets/images/apple-logo.png";
+import play from "public/assets/images/google-play-logo.png";
 import { useTranslations } from "next-intl";
-
+import bgBlur from "public/assets/images/bgBlur.png";
 
 const Transform = () => {
-    const t = useTranslations("Shared");
-    return(
-        <>
-        <div className="lg:mt-[120px] mt-[80px] container flex lg:flex-row flex-col lg:justify-center justify-end lg:items-end items-center lg:gap-[5%] bg-[#E6F2F4] rounded-[80px] lg:pt-[100px] h-[auto] pt-[50px]">
-            <div className="flex flex-col lg:gap-[30px] gap-[17px] mb-[10%] lg:items-start items-center ">
-                <h1 className="lg:max-w-[550px] lg:text-[50px] text-[39px] font-medium lg:leading-[64px] leading-[50px] lg:text-left text-center">{t('TransformTitle')}</h1>
+  const t = useTranslations("Shared");
+  return (
+    <>
+      <div
+        className="container relative mt-[80px] flex h-[auto] flex-col items-center justify-end rounded-[80px]
+        border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] bg-[#E6F2F4] p-4 pb-[0px] pt-[50px] lg:mt-[120px]
+        lg:flex-row lg:items-end lg:justify-center lg:gap-[5%] lg:pt-[100px]"
+      >
+        <Image
+          src={bgBlur}
+          alt=""
+          className="absolute right-0 top-0 h-[100%] w-[100%] lg:w-[88%]"
+        />
 
-                <div className="flex flex-col lg:gap-[25px] gap-[20px] w-fit">
-                    <div className="flex lg:justify-start justify-center items-start gap-[10px] w-fit">
-                        <Image 
-                        src={flame}
-                        alt=""
-                        className="w-[22px] mt-[5px]"
-                        />
-                        <p className="lg:text-[20px] text-[18px]">{t('TransformP1')}</p>
-                    </div>
-                    <div className="flex lg:justify-start justify-center items-start gap-[10px] w-fit">
-                        <Image 
-                        src={flame}
-                        alt=""
-                        className="w-[22px] mt-[5px]"
-                        />
-                        <p className="lg:text-[20px] text-[18px]">{t('TransformP2')}</p>
-                    </div>
-                    <div className="flex lg:justify-start justify-center items-start gap-[10px] w-fit">
-                        <Image 
-                        src={flame}
-                        alt=""
-                        className="w-[22px] mt-[5px]"
-                        />
-                        <p className="lg:text-[20px] text-[18px]">{t('TransformP3')}</p>
-                    </div>
-                </div>
-
-                <div className="flex lg:justify-start lg:flex-row flex-col justify-center items-center gap-[20px] w-fit">
-                    <button className="w-[200px] h-[60px] border border-color-[#00C9A5] rounded-full flex justify-center items-center gap-[10px]">
-                    <Image 
-                        src={apple}
-                        alt=""
-                        className=""
-                        />
-                        App Store
-                    </button>
-                    <button className="w-[200px] h-[60px] border border-color-[#00C9A5] rounded-full flex justify-center items-center gap-[10px]">
-                    <Image 
-                        src={play}
-                        alt=""
-                        className=""
-                        />
-                        Google Play
-                    </button>
-                </div>
-                
+        <div className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
+          <h1 className="text-center text-[32px] font-medium leading-[40px] lg:max-w-[550px] lg:text-left lg:text-[36px] lg:leading-[50px]">
+            {t("TransformTitle")}
+          </h1>
+          <div className="flex w-fit flex-col gap-[20px] lg:gap-[25px]">
+            <div className="flex w-fit items-center justify-center gap-[10px]">
+              <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+              <p className="text-[16px] leading-[24px] lg:text-[18px]">
+                {t("TransformP1")}
+              </p>
             </div>
-            <Image 
-            src={phone}
-            alt="Tranform Phone"
-            className="lg:w-[39%] w-[300px]" 
-            />
+            <div className="flex w-fit items-center justify-center gap-[10px]">
+              <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+              <p className="text-[16px] leading-[24px] lg:text-[18px]">
+                {t("TransformP2")}
+              </p>
+            </div>
+            <div className="flex w-fit items-center justify-center gap-[10px]">
+              <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+              <p className="text-[16px] leading-[24px] lg:text-[18px]">
+                {t("TransformP3")}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex w-fit flex-col items-center justify-center gap-[20px] lg:flex-row lg:justify-start">
+            <button
+              className="border-color-[#00C9A5] flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+            rounded-full border border-primary duration-150 hover:bg-primary"
+            >
+              <Image src={apple} alt="" className="w-[30px]" />
+              App Store
+            </button>
+            <button
+              className="border-color-[#00C9A5] flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+            rounded-full border border-primary duration-150 hover:bg-primary"
+            >
+              <Image src={play} alt="" className="w-[30px]" />
+              Google Play
+            </button>
+          </div>
         </div>
-        </>
-    )
+        <Image
+          src={phone}
+          alt="Tranform Phone"
+          className="z-10 w-[300px] lg:w-[39%]"
+        />
+      </div>
+    </>
+  );
 };
 
 export default Transform;
