@@ -12,9 +12,9 @@ const Transform = () => {
   return (
     <>
       <div
-        className="container relative mt-[80px] flex h-[auto] flex-col items-center justify-end rounded-[80px]
-        border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] bg-[#E6F2F4] p-4 pb-[0px] pt-[50px] lg:mt-[120px]
-        lg:flex-row lg:items-end lg:justify-center lg:gap-[5%] lg:pt-[100px]"
+        className="container relative mt-[80px] flex h-[auto] flex-col items-center justify-end overflow-hidden
+        rounded-[80px] border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] bg-[#E6F2F4] p-4 pb-[0px] pt-[50px]
+        lg:mt-[120px] lg:flex-row lg:items-end lg:justify-center lg:gap-[5%] lg:pt-[100px]"
       >
         <Image
           src={bgBlur}

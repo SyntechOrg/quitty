@@ -27,7 +27,7 @@ const InsightRow: FC<InsightRowProps> = (props) => {
 
   const overlayBackground = useTransform(
     scrollYProgress,
-    [0.6, 0.7, 0.8],
+    [0.5, 0.55, 0.6],
     [
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 1) 100%)`,
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 0.5) 50%)`,
@@ -35,7 +35,7 @@ const InsightRow: FC<InsightRowProps> = (props) => {
     ],
   );
 
-  const overlayTextOpacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
+  const overlayTextOpacity = useTransform(scrollYProgress, [0.5, 0.55], [1, 0]);
 
   const rowMarginTop = useTransform(
     scrollYProgress,
