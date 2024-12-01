@@ -1,6 +1,7 @@
 import HomeHero from "@/components/sections/home-hero/HomeHero";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import InsightsSection from "@/components/sections/insights-section/InsightsSection";
+import PromoSection from "@/components/sections/promo-section/PromoSection";
 
 const Home = () => {
   return (
@@ -15,6 +16,12 @@ const Home = () => {
         </p>
       </FadeIn>
       <InsightsSection />
+      <FadeIn className="mx-auto max-w-[650px] text-center text-text">
+        <h3 className="text-[24px] font-medium leading-[1.4] lg:text-[58px]">
+          Sustainable, Efficient, and Engaging.
+        </h3>
+      </FadeIn>
+      <PromoSection />
     </div>
   );
 };

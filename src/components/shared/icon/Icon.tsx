@@ -7,7 +7,7 @@ import {
   LebensmittelOutline,
   LogoIcon,
   LogoIconOnly,
-  MoebelOutline,
+  MoebelOutline, MoneyBag,
   RestaurantOutline, SportOutline,
 } from "./icons";
 import { IconType } from "./icon-types";
@@ -37,6 +37,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <RestaurantOutline {...props} />;
     case IconType.SPORT_OUTLINE:
       return <SportOutline {...props} />;
+      case IconType.MONEY_BAG:
+      return <MoneyBag {...props} />;
     default:
       throw new Error("Invalid icon type");
   }

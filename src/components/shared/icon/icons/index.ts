@@ -7,3 +7,4 @@ export { MoebelOutline } from "./MoebelOutline";
 export { LebensmittelOutline } from "./LebensmittelOutline";
 export { RestaurantOutline } from "./RestaurantOutline";
 export { SportOutline } from "./SportOutline";
+export { MoneyBag } from "./MoneyBag";

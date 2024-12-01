@@ -100,7 +100,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
       className="relative h-full max-h-[720px] w-full overflow-hidden rounded-[40px] lg:h-[70vh] lg:rounded-[80px]"
     >
       <motion.div
-        className="h-full"
+        className="relative h-full"
         style={{
           translateY: divContentTranslateY,
           opacity: divContentOpacity,
@@ -114,6 +114,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
             percentage={item?.percentage}
             icon={item?.icon}
             color={item.color}
+            scrollYProgress={props.scrollYProgress}
           />
         ))}
       </motion.div>

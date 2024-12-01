@@ -1,6 +1,6 @@
 "use client";
 import React, { FC, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { Icon, IconType } from "@/components/shared";
 
 interface InsightRowProps {
@@ -9,24 +9,24 @@ interface InsightRowProps {
   name: string;
   percentage?: number;
   color: string;
+  scrollYProgress: MotionValue<number>;
 }
 
 const InsightRow: FC<InsightRowProps> = (props) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const overlayInset = useTransform(scrollYProgress, [0.4, 0.8], ["0", "4px"]);
+  const overlayInset = useTransform(
+    props.scrollYProgress,
+    [0.4, 0.8],
+    ["0", "4px"],
+  );
 
   const overlayRadius = useTransform(
-    scrollYProgress,
+    props.scrollYProgress,
     [0.6, 0.8],
     ["40px", "36px"],
   );
 
   const overlayBackground = useTransform(
-    scrollYProgress,
+    props.scrollYProgress,
     [0.5, 0.55, 0.6],
     [
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 1) 100%)`,
@@ -35,12 +35,16 @@ const InsightRow: FC<InsightRowProps> = (props) => {
     ],
   );
 
-  const overlayTextOpacity = useTransform(scrollYProgress, [0.5, 0.55], [1, 0]);
+  const overlayTextOpacity = useTransform(
+    props.scrollYProgress,
+    [0.5, 0.55],
+    [1, 0],
+  );
 
   const rowMarginTop = useTransform(
-    scrollYProgress,
-    [0.2, 0.5],
-    [`${props.index * -40}px`, "10px"],
+    props.scrollYProgress,
+    [0, 0.5],
+    [`-80px`, "10px"],
   );
 
   return (
