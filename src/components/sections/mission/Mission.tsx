@@ -5,7 +5,7 @@ const Mission = () => {
   const t = useTranslations("Shared");
 
   return (
-    <div className="lg:pt-[40px] lg:pb-[100px] pt-[15px] pb-[60px] container flex lg:flex-row flex-col lg:justify-between lg:gap-[0] gap-[30px] justify-center ">
+    <div className="lg:pt-[40px] lg:pb-[100px] pt-[15px] pb-[60px] container flex items-start lg:flex-row flex-col lg:justify-between lg:gap-[0] gap-[30px] justify-center ">
       <div className="flex flex-col justify-center items-start gap-[15px] lg:max-w-[45%] w-[100%]">
         <h5 className="text-[#0C1726] text-[16px] border-b-[2px] border-[#60606B] pb-[13px] w-[100%] border-opacity-[40%] font-[500]">
           {t("Mission-underTitle")}
