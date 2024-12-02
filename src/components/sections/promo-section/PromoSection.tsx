@@ -13,10 +13,7 @@ const PromoSection = () => {
 
   return (
     <FadeIn>
-      <section
-        ref={targetRef}
-        className="w-full relative flex h-[400vh] w-full"
-      >
+      <section ref={targetRef} className="relative flex h-[500vh] w-full">
         <div className="relative w-full max-lg:w-full lg:flex lg:justify-between lg:gap-6">
           <div className="sticky top-[90px] flex h-[47vh] w-full items-center overflow-hidden lg:top-[45px] lg:h-screen lg:w-1/2">
             <PromoLeft scrollYProgress={scrollYProgress} />

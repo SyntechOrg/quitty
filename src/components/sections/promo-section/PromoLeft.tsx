@@ -170,7 +170,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
             Guarantee
           </h4>
-          <p className="mt-3 lg:mt-7 text-[16px] leading-[1.6] text-text lg:text-[18px]">
+          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
             Unleash your full potential with our cross-workout sessions,
             blending strength, agility, and endurance training for a
             transformative fitness experience like never before. Agility, and
@@ -189,7 +189,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
             Guarantee
           </h4>
-          <p className="mt-3 lg:mt-7 text-[16px] leading-[1.6] text-text lg:text-[18px]">
+          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
             Unleash your full potential with our cross-workout sessions,
             blending strength, agility, and endurance training for a
             transformative fitness experience like never before. Agility, and
@@ -208,7 +208,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
             Guarantee
           </h4>
-          <p className="mt-3 lg:mt-7 text-[16px] leading-[1.6] text-text lg:text-[18px]">
+          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
             Unleash your full potential with our cross-workout sessions,
             blending strength, agility, and endurance training for a
             transformative fitness experience like never before. Agility, and
@@ -227,7 +227,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
             Guarantee
           </h4>
-          <p className="mt-3 lg:mt-7 text-[16px] leading-[1.6] text-text lg:text-[18px]">
+          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
             Unleash your full potential with our cross-workout sessions,
             blending strength, agility, and endurance training for a
             transformative fitness experience like never before. Agility, and
