@@ -16,7 +16,6 @@ const AboutPage = () => {
         underTitle="Heading-underTitle1"
         text="Heading-text1"
       />
-
       <Mission />
     </>
   );
