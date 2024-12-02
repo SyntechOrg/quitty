@@ -15,9 +15,9 @@ const InsightsSection = () => {
     <FadeIn>
       <section
         ref={targetRef}
-        className="container relative flex h-[400vh] w-full"
+        className="relative flex h-[400vh] w-full"
       >
-        <div className="relative w-full max-lg:w-full lg:flex lg:justify-between lg:gap-6">
+        <div className="relative w-full max-lg:w-full lg:flex lg:justify-between lg:gap-8">
           <div className="sticky top-[115px] flex h-[45vh] w-full items-center overflow-hidden lg:top-[45px] lg:h-screen lg:w-1/2">
             <InsightsLeft scrollYProgress={scrollYProgress} />
           </div>

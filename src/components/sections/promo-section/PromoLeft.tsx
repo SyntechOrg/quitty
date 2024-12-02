@@ -71,19 +71,19 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
 
   const textTwoDisplay = useTransform(
     props.scrollYProgress,
-    [0.25, 0.26, 0.5],
+    [0.25, 0.251, 0.5],
     ["none", "block", "none"],
   );
 
   const textThreeDisplay = useTransform(
     props.scrollYProgress,
-    [0.5, 0.51, 0.75],
+    [0.5, 0.501, 0.75],
     ["none", "block", "none"],
   );
 
   const textFourDisplay = useTransform(
     props.scrollYProgress,
-    [0.75, 0.76],
+    [0.75, 0.751],
     ["none", "block"],
   );
 
