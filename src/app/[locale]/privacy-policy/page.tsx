@@ -6,8 +6,8 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 const PrivacyPage = () => {
   const t = useTranslations("Privacy");
   return (
-    <>
-      <FadeIn className="container mt-[150px] lg:mt-[200px]">
+    <div className="container">
+      <FadeIn className="mt-[150px] lg:mt-[200px]">
         <h1 className="text-[40px] font-bold md:text-[50px] lg:text-[60px]">
           {t("Title")}
         </h1>
@@ -39,7 +39,7 @@ const PrivacyPage = () => {
         </div>
       </FadeIn>
       <Partners />
-    </>
+    </div>
   );
 };
 

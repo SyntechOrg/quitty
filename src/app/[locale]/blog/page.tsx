@@ -90,8 +90,8 @@ const blogPosts = [
 const BlogPage = () => {
   const t = useTranslations("Blog");
   return (
-    <>
-      <div className="container mt-[150px] lg:mt-[200px]">
+    <div className="container">
+      <div className="mt-[150px] lg:mt-[200px]">
         <FadeIn>
           <h1 className="text-[50px] font-bold lg:text-[60px]">{t("Title")}</h1>
           <h5 className="mb-[100px] text-[16px] lg:mb-[200px] lg:text-[18px]">
@@ -128,7 +128,7 @@ const BlogPage = () => {
         </FadeIn>
       </div>
       <Partners />
-    </>
+    </div>
   );
 };
 
