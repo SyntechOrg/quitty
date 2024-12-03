@@ -6,10 +6,14 @@ import { IconType } from "@/components/shared";
 const insightRows = [
   {
     name: "Travel",
+    percentage: undefined,
+    icon: undefined,
     color: "113, 238, 56",
   },
   {
     name: "Auto",
+    percentage: undefined,
+    icon: undefined,
     color: "255, 199, 0",
   },
   {
@@ -63,25 +67,25 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
 
   const divScale = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.9, 1],
+    [0, 0.35, 0.925, 1],
     [0.2, 1, 1, 0.2],
   );
 
   const divRotate = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.9, 1],
+    [0, 0.35, 0.925, 1],
     ["-45deg", "0deg", "0deg", "45deg"],
   );
 
   const divBackground = useTransform(
     props.scrollYProgress,
-    [0.2, 0.5, 0.9, 0.95],
+    [0.2, 0.5, 0.925, 0.95],
     ["#d2f4f000", "#d2f4f0", "#d2f4f0", "#d2f4f000"],
   );
 
   const divTranslateY = useTransform(
     props.scrollYProgress,
-    [0, 0.2, 0.9, 1],
+    [0, 0.2, 0.925, 1],
     ["40%", "0%", "0%", "-30%"],
   );
 
@@ -93,10 +97,11 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
         translateY: divTranslateY,
         rotate: divRotate,
       }}
-      className="relative h-full max-h-[720px] w-full overflow-hidden rounded-[40px] lg:h-[70vh] lg:rounded-[80px]"
+      className="relative h-full max-h-[720px] w-full overflow-hidden rounded-[40px] max-lg:mx-auto max-lg:max-w-[620px]
+       lg:h-[70vh] lg:rounded-[80px]"
     >
       <motion.div
-        className="h-full"
+        className="relative h-full"
         style={{
           translateY: divContentTranslateY,
           opacity: divContentOpacity,
@@ -107,9 +112,10 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
             key={index}
             index={index}
             name={item.name}
-            percentage={item.percentage}
-            icon={item.icon}
+            percentage={item?.percentage}
+            icon={item?.icon}
             color={item.color}
+            scrollYProgress={props.scrollYProgress}
           />
         ))}
       </motion.div>

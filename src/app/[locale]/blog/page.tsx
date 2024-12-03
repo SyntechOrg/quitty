@@ -11,6 +11,8 @@ import blogimage7 from "public/assets/images/blog-image7.png";
 import blogimage8 from "public/assets/images/blog-image8.png";
 import blogimage9 from "public/assets/images/blog-image9.png";
 import blogimage10 from "public/assets/images/blog-image10.png";
+import Partners from "@/components/shared/partners/Partners";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const blogPosts = [
   {
@@ -90,16 +92,17 @@ const BlogPage = () => {
   return (
     <>
       <div className="container mt-[150px] lg:mt-[200px]">
-        <h1 className="text-[50px] font-bold lg:text-[60px]">{t("Title")}</h1>
-        <h5 className="mb-[100px] text-[16px] lg:mb-[200px] lg:text-[18px]">
-          {t("UnderTitle")}
-        </h5>
-        <p className="mb-[20px] text-[16px]">
-          <span className="font-[600]">{t("Pagination1")}</span>{" "}
-          {t("Pagination2")}
-        </p>
-
-        <div className="grid-cols-1s grid justify-between gap-[0.5%] pb-[200px] sm:pb-[150px] md:grid-cols-2 md:gap-[2%] lg:grid-cols-3 lg:gap-[2%]">
+        <FadeIn>
+          <h1 className="text-[50px] font-bold lg:text-[60px]">{t("Title")}</h1>
+          <h5 className="mb-[100px] text-[16px] lg:mb-[200px] lg:text-[18px]">
+            {t("UnderTitle")}
+          </h5>
+          <p className="mb-[20px] text-[16px]">
+            <span className="font-[600]">{t("Pagination1")}</span>{" "}
+            {t("Pagination2")}
+          </p>
+        </FadeIn>
+        <FadeIn className="grid-cols-1s grid justify-between gap-[0.5%] pb-[200px] sm:pb-[150px] md:grid-cols-2 md:gap-[2%] lg:grid-cols-3 lg:gap-[2%]">
           {blogPosts.map((post) => (
             <div
               key={post.id}
@@ -122,8 +125,9 @@ const BlogPage = () => {
               </div>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
+      <Partners />
     </>
   );
 };

@@ -12,10 +12,10 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 const HomeHero = () => {
   const { scrollYProgress, scrollY } = useScroll();
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
 
-  const mainY = useTransform(scrollYProgress, [0, 1.2], ["0%", "80%"]);
+  const mainY = useTransform(scrollYProgress, [0, 1.2], ["0%", "100%"]);
   const mainScale = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   const mockUpTop = useTransform(
@@ -33,7 +33,7 @@ const HomeHero = () => {
     <FadeIn className="mb-[700px]">
       <motion.div
         style={{ y: imageY, scale: imageScale }}
-        className="absolute inset-0 z-[-1] min-h-[600px] lg:min-h-[680px]"
+        className="absolute inset-0 z-[-1] max-h-[100vh] min-h-[600px] lg:min-h-[680px]"
       >
         <Image
           src={HomeHeroImage}

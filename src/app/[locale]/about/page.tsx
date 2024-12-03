@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
+import Partners from "@/components/shared/partners/Partners";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -17,6 +18,7 @@ const AboutPage = () => {
         text="Heading-text1"
       />
       <Mission />
+      <Partners />
     </>
   );
 };

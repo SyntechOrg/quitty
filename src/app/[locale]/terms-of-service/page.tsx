@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import Partners from "@/components/shared/partners/Partners";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const TermsPage = () => {
   const t = useTranslations("Terms");
   return (
     <>
-      <div
+      <FadeIn
         className="container mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px] [&>p]:text-[14px]
       [&>p]:leading-[23px] md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
       >
@@ -29,7 +30,8 @@ const TermsPage = () => {
 
         <p>{t("Paragraph1-8")}</p>
         <p>{t("Paragraph1-9")}</p>
-      </div>
+      </FadeIn>
+      <Partners />
     </>
   );
 };
