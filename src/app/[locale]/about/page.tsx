@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="container">
       <Heading
         title="Heading-title1"
         underTitle="Heading-underTitle1"
@@ -19,7 +19,7 @@ const AboutPage = () => {
       />
       <Mission />
       <Partners />
-    </>
+    </div>
   );
 };
 
