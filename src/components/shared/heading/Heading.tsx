@@ -13,7 +13,7 @@ export const Heading: FC<HeadingProps> = ({ title, underTitle, text }) => {
 
   return (
     <>
-      <div className="container flex flex-col justify-between gap-[20px] pb-[60px] pt-[60px] lg:flex-row lg:gap-[0px] lg:pb-[100px] lg:pt-[100px]">
+      <div className="flex flex-col justify-between gap-[20px] pb-[60px] pt-[60px] lg:flex-row lg:gap-[0px] lg:pb-[100px] lg:pt-[100px]">
         <div className="flex w-[100%] flex-col items-start justify-center lg:max-w-[50%] lg:gap-[10px]">
           <h5 className="text-[16px] font-[500] text-[#00C9A5] lg:text-[18px]">
             {t(underTitle)}
