@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import tinder from "public/assets/images/tinder-1 1.png";
 import { useTranslations } from "next-intl";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const Images = [
   { src: tinder, alt: "tinder logo" },

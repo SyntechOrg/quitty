@@ -14,7 +14,7 @@ const Transform = () => {
     <FadeIn
       className="container relative mt-[80px] flex h-[auto] flex-col items-center justify-end overflow-hidden
         rounded-[80px] border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] bg-[#E6F2F4] p-4 pb-[0px] pt-[50px]
-        lg:mt-[120px] lg:flex-row lg:items-end lg:justify-center lg:gap-[5%] lg:pt-[100px]"
+        lg:mt-[120px] lg:flex-row lg:items-end lg:justify-center lg:gap-[7.5%] lg:pt-[75px]"
     >
       <Image
         src={bgBlur}
@@ -23,7 +23,7 @@ const Transform = () => {
       />
 
       <div className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
-        <h1 className="text-center text-[32px] font-medium leading-[40px] lg:max-w-[550px] lg:text-left lg:text-[36px] lg:leading-[50px]">
+        <h1 className="max-w-[420px] text-center text-[32px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
           {t("TransformTitle")}
         </h1>
         <div className="flex w-fit flex-col gap-[20px] lg:gap-[25px]">
@@ -67,7 +67,7 @@ const Transform = () => {
       <Image
         src={phone}
         alt="Tranform Phone"
-        className="z-10 w-[300px] lg:w-[39%]"
+        className="z-10 w-[300px] lg:w-[30%]"
       />
     </FadeIn>
   );
