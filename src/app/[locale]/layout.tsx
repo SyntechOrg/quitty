@@ -36,7 +36,6 @@ export default async function LocaleLayout({
           </div>
           <GradientBackground />
           {children}
-          <Partners />
           <Transform />
           <Footer />
           <ToastContainer />

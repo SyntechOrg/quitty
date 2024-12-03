@@ -97,7 +97,8 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
         translateY: divTranslateY,
         rotate: divRotate,
       }}
-      className="relative h-full max-h-[720px] w-full overflow-hidden rounded-[40px] lg:h-[70vh] lg:rounded-[80px]"
+      className="relative h-full max-h-[720px] w-full overflow-hidden rounded-[40px] max-lg:mx-auto max-lg:max-w-[620px]
+       lg:h-[70vh] lg:rounded-[80px]"
     >
       <motion.div
         className="relative h-full"

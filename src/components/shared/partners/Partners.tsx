@@ -23,11 +23,11 @@ const Partners = () => {
   const t = useTranslations("Shared");
 
   return (
-    <FadeIn className="container mt-[60px] gap-[50px] lg:mt-[100px]">
+    <FadeIn className="mt-[60px] gap-[50px] lg:mt-[100px]">
       <h1 className="mx-auto w-fit text-center text-[21px] font-medium leading-[1.4] text-text lg:text-[24px]">
         {t("PartnersTitle")}
       </h1>
-      <div className="flex w-[100%] flex-wrap items-start justify-center">
+      <div className="mt-10 flex w-[100%] flex-wrap items-start justify-center lg:mt-[60px]">
         {Images.map((image, index) => (
           <div
             key={index}

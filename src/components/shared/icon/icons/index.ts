@@ -8,3 +8,4 @@ export { LebensmittelOutline } from "./LebensmittelOutline";
 export { RestaurantOutline } from "./RestaurantOutline";
 export { SportOutline } from "./SportOutline";
 export { MoneyBag } from "./MoneyBag";
+export { ArrowDiagonal } from "./ArrowDiagonal";

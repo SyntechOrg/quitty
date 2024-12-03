@@ -9,4 +9,5 @@ export enum IconType {
   RESTAURANT_OUTLINE = "restaurant-outline",
   SPORT_OUTLINE = "sport-outline",
   MONEY_BAG = "money-bag",
+  ARROW_DIAGONAL = "arrow-diagonal",
 }

@@ -26,7 +26,7 @@ const Transform = () => {
         <h1 className="max-w-[420px] text-center text-[32px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
           {t("TransformTitle")}
         </h1>
-        <div className="flex w-fit flex-col gap-[20px] lg:gap-[25px]">
+        <div className="mx-auto flex w-11/12 flex-col gap-[20px] lg:w-fit lg:gap-[25px]">
           <div className="flex w-fit items-center justify-center gap-[10px]">
             <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
             <p className="text-[16px] leading-[24px] lg:text-[18px]">

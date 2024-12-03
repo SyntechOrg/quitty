@@ -106,7 +106,7 @@ const PromoRight: FC<PromoRightProps> = (props) => {
   );
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center">
+    <div className="relative flex h-full w-full items-center justify-center max-lg:mx-auto max-lg:max-w-[380px]">
       <motion.div
         style={{
           top: imageOneTop,

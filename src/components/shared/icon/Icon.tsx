@@ -1,14 +1,17 @@
 import { type FC, memo } from "react";
 
 import {
+  ArrowDiagonal,
   BurgerMenuIcon,
   CloseIcon,
   KleidungOutline,
   LebensmittelOutline,
   LogoIcon,
   LogoIconOnly,
-  MoebelOutline, MoneyBag,
-  RestaurantOutline, SportOutline,
+  MoebelOutline,
+  MoneyBag,
+  RestaurantOutline,
+  SportOutline,
 } from "./icons";
 import { IconType } from "./icon-types";
 
@@ -37,8 +40,10 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <RestaurantOutline {...props} />;
     case IconType.SPORT_OUTLINE:
       return <SportOutline {...props} />;
-      case IconType.MONEY_BAG:
+    case IconType.MONEY_BAG:
       return <MoneyBag {...props} />;
+    case IconType.ARROW_DIAGONAL:
+      return <ArrowDiagonal {...props} />;
     default:
       throw new Error("Invalid icon type");
   }
