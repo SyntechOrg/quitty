@@ -6,9 +6,9 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 const TermsPage = () => {
   const t = useTranslations("Terms");
   return (
-    <>
+    <div className="container">
       <FadeIn
-        className="container mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px] [&>p]:text-[14px]
+        className="mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px] [&>p]:text-[14px]
       [&>p]:leading-[23px] md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
       >
         <p>{t("Paragraph1-1")}</p>
@@ -32,7 +32,7 @@ const TermsPage = () => {
         <p>{t("Paragraph1-9")}</p>
       </FadeIn>
       <Partners />
-    </>
+    </div>
   );
 };
 
