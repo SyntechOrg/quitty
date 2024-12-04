@@ -10,7 +10,7 @@ import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
 import { useScrollYPosition } from "@/hooks/useScrollYPosition";
 
-const NAV_ITEMS = ["Home", "About", "Portfolio", "Services"] as const;
+const NAV_ITEMS = ["Home", "Product", "About", "Blog"] as const;
 
 type NavProps = {
   className?: string;
@@ -24,25 +24,30 @@ const Nav: FC<NavProps> = ({ className }) => {
 
   return (
     <nav className={classNames("lg:block relative z-10", className)}>
-      <ul className="flex flex-col gap-x-[40px] gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:items-center lg:gap-y-0 lg:text-base">
-        {NAV_ITEMS.map((item) => {
+      <ul className="flex flex-col gap-x-10 gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:items-center lg:gap-y-0">
+        {NAV_ITEMS.map((item, index) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =
             (isHomePage && lowerCaseItem === "home") ||
             (!isHomePage && pathname === `/${localActive}/${lowerCaseItem}`);
 
           return (
-            <li key={item} className="lg:text-center">
+            <li key={item} className=" lg:text-right">
               <Link
                 href={`/${localActive}/${item === "Home" ? "" : lowerCaseItem}`}
                 className={classNames(
-                  "transition-all duration-150 ease-in-out cursor-pointer hover:text-primary",
-                  isActive
-                    ? "text-primary font-bold lg:font-normal"
-                    : "hover:text-primary",
+                  "transition-all duration-150 ease-in-out cursor-pointer",
+                  isActive ? "text-primary" : "text-text hover:text-primary",
                 )}
               >
-                {t(item)}
+                <div className="flex flex-col justify-center">
+                  <span className="text-[9px] font-semibold leading-[10px]">
+                    {(index + 1).toString().padStart(2, "0")}
+                  </span>
+                  <span className="text-[16px] font-medium leading-[20px]">
+                    {t(item)}
+                  </span>
+                </div>
               </Link>
             </li>
           );
@@ -59,19 +64,16 @@ const Header: FC = () => {
   return (
     <header
       className={classNames(
-        "fixed w-screen top-0 right-0 left-0 transition-transform py-[33px] duration-500 z-20 bg-background/50 backdrop-blur-sm",
+        "fixed w-screen top-0 right-0 left-0 transition-transform py-5 duration-500 z-20 backdrop-blur-[5px] bg-background/40",
       )}
     >
-      <div className="container flex items-center justify-between gap-4 ">
+      <div className="container flex h-[50px] items-center justify-between gap-4">
         <Logo />
         <Nav className="hidden lg:block" />
         <div className="flex items-center gap-2 max-lg:ml-auto">
           <LocalSwitcher />
           <div className="group hidden items-center lg:flex">
-            <Button
-              to={`/${localActive}/contact`}
-              className="text-center leading-[1.3]"
-            >
+            <Button to={`/${localActive}/contact`} variant="contact">
               {t("ContactButton")}
             </Button>
           </div>

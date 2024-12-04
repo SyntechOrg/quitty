@@ -1,9 +1,13 @@
 export enum IconType {
   LOGO = "logo",
-  ARROW = "arrow",
-  DIAMOND = "diamond",
-  LOGO_BACKGROUND = "logo-background",
-  MENU = "menu",
+  BURGER_MENU = "burger-menu",
   CLOSE = "close",
-  DROPDOWN = "dropdown",
+  LOGO_ONLY = "logo-only",
+  MOEBEL_OUTLINE = "moebel-outline",
+  LEBENSMITTEL_OUTLINE = "lebensmittel-outline",
+  KLEIDUNG_OUTLINE = "kleidung-outline",
+  RESTAURANT_OUTLINE = "restaurant-outline",
+  SPORT_OUTLINE = "sport-outline",
+  MONEY_BAG = "money-bag",
+  ARROW_DIAGONAL = "arrow-diagonal",
 }
