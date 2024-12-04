@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 };
 
 const ContactPage: FC = () => (
-  <>
+  <div className="container">
     <p>Contact Page</p>
     <Partners />
-  </>
+  </div>
 );
 
 export default ContactPage;
