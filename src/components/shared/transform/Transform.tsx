@@ -19,7 +19,7 @@ const Transform = () => {
       <Image
         src={bgBlur}
         alt=""
-        className="absolute right-0 top-0 h-[100%] w-[100%] lg:w-[88%]"
+        className="absolute right-0 top-0 h-[100%] w-[100%] object-cover lg:w-[88%]"
       />
 
       <div className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
