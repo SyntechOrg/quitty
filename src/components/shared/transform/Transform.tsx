@@ -23,7 +23,7 @@ const Transform = () => {
       />
 
       <div className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
-        <h1 className="max-w-[420px] text-center text-[32px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
+        <h1 className="max-w-[420px] text-center text-[28px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
           {t("TransformTitle")}
         </h1>
         <div className="mx-auto flex w-11/12 flex-col gap-[20px] lg:w-fit lg:gap-[25px]">
