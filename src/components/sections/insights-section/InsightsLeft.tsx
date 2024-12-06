@@ -53,7 +53,7 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
       <motion.div
         style={{
           opacity: firstTextOpacity,
-          lineHeight: firstTextLineHeight,
+          lineHeight: isLargeScreen ? secondTextLineHeight : 1.4,
           top: firstTextTop,
         }}
         className="absolute max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"
@@ -68,7 +68,7 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
       <motion.div
         style={{
           opacity: secondTextOpacity,
-          lineHeight: secondTextLineHeight,
+          lineHeight: isLargeScreen ? secondTextLineHeight : 1.4,
           top: secondTextTop,
         }}
         className="absolute top-[50vh] max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"

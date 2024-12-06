@@ -111,6 +111,62 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
     ["20px", "0px", "0px", "-15px"],
   );
 
+  const categories = [
+    { iconType: IconType.MONEY_BAG, backgroundColor: iconOneBackgroundColor },
+    { iconType: IconType.MONEY_BAG, backgroundColor: iconTwoBackgroundColor },
+    { iconType: IconType.MONEY_BAG, backgroundColor: iconThreeBackgroundColor },
+    { iconType: IconType.MONEY_BAG, backgroundColor: iconFourBackgroundColor },
+  ];
+
+  const textElements = [
+    {
+      title: "Digital Receipts",
+      description:
+        "Instantly send receipts to customers’ smartphones, eliminating paper waste and making receipts easy to access. " +
+        "Quitty helps businesses reduce their environmental footprint while offering customers the convenience of securely storing all their receipts. No more lost papers—just seamless, digital organization.",
+      styles: {
+        opacity: textOneOpacity,
+        display: textOneDisplay,
+        translateY: textOneTranslateY,
+      },
+    },
+    {
+      title: "Warranty Tracker",
+      description:
+        "Store receipts digitally, making warranty claims and returns effortless for customers and retailers. " +
+        "Quitty ensures warranties are always accessible, removing the hassle of searching for proof of purchase. Streamline the process and provide peace of mind to customers.",
+      styles: {
+        opacity: textTwoOpacity,
+        display: textTwoDisplay,
+        translateY: textTwoTranslateY,
+      },
+    },
+    {
+      title: "Loyalty Rewards",
+      description:
+        "Reward customers with points for every purchase, driving engagement and repeat visits. " +
+        "Quitty’s loyalty system encourages repeat purchases by offering redeemable points for discounts or perks from partnered brands. " +
+        "Build long-term customer relationships with ease.",
+      styles: {
+        opacity: textThreeOpacity,
+        display: textThreeDisplay,
+        translateY: textThreeTranslateY,
+      },
+    },
+    {
+      title: "Spending Insights",
+      description:
+        "Provide customers with categorized spending reports to help them manage finances easily. " +
+        "Quitty offers users a clear view of their spending habits through detailed charts. " +
+        "Empower customers to make informed financial decisions and manage budgets confidently.",
+      styles: {
+        opacity: textFourOpacity,
+        display: textFourDisplay,
+        translateY: textFourTranslateY,
+      },
+    },
+  ];
+
   return (
     <motion.div
       style={{
@@ -121,120 +177,34 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
         <p className="text-[16px] font-medium text-primary">
           Advantages of Quitty
         </p>
-        <div className="mt-5 flex gap-1.5 max-lg:mx-auto max-lg:w-full max-lg:max-w-[480px] max-lg:justify-between lg:mt-9">
-          <motion.div
-            style={{ backgroundColor: iconOneBackgroundColor }}
-            className="flex h-16 w-16 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
-          >
-            <Icon
-              icon={IconType.MONEY_BAG}
-              className="object-container h-[42px] w-[42px] lg:h-[50px] lg:w-[50px]"
-            />
-          </motion.div>
-          <motion.div
-            style={{ backgroundColor: iconTwoBackgroundColor }}
-            className="flex h-16 w-16 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
-          >
-            <Icon
-              icon={IconType.MONEY_BAG}
-              className="object-container h-[42px] w-[42px] lg:h-[50px] lg:w-[50px]"
-            />
-          </motion.div>
-          <motion.div
-            style={{ backgroundColor: iconThreeBackgroundColor }}
-            className="flex h-16 w-16 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
-          >
-            <Icon
-              icon={IconType.MONEY_BAG}
-              className="object-container h-[42px] w-[42px] lg:h-[50px] lg:w-[50px]"
-            />
-          </motion.div>
-          <motion.div
-            style={{ backgroundColor: iconFourBackgroundColor }}
-            className="flex h-16 w-16 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
-          >
-            <Icon
-              icon={IconType.MONEY_BAG}
-              className="object-container h-[42px] w-[42px] lg:h-[50px] lg:w-[50px]"
-            />
-          </motion.div>
+        <div className="mt-3 flex gap-1.5 max-lg:mx-auto max-lg:w-full max-lg:max-w-[480px] max-lg:justify-between lg:mt-9">
+          {categories.map((category, index) => (
+            <motion.div
+              key={index}
+              style={{ backgroundColor: category.backgroundColor }}
+              className="flex h-14 w-14 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
+            >
+              <Icon
+                icon={category.iconType}
+                className="object-container h-[34px] w-[34px] lg:h-[50px] lg:w-[50px]"
+              />
+            </motion.div>
+          ))}
         </div>
-        <motion.div
-          style={{
-            opacity: textOneOpacity,
-            display: textOneDisplay,
-            translateY: textOneTranslateY,
-          }}
-          className="mx-auto mt-3 max-w-[520px] max-lg:text-center lg:mt-10"
-        >
-          <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
-            Guarantee
-          </h4>
-          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
-            Unleash your full potential with our cross-workout sessions,
-            blending strength, agility, and endurance training for a
-            transformative fitness experience like never before. Agility, and
-            endurance training for a transformative fitness experience like
-            never before.
-          </p>
-        </motion.div>
-        <motion.div
-          style={{
-            opacity: textTwoOpacity,
-            display: textTwoDisplay,
-            translateY: textTwoTranslateY,
-          }}
-          className="mx-auto mt-3 max-w-[520px] max-lg:text-center lg:mt-10"
-        >
-          <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
-            Guarantee
-          </h4>
-          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
-            Unleash your full potential with our cross-workout sessions,
-            blending strength, agility, and endurance training for a
-            transformative fitness experience like never before. Agility, and
-            endurance training for a transformative fitness experience like
-            never before.
-          </p>
-        </motion.div>
-        <motion.div
-          style={{
-            opacity: textThreeOpacity,
-            display: textThreeDisplay,
-            translateY: textThreeTranslateY,
-          }}
-          className="mx-auto mt-3 max-w-[520px] max-lg:text-center lg:mt-10"
-        >
-          <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
-            Guarantee
-          </h4>
-          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
-            Unleash your full potential with our cross-workout sessions,
-            blending strength, agility, and endurance training for a
-            transformative fitness experience like never before. Agility, and
-            endurance training for a transformative fitness experience like
-            never before.
-          </p>
-        </motion.div>
-        <motion.div
-          style={{
-            opacity: textFourOpacity,
-            display: textFourDisplay,
-            translateY: textFourTranslateY,
-          }}
-          className="mx-auto mt-3 max-w-[520px] max-lg:text-center lg:mt-10"
-        >
-          <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
-            Guarantee
-          </h4>
-          <p className="mt-3 text-[16px] leading-[1.6] text-text lg:mt-7 lg:text-[18px]">
-            Unleash your full potential with our cross-workout sessions,
-            blending strength, agility, and endurance training for a
-            transformative fitness experience like never before. Agility, and
-            endurance training for a transformative fitness experience like
-            never before.
-          </p>
-        </motion.div>
+        {textElements.map((element, index) => (
+          <motion.div
+            key={index}
+            style={element.styles}
+            className="mx-auto mt-2 max-w-[520px] max-lg:text-center lg:mt-10"
+          >
+            <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
+              {element.title}
+            </h4>
+            <p className="mt-3 text-[16px] leading-[1.5] text-text lg:mt-7 lg:text-[18px] lg:leading-[1.6]">
+              {element.description}
+            </p>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );
