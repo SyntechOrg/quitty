@@ -8,6 +8,13 @@ export enum IconType {
   KLEIDUNG_OUTLINE = "kleidung-outline",
   RESTAURANT_OUTLINE = "restaurant-outline",
   SPORT_OUTLINE = "sport-outline",
+  BILL = "bill",
+  REWARD = "reward",
+  CHINESE_COIN = "chinese-coin",
   MONEY_BAG = "money-bag",
+  BILL_ACTIVE = "bill-active",
+  REWARD_ACTIVE = "reward-active",
+  CHINESE_COIN_ACTIVE = "chinese-coin-active",
+  MONEY_BAG_ACTIVE = "money-bag-active",
   ARROW_DIAGONAL = "arrow-diagonal",
 }

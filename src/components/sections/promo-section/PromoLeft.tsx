@@ -18,25 +18,73 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
   const iconOneBackgroundColor = useTransform(
     props.scrollYProgress,
     [0, 0.05, 0.2, 0.25],
-    ["#ffffff", "#00C9A560", "#00C9A560", "#ffffff"],
+    ["#ffffff", "#00C9A5", "#00C9A5", "#ffffff"],
+  );
+
+  const iconOneOpacity = useTransform(
+    props.scrollYProgress,
+    [0, 0.05, 0.2, 0.25],
+    [1, 0, 0, 1],
+  );
+
+  const iconOneActiveOpacity = useTransform(
+    props.scrollYProgress,
+    [0, 0.05, 0.2, 0.25],
+    [0, 1, 1, 0],
   );
 
   const iconTwoBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.25, 0.3, 0.45, 0.5],
-    ["#fff", "#00C9A560", "#00C9A560", "#fff"],
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
+  );
+
+  const iconTwoOpacity = useTransform(
+    props.scrollYProgress,
+    [0.25, 0.3, 0.45, 0.5],
+    [1, 0, 0, 1],
+  );
+
+  const iconTwoActiveOpacity = useTransform(
+    props.scrollYProgress,
+    [0.25, 0.3, 0.45, 0.5],
+    [0, 1, 1, 0],
   );
 
   const iconThreeBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.5, 0.55, 0.7, 0.75],
-    ["#fff", "#00C9A560", "#00C9A560", "#fff"],
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
+  );
+
+  const iconThreeOpacity = useTransform(
+    props.scrollYProgress,
+    [0.5, 0.55, 0.7, 0.75],
+    [1, 0, 0, 1],
+  );
+
+  const iconThreeActiveOpacity = useTransform(
+    props.scrollYProgress,
+    [0.5, 0.55, 0.7, 0.75],
+    [0, 1, 1, 0],
   );
 
   const iconFourBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.75, 0.8, 0.95, 1.1],
-    ["#fff", "#00C9A560", "#00C9A560", "#fff"],
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
+  );
+
+  const iconFourOpacity = useTransform(
+    props.scrollYProgress,
+    [0.75, 0.8, 0.95, 1.1],
+    [1, 0, 0, 1],
+  );
+
+  const iconFourActiveOpacity = useTransform(
+    props.scrollYProgress,
+    [0.75, 0.8, 0.95, 1.1],
+    [0, 1, 1, 0],
   );
 
   const textOneOpacity = useTransform(
@@ -112,10 +160,34 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
   );
 
   const categories = [
-    { iconType: IconType.MONEY_BAG, backgroundColor: iconOneBackgroundColor },
-    { iconType: IconType.MONEY_BAG, backgroundColor: iconTwoBackgroundColor },
-    { iconType: IconType.MONEY_BAG, backgroundColor: iconThreeBackgroundColor },
-    { iconType: IconType.MONEY_BAG, backgroundColor: iconFourBackgroundColor },
+    {
+      iconType: IconType.BILL,
+      activeIcon: IconType.BILL_ACTIVE,
+      backgroundColor: iconOneBackgroundColor,
+      iconOpacity: iconOneOpacity,
+      iconActiveOpacity: iconOneActiveOpacity,
+    },
+    {
+      iconType: IconType.REWARD,
+      activeIcon: IconType.REWARD_ACTIVE,
+      backgroundColor: iconTwoBackgroundColor,
+      iconOpacity: iconTwoOpacity,
+      iconActiveOpacity: iconTwoActiveOpacity,
+    },
+    {
+      iconType: IconType.CHINESE_COIN,
+      activeIcon: IconType.CHINESE_COIN_ACTIVE,
+      backgroundColor: iconThreeBackgroundColor,
+      iconOpacity: iconThreeOpacity,
+      iconActiveOpacity: iconThreeActiveOpacity,
+    },
+    {
+      iconType: IconType.MONEY_BAG,
+      activeIcon: IconType.MONEY_BAG_ACTIVE,
+      backgroundColor: iconFourBackgroundColor,
+      iconOpacity: iconFourOpacity,
+      iconActiveOpacity: iconFourActiveOpacity,
+    },
   ];
 
   const textElements = [
@@ -182,12 +254,30 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
             <motion.div
               key={index}
               style={{ backgroundColor: category.backgroundColor }}
-              className="flex h-14 w-14 items-center justify-center rounded-full object-contain lg:h-24 lg:w-24"
+              className="relative h-14 w-14 rounded-full object-contain lg:h-24 lg:w-24"
             >
-              <Icon
-                icon={category.iconType}
-                className="object-container h-[34px] w-[34px] lg:h-[50px] lg:w-[50px]"
-              />
+              <motion.div
+                style={{
+                  opacity: category.iconOpacity,
+                }}
+                className="absolute left-[50%] top-[50%] h-[34px] w-[34px] translate-x-[-50%] translate-y-[-50%] lg:h-[50px] lg:w-[50px]"
+              >
+                <Icon
+                  icon={category.iconType}
+                  className="h-full w-full object-contain"
+                />
+              </motion.div>
+              <motion.div
+                style={{
+                  opacity: category.iconActiveOpacity,
+                }}
+                className="absolute left-[50%] top-[50%] h-[34px] w-[34px] translate-x-[-50%] translate-y-[-50%] lg:h-[50px] lg:w-[50px]"
+              >
+                <Icon
+                  icon={category.activeIcon}
+                  className="h-full w-full object-contain"
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
