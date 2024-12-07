@@ -27,7 +27,7 @@ const InsightRow: FC<InsightRowProps> = (props) => {
 
   const overlayBackground = useTransform(
     props.scrollYProgress,
-    [0.5, 0.55, 0.6],
+    [0.5, 0.55, 0.65],
     [
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 1) 100%)`,
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 0.5) 50%)`,
