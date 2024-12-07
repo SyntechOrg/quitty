@@ -107,7 +107,8 @@ const SpotLightSection = () => {
           <div className="px-7">
             <Button
               to={"/"}
-              className="mx-auto h-[58px] w-full bg-primary text-[22px] lg:text-[24px] leading-[1.5] text-white hover:bg-primary/80 active:bg-primary/90"
+              className="mx-auto h-[58px] w-full bg-primary text-[22px] leading-[1.5] text-white hover:bg-primary/80
+              active:bg-primary/90 lg:text-[24px]"
             >
               Explore all features
             </Button>
