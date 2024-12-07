@@ -5,7 +5,7 @@ import styles from "./GradientBackground.module.css";
 
 const GradientBackground = () => {
   return (
-    <div className="fixed inset-0 z-[-1]">
+    <div className="fixed inset-0 z-[-1] overflow-hidden">
       <Image
         src={BGGradients}
         alt="ch-flag"
