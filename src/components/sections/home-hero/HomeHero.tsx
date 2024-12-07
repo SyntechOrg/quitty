@@ -8,9 +8,11 @@ import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-lo
 import IphoneMockup from "../../../../public/assets/images/iphone-mockup.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import useIsLargeScreen from "@/hooks/useIsLargeScreen";
 
 const HomeHero = () => {
   const { scrollYProgress } = useScroll();
+  const isLargeScreen = useIsLargeScreen();
 
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
@@ -20,8 +22,8 @@ const HomeHero = () => {
 
   const mockUpScale = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2],
-    [1, 0.85, 1],
+    [0, 0.05, 0.2, 0.25, 0.3],
+    [1, 0.85, 1, 1, 1.2],
   );
 
   return (
@@ -71,15 +73,21 @@ const HomeHero = () => {
       <div className="relative flex h-[400vh] w-full justify-center">
         <motion.div
           style={{
-            scale: mockUpScale,
+            top: isLargeScreen ? "20px" : "80px",
           }}
-          className="sticky top-0 h-fit"
+          className="sticky h-fit"
         >
-          <Image
-            src={IphoneMockup}
-            alt="background image"
-            className="mt-[100px] h-[calc(100vh-110px)] max-h-[950px] w-full max-w-[300px] object-contain  lg:max-w-[360px]"
-          />
+          <motion.div
+            style={{ scale: mockUpScale }}
+            className="relative mx-auto h-[calc(100vh-110px)] max-h-[950px] w-full max-w-[300px] lg:max-w-[360px]"
+          >
+            <Image
+              src={IphoneMockup}
+              alt="background image"
+              style={{ marginTop: isLargeScreen ? "80px" : "20px" }}
+              className="h-full w-full object-contain"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </FadeIn>
