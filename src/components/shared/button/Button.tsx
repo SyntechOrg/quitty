@@ -14,14 +14,14 @@ const variantClasses = {
 type ButtonProps = {
   children: ReactNode;
   variant?: keyof typeof variantClasses;
-  className: string;
+  className?: string;
   onClick?: () => void;
   to?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
   children,
-  className,
+  className = "",
   variant = "primary",
   to,
   disabled,

@@ -47,7 +47,6 @@ const PackagesSection = () => {
       <div className="mx-auto mt-20 max-w-[500px]">
         <Icon
           icon={IconType.UNLOCK}
-          alt="unlock-icon"
           className="mx-auto h-14 w-14 object-contain"
         />
         <h6 className="mt-3 text-center text-[32px] font-semibold leading-[1.2] text-text lg:mt-4 lg:text-[52px]">
