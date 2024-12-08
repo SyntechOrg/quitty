@@ -14,10 +14,9 @@ const variantClasses = {
 type ButtonProps = {
   children: ReactNode;
   variant?: keyof typeof variantClasses;
-  className?: string;
+  className: string;
   onClick?: () => void;
   to?: string;
-  icon?: IconType;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
@@ -25,21 +24,19 @@ export const Button: FC<ButtonProps> = ({
   className,
   variant = "primary",
   to,
-  icon,
   disabled,
   ...props
 }) => {
   const buttonClassNames = classNames(
-    "flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed",
+    "flex items-center justify-center cursor-pointer transition-all duration-150 ease-in-out gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed" as never,
     variantClasses[variant],
-    className,
+    className as never,
   );
 
   if (to) {
     return (
-      <Link href={to} className="group flex items-center gap-x-2.5">
-        <span className={buttonClassNames}>{children}</span>
-        {icon && <Icon icon={icon as unknown as IconType} />}
+      <Link href={to} className={buttonClassNames}>
+        {children}
       </Link>
     );
   }
@@ -52,7 +49,6 @@ export const Button: FC<ButtonProps> = ({
       className={buttonClassNames}
     >
       {children}
-      {icon && <Icon icon={icon} />}
     </button>
   );
 };
