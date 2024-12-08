@@ -46,7 +46,7 @@ const PackageCard: FC<PackageCardProps> = (props) => {
           <Button
             to={"/"}
             variant="primary"
-            className="flex h-[54px] w-full items-center justify-center gap-x-[5px] px-0.5 font-medium"
+            className="flex !h-[54px] w-full items-center justify-center gap-x-[5px] !px-0.5 font-medium"
           >
             <Image
               src={AppleLogoWhite}
@@ -60,7 +60,7 @@ const PackageCard: FC<PackageCardProps> = (props) => {
           <Button
             to={"/"}
             variant="primary"
-            className="flex h-[54px] w-full items-center justify-center gap-x-[5px] px-0.5 font-medium"
+            className="flex !h-[54px] w-full items-center justify-center gap-x-[5px] !px-0.5 font-medium"
           >
             <Image
               src={GooglePlayLogoWhite}
