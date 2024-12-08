@@ -6,6 +6,7 @@ import HowItWorksSection from "@/components/sections/how-it-works/HowItWorksSect
 import Partners from "@/components/shared/partners/Partners";
 import React from "react";
 import SpotLightSection from "@/components/sections/spotlight-section/SpotLightSection";
+import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
       <PromoSection />
       <HowItWorksSection />
       <SpotLightSection />
+      <PackagesSection />
     </div>
   );
 };

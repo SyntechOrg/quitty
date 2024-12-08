@@ -17,4 +17,5 @@ export enum IconType {
   CHINESE_COIN_ACTIVE = "chinese-coin-active",
   MONEY_BAG_ACTIVE = "money-bag-active",
   ARROW_DIAGONAL = "arrow-diagonal",
+  UNLOCK = "unlock",
 }
