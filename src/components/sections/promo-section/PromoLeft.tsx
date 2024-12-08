@@ -17,73 +17,73 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
 
   const iconOneBackgroundColor = useTransform(
     props.scrollYProgress,
-    [0, 0.05, 0.2, 0.25],
+    [0, 0.02, 0.23, 0.25],
     ["#ffffff", "#00C9A5", "#00C9A5", "#ffffff"],
   );
 
   const iconOneOpacity = useTransform(
     props.scrollYProgress,
-    [0, 0.05, 0.2, 0.25],
+    [0, 0.01, 0.24, 0.25],
     [1, 0, 0, 1],
   );
 
   const iconOneActiveOpacity = useTransform(
     props.scrollYProgress,
-    [0, 0.05, 0.2, 0.25],
+    [0, 0.01, 0.24, 0.25],
     [0, 1, 1, 0],
   );
 
   const iconTwoBackgroundColor = useTransform(
     props.scrollYProgress,
-    [0.25, 0.3, 0.45, 0.5],
+    [0.25, 0.27, 0.48, 0.5],
     ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconTwoOpacity = useTransform(
     props.scrollYProgress,
-    [0.25, 0.3, 0.45, 0.5],
+    [0.25, 0.26, 0.49, 0.5],
     [1, 0, 0, 1],
   );
 
   const iconTwoActiveOpacity = useTransform(
     props.scrollYProgress,
-    [0.25, 0.3, 0.45, 0.5],
+    [0.25, 0.26, 0.49, 0.5],
     [0, 1, 1, 0],
   );
 
   const iconThreeBackgroundColor = useTransform(
     props.scrollYProgress,
-    [0.5, 0.55, 0.7, 0.75],
+    [0.5, 0.52, 0.73, 0.75],
     ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconThreeOpacity = useTransform(
     props.scrollYProgress,
-    [0.5, 0.55, 0.7, 0.75],
+    [0.5, 0.51, 0.74, 0.75],
     [1, 0, 0, 1],
   );
 
   const iconThreeActiveOpacity = useTransform(
     props.scrollYProgress,
-    [0.5, 0.55, 0.7, 0.75],
+    [0.5, 0.51, 0.74, 0.75],
     [0, 1, 1, 0],
   );
 
   const iconFourBackgroundColor = useTransform(
     props.scrollYProgress,
-    [0.75, 0.8, 0.95, 1.1],
+    [0.75, 0.77, 0.98, 1.1],
     ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconFourOpacity = useTransform(
     props.scrollYProgress,
-    [0.75, 0.8, 0.95, 1.1],
+    [0.75, 0.76, 0.99, 1.1],
     [1, 0, 0, 1],
   );
 
   const iconFourActiveOpacity = useTransform(
     props.scrollYProgress,
-    [0.75, 0.8, 0.95, 1.1],
+    [0.75, 0.76, 0.99, 1.1],
     [0, 1, 1, 0],
   );
 
@@ -285,12 +285,12 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <motion.div
             key={index}
             style={element.styles}
-            className="mx-auto mt-2 max-w-[520px] max-lg:text-center lg:mt-10"
+            className="mx-auto mt-2 min-h-[255px] max-w-[520px] max-lg:text-center lg:mt-10 lg:min-h-[280px]"
           >
             <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
               {element.title}
             </h4>
-            <p className="mt-3 text-[16px] leading-[1.5] text-text lg:mt-7 lg:text-[18px] lg:leading-[1.6]">
+            <p className="mt-2.5 text-[16px] leading-[1.5] text-text lg:mt-7 lg:text-[18px] lg:leading-[1.6]">
               {element.description}
             </p>
           </motion.div>

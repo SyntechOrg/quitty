@@ -11,7 +11,7 @@ import {
   MoebelOutline,
   MoneyBag, MoneyBagActive,
   RestaurantOutline, Reward, RewardActive,
-  SportOutline,
+  SportOutline, Unlock,
 } from "./icons";
 import { IconType } from "./icon-types";
 
@@ -58,6 +58,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <MoneyBagActive {...props} />;
     case IconType.ARROW_DIAGONAL:
       return <ArrowDiagonal {...props} />;
+    case IconType.UNLOCK:
+      return <Unlock {...props} />;
     default:
       throw new Error("Invalid icon type");
   }

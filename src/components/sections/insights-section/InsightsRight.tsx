@@ -67,25 +67,25 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
 
   const divScale = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.925, 1],
+    [0, 0.35, 0.85, 1],
     [0.2, 1, 1, 0.2],
   );
 
   const divRotate = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.925, 1],
+    [0, 0.35, 0.85, 1],
     ["-45deg", "0deg", "0deg", "45deg"],
   );
 
   const divBackground = useTransform(
     props.scrollYProgress,
-    [0.2, 0.5, 0.925, 0.95],
+    [0.2, 0.5, 0.85, 0.95],
     ["#d2f4f000", "#d2f4f0", "#d2f4f0", "#d2f4f000"],
   );
 
   const divTranslateY = useTransform(
     props.scrollYProgress,
-    [0, 0.2, 0.925, 1],
+    [0, 0.2, 0.85, 1],
     ["40%", "0%", "0%", "-30%"],
   );
 
