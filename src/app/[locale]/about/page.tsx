@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
 import Partners from "@/components/shared/partners/Partners";
+import Process from "@/components/sections/process/Process";
+import Slider from "@/components/sections/slider/Slider";
+import Features from "@/components/sections/features/Features";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -19,6 +22,9 @@ const AboutPage = () => {
       />
       <Mission />
       <Partners />
+      <Process />
+      <Slider />
+      <Features />
     </div>
   );
 };

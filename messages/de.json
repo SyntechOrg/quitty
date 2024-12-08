@@ -28,6 +28,39 @@
     "Vision-underTitle": "VISION",
     "Vision-text": "Wir stellen uns eine Welt vor, in der jede Transaktion papierlos ist, Einzelhändler von datengestützten Erkenntnissen profitieren und Verbraucher nahtlose, umweltfreundliche Einkaufserlebnisse geniessen. Wir setzen uns dafür ein, ein nachhaltiges Einzelhandels-Ökosystem aufzubauen."
   },
+  "Process": {
+    "title": "Digitale Belege, mühelos gemacht",
+    "undertitle": "Wie Quitty funktioniert",
+    "text": "Der Prozess von Quitty ist sowohl für Einzelhändler als auch für Kunden einfach gestaltet. So funktioniert es",
+    "listTitle1": "Kundenzahlung:",
+    "listTitle2": "Sofortige Lieferung:",
+    "listTitle3": "Loyalty-Integration:",
+    "listTitle4": "Datenanalyse:",
+    "listText1": "Wenn ein Kunde seinen Kauf abschliesst, wird er gefragt, ob er einen digitalen Beleg möchte.",
+    "listText2": "Der Beleg wird sofort auf das Smartphone des Kunden gesendet, entweder über die Quitty-App oder per E-Mail.",
+    "listText3": "Kunden sammeln automatisch Treuepunkte bei jedem Kauf, was wiederholte Besuche fördert.",
+    "listText4": "Sowohl Kunden als auch Einzelhändler erhalten kategorisierte Ausgabenanalysen, die wertvolle Einblicke in Kaufgewohnheiten bieten.",
+    "button": "Jetzt starten"
+  },
+  "Features": {
+    "title": "Die All-in-One-Lösung für Einzelhändler",
+    "undertitle": "Hauptfunktionen",
+    "listTitle1": "Instant Digitale Quittungen",
+    "listTitle2": "Integriertes Treueprogramm",
+    "listTitle3": "Umfassende Ausgabenanalyse",
+    "listTitle4": "Nachhaltigkeit im Mittelpunkt",
+
+    "listText1": "Verabschieden Sie sich von Papierstapeln. Die digitalen Quittungen von Quitty werden sofort auf die Smartphones Ihrer Kunden gesendet und bieten eine umweltfreundliche, moderne Alternative zu gedruckten Quittungen.",
+    "listText2": "Binden Sie Kunden wie nie zuvor. Das integrierte Treueprogramm von Quitty ermöglicht es Kunden, bei jedem Einkauf Punkte zu sammeln und diese gegen Belohnungen einzulösen, was die Kundenbindung stärkt und Wiederholungsgeschäfte anregt.",
+    "listText3": "Quitty bietet in Echtzeit detaillierte Einblicke in das Kaufverhalten, Ausgabenkategorien und Trends, sowohl für Kunden als auch für Einzelhändler. Diese Erkenntnisse ermöglichen es den Einzelhändlern, gezielte Marketingstrategien zu entwickeln.",
+    "listText4": "Reduzieren Sie Ihren CO2-Fussabdruck, indem Sie auf Papierquittungen verzichten. Quitty unterstützt Ihr Unternehmen dabei, seine Nachhaltigkeitsziele zu erreichen und auf die wachsende Nachfrage nach umweltfreundlichen Praktiken zu reagieren.",
+
+    "listText1-2": "Reduziert Papierkosten, vermeidet Abfall und verbessert das Kundenerlebnis mit einer nahtlosen digitalen Option.",
+    "listText2-2": "Steigern Sie die Kundenloyalität und erhöhen Sie den Umsatz mit personalisierten Belohnungen, die Wiederholungskäufe anreizen.",
+    "listText3-2": "Treffen Sie datengestützte Entscheidungen, um den Bestand zu optimieren, Werbeaktionen anzupassen und das Kundenerlebnis zu verbessern.",
+    "listText4-2": "Stärken Sie das umweltbewusste Markenimage, das bei den heutigen, umweltorientierten Verbrauchern gut ankommt.",
+    "span": "Vorteil: "
+  },
   "Blog": {
     "Title": "Blog",
     "UnderTitle": "Entdecke Einblicke und Ideen - tauche ein und lass dich inspirieren!",
