@@ -13,9 +13,8 @@ export type CarouselOptions = {
 
 const defaultOptions: CarouselOptions = {
   loop: true,
-  slideClassName:
-    "flex-0 flex-shrink-0 flex-grow-0 min-w-0 w-1/2 md:w-1/4 lg:w-1/5",
-  containerClassName: "w-full overflow-hidden",
+  slideClassName: "",
+  containerClassName: "w-full overflow-x-hidden",
 };
 
 type CarouselProps = {
@@ -41,11 +40,11 @@ export const Carousel: FC<CarouselProps> = ({ children, options }) => {
   ]);
 
   return (
-    <div className={classNames(containerClassName)}>
-      <div className="w-full overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y touch-pinch-zoom w-full">
+    <div className={classNames(containerClassName as never)}>
+      <div className="w-full overflow-x-hidden" ref={emblaRef}>
+        <div className="flex w-full touch-pan-y touch-pinch-zoom">
           {Children.map(children, (child, index) => (
-            <div className={classNames(slideClassName)} key={index}>
+            <div className={classNames(slideClassName as never)} key={index}>
               {child}
             </div>
           ))}

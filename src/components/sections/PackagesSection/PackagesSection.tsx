@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon, IconType } from "@/components/shared";
 import PackageCard from "@/components/sections/PackagesSection/PackageCard";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 const packages = [
   {
@@ -44,7 +45,7 @@ const packages = [
 const PackagesSection = () => {
   return (
     <div>
-      <div className="mx-auto mt-20 max-w-[500px]">
+      <FadeIn className="mx-auto mt-20 max-w-[500px]">
         <Icon
           icon={IconType.UNLOCK}
           className="mx-auto h-14 w-14 object-contain"
@@ -52,7 +53,7 @@ const PackagesSection = () => {
         <h6 className="mt-3 text-center text-[32px] font-semibold leading-[1.2] text-text lg:mt-4 lg:text-[52px]">
           Unlock all benefits
         </h6>
-      </div>
+      </FadeIn>
       <div className="mt-14 flex w-full gap-y-6 max-lg:mx-auto max-lg:max-w-[420px] max-lg:flex-col lg:mt-20">
         {packages.map((pkg, index) => (
           <PackageCard
