@@ -18,13 +18,11 @@ const FAQ = [
   },
   {
     question: "Safe and Eco-friendly",
-    answer:
-      "Over 10,000 tons of paper receipts are discarded annually in Switzerland alone.",
+    answer: "Paper receipts often contain harmful chemicals.",
   },
   {
     question: "Customer Preferences",
-    answer:
-      "Over 10,000 tons of paper receipts are discarded annually in Switzerland alone.",
+    answer: "69% of consumers prefer brands that offer eco-friendly solutions.",
   },
 ];
 
