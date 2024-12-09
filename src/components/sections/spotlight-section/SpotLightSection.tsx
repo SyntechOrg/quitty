@@ -12,9 +12,9 @@ import { Button } from "@/components/shared";
 const SpotLightSection = () => {
   return (
     <div className="mt-[150px] lg:mt-[200px]">
-      <FadeIn className="mx-auto max-w-[750px] text-center text-text">
-        <h6 className="text-[32px] font-medium leading-[1.4] lg:text-[50px]">
-          Spotlight on distinctive features
+      <FadeIn className="mx-auto max-w-[700px] text-center text-text">
+        <h6 className="text-[32px] font-medium leading-[1.4] lg:text-[48px]">
+          Im Mittelpunkt der einzigartigen Funktionen
         </h6>
       </FadeIn>
       <FadeIn className="mt-[60px] grid grid-cols-1 gap-8 max-lg:mx-auto max-lg:max-w-[500px] lg:mt-[100px] lg:grid-cols-3">
@@ -34,7 +34,7 @@ const SpotLightSection = () => {
               </div>
             </div>
             <p className="text-right text-[16px] leading-[1.5] text-white">
-              Worldwide users
+              Weltweit aktive Nutzer
             </p>
           </div>
           <div className="px-8 pb-8">
@@ -60,7 +60,7 @@ const SpotLightSection = () => {
                 </div>
               </div>
               <p className="mt-1 text-[16px] leading-[1.4] text-white">
-                Available users that always love us
+                Verfügbare Nutzer, die uns stets unterstützen
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ const SpotLightSection = () => {
               24 <span className="text-[#3f7cf3]"> / </span> 7
             </p>
             <p className="text-[16px] font-medium leading-[24px] text-[#111]">
-              Fast chat supports
+              Schneller Chat-Support
             </p>
           </div>
           <div>
@@ -93,12 +93,12 @@ const SpotLightSection = () => {
         >
           <div className="px-7">
             <p className="text-[24px] font-semibold leading-[1.4] text-[#111] lg:text-[26px]">
-              Turn every Receipt into a Loyalty Opportunity
+              Verwandle jede Quittung in eine Loyalitätschance
             </p>
             <p className="mt-4 text-[16px] leading-[1.45] text-[#4f4f4f]">
-              Quitty’s integrated loyalty program lets your customers earn
-              points with every purchase, which they can redeem for discounts or
-              special offers.
+              Das integrierte Loyalitätsprogramm von Quitty ermöglicht es deinen
+              Kunden, mit jedem Einkauf Punkte zu sammeln, die sie für Rabatte
+              oder Sonderangebote einlösen können.
             </p>
           </div>
           <div>
@@ -107,10 +107,10 @@ const SpotLightSection = () => {
           <div className="px-7">
             <Button
               to={"/"}
-              className="mx-auto h-[58px] w-full bg-primary text-[22px] leading-[1.5] text-white hover:bg-primary/80
+              className="mx-auto h-[58px] w-full bg-primary !px-3 text-[20px] leading-[1.5] text-white hover:bg-primary/80
               active:bg-primary/90 lg:text-[24px]"
             >
-              Explore all features
+              Entdecke alle Funktionen
             </Button>
           </div>
         </div>
@@ -121,11 +121,12 @@ const SpotLightSection = () => {
           <div className="flex h-full w-full flex-col justify-between py-8 max-lg:px-9 lg:w-[56%] lg:py-14 lg:pl-[47px]">
             <div>
               <p className="text-[24px] font-semibold leading-[1.3] text-[#111] lg:text-[28px] lg:leading-[1.5]">
-                Seamless Integration with your Existing POS Systems
+                Nahtlose Integration mit deinen bestehenden POS-Systemen
               </p>
               <p className="mt-3 text-[16px] leading-[1.4] text-[#4f4f4f] lg:mt-4 lg:leading-[1.5]">
-                Quitty integrates effortlessly into your current Point-of-Sale
-                systems, ensuring minimal disruption to your operations.
+                Quitty lässt sich mühelos in deine bestehenden
+                Point-of-Sale-Systeme integrieren, wodurch minimale Störungen im
+                Betrieb entstehen.
               </p>
             </div>
             <div>

@@ -12,17 +12,17 @@ import { useTranslations } from "next-intl";
 
 const FAQ = [
   {
-    question: "Eliminate Paper Waste",
+    question: "Papierabfall beseitigen",
     answer:
-      "Over 10,000 tons of paper receipts are discarded annually in Switzerland alone.",
+      "Jährlich werden in der Schweiz allein über 10.000 Tonnen Papierquittungen weggeworfen.",
   },
   {
-    question: "Safe and Eco-friendly",
-    answer: "Paper receipts often contain harmful chemicals.",
+    question: "Sicher und umweltfreundlich",
+    answer: "Papierquittungen enthalten oft schädliche Chemikalien.",
   },
   {
-    question: "Customer Preferences",
-    answer: "69% of consumers prefer brands that offer eco-friendly solutions.",
+    question: "Kundenpräferenzen",
+    answer: "69% der Verbraucher bevorzugen Marken, die umweltfreundliche Lösungen anbieten.",
   },
 ];
 
@@ -41,16 +41,15 @@ const HowItWorksSection = () => {
       <div className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
         <div className="mx-auto max-w-[540px]">
           <p className="text-[16px] font-medium leading-[1.4] text-primary lg:text-[18px]">
-            How it works
+            Wie es funktioniert
           </p>
           <h5 className="mt-4 text-[32px] font-medium leading-[1.19] text-text lg:mt-6 lg:text-[48px]">
-            We&apos;re Committed to Creating Impact.
+            Wir setzen uns dafür ein, einen Unterschied zu machen.
           </h5>
           <p className="mt-4 text-[16px] leading-[1.6] text-text lg:mt-6 lg:text-[18px]">
-            Consumers will be actors of the end of paper receipts and get
-            unprecedented accuracy to classify spendings by categories and
-            products in order to clean up their finance. Product quality will be
-            reviewed to offer health impact.
+            Verbraucher werden zu Akteuren des Endes der Papierquittungen und erhalten eine beispiellose Genauigkeit
+            bei der Klassifizierung ihrer Ausgaben nach Kategorien und Produkten, um ihre Finanzen zu bereinigen.
+            Die Produktqualität wird überprüft, um gesundheitliche Auswirkungen zu bieten.
           </p>
           <div className="mt-4 lg:mt-6">
             <Accordion type="single" className="" defaultValue="item-0">

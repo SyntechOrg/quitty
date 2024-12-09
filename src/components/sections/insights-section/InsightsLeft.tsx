@@ -59,10 +59,10 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
         className="absolute max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"
       >
         <p className="text-[16px] font-medium text-primary">
-          Simplify Your Receipts
+          Vereinfache deine Quittungen
         </p>
         <h3 className="mx-auto text-[32px] font-medium text-text max-lg:max-w-[520px] lg:text-[52px]">
-          Discover your Spending Patterns with Ease
+          Entdecke deine Ausgabemuster mit Leichtigkeit
         </h3>
       </motion.div>
       <motion.div
@@ -74,10 +74,10 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
         className="absolute top-[50vh] max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"
       >
         <p className="text-[16px] font-medium text-primary">
-          See Your Spending at a Glance
+          Sehen Sie Ihre Ausgaben auf einen Blick.
         </p>
         <h4 className="mx-auto text-[32px] font-medium text-text max-lg:max-w-[520px] lg:text-[52px]">
-          Uncover Insights for Every Category you Track
+          Entdecken Sie Einblicke für jede Kategorie, die Sie verfolgen.
         </h4>
       </motion.div>
     </div>
