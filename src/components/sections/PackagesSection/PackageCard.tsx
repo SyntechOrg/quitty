@@ -22,11 +22,11 @@ const PackageCard: FC<PackageCardProps> = (props) => {
         </p>
         <hr className="mt-4 border-[#CFD9DB]" />
         <div className="mt-10 flex gap-2.5 lg:mt-9">
-          <p className="text-[20px] font-semibold text-text duration-300 ease-in-out group-hover:text-white">
+          <p className="text-[18px] font-semibold text-text duration-300 ease-in-out group-hover:text-white">
             CHF <span className="text-[39px]">{props.price}</span>
           </p>
           <p className="text-[17px] text-[#939398] duration-300 ease-in-out group-hover:text-white">
-            /per month
+            /pro Monat
           </p>
         </div>
         <p className="mt-4 text-[17px] font-medium leading-[1.6] text-text duration-300 ease-in-out group-hover:text-white">

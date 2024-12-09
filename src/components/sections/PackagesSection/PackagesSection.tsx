@@ -5,7 +5,7 @@ import {FadeIn} from "@/components/fade-in/FadeIn";
 
 const packages = [
   {
-    type: "Basic Package",
+    type: "Basis-Paket",
     features: [
       "Unlimited receipt storage",
       "Advanced spending insights and analytics",
@@ -13,11 +13,11 @@ const packages = [
       "Priority customer support",
       "Customizable receipt categories",
     ],
-    forWho: "(For Individuals)",
+    forWho: "(Für Einzelpersonen)",
     price: "0.00",
   },
   {
-    type: "Pro Package",
+    type: "Pro Paket",
     features: [
       "Unlimited receipt storage",
       "Advanced spending insights and analytics",
@@ -25,11 +25,11 @@ const packages = [
       "Priority customer support",
       "Customizable receipt categories",
     ],
-    forWho: "(For Power Users)",
+    forWho: "(Für Power-User)",
     price: "4.99",
   },
   {
-    type: "Business Package",
+    type: "Business Paket",
     features: [
       "Unlimited receipt storage",
       "Advanced spending insights and analytics",
@@ -37,7 +37,7 @@ const packages = [
       "Priority customer support",
       "Customizable receipt categories",
     ],
-    forWho: "(For Retailers and Companies)",
+    forWho: "(Für Einzelhändler und Unternehmen)",
     price: "29.99",
   },
 ];
@@ -45,13 +45,13 @@ const packages = [
 const PackagesSection = () => {
   return (
     <div>
-      <FadeIn className="mx-auto mt-20 max-w-[500px]">
+      <FadeIn className="mx-auto mt-20 max-w-[650px]">
         <Icon
           icon={IconType.UNLOCK}
           className="mx-auto h-14 w-14 object-contain"
         />
-        <h6 className="mt-3 text-center text-[32px] font-semibold leading-[1.2] text-text lg:mt-4 lg:text-[52px]">
-          Unlock all benefits
+        <h6 className="mt-3 text-center text-[32px] font-semibold leading-[1.2] text-text lg:mt-4 lg:text-[48px]">
+          Entsperren Sie alle Vorteile
         </h6>
       </FadeIn>
       <div className="mt-14 flex w-full gap-y-6 max-lg:mx-auto max-lg:max-w-[420px] max-lg:flex-col lg:mt-20">

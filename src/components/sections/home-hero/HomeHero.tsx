@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/shared";
 import HomeHeroImage from "../../../../public/assets/images/home-hero-image.png";
@@ -11,86 +11,96 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
 
 const HomeHero = () => {
-  const { scrollYProgress } = useScroll();
+  const targetRef = useRef(null);
+  const { scrollYProgress, scrollY } = useScroll({
+    target: targetRef,
+  });
   const isLargeScreen = useIsLargeScreen();
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const imageScale = useTransform(scrollY, [100, 600], [1, 0.75]);
 
-  const mainY = useTransform(scrollYProgress, [0, 1.2], ["0%", "100%"]);
-  const mainScale = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const mainY = useTransform(scrollY, [0, 500], ["0%", "-20%"]);
+  const mainScale = useTransform(scrollY, [0, 700], [1, 0.5]);
+  const mainOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const mockUpScale = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.2, 0.25, 0.3],
-    [1, 0.85, 1, 1, 1.2],
+    [0, 0.3, 0.75, 1],
+    [1, 0.85, 1, 1.15],
+  );
+  const mockUpTranslateY = useTransform(
+    scrollYProgress,
+    [0, 0.75, 1],
+    ["0%", "0%", "-125%"],
   );
 
   return (
-    <FadeIn>
-      <div>
-        <motion.div
-          style={{ y: imageY, scale: imageScale }}
-          className="absolute inset-0 z-[-1] max-h-[100vh] min-h-[600px] lg:min-h-[680px]"
-        >
-          <Image
-            src={HomeHeroImage}
-            alt="background image"
-            className="min-h-[600px] rounded-[45px] object-cover"
-          />
-        </motion.div>
-        <motion.div
-          style={{ y: mainY, scale: mainScale }}
-          className="mx-auto flex max-w-[400px] flex-col items-center pt-16 lg:max-w-[580px] lg:pt-20"
-        >
-          <h1 className="text-center text-[44px] font-medium leading-[1.2] text-white lg:text-[64px]">
-            The future of Digital Receipts
-          </h1>
-          <p className="mt-5 text-center text-[16px] leading-[1.6] text-white lg:text-[18px]">
-            Say goodbye to paper receipts and hello to real-time digital
-            solutions that drive customer engagement and operational efficiency.
-          </p>
-          <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
-            <Button to={"/"} variant="primary" className="w-[250px]">
-              <Image
-                src={AppleLogoWhite}
-                alt="Apple logo"
-                className="h-full max-h-[30px] w-full max-w-[30px] object-contain"
-              />
-              App Store
-            </Button>
-            <Button to={"/"} variant="primary" className="w-[250px]">
-              <Image
-                src={GooglePlayLogoWhite}
-                alt="Google Play logo"
-                className="h-full max-h-[30px] w-full max-w-[30px] object-contain"
-              />
-              Google Play
-            </Button>
-          </div>
-        </motion.div>
-      </div>
-      <div className="relative flex h-[400vh] w-full justify-center">
-        <motion.div
-          style={{
-            top: isLargeScreen ? "20px" : "80px",
-          }}
-          className="sticky h-fit"
-        >
+    <div ref={targetRef}>
+      <FadeIn>
+        <div>
           <motion.div
-            style={{ scale: mockUpScale }}
-            className="relative mx-auto h-[calc(100vh-110px)] max-h-[950px] w-full max-w-[300px] lg:max-w-[360px]"
+            style={{ scale: imageScale }}
+            className="absolute inset-0 z-[-1] max-h-[100vh] min-h-[600px] lg:min-h-[680px]"
           >
             <Image
-              src={IphoneMockup}
+              src={HomeHeroImage}
               alt="background image"
-              style={{ marginTop: isLargeScreen ? "80px" : "20px" }}
-              className="h-full w-full object-contain"
+              className="min-h-[600px] rounded-[45px] object-cover"
             />
           </motion.div>
-        </motion.div>
-      </div>
-    </FadeIn>
+          <motion.div
+            style={{ y: mainY, scale: mainScale, opacity: mainOpacity }}
+            className="mx-auto flex max-w-[400px] flex-col items-center pt-16 lg:max-w-[640px] lg:pt-20"
+          >
+            <h1 className="text-center text-[44px] font-medium leading-[1.2] text-white lg:text-[60px]">
+              Die Zukunft der digitalen Quittungen
+            </h1>
+            <p className="mt-5 text-center text-[16px] leading-[1.6] text-white lg:text-[17px]">
+              Verabschiede dich von Papierquittungen und begrüsse digitale Lösungen in Echtzeit, die die Kundenbindung
+              stärken und die betriebliche Effizienz steigern.
+            </p>
+            <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
+              <Button to={"/"} variant="primary" className="w-[250px]">
+                <Image
+                  src={AppleLogoWhite}
+                  alt="Apple logo"
+                  className="h-full max-h-[30px] w-full max-w-[30px] object-contain"
+                />
+                App Store
+              </Button>
+              <Button to={"/"} variant="primary" className="w-[250px]">
+                <Image
+                  src={GooglePlayLogoWhite}
+                  alt="Google Play logo"
+                  className="h-full max-h-[30px] w-full max-w-[30px] object-contain"
+                />
+                Google Play
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+        <div className="relative flex h-[200vh] w-full justify-center">
+          <motion.div
+            style={{
+              top: isLargeScreen ? "20px" : "80px",
+            }}
+            className="sticky h-fit"
+          >
+            <motion.div
+              style={{ scale: mockUpScale, translateY: mockUpTranslateY }}
+              className="relative mx-auto h-[calc(100vh-110px)] max-h-[700px] w-full max-w-[300px] lg:max-w-[360px]"
+            >
+              <Image
+                src={IphoneMockup}
+                alt="background image"
+                style={{ marginTop: isLargeScreen ? "80px" : "20px" }}
+                className="h-full w-full object-contain"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </FadeIn>
+    </div>
   );
 };
 
