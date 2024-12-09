@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/shared";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 interface PackageCardProps {
   type: string;
@@ -14,7 +15,7 @@ interface PackageCardProps {
 
 const PackageCard: FC<PackageCardProps> = (props) => {
   return (
-    <div className="group w-full rounded-[70px] bg-transparent px-9 pb-12 pt-9 duration-300 ease-in-out hover:bg-text hover:pt-12 lg:w-1/3">
+    <FadeIn className="group w-full rounded-[70px] bg-transparent px-9 pb-12 pt-9 duration-300 ease-in-out hover:bg-text hover:pt-12 lg:w-1/3">
       <div>
         <p className="text-[24px] font-medium leading-[1.25] text-text duration-300 ease-in-out group-hover:text-white">
           {props.type}
@@ -73,7 +74,7 @@ const PackageCard: FC<PackageCardProps> = (props) => {
           </Button>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

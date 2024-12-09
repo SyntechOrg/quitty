@@ -28,6 +28,39 @@
     "Vision-underTitle": "VISION",
     "Vision-text": "We envision a world where every transaction is paperless, retailers thrive with data-driven insights, and consumers enjoy seamless, eco-friendly shopping experiences. We're committed to building a sustainable retail ecosystem."
   },
+  "Process": {
+    "title": "Digital Receipts,Made Effortless",
+    "undertitle": "How Quitty Works",
+    "text": "Quitty's process is designed to be simple for both retailers and customers. Here's how it works:",
+    "listTitle1": "Customer Checkout",
+    "listTitle2": "Instant Delivery:",
+    "listTitle3": "Loyalty Integration:",
+    "listTitle4": "Data Insights:",
+    "listText1": "When a customer completes their purchase, they are asked if they would like a digital receipt.",
+    "listText2": "The receipt is sent instantly to their smartphone, accessible via the Quitty app or email.",
+    "listText3": "Customers automatically collect loyalty points with every purchase, encouraging repeat visits.",
+    "listText4": "Both customers and retailers receive categorized spending insights that provide actionable data on purchasing habits.",
+    "button": "Get Started"
+  },
+  "Features": {
+    "title": "The All-in-One Solution for Retailers",
+    "undertitle": "Key Features",
+    "listTitle1": "Instant Digital Receipts",
+    "listTitle2": "Integrated Loyalty Program",
+    "listTitle3": "Comprehensive Spending Insights",
+    "listTitle4": "Sustainability at the Core",
+
+    "listText1": "Say goodbye to paper clutter. Quitty's digital receipts are delivered instantly to your customers' phones, providing an eco-friendly, modern alternative to printed receipts.",
+    "listText2": "Engage customers like never before. Quitty's integrated loyalty program allows customers to collect points with every purchase and redeem them for rewards, increasing retention and driving repeat business.",
+    "listText3": "Quitty's real-time data analytics offer both customers and retailers deep insights into purchasing behavior, spending categories, and trends. These insights allow retailers to create more targeted marketing strategies.",
+    "listText4": "Reduce your carbon footprint by eliminating the need for paper receipts. Quitty helps your business achieve its sustainability goals while responding to the growing demand for eco-friendly practices.",
+
+    "listText1-2": "Reduces paper costs, eliminates waste, and enhances the customer experience with a seamless digital option.",
+    "listText2-2": "Boost customer loyalty and increase sales with personalized rewards that incentivize repeat visits.",
+    "listText3-2": "Make data-driven decisions to optimize inventory, tailor promotions, and improve customer experience.",
+    "listText4-2": "Build a strong, eco-conscious brand image that resonates with today's environmentally aware consumers.",
+    "span": "Benefit: "
+  },
   "Blog": {
     "Title": "Blog",
     "UnderTitle": "Discover insights and ideas—dive in and get inspired!",

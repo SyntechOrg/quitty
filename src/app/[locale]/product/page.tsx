@@ -1,6 +1,11 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Metadata } from "next";
 import Partners from "@/components/shared/partners/Partners";
+import Heading from "@/components/shared/heading/Heading";
+import Slider from "@/components/sections/slider/Slider";
+import Process from "@/components/sections/process/Process";
+import Features from "@/components/sections/features/Features";
+import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 
 export const metadata: Metadata = {
   title: "Quitty | Product",
@@ -9,8 +14,16 @@ export const metadata: Metadata = {
 
 const ContactPage: FC = () => (
   <div className="container">
-    <p>Product Page</p>
     <Partners />
+    <Heading
+      title="Heading-title2"
+      underTitle="Heading-underTitle2"
+      text="Heading-text2"
+    />
+    <Slider />
+    <Process />
+    <Features />
+    <PackagesSection />
   </div>
 );
 
