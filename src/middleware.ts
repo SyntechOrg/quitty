@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 
 const intlMiddleware = createMiddleware({
   locales: ["en", "de"],
-  defaultLocale: "en",
+  defaultLocale: "de",
 });
 
 const customMiddleware = async (request: NextRequest) => {
@@ -20,7 +20,6 @@ const customMiddleware = async (request: NextRequest) => {
 };
 
 export default customMiddleware;
-
 
 export const config = {
   // Match only internationalized pathnames
