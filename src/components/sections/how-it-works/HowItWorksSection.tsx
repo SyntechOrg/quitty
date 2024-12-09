@@ -44,7 +44,7 @@ const HowItWorksSection = () => {
             How it works
           </p>
           <h5 className="mt-4 text-[32px] font-medium leading-[1.19] text-text lg:mt-6 lg:text-[48px]">
-            We're Committed to Creating Impact.
+            We&apos;re Committed to Creating Impact.
           </h5>
           <p className="mt-4 text-[16px] leading-[1.6] text-text lg:mt-6 lg:text-[18px]">
             Consumers will be actors of the end of paper receipts and get
