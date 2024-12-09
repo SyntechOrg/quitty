@@ -4,83 +4,61 @@ import phone from "public/assets/images/quittyPhone.png";
 import icon from "public/assets/images/borderArrow.png";
 import arrow from "public/assets/images/rightArrow.png";
 import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/fade-in/FadeIn";
+
+const listItems = [
+  { title: "listTitle1", text: "listText1" },
+  { title: "listTitle2", text: "listText2" },
+  { title: "listTitle3", text: "listText3" },
+  { title: "listTitle4", text: "listText4" },
+];
 
 const Process = () => {
   const t = useTranslations("Process");
 
   return (
     <>
-      <div className="lg:mt-[100px] mt-[70px]">
-        <div className="sectionHead">
-          <h5 className="text-[#01C9A5] lg:text-[18px] text-[16px] text-center">
+      <div className="mt-[70px] lg:mt-[100px]">
+        <FadeIn className="max-lg:mx-auto max-lg:max-w-[620px]">
+          <h5 className="text-center text-[16px] text-[#01C9A5] lg:text-[18px]">
             {t("undertitle")}
           </h5>
-          <h1 className="lg:text-[46px] leading-[1.40] text-[32px] text-[#0C1726] font-[500] lg:mb-[20px] mb-[10px] text-center">
+          <h1 className="mb-[10px] text-center text-[32px] font-[500] leading-[1.40] text-[#0C1726] lg:mb-[20px] lg:text-[46px]">
             {t("title")}
           </h1>
-          <p className="lg:text-[16px] leading-[1.80] text-[14px] text-[#232226] text-center">
+          <p className="text-center text-[14px] leading-[1.80] text-[#232226] lg:text-[16px]">
             {t("text")}
           </p>
-        </div>
-
-        <div className="flex lg:flex-row flex-col justify-between lg:gap-[5%] gap-[35px] lg:mt-[70px] mt-[40px]">
-          <div className="lg:w-[50%] w-[100%]">
+        </FadeIn>
+        <div className="mt-[40px] flex flex-col justify-between gap-[35px] lg:mt-[70px] lg:flex-row lg:gap-[5%]">
+          <FadeIn className="mx-auto w-full max-w-[520px] lg:w-[50%]">
             <Image
               src={phone}
               alt="Quitty phone"
-              className="h-[100%] lg:mx-0 mx-auto"
+              className="mx-auto h-full w-full object-contain lg:mx-0"
             />
-          </div>
-          <div className="flex flex-col justify-center gap-[30px] lg:w-[50%] w-[100%]">
-            <div>
-              <div className="flex items-center lg:lg:justify-start justify-center gap-[10px] mb-[15px]">
-                <Image src={icon} alt="arrow icon" className="w-[22px]" />
-                <h5 className="lg:text-[16px] text-[15px] leading-[1.60] font-[600]">
-                  {t("listTitle1")}
-                </h5>
-              </div>
-              <p className="lg:text-left lg:text-[16px] text-[14px] text-center">
-                {t("listText1")}
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center lg:justify-start justify-center gap-[10px] mb-[15px]">
-                <Image src={icon} alt="arrow icon" className="w-[22px]" />
-                <h5 className="lg:text-[16px] text-[15px] leading-[1.60] font-[600]">
-                  {t("listTitle2")}
-                </h5>
-              </div>
-              <p className="lg:text-left lg:text-[16px] text-[14px] text-center">
-                {t("listText2")}
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center lg:justify-start justify-center gap-[10px] mb-[15px]">
-                <Image src={icon} alt="arrow icon" className="w-[22px]" />
-                <h5 className="lg:text-[16px] text-[15px] leading-[1.60] font-[600]">
-                  {t("listTitle3")}
-                </h5>
-              </div>
-              <p className="lg:text-left lg:text-[16px] text-[14px] text-center">
-                {t("listText3")}
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center lg:justify-start justify-center gap-[10px] mb-[15px]">
-                <Image src={icon} alt="arrow icon" className="w-[22px]" />
-                <h5 className="lg:text-[16px] text-[15px] font-[600]">
-                  {t("listTitle4")}
-                </h5>
-              </div>
-              <p className="lg:text-left lg:text-[16px] text-[14px] text-center">
-                {t("listText4")}
-              </p>
-            </div>
-
-            <button className="w-[200px] h-[48px] flex justify-center items-center gap-[10px] font-600 text-white bg-[#00C9A5] rounded-3xl lg:mx-0 mx-auto">
-              {t("button")}
-              <Image src={arrow} alt="arrow icon" className="w-[16px]" />
-            </button>
+          </FadeIn>
+          <div className="flex w-full max-w-[600px] flex-col justify-center gap-[30px] max-lg:mx-auto lg:w-1/2">
+            {listItems.map((item, index) => (
+              <FadeIn key={index}>
+                <div className="mb-[15px] flex items-center gap-2.5">
+                  <Image src={icon} alt="arrow icon" className="w-[22px]" />
+                  <h5 className="text-[15px] font-semibold leading-[1.60] lg:text-[16px]">
+                    {t(item.title)}
+                  </h5>
+                </div>
+                <p className="text-[14px] lg:text-[16px]">{t(item.text)}</p>
+              </FadeIn>
+            ))}
+            <FadeIn>
+              <button
+                className="flex h-[48px] w-[200px] items-center justify-center gap-2.5 rounded-3xl
+                bg-[#00C9A5] font-semibold text-white max-lg:mx-auto"
+              >
+                {t("button")}
+                <Image src={arrow} alt="arrow icon" className="w-[16px]" />
+              </button>
+            </FadeIn>
           </div>
         </div>
       </div>

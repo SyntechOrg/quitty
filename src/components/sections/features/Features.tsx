@@ -1,15 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "public/assets/images/featureimage1.png";
-import image2 from "public/assets/images/featureimage2.png";
-import image3 from "public/assets/images/featureimage3.png";
-import image4 from "public/assets/images/featureimage4.png";
-import icon1 from "public/assets/images/featureicon1.png";
-import icon2 from "public/assets/images/featureicon2.png";
-import icon3 from "public/assets/images/featureicon3.png";
-import icon4 from "../../../../featureicon4.png";
-import iconn4 from "/public/assets/images/featureicon4.png";
 import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const myContent = [
   {
@@ -50,55 +42,58 @@ const Features = () => {
   const t = useTranslations("Features");
   return (
     <>
-      <div className="flex jsutify-center flex-col items-center lg:gap-[80px] gap-[50px] lg:mt-[120px] mt-[80px]">
+      <FadeIn className="mt-[80px] flex flex-col items-center justify-center gap-[50px] max-lg:mx-auto max-lg:max-w-[620px] lg:mt-[120px] lg:gap-[80px]">
         <div>
-          <p className="text-[#01C9A5] lg:text-[17px] text-[15px] text-center">
+          <p className="text-center text-[15px] text-[#01C9A5] lg:text-[17px]">
             {t("undertitle")}
           </p>
-          <h1 className="text-[#0C1726] lg:text-[44px] text-[34px] text-center leading-[1.4] font-[500]">
+          <h1 className="text-center text-[32px] font-semibold leading-[1.4] text-[#0C1726] lg:text-[44px]">
             {t("title")}
           </h1>
         </div>
-        <div className="flex flex-col justify-center gap-[50px]">
+        <div className="flex flex-col justify-center gap-32">
           {myContent.map((feature, index) => (
-            <div className="flex justify-between items-center lg:flex-row md:flex-row flex-col gap-[15px]">
+            <FadeIn
+              key={index}
+              className="flex flex-col items-center justify-between gap-x-16 gap-y-10 lg:flex-row"
+            >
               <div
                 key={index}
-                className="lg:w-[40%] w-[100%] flex flex-col justify-center lg:gap-[20px] md:gap-[10px] gap-[15px] items-start"
+                className="flex w-full flex-col items-start justify-center gap-[15px] max-lg:mx-auto max-lg:max-w-[550px] lg:w-[50%] lg:gap-[20px]"
               >
                 <Image
                   src={feature.src2}
                   alt={t(feature.title)}
-                  className="md:mx-[0] mx-[auto]"
+                  className="max-lg:mx-auto"
                   width={50}
                   height={50}
                 />
-                <h2 className="text-[#0C1726] leading-[1.4] md:text-left text-center w-[100%] lg:text-[36px] md:text-[30px] text-[25px] font-[500]">
+                <h2 className="w-full text-[25px] font-[500] leading-[1.4] text-[#0C1726] max-lg:text-center lg:text-left lg:text-[36px]">
                   {t(feature.title)}
                 </h2>
-                <p className="text-[#111013] leading-[1.6] md:text-left text-center w-[100%] lg:text-[15px] text-[14px]">
+                <p className="full text-[14px] leading-[1.6] text-[#111013] max-lg:text-center lg:text-left lg:text-[15px]">
                   {t(feature.text)}
                 </p>
-                <p className="text-[#111013] leading-[1.6] md:text-left text-center w-[100%] lg:text-[15px] text-[14px]">
-                  <span className="font-[500]">{t(feature.span)}</span>
+                <p className="w-full text-[14px] leading-[1.6] text-[#111013] max-lg:text-center lg:text-left lg:text-[15px]">
+                  <span className="font-medium">{t(feature.span)}</span>
                   {t(feature.text2)}
                 </p>
               </div>
-              <div className="lg:w-[55%] w-[100%]">
+              <div className="w-full lg:w-1/2">
                 <Image
                   src={feature.src}
                   alt={t(feature.title)}
-                  className="w-[100%] h-[auto]"
+                  className="h-full w-full object-contain"
                   layout="responsive"
                   width={16}
                   height={12}
                   quality={100}
                 />
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </>
   );
 };

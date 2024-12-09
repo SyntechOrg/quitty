@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <div className="container">
+      <Partners />
       <Heading
         title="Heading-title1"
         underTitle="Heading-underTitle1"
         text="Heading-text1"
       />
       <Mission />
-      <Partners />
       <Process />
       <Slider />
       <Features />
