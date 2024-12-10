@@ -15,19 +15,19 @@ interface InsightRowProps {
 const InsightRow: FC<InsightRowProps> = (props) => {
   const overlayInset = useTransform(
     props.scrollYProgress,
-    [0.4, 0.8],
+    [0.6, 0.65],
     ["0", "4px"],
   );
 
   const overlayRadius = useTransform(
     props.scrollYProgress,
-    [0.6, 0.8],
+    [0.6, 0.65],
     ["40px", "36px"],
   );
 
   const overlayBackground = useTransform(
     props.scrollYProgress,
-    [0.5, 0.55, 0.65],
+    [0.5, 0.55, 0.7],
     [
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 1) 100%)`,
       `linear-gradient(90deg, rgba(${props.color}, 1) 0%, rgba(${props.color}, 0.5) 50%)`,
@@ -43,7 +43,7 @@ const InsightRow: FC<InsightRowProps> = (props) => {
 
   const rowMarginTop = useTransform(
     props.scrollYProgress,
-    [0, 0.5],
+    [0, 0.3],
     [`-80px`, "10px"],
   );
 
