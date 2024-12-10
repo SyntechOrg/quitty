@@ -55,26 +55,26 @@ interface InsightsRightProps {
 const InsightsRight: FC<InsightsRightProps> = (props) => {
   const divContentTranslateY = useTransform(
     props.scrollYProgress,
-    [0.1, 0.5],
-    ["0%", "-40%"],
+    [0.1, 0.3, 0.5],
+    ["30%", "-0%", "-40%"],
   );
 
   const divContentOpacity = useTransform(
     props.scrollYProgress,
-    [0, 0.3, 0.9, 1],
+    [0, 0.2, 0.9, 1],
     [0, 1, 1, 0],
   );
 
   const divScale = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.85, 1],
-    [0.2, 1, 1, 0.2],
+    [0, 0.3, 0.75, 1],
+    [0.2, 1, 1, 0.75],
   );
 
   const divRotate = useTransform(
     props.scrollYProgress,
-    [0, 0.35, 0.85, 1],
-    ["-45deg", "0deg", "0deg", "45deg"],
+    [0, 0.3],
+    ["-45deg", "0deg"],
   );
 
   const divBackground = useTransform(
@@ -86,7 +86,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
   const divTranslateY = useTransform(
     props.scrollYProgress,
     [0, 0.2, 0.85, 1],
-    ["40%", "0%", "0%", "-30%"],
+    ["40%", "0%", "0%", "-15%"],
   );
 
   return (
