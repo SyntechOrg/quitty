@@ -10,7 +10,7 @@ import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 import GradientBackground from "@/components/shared/background/GradientBackground";
 import Transform from "@/components/shared/transform/Transform";
-import ReactLenis from "lenis/dist/lenis-react";
+import LenisWrapper from "@/components/shared/lenis/Lenis";
 
 export const metadata: Metadata = {
   title: "Quitty | Home",
@@ -35,11 +35,11 @@ export default async function LocaleLayout({
             <Header />
           </div>
           <GradientBackground />
-          <ReactLenis root options={{ lerp: 0.075 }}>
+          <LenisWrapper>
             {children}
             <Transform />
             <Footer />
-          </ReactLenis>
+          </LenisWrapper>
           <ToastContainer />
         </NextIntlClientProvider>
       </body>
