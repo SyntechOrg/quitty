@@ -18,4 +18,6 @@ export enum IconType {
   MONEY_BAG_ACTIVE = "money-bag-active",
   ARROW_DIAGONAL = "arrow-diagonal",
   UNLOCK = "unlock",
+  CAROUSEL_LEFT = "carousel-left",
+  CAROUSEL_RIGHT = "carousel-right",
 }

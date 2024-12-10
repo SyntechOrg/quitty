@@ -8,6 +8,7 @@ import React from "react";
 import SpotLightSection from "@/components/sections/spotlight-section/SpotLightSection";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
+import ResponsiveCarousel from "@/components/sections/feedback/FeedbackStacked";
 
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ const Home = () => {
         <PromoSection />
         <HowItWorksSection />
         <SpotLightSection />
+        <ResponsiveCarousel />
         <PackagesSection />
       </div>
     </>
