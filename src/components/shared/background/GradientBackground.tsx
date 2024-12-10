@@ -8,6 +8,7 @@ const GradientBackground = () => {
     <div className="fixed inset-0 z-[-1] overflow-hidden">
       <Image
         src={BGGradients}
+        loading="lazy"
         alt="ch-flag"
         className={`${styles.background} background h-full w-full rounded-md object-contain duration-500 ease-in-out`}
       />
