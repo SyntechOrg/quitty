@@ -30,15 +30,15 @@ const HowItWorksSection = () => {
   const t = useTranslations("");
 
   return (
-    <FadeIn className="flex items-center justify-center gap-10 max-lg:flex-col">
-      <div className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
+    <div className="flex items-center justify-center gap-10 max-lg:flex-col">
+      <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
         <Image
           src={Globe}
           alt="globe"
           className="h-full w-full object-contain max-lg:mx-auto max-lg:max-w-[480px]"
         />
-      </div>
-      <div className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
+      </FadeIn>
+      <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
         <div className="mx-auto max-w-[540px]">
           <p className="text-[16px] font-medium leading-[1.4] text-primary lg:text-[18px]">
             Wie es funktioniert
@@ -62,8 +62,8 @@ const HowItWorksSection = () => {
             </Accordion>
           </div>
         </div>
-      </div>
-    </FadeIn>
+      </FadeIn>
+    </div>
   );
 };
 
