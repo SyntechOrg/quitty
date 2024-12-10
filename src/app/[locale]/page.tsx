@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="container relative">
       <HomeHero />
-      <div className="mt-[-450px]">
+      <div className="mt-[-420px]">
         <Partners />
       </div>
       <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">

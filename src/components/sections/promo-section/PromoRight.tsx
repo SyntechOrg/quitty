@@ -1,6 +1,9 @@
 "use client";
 import React, { FC } from "react";
+import PromoImage1 from "../../../../public/assets/images/promo-image-1.png";
+import PromoImage2 from "../../../../public/assets/images/promo-image-2.png";
 import PromoImage3 from "../../../../public/assets/images/promo-image-3.png";
+import PromoImage4 from "../../../../public/assets/images/promo-image-4.png";
 import Image from "next/image";
 import { motion, MotionValue, useTransform } from "framer-motion";
 
@@ -105,76 +108,59 @@ const PromoRight: FC<PromoRightProps> = (props) => {
     [0.9, 1, 0.9],
   );
 
+  const images = [
+    {
+      image: PromoImage1,
+      top: imageOneTop,
+      opacity: imageOneOpacity,
+      rotate: imageOneRotate,
+      scale: imageOneScale,
+    },
+    {
+      image: PromoImage2,
+      top: imageTwoTop,
+      opacity: imageTwoOpacity,
+      rotate: imageTwoRotate,
+      scale: imageTwoScale,
+    },
+    {
+      image: PromoImage3,
+      top: imageTreeTop,
+      opacity: imageTreeOpacity,
+      rotate: imageTreeRotate,
+      scale: imageTreeScale,
+    },
+    {
+      image: PromoImage4,
+      top: imageFourTop,
+      opacity: imageFourOpacity,
+      rotate: imageFourRotate,
+      scale: imageFourScale,
+    },
+  ];
+
   return (
     <div className="relative flex h-full w-full items-center justify-center max-lg:mx-auto max-lg:max-w-[380px]">
-      <motion.div
-        style={{
-          top: imageOneTop,
-          opacity: imageOneOpacity,
-          rotate: imageOneRotate,
-          scale: imageOneScale,
-        }}
-        className="absolute flex h-full w-full items-center"
-      >
-        <div>
-          <Image
-            src={PromoImage3}
-            alt="Promo Image"
-            className="relative h-full max-h-[520px] w-full  max-w-[520px] rounded-[80px] object-contain"
-          />
-        </div>
-      </motion.div>
-      <motion.div
-        style={{
-          top: imageTwoTop,
-          opacity: imageTwoOpacity,
-          rotate: imageTwoRotate,
-          scale: imageTwoScale,
-        }}
-        className="absolute flex h-full w-full items-center"
-      >
-        <div>
-          <Image
-            src={PromoImage3}
-            alt="Promo Image"
-            className="relative h-full max-h-[520px] w-full  max-w-[520px] rounded-[80px] object-contain"
-          />
-        </div>
-      </motion.div>
-      <motion.div
-        style={{
-          top: imageTreeTop,
-          opacity: imageTreeOpacity,
-          rotate: imageTreeRotate,
-          scale: imageTreeScale,
-        }}
-        className="absolute flex h-full w-full items-center"
-      >
-        <div>
-          <Image
-            src={PromoImage3}
-            alt="Promo Image"
-            className="relative h-full max-h-[520px] w-full  max-w-[520px] rounded-[80px] object-contain"
-          />
-        </div>
-      </motion.div>
-      <motion.div
-        style={{
-          top: imageFourTop,
-          opacity: imageFourOpacity,
-          rotate: imageFourRotate,
-          scale: imageFourScale,
-        }}
-        className="absolute flex h-full w-full items-center"
-      >
-        <div>
-          <Image
-            src={PromoImage3}
-            alt="Promo Image"
-            className="relative h-full max-h-[520px] w-full  max-w-[520px] rounded-[80px] object-contain"
-          />
-        </div>
-      </motion.div>
+      {images.map((config, index) => (
+        <motion.div
+          key={index}
+          style={{
+            top: config.top,
+            opacity: config.opacity,
+            rotate: config.rotate,
+            scale: config.scale,
+          }}
+          className="absolute flex h-full w-full items-center"
+        >
+          <div>
+            <Image
+              src={config.image}
+              alt={`Promo Image ${index + 1}`}
+              className="relative h-full max-h-[520px] w-full max-w-[520px] rounded-[80px] object-contain"
+            />
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
