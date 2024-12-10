@@ -102,9 +102,9 @@ const BlogPage = () => {
             {t("Pagination2")}
           </p>
         </FadeIn>
-        <FadeIn className="grid-cols-1s grid justify-between gap-[0.5%] pb-[200px] sm:pb-[150px] md:grid-cols-2 md:gap-[2%] lg:grid-cols-3 lg:gap-[2%]">
+        <div className="grid-cols-1s grid justify-between gap-[0.5%] pb-[200px] sm:pb-[150px] md:grid-cols-2 md:gap-[2%] lg:grid-cols-3 lg:gap-[2%]">
           {blogPosts.map((post) => (
-            <div
+            <FadeIn
               key={post.id}
               className={`relative flex h-[410px] items-end justify-start ${
                 post.span ? "lg:col-span-2" : ""
@@ -123,9 +123,9 @@ const BlogPage = () => {
                   {t(post.title)}
                 </h1>
               </div>
-            </div>
+            </FadeIn>
           ))}
-        </FadeIn>
+        </div>
       </div>
       <Partners />
     </div>
