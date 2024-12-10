@@ -10,7 +10,7 @@ import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 import GradientBackground from "@/components/shared/background/GradientBackground";
 import Transform from "@/components/shared/transform/Transform";
-import LenisWrapper from "@/components/shared/lenis/Lenis";
+import LenisWrapper from "@/components/shared/lenis-wrapper/LenisWrapper";
 
 export const metadata: Metadata = {
   title: "Quitty | Home",
