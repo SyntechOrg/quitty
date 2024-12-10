@@ -47,9 +47,15 @@ const InsightRow: FC<InsightRowProps> = (props) => {
     [`-80px`, "10px"],
   );
 
+  const rowOpacity = useTransform(
+    props.scrollYProgress,
+    [0, 0.3],
+    [`75%`, "100%"],
+  );
+
   return (
     <motion.div
-      style={{ marginTop: rowMarginTop }}
+      style={{ marginTop: rowMarginTop, opacity: rowOpacity }}
       className="relative mx-auto flex h-[calc(20%-11px)] w-[85%] items-center justify-between rounded-[40px] bg-white p-4"
     >
       <motion.div

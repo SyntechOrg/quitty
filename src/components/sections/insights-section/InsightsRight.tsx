@@ -61,7 +61,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
 
   const divContentOpacity = useTransform(
     props.scrollYProgress,
-    [0, 0.3, 0.9, 1],
+    [0, 0.2, 0.9, 1],
     [0, 1, 1, 0],
   );
 
