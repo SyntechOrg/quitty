@@ -12,7 +12,13 @@
 
 .twitch-card:hover {
     transform: scale(1.01);
+    transition: all 300ms ease;
 }
+
+.twitch-card:active {
+    transition: all 300ms ease;
+}
+
 
 .react-stacked-center-carousel-slide-0 .twitch-card {
     cursor: default;
@@ -34,27 +40,36 @@
     background-color: #00000011;
 }
 
+.react-stacked-center-carousel-slide-0 {
+    transition: all 300ms ease !important;
+}
+
 .react-stacked-center-carousel-slide-1 {
     rotate: 4deg;
+    transition: all 300ms ease !important;
 }
+
 
 .react-stacked-center-carousel-slide--1 {
     rotate: -4deg;
+    transition: all 300ms ease !important;
 }
-
 
 .react-stacked-center-carousel-slide-2 {
     rotate: 4deg;
+    transition: all 300ms ease !important;
 }
 
 .react-stacked-center-carousel-slide--2 {
     rotate: -4deg;
+    transition: all 300ms ease !important;
 }
 
 .twitch-card .cover {
     position: absolute;
     transition: opacity 300ms ease;
 }
+
 .react-stacked-center-carousel-slide-0 .twitch-card .cover {
     transition: opacity 300ms ease, z-index 0ms 300ms;
 }
