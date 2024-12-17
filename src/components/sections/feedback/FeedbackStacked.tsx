@@ -119,6 +119,7 @@ export const FeedbackStacked = () => {
   );
 };
 
+// eslint-disable-next-line react/display-name
 const Slide = React.memo(function (props: StackedCarouselSlideProps) {
   const { dataIndex, isCenterSlide, swipeTo, slideIndex } = props;
   const [loadDelay, setLoadDelay] = React.useState<any>();
