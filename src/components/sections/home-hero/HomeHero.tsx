@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/shared";
-import HomeHeroImage from "../../../../public/assets/images/home-hero-image.png";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 import IphoneMockup from "../../../../public/assets/images/iphone-mockup.png";
@@ -16,8 +15,6 @@ const HomeHero = () => {
     target: targetRef,
   });
   const isLargeScreen = useIsLargeScreen();
-
-  const imageScale = useTransform(scrollY, [100, 600], [1, 0.75]);
 
   const mainY = useTransform(scrollY, [0, 500], ["0%", "-20%"]);
   const mainScale = useTransform(scrollY, [0, 700], [1, 0.5]);
@@ -38,16 +35,7 @@ const HomeHero = () => {
     <div ref={targetRef}>
       <FadeIn>
         <div>
-          <motion.div
-            style={{ scale: imageScale }}
-            className="absolute inset-0 z-[-1] max-h-[100vh] min-h-[600px] lg:min-h-[680px]"
-          >
-            <Image
-              src={HomeHeroImage}
-              alt="background image"
-              className="min-h-[600px] rounded-[45px] object-cover"
-            />
-          </motion.div>
+
           <motion.div
             style={{ y: mainY, scale: mainScale, opacity: mainOpacity }}
             className="mx-auto flex max-w-[400px] flex-col items-center pt-16 lg:max-w-[640px] lg:pt-20"

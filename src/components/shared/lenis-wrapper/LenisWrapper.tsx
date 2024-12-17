@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-const LenisWrapper = (props: { children: any }) => {
+const LenisWrapper = (props: { children: ReactNode }) => {
   useEffect(() => {
     const lenis = new Lenis();
 
