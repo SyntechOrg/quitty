@@ -46,7 +46,7 @@ const CONTENT = [
 ];
 
 export const FeedbackStacked = () => {
-  const ref = React.useRef<>();
+  const ref = React.useRef<any>();
   const isLargeScreen = useIsLargeScreen();
 
   const slideWidth = isLargeScreen ? 420 : 295;
@@ -73,7 +73,7 @@ export const FeedbackStacked = () => {
             haben.
           </h6>
         </div>
-        <div className="relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px]">
+        <div className="select-none relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px]">
           <ResponsiveContainer
             carouselRef={ref}
             render={(width, carouselRef) => {
