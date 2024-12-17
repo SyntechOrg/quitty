@@ -6,6 +6,7 @@ import Slider from "@/components/sections/slider/Slider";
 import Process from "@/components/sections/process/Process";
 import Features from "@/components/sections/features/Features";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
+import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 
 export const metadata: Metadata = {
   title: "Quitty | Product",
@@ -23,6 +24,7 @@ const ContactPage: FC = () => (
     <Slider />
     <Process />
     <Features />
+    <FeedbackStacked />
     <PackagesSection />
   </div>
 );

@@ -17,3 +17,6 @@ export { ChineseCoinActive } from "./ChineseCoinActive";
 export { MoneyBagActive } from "./MoneyBagActive";
 export { BillActive } from "./BillActive";
 export { Unlock } from "./Unlock";
+export { CarouselLeft } from "./CarouselLeft";
+export { CarouselRight } from "./CarouselRight";
+export { Star } from "./Star";
