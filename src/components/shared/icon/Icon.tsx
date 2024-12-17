@@ -20,7 +20,7 @@ import {
   RestaurantOutline,
   Reward,
   RewardActive,
-  SportOutline,
+  SportOutline, Star,
   Unlock,
 } from "./icons";
 import { IconType } from "./icon-types";
@@ -74,6 +74,8 @@ const Icon: FC<IconProps> = ({ icon, ...props }) => {
       return <CarouselLeft {...props} />;
     case IconType.CAROUSEL_RIGHT:
       return <CarouselRight {...props} />;
+    case IconType.STAR:
+      return <Star {...props} />;
     default:
       throw new Error("Invalid icon type");
   }

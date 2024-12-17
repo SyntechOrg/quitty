@@ -20,4 +20,5 @@ export enum IconType {
   UNLOCK = "unlock",
   CAROUSEL_LEFT = "carousel-left",
   CAROUSEL_RIGHT = "carousel-right",
+  STAR = "star",
 }

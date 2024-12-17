@@ -10,19 +10,47 @@ import Image from "next/image";
 import FeedbackBackground from "../../../../public/assets/images/feedback-background.png";
 import { Icon, IconType } from "@/components/shared";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
+import AvatarPlaceholder from "../../../../public/assets/images/avatar-placeholder.png";
 
-const COLORS = [
-  { color: "#323CD2", text: "1111" },
-  { color: "#00C9A5", text: "2222" },
-  { color: "#3F7CF3", text: "3333" },
+const CONTENT = [
+  {
+    bgColor: "#323CD2",
+    avatar: AvatarPlaceholder,
+    name: "Retailer X",
+    city: "Switzerland",
+    stars: 5,
+    review:
+      "“Seit der Integration von Quitty haben wir die Papierkosten um 35 % reduziert und einen Anstieg der Wiederholungskäufe um 25 % verzeichnet.”",
+    date: "20 Mar, 2024",
+  },
+  {
+    bgColor: "#00C9A5",
+    avatar: AvatarPlaceholder,
+    name: "Retailer X",
+    city: "Switzerland",
+    stars: 4,
+    review:
+      "“Seit der Integration von Quitty haben wir die Papierkosten um 35 % reduziert und einen Anstieg der Wiederholungskäufe um 25 % verzeichnet.”",
+    date: "21 Mar, 2024",
+  },
+  {
+    bgColor: "#3F7CF3",
+    avatar: AvatarPlaceholder,
+    name: "Retailer X",
+    city: "Switzerland",
+    stars: 5,
+    review:
+      "“Since integrating Quitty, we’ve reduced paper costs by 35% and seen a 25% increase in repeat purchases.”",
+    date: "22 Mar, 2024",
+  },
 ];
 
-export const ResponsiveCarousel = () => {
+export const FeedbackStacked = () => {
   const ref = React.useRef<>();
   const isLargeScreen = useIsLargeScreen();
 
-  const slideWidth = isLargeScreen ? 420 : 300;
-  const slideFadeDistance = isLargeScreen ? 0.8 : 0.2;
+  const slideWidth = isLargeScreen ? 420 : 295;
+  const slideFadeDistance = isLargeScreen ? 0.85 : 0.55;
 
   return (
     <div className="relative my-[80px] flex items-center justify-center py-[80px] lg:my-[150px] lg:py-[120px]">
@@ -45,7 +73,7 @@ export const ResponsiveCarousel = () => {
             haben.
           </h6>
         </div>
-        <div className="relative mx-auto mt-12 h-full w-full max-w-[800px]">
+        <div className="relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px]">
           <ResponsiveContainer
             carouselRef={ref}
             render={(width, carouselRef) => {
@@ -55,11 +83,10 @@ export const ResponsiveCarousel = () => {
                   slideComponent={Slide}
                   slideWidth={slideWidth}
                   carouselWidth={width}
-                  data={COLORS}
-                  disableSwipe
+                  data={CONTENT}
                   height={340}
-                  maxVisibleSlide={3}
-                  customScales={[1, 0.75, 0.25]}
+                  maxVisibleSlide={5}
+                  customScales={[1, 0.95, 0.85, 0.3]}
                   fadeDistance={slideFadeDistance}
                   transitionTime={500}
                 />
@@ -112,14 +139,14 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
     clearTimeout(loadDelay);
   });
 
-  const card = COLORS[dataIndex];
+  const card = CONTENT[dataIndex];
 
   return (
     <div
       className="twitch-card overflow-clip rounded-[52px]"
       draggable={false}
       style={{
-        backgroundColor: card.color,
+        backgroundColor: card.bgColor,
       }}
     >
       <div
@@ -132,13 +159,53 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
           }}
         />
       </div>
-      {loaded && (
-        <div className="h-full w-full">
-          <p>test</p>
+      {/*{loaded && (*/}
+      <div className="h-full w-full p-6 lg:p-7">
+        <div className="flex items-center gap-4">
+          <div className="h-full max-h-[55px] w-full max-w-[55px]">
+            <Image
+              src={card.avatar}
+              alt="avatar image"
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <div>
+            <p className="text-[20px] font-medium leading-[1.3] text-white lg:text-[24px]">
+              {card.name}
+            </p>
+            <p className="text-[15px] font-medium leading-[1.4] text-white lg:text-[16px]">
+              {card.city}
+            </p>
+          </div>
         </div>
-      )}
+        <div className="mt-4 flex gap-2 lg:mt-5">
+          {Array.from({ length: card.stars }).map((_, index) => (
+            <Icon
+              key={index}
+              icon={IconType.STAR}
+              className="h-full w-full max-w-[24px] object-contain lg:max-w-[32px]"
+            />
+          ))}
+          {Array.from({ length: 5 - card.stars }).map((_, index) => (
+            <Icon
+              key={index}
+              icon={IconType.STAR}
+              className="h-full w-full max-w-[24px] object-contain opacity-50 lg:max-w-[32px]"
+            />
+          ))}
+        </div>
+        <div className="mt-4 lg:mt-5">
+          <p className="text-[16px] font-medium leading-[1.4] text-white">
+            {card.review}
+          </p>
+          <p className="mt-2 text-[15px] font-medium leading-[1.4] text-white lg:mt-3 lg:text-[16px]">
+            {card.date}
+          </p>
+        </div>
+      </div>
+      {/*)}*/}
     </div>
   );
 });
 
-export default ResponsiveCarousel;
+export default FeedbackStacked;

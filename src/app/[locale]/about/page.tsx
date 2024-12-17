@@ -4,6 +4,7 @@ import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
 import Partners from "@/components/shared/partners/Partners";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
+import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -20,6 +21,7 @@ const AboutPage = () => {
         text="Heading-text1"
       />
       <Mission />
+      <FeedbackStacked />
       <PackagesSection />
     </div>
   );
