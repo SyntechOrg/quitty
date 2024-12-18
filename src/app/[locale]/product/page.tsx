@@ -7,6 +7,7 @@ import Process from "@/components/sections/process/Process";
 import Features from "@/components/sections/features/Features";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
+import ProductHero from "@/components/sections/product-hero/ProductHero";
 
 export const metadata: Metadata = {
   title: "Quitty | Product",
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
 
 const ContactPage: FC = () => (
   <div className="container">
-    <Partners />
+    <ProductHero />
+    <div className="my-32 lg:my-44">
+      <Partners />
+    </div>
     <Heading
       title="Heading-title2"
       underTitle="Heading-underTitle2"

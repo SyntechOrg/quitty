@@ -35,7 +35,6 @@ const HomeHero = () => {
     <div ref={targetRef}>
       <FadeIn>
         <div>
-
           <motion.div
             style={{ y: mainY, scale: mainScale, opacity: mainOpacity }}
             className="mx-auto flex max-w-[400px] flex-col items-center pt-16 lg:max-w-[640px] lg:pt-20"

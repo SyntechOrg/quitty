@@ -5,7 +5,7 @@ import styles from "./GradientBackground.module.css";
 
 const GradientBackground = () => {
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden">
+    <div className="fixed inset-0 z-[-1] overflow-hidden opacity-80">
       <Image
         src={BGGradients}
         loading="lazy"

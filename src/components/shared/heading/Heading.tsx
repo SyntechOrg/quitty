@@ -18,7 +18,7 @@ export const Heading: FC<HeadingProps> = ({ title, underTitle, text }) => {
         <h5 className="text-[16px] font-[500] text-[#00C9A5] lg:text-[18px]">
           {t(underTitle)}
         </h5>
-        <h1 className="w-[100%] text-[32px] font-[500] leading-[1.3] text-[#0C1726] lg:w-[90%] lg:text-[48px]">
+        <h1 className="w-[100%] break-words text-[32px] font-[500] leading-[1.3] text-[#0C1726] lg:w-[90%] lg:text-[48px]">
           {t(title)}
         </h1>
       </div>
