@@ -12,6 +12,7 @@ import ProductHeroLeft3 from "../../../../public/assets/images/product-hero/hero
 import ProductHeroRight1 from "../../../../public/assets/images/product-hero/hero-right-1.png";
 import ProductHeroRight2 from "../../../../public/assets/images/product-hero/hero-right-2.png";
 import ProductHeroRight3 from "../../../../public/assets/images/product-hero/hero-right-3.png";
+import ProductHeroResponsive from "../../../../public/assets/images/product-hero/product-hero-responsive.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
@@ -82,7 +83,7 @@ const ProductHero = () => {
           </div>
         </FadeIn>
       </div>
-      <FadeIn className={`${isLargeScreen ? "block" : "hidden"}`}>
+      <FadeIn className="hidden lg:block">
         <motion.div
           style={{
             top: left1Top,
@@ -156,7 +157,13 @@ const ProductHero = () => {
           />
         </motion.div>
       </FadeIn>
-      <div></div>
+      <FadeIn className="mx-auto mt-10 block max-w-[620px] lg:hidden">
+        <Image
+          src={ProductHeroResponsive}
+          alt="product hero image"
+          className="h-full w-full object-cover"
+        />
+      </FadeIn>
     </div>
   );
 };
