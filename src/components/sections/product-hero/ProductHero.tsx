@@ -15,14 +15,15 @@ import ProductHeroRight3 from "../../../../public/assets/images/product-hero/her
 import ProductHeroResponsive from "../../../../public/assets/images/product-hero/product-hero-responsive.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
-import useIsLargeScreen from "@/hooks/useIsLargeScreen";
+import { useTranslations } from "next-intl";
 
 const ProductHero = () => {
   const targetRef = useRef(null);
   const { scrollY } = useScroll({
     target: targetRef,
   });
-  const isLargeScreen = useIsLargeScreen();
+
+  const t = useTranslations("Product");
 
   const left1Top = useTransform(scrollY, [0, 400], ["45vh", "-45vh"]);
   const left2Top = useTransform(scrollY, [0, 600], ["20vh", "15vh"]);
@@ -34,20 +35,13 @@ const ProductHero = () => {
 
   return (
     <div ref={targetRef} className="relative min-h-[100vh]">
-      <div
-        style={{
-          position: isLargeScreen ? "sticky" : "relative",
-          top: isLargeScreen ? 40 : 0,
-        }}
-        className="z-10 mx-auto  max-w-[400px] pt-5 md:max-w-[550px] lg:max-w-[640px] lg:pt-20"
-      >
+      <div className="relative top-5 z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:sticky lg:top-10 lg:max-w-[640px] lg:pt-20">
         <FadeIn className="flex flex-col items-center">
           <h1 className="text-center text-[32px] font-medium leading-[1.2] text-text md:text-[40px] lg:text-[52px]">
-            Die Zukunft von digitalen Belegen, Kundenbindung und Nachhaltigkeit.
+            {t("heroTitle")}
           </h1>
           <p className="mt-5 text-center text-[16px] leading-[1.6] text-text lg:text-[19px]">
-            Gehe papierlos, binde Kunden ein und wachse mit Quitty’s All-in-One
-            Digital-Receipt-Plattform.
+            {t("heroText")}
           </p>
           <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
             <Button to={"/"} variant="primary" className="group w-[250px]">
