@@ -73,7 +73,7 @@ export const FeedbackStacked = () => {
             haben.
           </h6>
         </div>
-        <div className="select-none relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px]">
+        <div className="relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px] select-none">
           <ResponsiveContainer
             carouselRef={ref}
             render={(width, carouselRef) => {

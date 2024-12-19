@@ -2,6 +2,10 @@
   "Home": {
     "HeroSectionTitle": "Die Zukunft der digitalen Quittungen"
   },
+  "Product": {
+    "heroTitle": "Die Zukunft von digitalen Belegen, Kundenbindung und Nachhaltigkeit.",
+    "heroText": "Gehe papierlos, binde Kunden ein und wachse mit Quitty’s All-in-One Digital-Receipt-Plattform."
+  },
   "Header": {
     "Home": "Startseite",
     "About": "Über uns",
