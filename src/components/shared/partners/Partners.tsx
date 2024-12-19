@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import tinder from "public/assets/images/tinder-1 1.png";
+import zara from "public/assets/images/zara.png";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const Images = [
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
 ];
 
 const Partners = () => {
@@ -37,8 +37,8 @@ const Partners = () => {
               src={image.src}
               alt={image.alt}
               className=""
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             />
           </div>
         ))}

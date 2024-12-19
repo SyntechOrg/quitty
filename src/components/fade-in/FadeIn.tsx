@@ -2,6 +2,7 @@
 import { ReactNode, useEffect, useRef, useState, type FC } from "react";
 import { motion } from "framer-motion";
 import classNames from "classnames";
+import React from "react";
 
 type FadeInProps = {
   children: ReactNode;
