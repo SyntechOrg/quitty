@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
 import Icon from "@/components/shared/icon/Icon";
 import { IconType } from "@/components/shared";
+import { useTranslations } from "next-intl";
 
 interface PromoLeftProps {
   scrollYProgress: MotionValue<number>;
@@ -192,10 +193,8 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
 
   const textElements = [
     {
-      title: "Digital Receipts",
-      description:
-        "Instantly send receipts to customers’ smartphones, eliminating paper waste and making receipts easy to access. " +
-        "Quitty helps businesses reduce their environmental footprint while offering customers the convenience of securely storing all their receipts. No more lost papers—just seamless, digital organization.",
+      title: "AdvantageTitle1",
+      description: "AdvantageText1",
       styles: {
         opacity: textOneOpacity,
         display: textOneDisplay,
@@ -203,10 +202,8 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
       },
     },
     {
-      title: "Warranty Tracker",
-      description:
-        "Store receipts digitally, making warranty claims and returns effortless for customers and retailers. " +
-        "Quitty ensures warranties are always accessible, removing the hassle of searching for proof of purchase. Streamline the process and provide peace of mind to customers.",
+      title: "AdvantageTitle2",
+      description: "AdvantageText2",
       styles: {
         opacity: textTwoOpacity,
         display: textTwoDisplay,
@@ -214,11 +211,8 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
       },
     },
     {
-      title: "Loyalty Rewards",
-      description:
-        "Reward customers with points for every purchase, driving engagement and repeat visits. " +
-        "Quitty’s loyalty system encourages repeat purchases by offering redeemable points for discounts or perks from partnered brands. " +
-        "Build long-term customer relationships with ease.",
+      title: "AdvantageTitle3",
+      description: "AdvantageText3",
       styles: {
         opacity: textThreeOpacity,
         display: textThreeDisplay,
@@ -226,11 +220,8 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
       },
     },
     {
-      title: "Spending Insights",
-      description:
-        "Provide customers with categorized spending reports to help them manage finances easily. " +
-        "Quitty offers users a clear view of their spending habits through detailed charts. " +
-        "Empower customers to make informed financial decisions and manage budgets confidently.",
+      title: "AdvantageTitle4",
+      description: "AdvantageText4",
       styles: {
         opacity: textFourOpacity,
         display: textFourDisplay,
@@ -238,6 +229,8 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
       },
     },
   ];
+
+  const t = useTranslations("Home");
 
   return (
     <motion.div
@@ -247,7 +240,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
     >
       <motion.div className="absolute max-lg:top-0 max-lg:w-full max-lg:text-center lg:translate-y-[-50%]">
         <p className="text-[16px] font-medium text-primary">
-          Advantages of Quitty
+          {t("AdvantageUndertitle")}
         </p>
         <div className="mt-3 flex gap-1.5 max-lg:mx-auto max-lg:w-full max-lg:max-w-[480px] max-lg:justify-between lg:mt-9">
           {categories.map((category, index) => (
@@ -288,10 +281,10 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
             className="mx-auto mt-2 min-h-[255px] max-w-[520px] max-lg:text-center lg:mt-10 lg:min-h-[280px]"
           >
             <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
-              {element.title}
+              {t(element.title)}
             </h4>
             <p className="mt-2.5 text-[16px] leading-[1.5] text-text lg:mt-7 lg:text-[18px] lg:leading-[1.6]">
-              {element.description}
+              {t(element.description)}
             </p>
           </motion.div>
         ))}

@@ -1,20 +1,28 @@
+"use client";
 import React from "react";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import Image from "next/image";
 import Avatar1 from "../../../../public/assets/images/avatar-1.png";
 import Avatar2 from "../../../../public/assets/images/avatar-2.png";
 import ChatSupport from "../../../../public/assets/images/chat-support.png";
+import ChatSupportDE from "../../../../public/assets/images/chat-support-de.png";
 import OrderMockup from "../../../../public/assets/images/order-mockup.png";
 import FiveStars from "../../../../public/assets/images/5-stars.png";
 import SpotlightIphoneMockup from "../../../../public/assets/images/spotlight-iphone-mockup.png";
 import { Button } from "@/components/shared";
+import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const SpotLightSection = () => {
+  const t = useTranslations("Home");
+
+  const localActive = useLocale();
+
   return (
     <div className="mt-[150px] lg:mt-[200px]">
       <FadeIn className="mx-auto max-w-[700px] text-center text-text">
         <h6 className="text-[32px] font-medium leading-[1.4] lg:text-[48px]">
-          Im Mittelpunkt der einzigartigen Funktionen
+          {t("SpotlightTitle")}
         </h6>
       </FadeIn>
       <FadeIn className="mt-[60px] grid grid-cols-1 gap-8 max-lg:mx-auto max-lg:max-w-[500px] lg:mt-[100px] lg:grid-cols-3">
@@ -34,7 +42,7 @@ const SpotLightSection = () => {
               </div>
             </div>
             <p className="text-right text-[16px] leading-[1.5] text-white">
-              Weltweit aktive Nutzer
+              {t("SpotCard1Users")}
             </p>
           </div>
           <div className="px-8 pb-8">
@@ -60,7 +68,7 @@ const SpotLightSection = () => {
                 </div>
               </div>
               <p className="mt-1 text-[16px] leading-[1.4] text-white">
-                Verfügbare Nutzer, die uns stets unterstützen
+                {t("SpotCard1Text")}
               </p>
             </div>
           </div>
@@ -71,15 +79,23 @@ const SpotLightSection = () => {
               24 <span className="text-[#3f7cf3]"> / </span> 7
             </p>
             <p className="text-[16px] font-medium leading-[24px] text-[#111]">
-              Schneller Chat-Support
+              {t("SpotCard2Support")}
             </p>
           </div>
           <div>
-            <Image
-              src={ChatSupport}
-              alt="chat-support"
-              className="h-full w-full object-contain"
-            />
+            {localActive === "en" ? (
+              <Image
+                src={ChatSupport}
+                alt="chat-support"
+                className="h-full w-full object-contain"
+              />
+            ) : (
+              <Image
+                src={ChatSupportDE}
+                alt="chat-support"
+                className="h-full w-full object-contain"
+              />
+            )}
           </div>
         </div>
         <div
@@ -93,12 +109,10 @@ const SpotLightSection = () => {
         >
           <div className="px-7">
             <p className="text-[24px] font-semibold leading-[1.4] text-[#111] lg:text-[26px]">
-              Verwandle jede Quittung in eine Loyalitätschance
+              {t("SpotCard3ReceiptTitle")}
             </p>
             <p className="mt-4 text-[16px] leading-[1.45] text-[#4f4f4f]">
-              Das integrierte Loyalitätsprogramm von Quitty ermöglicht es deinen
-              Kunden, mit jedem Einkauf Punkte zu sammeln, die sie für Rabatte
-              oder Sonderangebote einlösen können.
+              {t("SpotCard3ReceiptText")}
             </p>
           </div>
           <div>
@@ -110,7 +124,7 @@ const SpotLightSection = () => {
               className="mx-auto h-[58px] w-full bg-primary !px-3 text-[20px] leading-[1.5] text-white hover:bg-primary/80
               active:bg-primary/90 lg:text-[24px]"
             >
-              Entdecke alle Funktionen
+              {t("SpotCard3ReceiptButton")}
             </Button>
           </div>
         </div>
@@ -121,12 +135,10 @@ const SpotLightSection = () => {
           <div className="flex h-full w-full flex-col justify-between py-8 max-lg:px-9 lg:w-[56%] lg:py-14 lg:pl-[47px]">
             <div>
               <p className="text-[24px] font-semibold leading-[1.3] text-[#111] lg:text-[28px] lg:leading-[1.5]">
-                Nahtlose Integration mit deinen bestehenden POS-Systemen
+                {t("SpotCard4ReceiptTitle")}
               </p>
               <p className="mt-3 text-[16px] leading-[1.4] text-[#4f4f4f] lg:mt-4 lg:leading-[1.5]">
-                Quitty lässt sich mühelos in deine bestehenden
-                Point-of-Sale-Systeme integrieren, wodurch minimale Störungen im
-                Betrieb entstehen.
+                {t("SpotCard4ReceiptText")}
               </p>
             </div>
             <div>

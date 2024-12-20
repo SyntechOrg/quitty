@@ -9,8 +9,10 @@ import SpotLightSection from "@/components/sections/spotlight-section/SpotLightS
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
+import { useTranslations } from "next-intl";
 
 const Home = () => {
+  const t = useTranslations("Home");
   return (
     <>
       <HomeHeroBg />
@@ -21,17 +23,16 @@ const Home = () => {
         </div>
         <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
           <h2 className="text-[32px] font-medium leading-[1.4] lg:text-[42px]">
-            Verändere die Art und Weise, wie du deine Quittungen einfach
-            verwaltest.
+            {t("ChangeTitle")};
           </h2>
           <p className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]">
-            Bau Loyalität auf, spare Geld und werde mühelos umweltfreundlich.
+            {t("ChangeUndertitle")}
           </p>
         </FadeIn>
         <InsightsSection />
         <FadeIn className="mx-auto max-w-[650px] text-center text-text">
           <h3 className="text-[32px] font-medium leading-[1.4] lg:text-[58px]">
-            Nachhaltig, effizient und ansprechend.
+            {t("Sustainable")}
           </h3>
         </FadeIn>
         <PromoSection />
