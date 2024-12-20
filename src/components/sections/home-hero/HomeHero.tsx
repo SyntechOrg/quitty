@@ -8,6 +8,7 @@ import IphoneMockup from "../../../../public/assets/images/iphone-mockup.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
+import { useTranslations } from "next-intl";
 
 const HomeHero = () => {
   const targetRef = useRef(null);
@@ -31,6 +32,7 @@ const HomeHero = () => {
     ["0%", "0%", "-125%"],
   );
 
+  const t = useTranslations("Home");
   return (
     <div ref={targetRef}>
       <FadeIn>
@@ -40,11 +42,10 @@ const HomeHero = () => {
             className="mx-auto flex max-w-[400px] flex-col items-center pt-16 lg:max-w-[640px] lg:pt-20"
           >
             <h1 className="text-center text-[44px] font-medium leading-[1.2] text-white lg:text-[60px]">
-              Die Zukunft der digitalen Quittungen
+              {t("HeroSectionTitle")}
             </h1>
             <p className="mt-5 text-center text-[16px] leading-[1.6] text-white lg:text-[17px]">
-              Verabschiede dich von Papierquittungen und begrüsse digitale Lösungen in Echtzeit, die die Kundenbindung
-              stärken und die betriebliche Effizienz steigern.
+              {t("HeroSectionUndertitle")}
             </p>
             <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
               <Button to={"/"} variant="primary" className="w-[250px]">

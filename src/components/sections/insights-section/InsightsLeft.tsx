@@ -2,6 +2,7 @@
 import React, { FC } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
+import { useTranslations } from "next-intl";
 
 interface InsightsLeftProps {
   scrollYProgress: MotionValue<number>;
@@ -13,24 +14,24 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
   const firstTextOpacity = useTransform(
     props.scrollYProgress,
     [0, 0.1, 0.35, 0.5],
-    [0, 1, 1, 0],
+    [0, 1, 1, 0]
   );
 
   const secondTextOpacity = useTransform(
     props.scrollYProgress,
     [0.5, 0.6, 0.85, 1],
-    [0, 1, 1, 0],
+    [0, 1, 1, 0]
   );
 
   const firstTextLineHeight = useTransform(
     props.scrollYProgress,
     [0, 0.2, 0.35, 0.5],
-    [2.0, 1.4, 1.4, 1],
+    [2.0, 1.4, 1.4, 1]
   );
   const secondTextLineHeight = useTransform(
     props.scrollYProgress,
     [0.5, 0.7, 0.85, 1],
-    [2.0, 1.4, 1.4, 1],
+    [2.0, 1.4, 1.4, 1]
   );
 
   const firstTextTop = useTransform(
@@ -38,7 +39,7 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
     [0, 0.15, 0.35, 0.5],
     isLargeScreen
       ? ["60vh", "50vh", "50vh", "30vh"]
-      : ["0vh", "0vh", "0vh", "0vh"],
+      : ["0vh", "0vh", "0vh", "0vh"]
   );
 
   const secondTextTop = useTransform(
@@ -46,8 +47,10 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
     [0.5, 0.65, 0.85, 1],
     isLargeScreen
       ? ["60vh", "50vh", "50vh", "30vh"]
-      : ["0vh", "0vh", "0vh", "0vh"],
+      : ["0vh", "0vh", "0vh", "0vh"]
   );
+
+  const t = useTranslations("Home");
   return (
     <div>
       <motion.div
@@ -59,10 +62,10 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
         className="absolute max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"
       >
         <p className="text-[16px] font-medium text-primary">
-          Vereinfache deine Quittungen
+          {t("InsightUndertitle")}
         </p>
         <h3 className="mx-auto text-[32px] font-medium text-text max-lg:max-w-[520px] lg:text-[52px]">
-          Entdecke deine Ausgabemuster mit Leichtigkeit
+          {t("InsightTitle")}
         </h3>
       </motion.div>
       <motion.div
@@ -74,10 +77,10 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
         className="absolute top-[50vh] max-lg:w-full max-lg:text-center lg:translate-y-[-50%]"
       >
         <p className="text-[16px] font-medium text-primary">
-          Sehen Sie Ihre Ausgaben auf einen Blick.
+          {t("InsightUndertitle2")}
         </p>
         <h4 className="mx-auto text-[32px] font-medium text-text max-lg:max-w-[520px] lg:text-[52px]">
-          Entdecken Sie Einblicke für jede Kategorie, die Sie verfolgen.
+          {t("InsightTitle2")}
         </h4>
       </motion.div>
     </div>
