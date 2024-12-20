@@ -24,12 +24,12 @@ const HomeHero = () => {
   const mockUpScale = useTransform(
     scrollYProgress,
     [0, 0.3, 0.75, 1],
-    [1, 0.85, 1, 1.15]
+    [1, 0.85, 1, 1.15],
   );
   const mockUpTranslateY = useTransform(
     scrollYProgress,
     [0, 0.75, 1],
-    ["0%", "0%", "-125%"]
+    ["0%", "0%", "-125%"],
   );
 
   const t = useTranslations("Home");

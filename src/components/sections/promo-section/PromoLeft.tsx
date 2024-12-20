@@ -13,151 +13,151 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
   const divOpacity = useTransform(
     props.scrollYProgress,
     [0, 0.1, 0.9, 1],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const iconOneBackgroundColor = useTransform(
     props.scrollYProgress,
     [0, 0.02, 0.23, 0.25],
-    ["#ffffff", "#00C9A5", "#00C9A5", "#ffffff"]
+    ["#ffffff", "#00C9A5", "#00C9A5", "#ffffff"],
   );
 
   const iconOneOpacity = useTransform(
     props.scrollYProgress,
     [0, 0.01, 0.24, 0.25],
-    [1, 0, 0, 1]
+    [1, 0, 0, 1],
   );
 
   const iconOneActiveOpacity = useTransform(
     props.scrollYProgress,
     [0, 0.01, 0.24, 0.25],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const iconTwoBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.25, 0.27, 0.48, 0.5],
-    ["#fff", "#00C9A5", "#00C9A5", "#fff"]
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconTwoOpacity = useTransform(
     props.scrollYProgress,
     [0.25, 0.26, 0.49, 0.5],
-    [1, 0, 0, 1]
+    [1, 0, 0, 1],
   );
 
   const iconTwoActiveOpacity = useTransform(
     props.scrollYProgress,
     [0.25, 0.26, 0.49, 0.5],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const iconThreeBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.5, 0.52, 0.73, 0.75],
-    ["#fff", "#00C9A5", "#00C9A5", "#fff"]
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconThreeOpacity = useTransform(
     props.scrollYProgress,
     [0.5, 0.51, 0.74, 0.75],
-    [1, 0, 0, 1]
+    [1, 0, 0, 1],
   );
 
   const iconThreeActiveOpacity = useTransform(
     props.scrollYProgress,
     [0.5, 0.51, 0.74, 0.75],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const iconFourBackgroundColor = useTransform(
     props.scrollYProgress,
     [0.75, 0.77, 0.98, 1.1],
-    ["#fff", "#00C9A5", "#00C9A5", "#fff"]
+    ["#fff", "#00C9A5", "#00C9A5", "#fff"],
   );
 
   const iconFourOpacity = useTransform(
     props.scrollYProgress,
     [0.75, 0.76, 0.99, 1.1],
-    [1, 0, 0, 1]
+    [1, 0, 0, 1],
   );
 
   const iconFourActiveOpacity = useTransform(
     props.scrollYProgress,
     [0.75, 0.76, 0.99, 1.1],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const textOneOpacity = useTransform(
     props.scrollYProgress,
     [0, 0.05, 0.2, 0.25],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const textTwoOpacity = useTransform(
     props.scrollYProgress,
     [0.25, 0.3, 0.45, 0.5],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const textThreeOpacity = useTransform(
     props.scrollYProgress,
     [0.5, 0.55, 0.7, 0.75],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const textFourOpacity = useTransform(
     props.scrollYProgress,
     [0.75, 0.8, 0.95, 1],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const textOneDisplay = useTransform(
     props.scrollYProgress,
     [0, 0.25],
-    ["block", "none"]
+    ["block", "none"],
   );
 
   const textTwoDisplay = useTransform(
     props.scrollYProgress,
     [0.25, 0.250001, 0.5],
-    ["none", "block", "none"]
+    ["none", "block", "none"],
   );
 
   const textThreeDisplay = useTransform(
     props.scrollYProgress,
     [0.5, 0.500001, 0.75],
-    ["none", "block", "none"]
+    ["none", "block", "none"],
   );
 
   const textFourDisplay = useTransform(
     props.scrollYProgress,
     [0.75, 0.750001],
-    ["none", "block"]
+    ["none", "block"],
   );
 
   const textOneTranslateY = useTransform(
     props.scrollYProgress,
     [0, 0.1, 0.15, 0.25],
-    ["20px", "0px", "0px", "-15px"]
+    ["20px", "0px", "0px", "-15px"],
   );
 
   const textTwoTranslateY = useTransform(
     props.scrollYProgress,
     [0.25, 0.3, 0.4, 0.5],
-    ["20px", "0px", "0px", "-15px"]
+    ["20px", "0px", "0px", "-15px"],
   );
 
   const textThreeTranslateY = useTransform(
     props.scrollYProgress,
     [0.5, 0.55, 0.65, 0.75],
-    ["20px", "0px", "0px", "-15px"]
+    ["20px", "0px", "0px", "-15px"],
   );
 
   const textFourTranslateY = useTransform(
     props.scrollYProgress,
     [0.75, 0.8, 0.9, 1],
-    ["20px", "0px", "0px", "-15px"]
+    ["20px", "0px", "0px", "-15px"],
   );
 
   const categories = [

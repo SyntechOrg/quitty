@@ -1,17 +1,22 @@
+"use client";
 import React from "react";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import Image from "next/image";
 import Avatar1 from "../../../../public/assets/images/avatar-1.png";
 import Avatar2 from "../../../../public/assets/images/avatar-2.png";
 import ChatSupport from "../../../../public/assets/images/chat-support.png";
+import ChatSupportDE from "../../../../public/assets/images/chat-support-de.png";
 import OrderMockup from "../../../../public/assets/images/order-mockup.png";
 import FiveStars from "../../../../public/assets/images/5-stars.png";
 import SpotlightIphoneMockup from "../../../../public/assets/images/spotlight-iphone-mockup.png";
 import { Button } from "@/components/shared";
 import { useTranslations } from "next-intl";
+import { useLocale } from "use-intl";
 
 const SpotLightSection = () => {
   const t = useTranslations("Home");
+
+  const localActive = useLocale();
 
   return (
     <div className="mt-[150px] lg:mt-[200px]">
@@ -78,11 +83,19 @@ const SpotLightSection = () => {
             </p>
           </div>
           <div>
-            <Image
-              src={ChatSupport}
-              alt="chat-support"
-              className="h-full w-full object-contain"
-            />
+            {localActive === "en" ? (
+              <Image
+                src={ChatSupport}
+                alt="chat-support"
+                className="h-full w-full object-contain"
+              />
+            ) : (
+              <Image
+                src={ChatSupportDE}
+                alt="chat-support"
+                className="h-full w-full object-contain"
+              />
+            )}
           </div>
         </div>
         <div
