@@ -5,6 +5,7 @@ import { Button } from "@/components/shared";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 interface PackageCardProps {
   type: string;
@@ -14,6 +15,8 @@ interface PackageCardProps {
 }
 
 const PackageCard: FC<PackageCardProps> = (props) => {
+  const t = useTranslations("Home");
+
   return (
     <FadeIn className="group w-full rounded-[70px] bg-transparent px-9 pb-12 pt-9 duration-300 ease-in-out hover:bg-text hover:pt-12 lg:w-1/3">
       <div>
@@ -26,7 +29,7 @@ const PackageCard: FC<PackageCardProps> = (props) => {
             CHF <span className="text-[39px]">{props.price}</span>
           </p>
           <p className="text-[17px] text-[#939398] duration-300 ease-in-out group-hover:text-white">
-            /pro Monat
+            {t("PackageSpan")}
           </p>
         </div>
         <p className="mt-4 text-[17px] font-medium leading-[1.6] text-text duration-300 ease-in-out group-hover:text-white">
@@ -36,7 +39,7 @@ const PackageCard: FC<PackageCardProps> = (props) => {
           {props.features.map((feature, index) => (
             <li key={index} className="flex items-center gap-2">
               <Image src={flame} alt="" className="w-[20px] object-contain" />
-              <p>{feature}</p>
+              <p>{t(feature)}</p>
             </li>
           ))}
         </ul>

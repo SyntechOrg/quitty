@@ -2,46 +2,47 @@ import React, { FC } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
 import InsightRow from "@/components/insight-row/InsightRow";
 import { IconType } from "@/components/shared";
+import { useTranslations } from "next-intl";
 
 const insightRows = [
   {
-    name: "Travel",
+    name: "InsightCard1",
     percentage: undefined,
     icon: undefined,
     color: "113, 238, 56",
   },
   {
-    name: "Auto",
+    name: "InsightCard2",
     percentage: undefined,
     icon: undefined,
     color: "255, 199, 0",
   },
   {
-    name: "Möbel",
+    name: "InsightCard3",
     percentage: 50,
     icon: IconType.MOEBEL_OUTLINE,
     color: "0, 201, 137",
   },
   {
-    name: "Lebensmittel",
+    name: "InsightCard4",
     percentage: 20,
     icon: IconType.LEBENSMITTEL_OUTLINE,
     color: "58, 69, 241",
   },
   {
-    name: "Kleidung",
+    name: "InsightCard5",
     percentage: 20,
     icon: IconType.KLEIDUNG_OUTLINE,
     color: "220, 0, 0",
   },
   {
-    name: "Restaurant",
+    name: "InsightCard6",
     percentage: 20,
     icon: IconType.RESTAURANT_OUTLINE,
     color: "112, 48, 193",
   },
   {
-    name: "Sport",
+    name: "InsightCard7",
     percentage: 20,
     icon: IconType.SPORT_OUTLINE,
     color: "77, 193, 240",
@@ -89,6 +90,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
     ["40%", "0%", "0%", "-15%"],
   );
 
+  const t = useTranslations("Home");
   return (
     <motion.div
       style={{
@@ -111,7 +113,7 @@ const InsightsRight: FC<InsightsRightProps> = (props) => {
           <InsightRow
             key={index}
             index={index}
-            name={item.name}
+            name={t(item.name)}
             percentage={item?.percentage}
             icon={item?.icon}
             color={item.color}

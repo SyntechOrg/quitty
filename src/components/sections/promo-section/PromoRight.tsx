@@ -154,6 +154,7 @@ const PromoRight: FC<PromoRightProps> = (props) => {
         >
           <div>
             <Image
+              loading="eager"
               src={config.image}
               alt={`Promo Image ${index + 1}`}
               className="relative h-full max-h-[520px] w-full max-w-[520px] rounded-[80px] object-contain"
