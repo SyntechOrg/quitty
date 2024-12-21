@@ -5,6 +5,8 @@ import Mission from "@/components/sections/mission/Mission";
 import Partners from "@/components/shared/partners/Partners";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
+import CircularCarousel from "@/components/CircularCarousel/CircularCarousel";
+import ImpactSection from "@/components/ImpactSection/ImpactSection";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -21,6 +23,7 @@ const AboutPage = () => {
         text="Heading-text1"
       />
       <Mission />
+      <ImpactSection />
       <FeedbackStacked />
       <PackagesSection />
     </div>
