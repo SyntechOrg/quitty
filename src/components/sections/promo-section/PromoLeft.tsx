@@ -242,7 +242,7 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
         <p className="text-[16px] font-medium text-primary">
           {t("AdvantageUndertitle")}
         </p>
-        <div className="mt-3 flex gap-1.5 max-lg:mx-auto max-lg:w-full max-lg:max-w-[480px] max-lg:justify-between lg:mt-9">
+        <div className="mt-2.5 flex gap-1.5 max-lg:mx-auto max-lg:w-full max-lg:max-w-[480px] max-lg:justify-between lg:mt-9">
           {categories.map((category, index) => (
             <motion.div
               key={index}
@@ -278,12 +278,12 @@ const PromoLeft: FC<PromoLeftProps> = (props) => {
           <motion.div
             key={index}
             style={element.styles}
-            className="mx-auto mt-2 min-h-[255px] max-w-[520px] max-lg:text-center lg:mt-10 lg:min-h-[280px]"
+            className="mx-auto mt-2.5 min-h-[260px] max-w-[520px] max-lg:text-center lg:mt-9 lg:min-h-[305px]"
           >
             <h4 className="mx-auto text-[32px] font-medium text-text lg:text-[52px]">
               {t(element.title)}
             </h4>
-            <p className="mt-2.5 text-[16px] leading-[1.5] text-text lg:mt-7 lg:text-[18px] lg:leading-[1.6]">
+            <p className="mt-1 text-[15px] leading-[1.5] text-text lg:mt-6 lg:text-[18px] lg:leading-[1.6]">
               {t(element.description)}
             </p>
           </motion.div>
