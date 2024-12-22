@@ -52,7 +52,7 @@ const TeamSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(0);
   const t = useTranslations("About");
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index: number) => {
     setHoveredIndex(index);
   };
 
