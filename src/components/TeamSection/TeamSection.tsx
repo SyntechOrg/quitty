@@ -49,7 +49,7 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
   const t = useTranslations("About");
 
   const handleMouseEnter = (index: number) => {
