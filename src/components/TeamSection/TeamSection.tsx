@@ -97,7 +97,7 @@ const TeamSection = () => {
                ${
                  hoveredIndex === index ||
                  (hoveredIndex === null && index === 0)
-                   ? "opacity-100 duration-200"
+                   ? "opacity-100 duration-100"
                    : "opacity-0 transition-none"
                }
               `}
