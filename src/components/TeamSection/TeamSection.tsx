@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import QamilLika from "../.././../public/assets/images/Qamil-Lika.png";
 import LeoSahitaj from "../.././../public/assets/images/Leo-Sahitaj.png";
@@ -7,6 +7,7 @@ import LabiSahitaj from "../.././../public/assets/images/Labi-Sahitaj.png";
 import FacebookIcon from "../../../public/assets/images/team-member-facebook-icon.png";
 import YoutubeIcon from "../../../public/assets/images/team-member-youtube-icon.png";
 import BeIcon from "../../../public/assets/images/team-member-be-icon.png";
+import TeamMemberBackground from "../../../public/assets/images/team-member-background.png";
 import { useTranslations } from "next-intl";
 
 const teamMembers = [
@@ -49,15 +50,23 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(0);
+
   const t = useTranslations("About");
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-  };
+  useEffect(() => {
+    if (hoveredIndex !== null) {
+      const timer = setTimeout(() => {
+        setVisibleIndex(hoveredIndex);
+      }, 300);
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
+      return () => clearTimeout(timer);
+    }
+  }, [hoveredIndex]);
+
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
   };
 
   return (
@@ -74,41 +83,65 @@ const TeamSection = () => {
         {teamMembers.map((item, index) => (
           <div
             key={item.id}
-            className={`group flex h-full w-full flex-[1] flex-col overflow-hidden rounded-[60px]
-            bg-text duration-500 ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
+            className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[60px]
+            duration-300 ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
             ${
               hoveredIndex === index || (hoveredIndex === null && index === 0)
                 ? "flex-[2]"
-                : ""
+                : "flex-[1]"
             }`}
             onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
           >
             <div
-              className={`mt-auto flex flex-col justify-end duration-500 ease-in-out
+              className={`mt-auto flex flex-col justify-end duration-300 ease-in-out
               ${
                 hoveredIndex === index || (hoveredIndex === null && index === 0)
                   ? "h-[210px] w-full px-8 pb-6 pt-8 opacity-100 lg:h-[240px] lg:p-6"
                   : "h-0 w-0 px-0 pb-0 pt-0 opacity-0"
               }`}
             >
+              <div className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-text lg:right-[40%]">
+                <Image src={TeamMemberBackground} alt="background" />
+              </div>
               <div
-                className={`transition-opacity delay-[400ms] ease-in-out
-               ${
-                 hoveredIndex === index ||
-                 (hoveredIndex === null && index === 0)
-                   ? "opacity-100 duration-200"
-                   : "opacity-0 transition-none"
-               }
-              `}
+                className="relative z-10"
+                style={{
+                  opacity:
+                    hoveredIndex === index ||
+                    (hoveredIndex === null && index === 0)
+                      ? 1
+                      : 0,
+                  transition:
+                    hoveredIndex === index ||
+                    (hoveredIndex === null && index === 0)
+                      ? "opacity 250ms ease-in-out 300ms"
+                      : "",
+                  width:
+                    hoveredIndex === index ||
+                    (hoveredIndex === null && index === 0)
+                      ? ""
+                      : 0,
+                }}
               >
-                <p className="text-[19px] font-bold leading-[1.2] text-white delay-200">
+                <p
+                  className={`text-[19px] font-bold leading-[1.2] text-white delay-300 duration-300 ${
+                    visibleIndex !== index ? "hidden" : "block"
+                  }`}
+                >
                   {item.name}
                 </p>
-                <p className="mt-0.5 text-[15px] leading-[1.4] text-white delay-200">
+                <p
+                  className={`mt-0.5 text-[15px] leading-[1.4] text-white delay-300 duration-300 ${
+                    visibleIndex !== index ? "hidden" : "block"
+                  }`}
+                >
                   {item.position}
                 </p>
-                <p className="mt-2 text-[15px] leading-[1.4] text-white delay-200">
+                <p
+                  className={`mt-2 text-[15px] leading-[1.4] text-white delay-300 duration-300 ${
+                    visibleIndex !== index ? "hidden" : "block"
+                  }`}
+                >
                   {item.description}
                 </p>
                 <div className="mt-3 flex gap-2">
@@ -151,11 +184,11 @@ const TeamSection = () => {
                 </div>
               </div>
             </div>
-            <div className="h-full w-full max-lg:max-h-[350px]">
+            <div className="relative z-10 h-full max-h-[350px] w-full overflow-hidden duration-300 ease-in-out">
               <Image
                 src={item.src}
                 alt={item.alt}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover duration-300 ease-in-out"
               />
             </div>
           </div>
