@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import tailwindcss_motion from "tailwindcss-motion";
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -41,6 +43,6 @@ const config: Config = {
       "accordion-up": "accordion-up 0.2s ease-out",
     },
   },
-  plugins: [],
+  plugins: [tailwindcss_motion],
 };
 export default config;
