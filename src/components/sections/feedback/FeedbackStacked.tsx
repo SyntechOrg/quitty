@@ -84,9 +84,10 @@ export const FeedbackStacked = () => {
                   data={CONTENT}
                   height={340}
                   maxVisibleSlide={5}
-                  customScales={[1, 0.95, 0.85, 0.3]}
+                  customScales={[1, 0.95, 0.85, 0]}
                   fadeDistance={slideFadeDistance}
-                  transitionTime={500}
+                  transitionTime={350}
+                  disableSwipe
                 />
               );
             }}
@@ -156,7 +157,10 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
         <div
           className="card-overlay h-full w-full"
           onClick={() => {
-            if (!isCenterSlide) swipeTo(slideIndex);
+            if (!isCenterSlide) {
+              if (slideIndex < 0) swipeTo(-1);
+              else swipeTo(1);
+            }
           }}
         />
       </div>
