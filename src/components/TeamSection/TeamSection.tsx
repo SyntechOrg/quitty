@@ -7,6 +7,7 @@ import LabiSahitaj from "../.././../public/assets/images/Labi-Sahitaj.png";
 import FacebookIcon from "../../../public/assets/images/team-member-facebook-icon.png";
 import YoutubeIcon from "../../../public/assets/images/team-member-youtube-icon.png";
 import BeIcon from "../../../public/assets/images/team-member-be-icon.png";
+import TeamMemberBackground from "../../../public/assets/images/team-member-background.png";
 import { useTranslations } from "next-intl";
 
 const teamMembers = [
@@ -82,8 +83,8 @@ const TeamSection = () => {
         {teamMembers.map((item, index) => (
           <div
             key={item.id}
-            className={`group flex h-full w-full flex-col overflow-hidden rounded-[60px]
-            bg-text duration-300 ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
+            className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[60px]
+            duration-300 ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
             ${
               hoveredIndex === index || (hoveredIndex === null && index === 0)
                 ? "flex-[2]"
@@ -99,7 +100,11 @@ const TeamSection = () => {
                   : "h-0 w-0 px-0 pb-0 pt-0 opacity-0"
               }`}
             >
+              <div className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-text lg:right-[40%]">
+                <Image src={TeamMemberBackground} alt="background" />
+              </div>
               <div
+                className="relative z-10"
                 style={{
                   opacity:
                     hoveredIndex === index ||
@@ -109,7 +114,7 @@ const TeamSection = () => {
                   transition:
                     hoveredIndex === index ||
                     (hoveredIndex === null && index === 0)
-                      ? "opacity 300ms ease-in-out 310ms"
+                      ? "opacity 250ms ease-in-out 300ms"
                       : "",
                   width:
                     hoveredIndex === index ||
@@ -179,21 +184,7 @@ const TeamSection = () => {
                 </div>
               </div>
             </div>
-            <div
-              // style={{
-              //   scale:
-              //     hoveredIndex === index ||
-              //     (hoveredIndex === null && index === 0)
-              //       ? 0.9
-              //       : 1,
-              //   borderRadius:
-              //     hoveredIndex === index ||
-              //     (hoveredIndex === null && index === 0)
-              //       ? 54
-              //       : 60,
-              // }}
-              className="h-full max-h-[350px] w-full overflow-hidden duration-300 ease-in-out"
-            >
+            <div className="relative z-10 h-full max-h-[350px] w-full overflow-hidden duration-300 ease-in-out">
               <Image
                 src={item.src}
                 alt={item.alt}
