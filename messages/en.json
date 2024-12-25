@@ -34,7 +34,6 @@
     "FaqAnswer2": "Paper receipts often contain harmful chemicals.",
     "FaqQuestion3": "Customer Preferences",
     "FaqAnswer3": "69% of consumers prefer brands that offer eco-friendly solutions.",
-
     "SpotlightTitle": "Spotlight on distinctive features",
     "SpotCard1Users": "Worldwide user",
     "SpotCard1Text": "Available users that always Ove us",
@@ -87,7 +86,16 @@
   },
   "About": {
     "ourTeam": "Our Team",
-    "ourTeamText": "Meet the People Behind Quitty"
+    "ourTeamText": "Meet the People Behind Quitty",
+    "CoreUndertitle": "Our Core Values",
+    "CoreTitle": "Innovation, Sustainability, and Customer-Centricity",
+    "Core-faqQuestion1": "Innovation",
+    "Core-faqAnswer1": "We’re continuously pushing the boundaries of technology to offer cutting-edge solutions for retailers and consumers.",
+    "Core-faqQuestion2": "Sustainability",
+    "Core-faqAnswer2": "We’re continuously pushing the boundaries of technology to offer cutting-edge solutions for retailers and consumers.",
+    "Core-faqQuestion3": "Customer-Centricity",
+    "Core-faqAnswer3": "We’re continuously pushing the boundaries of technology to offer cutting-edge solutions for retailers and consumers.",
+    "button": "Get Started"
   },
   "Header": {
     "Home": "Home",

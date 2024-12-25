@@ -9,6 +9,7 @@ import YoutubeIcon from "../../../public/assets/images/team-member-youtube-icon.
 import BeIcon from "../../../public/assets/images/team-member-be-icon.png";
 import TeamMemberBackground from "../../../public/assets/images/team-member-background.png";
 import { useTranslations } from "next-intl";
+import {FadeIn} from "@/components/fade-in/FadeIn";
 
 const teamMembers = [
   {
@@ -59,7 +60,7 @@ const TeamSection = () => {
     if (hoveredIndex !== null) {
       const timer = setTimeout(() => {
         setVisibleIndex(hoveredIndex);
-      }, 300);
+      }, 400);
 
       return () => clearTimeout(timer);
     }
@@ -70,21 +71,21 @@ const TeamSection = () => {
   };
 
   return (
-    <div className="ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)] mt-20 w-screen lg:mt-32">
-      <div className="mx-auto w-[90%] max-w-[600px] lg:max-w-[1280px]">
+    <div className="ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)] mt-32 w-screen lg:mt-52">
+      <FadeIn className="mx-auto w-[90%] max-w-[600px] lg:max-w-[1280px]">
         <p className="text-[16px] font-medium leading-[1.2] text-primary lg:text-[18px]">
           {t("ourTeam")}
         </p>
         <h4 className="mt-2 text-[24px] font-medium leading-[1.333] text-text lg:text-[32px]">
           {t("ourTeamText")}
         </h4>
-      </div>
-      <div className="mx-auto mt-9 flex w-[95%] max-w-[1660px] flex-col items-center gap-x-1.5 gap-y-6 lg:w-[99%] lg:flex-row">
+      </FadeIn>
+      <FadeIn className="mx-auto mt-9 flex w-[95%] max-w-[1660px] flex-col items-center gap-x-1.5 gap-y-6 lg:w-[99%] lg:flex-row">
         {teamMembers.map((item, index) => (
           <div
             key={item.id}
             className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[60px]
-            duration-300 ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
+            duration-[400ms] ease-in-out max-lg:mx-auto max-lg:max-w-[400px] lg:flex-row
             ${
               hoveredIndex === index || (hoveredIndex === null && index === 0)
                 ? "flex-[2]"
@@ -93,7 +94,7 @@ const TeamSection = () => {
             onMouseEnter={() => handleMouseEnter(index)}
           >
             <div
-              className={`mt-auto flex flex-col justify-end duration-300 ease-in-out
+              className={`mt-auto flex flex-col justify-end duration-[400ms] ease-in-out
               ${
                 hoveredIndex === index || (hoveredIndex === null && index === 0)
                   ? "h-[210px] w-full px-8 pb-6 pt-8 opacity-100 lg:h-[240px] lg:p-6"
@@ -114,7 +115,7 @@ const TeamSection = () => {
                   transition:
                     hoveredIndex === index ||
                     (hoveredIndex === null && index === 0)
-                      ? "opacity 250ms ease-in-out 300ms"
+                      ? "opacity 300ms ease-in-out 400ms"
                       : "",
                   width:
                     hoveredIndex === index ||
@@ -124,21 +125,21 @@ const TeamSection = () => {
                 }}
               >
                 <p
-                  className={`text-[19px] font-bold leading-[1.2] text-white delay-300 duration-300 ${
+                  className={`text-[19px] font-bold leading-[1.2] text-white delay-500 duration-[400ms] ${
                     visibleIndex !== index ? "hidden" : "block"
                   }`}
                 >
                   {item.name}
                 </p>
                 <p
-                  className={`mt-0.5 text-[15px] leading-[1.4] text-white delay-300 duration-300 ${
+                  className={`mt-0.5 text-[15px] leading-[1.4] text-white delay-500 duration-[400ms] ${
                     visibleIndex !== index ? "hidden" : "block"
                   }`}
                 >
                   {item.position}
                 </p>
                 <p
-                  className={`mt-2 text-[15px] leading-[1.4] text-white delay-300 duration-300 ${
+                  className={`mt-2 text-[15px] leading-[1.4] text-white delay-500 duration-[400ms] ${
                     visibleIndex !== index ? "hidden" : "block"
                   }`}
                 >
@@ -184,16 +185,16 @@ const TeamSection = () => {
                 </div>
               </div>
             </div>
-            <div className="relative z-10 h-full max-h-[350px] w-full overflow-hidden duration-300 ease-in-out">
+            <div className="relative z-10 h-full max-h-[350px] w-full overflow-hidden">
               <Image
                 src={item.src}
                 alt={item.alt}
-                className="h-full w-full object-cover duration-300 ease-in-out"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
         ))}
-      </div>
+      </FadeIn>
     </div>
   );
 };
