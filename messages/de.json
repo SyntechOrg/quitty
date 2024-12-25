@@ -87,7 +87,16 @@
   },
   "About": {
     "ourTeam": "Unser Team",
-    "ourTeamText": "Lernen Sie die Menschen hinter Quitty kennen"
+    "ourTeamText": "Lernen Sie die Menschen hinter Quitty kennen",
+    "CoreUndertitle": "Unsere Kernwerte",
+    "CoreTitle": "Innovation, Nachhaltigkeit und Kundenorientierung",
+    "Core-faqQuestion1": "Innovation",
+    "Core-faqAnswer1": "Wir treiben kontinuierlich die Grenzen der Technologie voran, um Einzelhändlern und Verbrauchern hochmoderne Lösungen anzubieten.",
+    "Core-faqQuestion2": "Nachhaltigkeit",
+    "Core-faqAnswer2": "Wir treiben kontinuierlich die Grenzen der Technologie voran, um Einzelhändlern und Verbrauchern hochmoderne Lösungen anzubieten.",
+    "Core-faqQuestion3": "Kundenorientierung",
+    "Core-faqAnswer3": "Wir treiben kontinuierlich die Grenzen der Technologie voran, um Einzelhändlern und Verbrauchern hochmoderne Lösungen anzubieten.",
+    "button": "Jetzt starten"
   },
   "Header": {
     "Home": "Startseite",
