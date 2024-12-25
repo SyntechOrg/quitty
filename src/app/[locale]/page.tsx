@@ -10,6 +10,7 @@ import PackagesSection from "@/components/sections/PackagesSection/PackagesSecti
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import { useTranslations } from "next-intl";
+import VideoSection from "@/components/video-section/video-section";
 
 const Home = () => {
   const t = useTranslations("Home");
@@ -37,6 +38,7 @@ const Home = () => {
         </FadeIn>
         <PromoSection />
         <HowItWorksSection />
+        <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
         <SpotLightSection />
         <FeedbackStacked />
         <PackagesSection />

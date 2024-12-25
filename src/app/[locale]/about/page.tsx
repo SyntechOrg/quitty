@@ -8,6 +8,7 @@ import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import TeamSection from "@/components/TeamSection/TeamSection";
 import CoreValuesSection from "@/components/core-values/CoreValuesSection";
+import VideoSection from "@/components/video-section/video-section";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -24,6 +25,7 @@ const AboutPage = () => {
         text="Heading-text1"
       />
       <Mission />
+      <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
       <CoreValuesSection />
       <TeamSection />
       <ImpactSection />
