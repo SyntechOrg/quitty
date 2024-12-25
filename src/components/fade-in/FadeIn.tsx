@@ -11,10 +11,11 @@ import { motion } from "framer-motion";
 import classNames from "classnames";
 import React from "react";
 
-type FadeInProps = HTMLAttributes<HTMLDivElement> & {
+type FadeInProps = {
   children: ReactNode;
   className?: string;
   id?: string;
+  style?: Record<string, string>;
 };
 
 export const FadeIn: FC<FadeInProps> = ({ children, className, id, ...rest }) => {

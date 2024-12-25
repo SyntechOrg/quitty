@@ -9,7 +9,7 @@ import YoutubeIcon from "../../../public/assets/images/team-member-youtube-icon.
 import BeIcon from "../../../public/assets/images/team-member-be-icon.png";
 import TeamMemberBackground from "../../../public/assets/images/team-member-background.png";
 import { useTranslations } from "next-intl";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const teamMembers = [
   {
