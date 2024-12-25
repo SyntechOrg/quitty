@@ -1,16 +1,23 @@
 "use client";
-import { ReactNode, useEffect, useRef, useState, type FC } from "react";
+import {
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+  type FC,
+  HTMLAttributes,
+} from "react";
 import { motion } from "framer-motion";
 import classNames from "classnames";
 import React from "react";
 
-type FadeInProps = {
+type FadeInProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
   className?: string;
   id?: string;
 };
 
-export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
+export const FadeIn: FC<FadeInProps> = ({ children, className, id, ...rest }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -42,6 +49,7 @@ export const FadeIn: FC<FadeInProps> = ({ children, className, id }) => {
       exit={{ opacity: 0 }}
       className={classNames(className)}
       id={id}
+      {...rest}
     >
       {children}
     </motion.div>

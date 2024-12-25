@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const ImpactSection = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 gap-x-10 gap-y-16 max-lg:mx-auto max-lg:max-w-[600px] lg:mt-36 lg:grid-cols-3">
+    <div className="mt-32 grid grid-cols-1 gap-x-10 gap-y-16 max-lg:mx-auto max-lg:max-w-[600px] lg:mt-52 lg:grid-cols-3">
       <FadeIn className="lg:row-span-2">
         <p className="text-[16px] font-medium leading-[1.2] text-primary lg:text-[18px]">
           Statistics
