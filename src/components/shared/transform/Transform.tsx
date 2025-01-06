@@ -7,6 +7,11 @@ import play from "public/assets/images/google-play-logo.png";
 import { useTranslations } from "next-intl";
 import bgBlur from "public/assets/images/bgBlur.png";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import { Button } from "@/components/shared";
+import AppleLogo from "../../../../public/assets/images/apple-logo.png";
+import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
+import GooglePlayLogo from "../../../../public/assets/images/google-play-logo.png";
+import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 
 const Transform = () => {
   const t = useTranslations("Shared");
@@ -49,18 +54,40 @@ const Transform = () => {
 
         <div className="flex w-fit flex-col items-center justify-center gap-[20px] lg:flex-row lg:justify-start">
           <button
-            className="border-color-[#00C9A5] flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+            className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
           >
-            <Image src={apple} alt="" className="w-[30px]" />
-            App Store
+            <Image
+              src={AppleLogo}
+              alt="Apple logo"
+              className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
+            />
+            <Image
+              src={AppleLogoWhite}
+              alt="Apple logo"
+              className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
+            />
+            <span className="text-text duration-150 group-hover:text-white">
+              App Store
+            </span>
           </button>
           <button
-            className="border-color-[#00C9A5] flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+            className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
           >
-            <Image src={play} alt="" className="w-[30px]" />
-            Google Play
+            <Image
+              src={GooglePlayLogo}
+              alt="Google Play logo"
+              className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
+            />
+            <Image
+              src={GooglePlayLogoWhite}
+              alt="Google Play logo"
+              className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
+            />
+            <span className="text-text duration-150 group-hover:text-white">
+              Google Play
+            </span>
           </button>
         </div>
       </div>

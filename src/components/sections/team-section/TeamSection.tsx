@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import QamilLika from "../.././../public/assets/images/Qamil-Lika.png";
-import LeoSahitaj from "../.././../public/assets/images/Leo-Sahitaj.png";
-import LabiSahitaj from "../.././../public/assets/images/Labi-Sahitaj.png";
-import FacebookIcon from "../../../public/assets/images/team-member-facebook-icon.png";
-import YoutubeIcon from "../../../public/assets/images/team-member-youtube-icon.png";
-import BeIcon from "../../../public/assets/images/team-member-be-icon.png";
-import TeamMemberBackground from "../../../public/assets/images/team-member-background.png";
+import QamilLika from "../../.././../public/assets/images/Qamil-Lika.png";
+import LeoSahitaj from "../../.././../public/assets/images/Leo-Sahitaj.png";
+import LabiSahitaj from "../../.././../public/assets/images/Labi-Sahitaj.png";
+import FacebookIcon from "../../../../public/assets/images/team-member-facebook-icon.png";
+import YoutubeIcon from "../../../../public/assets/images/team-member-youtube-icon.png";
+import BeIcon from "../../../../public/assets/images/team-member-be-icon.png";
+import TeamMemberBackground from "../../../../public/assets/images/team-member-background.png";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 

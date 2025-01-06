@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
 
 interface VideoSectionProps {
   url: string;
@@ -7,7 +7,7 @@ interface VideoSectionProps {
 
 const VideoSection: FC<VideoSectionProps> = (props) => {
   return (
-    <FadeIn>
+    <FadeIn className="mt-32 lg:mt-52">
       <iframe
         className="z-10 mx-auto aspect-video w-full rounded-[40px] lg:w-10/12"
         src={props.url}
