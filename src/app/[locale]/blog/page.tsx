@@ -93,7 +93,7 @@ const BlogPage = () => {
     <div className="container">
       <div className="mt-[150px] lg:mt-[200px]">
         <FadeIn>
-          <h1 className="text-[50px] font-bold lg:text-[60px]">{t("Title")}</h1>
+          <h1 className="text-[50px] font-medium lg:text-[60px]">{t("Title")}</h1>
           <h5 className="mb-[100px] text-[16px] lg:mb-[200px] lg:text-[18px]">
             {t("UnderTitle")}
           </h5>

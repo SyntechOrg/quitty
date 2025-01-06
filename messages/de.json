@@ -100,6 +100,13 @@
     "Core-faqAnswer3": "Wir treiben kontinuierlich die Grenzen der Technologie voran, um Einzelhändlern und Verbrauchern hochmoderne Lösungen anzubieten.",
     "button": "Jetzt starten"
   },
+  "Contact": {
+    "HeroTitle": "Kontaktieren Sie uns",
+    "HeroText": "Hinterlassen Sie uns ein paar Informationen, und wir melden uns bei Ihnen.",
+    "CtaButton": "Schicken Sie uns eine E-Mail",
+    "FormTitle": "Arbeitsanfragen",
+    "FormText": "Lassen Sie uns die Art und Weise, wie Sie Geschäfte machen, revolutionieren. Kontaktieren Sie uns noch heute, um zu erfahren, wie Quitty Ihrem Unternehmen zu mehr Nachhaltigkeit und Kundenzentrierung verhelfen kann."
+  },
   "Header": {
     "Home": "Startseite",
     "About": "Über uns",

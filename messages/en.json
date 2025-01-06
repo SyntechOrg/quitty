@@ -99,6 +99,13 @@
     "Core-faqAnswer3": "We’re continuously pushing the boundaries of technology to offer cutting-edge solutions for retailers and consumers.",
     "button": "Get Started"
   },
+  "Contact": {
+    "HeroTitle": "Contact Us",
+    "HeroText": "Leave us a little info, and we’ll be in touch.",
+    "CtaButton": "Send Us an Email",
+    "FormTitle": "Work inquiries",
+    "FormText": "Let’s revolutionize the way you do business. Contact us today to learn how Quitty can help your company become more sustainable and customer-centric."
+  },
   "Header": {
     "Home": "Home",
     "About": "About Us",
