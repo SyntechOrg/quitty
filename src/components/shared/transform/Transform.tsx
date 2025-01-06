@@ -27,7 +27,7 @@ const Transform = () => {
         className="absolute right-0 top-0 h-[100%] w-[100%] object-cover lg:w-[88%]"
       />
 
-      <div className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
+      <FadeIn className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
         <h1 className="max-w-[420px] text-center text-[28px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
           {t("TransformTitle")}
         </h1>
@@ -52,7 +52,7 @@ const Transform = () => {
           </div>
         </div>
 
-        <div className="flex w-fit flex-col items-center justify-center gap-[20px] lg:flex-row lg:justify-start">
+        <FadeIn className="flex w-fit flex-col items-center justify-center gap-[20px] lg:flex-row lg:justify-start">
           <button
             className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
@@ -89,13 +89,15 @@ const Transform = () => {
               Google Play
             </span>
           </button>
-        </div>
-      </div>
-      <Image
-        src={phone}
-        alt="Tranform Phone"
-        className="z-10 w-[300px] lg:w-[30%]"
-      />
+        </FadeIn>
+      </FadeIn>
+      <FadeIn className="z-10 w-[300px] lg:w-[30%]">
+        <Image
+          src={phone}
+          alt="Tranform Phone"
+          className="h-full w-full object-contain"
+        />
+      </FadeIn>
     </FadeIn>
   );
 };
