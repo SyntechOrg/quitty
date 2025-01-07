@@ -24,13 +24,10 @@ const Home = () => {
           <Partners />
         </div>
         <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
-          {/*<h2 className="text-[32px] font-medium leading-[1.4] lg:text-[42px]">*/}
-          {/*</h2>*/}
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
             duration={4.5}
             spread={55}
-            as="h2"
           >
             {t("ChangeTitle")};
           </TextShimmer>
@@ -47,7 +44,6 @@ const Home = () => {
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
             duration={3}
-            as="h4"
             spread={5}
           >
             {t("Sustainable")}
