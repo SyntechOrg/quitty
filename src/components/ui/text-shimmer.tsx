@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface TextShimmerProps {
-  children: string;
+  children: any;
   as?: React.ElementType;
   className?: string;
   duration?: number;
