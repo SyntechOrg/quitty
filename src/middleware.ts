@@ -10,8 +10,8 @@ const intlMiddleware = createMiddleware({
 const customMiddleware = async (request: NextRequest) => {
   const url = new URL(request.url);
 
-  // Check if the URL contains '/projects/something'
-  if (url.pathname.startsWith("/projects")) {
+  // Check if the URL contains '/blogs/something'
+  if (url.pathname.startsWith("/blogs")) {
     return NextResponse.next();
   }
 

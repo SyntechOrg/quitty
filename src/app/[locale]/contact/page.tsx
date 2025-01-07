@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { Metadata } from "next";
 import Partners from "@/components/shared/partners/Partners";
-import { FadeIn } from "@/components/fade-in/FadeIn";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import ContactHero from "@/components/sections/contact-hero/ContactHero";
 

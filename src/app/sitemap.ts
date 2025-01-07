@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { projectsDeutsch, projectsEnglish } from "projects";
+import { blogsDeutsch, blogsEnglish } from "blogs";
 
 const BASE_URL = "https://www.quitty.ch";
 
@@ -54,44 +54,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
-      url: `${BASE_URL}/projects`,
+      url: `${BASE_URL}/blogs`,
       lastModified: new Date(),
       changefreq: "monthly",
       priority: 0.8,
       alternates: {
         languages: {
-          en: `${BASE_URL}/en/projects`,
-          de: `${BASE_URL}/de/projects`,
+          en: `${BASE_URL}/en/blogs`,
+          de: `${BASE_URL}/de/blogs`,
         },
       },
     },
   ];
 
-  const projectPages = projectsEnglish.map((project) => ({
-    url: `${BASE_URL}/projects/${project.slug}`,
-    lastModified: new Date(project.date),
+  const blogPages = blogsEnglish.map((blog) => ({
+    url: `${BASE_URL}/blogs/${blog.slug}`,
+    // lastModified: new Date(blog.date),
     changefreq: "monthly",
     priority: 0.8,
     alternates: {
       languages: {
-        en: `${BASE_URL}/en/projects/${project.slug}`,
-        de: `${BASE_URL}/de/projects/${project.slug}`,
+        en: `${BASE_URL}/en/blogs/${blog.slug}`,
+        de: `${BASE_URL}/de/blogs/${blog.slug}`,
       },
     },
   }));
 
-  const projectPagesDeutsch = projectsDeutsch.map((project) => ({
-    url: `${BASE_URL}/de/projects/${project.slug}`,
-    lastModified: new Date(project.date),
+  const blogPagesDeutsch = blogsDeutsch.map((blog) => ({
+    url: `${BASE_URL}/de/blogs/${blog.slug}`,
+    // lastModified: new Date(blog.date),
     changefreq: "monthly",
     priority: 0.8,
     alternates: {
       languages: {
-        en: `${BASE_URL}/en/projects/${project.slug}`,
-        de: `${BASE_URL}/de/projects/${project.slug}`,
+        en: `${BASE_URL}/en/blogs/${blog.slug}`,
+        de: `${BASE_URL}/de/blogs/${blog.slug}`,
       },
     },
   }));
 
-  return [...staticPages, ...projectPages, ...projectPagesDeutsch];
+  return [...staticPages, ...blogPages, ...blogPagesDeutsch];
 }
