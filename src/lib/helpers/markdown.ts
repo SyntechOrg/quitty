@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "projects");
+const postsDirectory = path.join(process.cwd(), "blogs");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);

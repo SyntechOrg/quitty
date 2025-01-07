@@ -6,9 +6,10 @@ import Partners from "@/components/shared/partners/Partners";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import ImpactSection from "@/components/ImpactSection/ImpactSection";
-import TeamSection from "@/components/TeamSection/TeamSection";
+import TeamSection from "@/components/sections/team-section/TeamSection";
 import CoreValuesSection from "@/components/core-values/CoreValuesSection";
-import VideoSection from "@/components/video-section/video-section";
+import VideoSection from "@/components/sections/video-section/video-section";
+import AboutHero from "@/components/sections/about-hero/AboutHero";
 
 export const metadata: Metadata = {
   title: "Quitty | About Us",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <div className="container">
+      <AboutHero />
       <Partners />
       <Heading
         title="Heading-title1"

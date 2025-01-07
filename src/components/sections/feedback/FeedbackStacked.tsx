@@ -53,7 +53,7 @@ export const FeedbackStacked = () => {
   const t = useTranslations("Home");
   return (
     <div className="relative my-[80px] flex items-center justify-center py-[80px] lg:my-[150px] lg:py-[120px]">
-      <div className="absolute z-[-1] mx-auto h-full w-screen max-w-[1660px] overflow-clip">
+      <div className="absolute z-[-1] mx-auto h-full w-screen overflow-clip">
         <div className="h-full w-full bg-black/5 blur-sm">
           <Image
             src={FeedbackBackground}
