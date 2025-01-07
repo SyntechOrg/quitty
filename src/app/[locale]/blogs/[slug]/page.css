@@ -1,0 +1,23 @@
+.blog-content {
+    @apply mt-32 pb-32 pt-24;
+}
+
+.blog-content p {
+    @apply mt-4 text-[16px] leading-[1.6] text-[#161519];
+}
+
+.blog-content h2 {
+    @apply mt-5 w-full text-[24px] font-semibold leading-[1.25] text-[#111013] md:w-[70%] lg:text-[36px];
+}
+
+.blog-content h3 {
+    @apply mt-5 text-[22px] font-medium leading-[1.25] text-[#111013] lg:text-[28px];
+}
+
+.blog-content .image-wrapper {
+    @apply mt-5 h-full w-full;
+}
+
+.blog-content .image-wrapper img {
+    @apply h-full w-full object-contain;
+}

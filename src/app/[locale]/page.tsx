@@ -10,7 +10,8 @@ import PackagesSection from "@/components/sections/PackagesSection/PackagesSecti
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import { useTranslations } from "next-intl";
-import VideoSection from "@/components/video-section/video-section";
+import VideoSection from "@/components/sections/video-section/video-section";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const Home = () => {
   const t = useTranslations("Home");
@@ -23,18 +24,34 @@ const Home = () => {
           <Partners />
         </div>
         <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
-          <h2 className="text-[32px] font-medium leading-[1.4] lg:text-[42px]">
+          {/*<h2 className="text-[32px] font-medium leading-[1.4] lg:text-[42px]">*/}
+          {/*</h2>*/}
+          <TextShimmer
+            className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
+            duration={4.5}
+            spread={55}
+            as="h2"
+          >
             {t("ChangeTitle")};
-          </h2>
-          <p className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]">
+          </TextShimmer>
+          <TextShimmer
+            className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]"
+            duration={4.5}
+            as="h2"
+          >
             {t("ChangeUndertitle")}
-          </p>
+          </TextShimmer>
         </FadeIn>
         <InsightsSection />
         <FadeIn className="mx-auto max-w-[650px] text-center text-text">
-          <h3 className="text-[32px] font-medium leading-[1.4] lg:text-[58px]">
+          <TextShimmer
+            className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
+            duration={3}
+            as="h4"
+            spread={5}
+          >
             {t("Sustainable")}
-          </h3>
+          </TextShimmer>
         </FadeIn>
         <PromoSection />
         <HowItWorksSection />

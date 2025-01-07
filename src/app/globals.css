@@ -27,3 +27,4 @@ body {
 .category-text {
   @apply lg:text-[16px] md:text-[15px] text-[14px] font-bold text-primary leading-[1.25] tracking-[0.2em];
 }
+@layer base {}
