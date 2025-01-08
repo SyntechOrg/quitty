@@ -15,27 +15,225 @@ const AboutHero = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="rotary-media--wrapper">
-        <div className="rotary-item">
-        <Image src={HeroImage1} alt="" />
+      {/*<FadeIn className="circular-carousel">*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*  <div className="circular-carousel__item">*/}
+      {/*    <Image src={HeroImage1} alt="" />*/}
+      {/*  </div>*/}
+      {/*</FadeIn>*/}
+
+      <div className="circular-carousel">
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+
+
+
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
+        </div>
+        <div className="circular-carousel__item">
+          <div className="image--wrapper">
+            <Image src={HeroImage1} alt="" />
+          </div>
+          <div className="image--wrapper">
+            {/*<Image src={HeroImage1} alt="" className="rotate-[180deg]" />*/}
+          </div>
         </div>
       </div>
 

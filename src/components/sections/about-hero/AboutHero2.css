@@ -1,0 +1,64 @@
+.circular-carousel {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    margin-inline: auto;
+    height: 320px;
+}
+
+.circular-carousel__item {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    animation: circularPath 24s linear infinite;
+}
+
+.circular-carousel__item:nth-child(1) {
+    animation-delay: -16s;
+}
+
+.circular-carousel__item:nth-child(2) {
+    animation-delay: -12s;
+}
+
+.circular-carousel__item:nth-child(3) {
+    animation-delay: -8s;
+}
+
+.circular-carousel__item:nth-child(4) {
+    animation-delay: -4s;
+}
+
+.circular-carousel__item:nth-child(5) {
+    animation-delay: 0s;
+}
+
+.circular-carousel__item:nth-child(6) {
+    animation-delay: 4s;
+}
+
+.circular-carousel__item:nth-child(7) {
+    animation-delay: 8s;
+}
+
+@keyframes circularPath {
+    0% {
+        opacity: 1;
+        top: 30%;
+        left: 0%;
+        transform: translateX(-150%) rotate(-5deg);
+    }
+    50% {
+        opacity: 1;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 30%;
+        left: 100%;
+        transform: translateX(50%) rotate(5deg);
+    }
+}
