@@ -1,8 +1,9 @@
 .circular-carousel {
     position: relative;
-    top: 40px;
     display: flex;
     justify-content: center;
+    margin-inline: auto;
+    width: 100%;
     aspect-ratio: 1 / 2;
     z-index: 1;
     animation: circularPath 60s linear infinite;
@@ -72,57 +73,6 @@
     --i: 11;
 }
 
-
-.circular-carousel__item:nth-of-type(13) {
-    --i: 12;
-}
-
-
-.circular-carousel__item:nth-of-type(14) {
-    --i: 13;
-}
-
-.circular-carousel__item:nth-of-type(15) {
-    --i: 14;
-}
-
-.circular-carousel__item:nth-of-type(16) {
-    --i: 15;
-}
-
-.circular-carousel__item:nth-of-type(17) {
-    --i: 16;
-}
-
-.circular-carousel__item:nth-of-type(18) {
-    --i: 17;
-}
-
-.circular-carousel__item:nth-of-type(19) {
-    --i: 18;
-}
-
-.circular-carousel__item:nth-of-type(20) {
-    --i: 19;
-}
-
-
-.circular-carousel__item:nth-of-type(21) {
-    --i: 20;
-}
-
-
-.circular-carousel__item:nth-of-type(22) {
-    --i: 21;
-}
-
-.circular-carousel__item:nth-of-type(23) {
-    --i: 22;
-}
-
-.circular-carousel__item:nth-of-type(24) {
-    --i: 23;
-}
 
 .circular-carousel__item .image--wrapper {
     max-width: 200px;
