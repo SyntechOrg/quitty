@@ -43,10 +43,15 @@ const AboutHero = () => {
           {circularCarouselImages.map((image, index) => (
             <div key={index} className="circular-carousel__item">
               <div className="image--wrapper">
-                <Image src={image} alt="image" />
+                <Image src={image} alt="image" loading="eager" />
               </div>
               <div className="image--wrapper">
-                <Image src={image} alt="image" className="rotate-[180deg]" />
+                <Image
+                  src={image}
+                  alt="image"
+                  className="rotate-[180deg]"
+                  loading="eager"
+                />
               </div>
             </div>
           ))}

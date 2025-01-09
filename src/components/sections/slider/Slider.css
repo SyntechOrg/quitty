@@ -1,0 +1,29 @@
+.animate-slide__container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.animate-slide {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 4400px;
+    animation: slide 10s linear infinite;
+}
+
+@media (max-width: 1024px) {
+    .animate-slide {
+        width: 3000px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
