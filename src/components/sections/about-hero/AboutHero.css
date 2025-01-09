@@ -1,9 +1,21 @@
+.circular-carousel-container {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    height: 600px;
+    margin-bottom: -300px;
+    width: 100vw;
+    overflow: hidden;
+    padding-top: 3rem;
+    max-width: 100vw;
+}
+
 .circular-carousel {
     position: relative;
     display: flex;
     justify-content: center;
     margin-inline: auto;
     width: 100%;
+    max-width: 1280px;
     aspect-ratio: 1 / 2;
     z-index: 1;
     animation: circularPath 60s linear infinite;
@@ -23,6 +35,13 @@
     overflow: hidden;
     flex-direction: column;
     z-index: 1;
+
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .circular-carousel__item:nth-of-type(1) {
@@ -94,3 +113,42 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 1024px) {
+    .circular-carousel__item .image--wrapper {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 800px) {
+    .circular-carousel {
+        aspect-ratio: 1 / 2.55;
+    }
+}
+
+
+@media (max-width: 620px) {
+    .circular-carousel {
+        aspect-ratio: 1 / 3.5;
+    }
+}
+
+
+@media (max-width: 620px) {
+    .circular-carousel-container {
+        height: 450px;
+        margin-bottom: -225px;
+        padding-top: 0.25rem;
+    }
+
+    .circular-carousel__item .image--wrapper {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 450px) {
+    .circular-carousel {
+        aspect-ratio: 1 / 4;
+    }
+}
+

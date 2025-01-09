@@ -30,19 +30,33 @@ const AboutHero = () => {
 
   return (
     <div className="relative">
-      <FadeIn className="-mb-[300px] h-[600px] overflow-hidden pt-12">
+      <FadeIn className="circular-carousel-container">
+        {/*<div*/}
+        {/*  className="absolute bottom-[-5%] left-[-5%] top-[90%] z-10 w-[25%] bg-background*/}
+        {/*  blur-[12px] max-lg:bottom-[25%] max-lg:left-[-25%] max-lg:top-[45%]*/}
+        {/*  max-md:bottom-[35%] max-md:top-[40%] max-sm:bottom-[40%] max-sm:top-[35%]"*/}
+        {/*></div>*/}
+        {/*<div*/}
+        {/*  className="absolute bottom-[-5%] right-[-5%] top-[90%] z-10 w-[25%] bg-background*/}
+        {/*  blur-[12px] max-lg:bottom-[25%] max-lg:right-[-25%] max-lg:top-[45%]*/}
+        {/*  max-md:bottom-[35%] max-md:top-[40%] max-sm:bottom-[40%] max-sm:top-[35%]"*/}
+        {/*></div>*/}
+        <div
+          className="absolute bottom-[-5%] left-[-5%] top-[92%] z-10 w-[24%] bg-background blur-[10px]
+          max-[1460px]:hidden min-[2200px]:hidden"
+        ></div>
+        <div
+          className="absolute bottom-[-5%] right-[-5%] top-[92%] z-10 w-[24%] bg-background blur-[10px]
+          max-[1460px]:hidden min-[2200px]:hidden"
+        ></div>
         <div className="circular-carousel">
           {circularCarouselImages.map((image, index) => (
             <div key={index} className="circular-carousel__item">
               <div className="image--wrapper">
-                <Image src={image} alt={`Carousel item ${index + 1}`} />
+                <Image src={image} alt="image" />
               </div>
               <div className="image--wrapper">
-                <Image
-                  src={image}
-                  alt={`Carousel item ${index + 1} rotated`}
-                  className="rotate-[180deg]"
-                />
+                <Image src={image} alt="image" className="rotate-[180deg]" />
               </div>
             </div>
           ))}
