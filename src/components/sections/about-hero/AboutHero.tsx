@@ -10,35 +10,48 @@ import HeroImage1 from "../../../../public/assets/images/about-hero/about-hero-i
 import { useTranslations } from "next-intl";
 import "./AboutHero.css";
 
+const circularCarouselImages = [
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+  HeroImage1,
+];
+
 const AboutHero = () => {
   const t = useTranslations("About");
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="rotary-media--wrapper">
-        <div className="rotary-item">
-        <Image src={HeroImage1} alt="" />
+    <div className="relative">
+      <FadeIn className="circular-carousel-container">
+        <div
+          className="absolute bottom-[-5%] left-[-5%] top-[92%] z-10 w-[24%] bg-background blur-[10px]
+          max-[1460px]:hidden min-[2200px]:hidden"
+        ></div>
+        <div
+          className="absolute bottom-[-5%] right-[-5%] top-[92%] z-10 w-[24%] bg-background blur-[10px]
+          max-[1460px]:hidden min-[2200px]:hidden"
+        ></div>
+        <div className="circular-carousel">
+          {circularCarouselImages.map((image, index) => (
+            <div key={index} className="circular-carousel__item">
+              <div className="image--wrapper">
+                <Image src={image} alt="image" />
+              </div>
+              <div className="image--wrapper">
+                <Image src={image} alt="image" className="rotate-[180deg]" />
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-        <div className="rotary-item">
-          <Image src={HeroImage1} alt="" />
-        </div>
-      </div>
-
+      </FadeIn>
       <div className="relative z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:max-w-[640px] lg:pt-20">
         <FadeIn className="flex flex-col items-center">
           <h1 className="text-center text-[32px] font-medium leading-[1.2] text-text md:text-[40px] lg:text-[52px]">
