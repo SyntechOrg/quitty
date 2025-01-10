@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
@@ -10,11 +12,11 @@ import TeamSection from "@/components/sections/team-section/TeamSection";
 import CoreValuesSection from "@/components/core-values/CoreValuesSection";
 import VideoSection from "@/components/sections/video-section/video-section";
 import AboutHero from "@/components/sections/about-hero/AboutHero";
-
-export const metadata: Metadata = {
-  title: "Quitty | About Us",
-  description: "Learn more about Quitty and our mission!",
-};
+import withAuth from "@/components/hocs/withAuth";
+// export const metadata: Metadata = {
+//   title: "Quitty | About Us",
+//   description: "Learn more about Quitty and our mission!",
+// };
 
 const AboutPage = () => {
   return (
@@ -37,4 +39,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default withAuth(AboutPage);
