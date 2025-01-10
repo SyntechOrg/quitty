@@ -13,6 +13,7 @@ import CoreValuesSection from "@/components/core-values/CoreValuesSection";
 import VideoSection from "@/components/sections/video-section/video-section";
 import AboutHero from "@/components/sections/about-hero/AboutHero";
 import withAuth from "@/components/hocs/withAuth";
+
 // export const metadata: Metadata = {
 //   title: "Quitty | About Us",
 //   description: "Learn more about Quitty and our mission!",

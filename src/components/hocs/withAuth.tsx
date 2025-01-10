@@ -10,15 +10,13 @@ const withAuth = (WrappedComponent: React.ComponentType) => {
     const router = useRouter();
 
     useEffect(() => {
-      // Check if the user is logged in
       const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
       if (!isLoggedIn) {
-        router.push(`/${localActive}/login`); // Redirect to login if not logged in
+        router.push(`/${localActive}/login`);
       }
     }, [router]);
 
-    // Return the wrapped component only if the user is logged in
     return <WrappedComponent {...props} />;
   };
 

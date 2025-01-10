@@ -1,7 +1,7 @@
-"use client"; // Make this a client-side component
+"use client";
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // Correct import for Next.js 13+
+import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 
 const Login = () => {
@@ -12,18 +12,16 @@ const Login = () => {
   const localActive = useLocale();
 
   useEffect(() => {
-    // Redirect to login if already logged in
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     if (isLoggedIn) {
-      router.push(`/${localActive}`); // Or any page you want after login
+      router.push(`/${localActive}`);
     }
   }, [router]);
 
   const handleLogin = () => {
-    // Example: Check login credentials (replace with actual logic)
-    if (email === "admin@example.com" && password === "password123") {
+    if (email === "quitty@admin.com" && password === "Quittyadmin0") {
       localStorage.setItem("isLoggedIn", "true");
-      router.push(`/${localActive}`); // Redirect after login
+      router.push(`/${localActive}`);
     } else {
       alert("Invalid credentials");
     }
