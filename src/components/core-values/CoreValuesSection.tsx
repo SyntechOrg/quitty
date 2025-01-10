@@ -30,7 +30,7 @@ const CoreValuesSection = () => {
   const t = useTranslations("About");
 
   return (
-    <div className="mt-20 flex items-center justify-center gap-10 max-lg:flex-col lg:mt-32">
+    <div className="mt-32 flex items-center justify-center gap-10 max-lg:flex-col lg:mt-52">
       <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[620px]">
         <Image
           src={CoreImage}

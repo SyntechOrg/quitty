@@ -88,6 +88,7 @@ const ProductHero = () => {
             src={ProductHeroLeft1}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
         <motion.div
@@ -100,6 +101,7 @@ const ProductHero = () => {
             src={ProductHeroLeft2}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
         <motion.div
@@ -112,6 +114,7 @@ const ProductHero = () => {
             src={ProductHeroLeft3}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
         <motion.div
@@ -124,6 +127,7 @@ const ProductHero = () => {
             src={ProductHeroRight1}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
         <motion.div
@@ -136,6 +140,7 @@ const ProductHero = () => {
             src={ProductHeroRight2}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
         <motion.div
@@ -148,6 +153,7 @@ const ProductHero = () => {
             src={ProductHeroRight3}
             alt="product hero image"
             className="h-full w-full object-contain"
+            loading="eager"
           />
         </motion.div>
       </FadeIn>
@@ -156,6 +162,7 @@ const ProductHero = () => {
           src={ProductHeroResponsive}
           alt="product hero image"
           className="h-full w-full object-cover"
+          loading="eager"
         />
       </FadeIn>
     </div>
