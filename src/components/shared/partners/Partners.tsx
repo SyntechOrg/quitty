@@ -1,29 +1,29 @@
 import React from "react";
 import Image from "next/image";
-import tinder from "public/assets/images/tinder-1 1.png";
+import zara from "public/assets/images/zara.png";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 
 const Images = [
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
-  { src: tinder, alt: "tinder logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
+  { src: zara, alt: "zara logo" },
 ];
 
 const Partners = () => {
   const t = useTranslations("Shared");
 
   return (
-    <FadeIn className="mt-[60px] gap-[50px] lg:mt-[100px]">
+    <FadeIn className="my-32 gap-[50px] lg:my-52">
       <h1 className="mx-auto w-fit text-center text-[21px] font-medium leading-[1.4] text-text lg:text-[24px]">
         {t("PartnersTitle")}
       </h1>
@@ -37,8 +37,8 @@ const Partners = () => {
               src={image.src}
               alt={image.alt}
               className=""
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             />
           </div>
         ))}

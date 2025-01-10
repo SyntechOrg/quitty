@@ -1,48 +1,51 @@
 import React from "react";
 import { Icon, IconType } from "@/components/shared";
 import PackageCard from "@/components/sections/PackagesSection/PackageCard";
-import {FadeIn} from "@/components/fade-in/FadeIn";
+import { FadeIn } from "@/components/fade-in/FadeIn";
+import { useTranslations } from "next-intl";
 
 const packages = [
   {
-    type: "Basis-Paket",
+    type: "PackageCardTitle1",
     features: [
-      "Unlimited receipt storage",
-      "Advanced spending insights and analytics",
-      "Priority access to partnered brand discounts",
-      "Priority customer support",
-      "Customizable receipt categories",
+      "PackageCardFeatures1-1",
+      "PackageCardFeatures1-2",
+      "PackageCardFeatures1-3",
+      "PackageCardFeatures1-4",
+      "PackageCardFeatures1-5",
     ],
-    forWho: "(Für Einzelpersonen)",
+    forWho: "PackageCardWho1",
     price: "0.00",
   },
   {
-    type: "Pro Paket",
+    type: "PackageCardTitle2",
     features: [
-      "Unlimited receipt storage",
-      "Advanced spending insights and analytics",
-      "Priority access to partnered brand discounts",
-      "Priority customer support",
-      "Customizable receipt categories",
+      "PackageCardFeatures2-1",
+      "PackageCardFeatures2-2",
+      "PackageCardFeatures2-3",
+      "PackageCardFeatures2-4",
+      "PackageCardFeatures2-5",
     ],
-    forWho: "(Für Power-User)",
+    forWho: "PackageCardWho2",
     price: "4.99",
   },
   {
-    type: "Business Paket",
+    type: "PackageCardTitle3",
     features: [
-      "Unlimited receipt storage",
-      "Advanced spending insights and analytics",
-      "Priority access to partnered brand discounts",
-      "Priority customer support",
-      "Customizable receipt categories",
+      "PackageCardFeatures3-1",
+      "PackageCardFeatures3-2",
+      "PackageCardFeatures3-3",
+      "PackageCardFeatures3-4",
+      "PackageCardFeatures3-5",
     ],
-    forWho: "(Für Einzelhändler und Unternehmen)",
+    forWho: "PackageCardWho3",
     price: "29.99",
   },
 ];
 
 const PackagesSection = () => {
+  const t = useTranslations("Home");
+
   return (
     <div>
       <FadeIn className="mx-auto mt-20 max-w-[650px]">
@@ -51,16 +54,16 @@ const PackagesSection = () => {
           className="mx-auto h-14 w-14 object-contain"
         />
         <h6 className="mt-3 text-center text-[32px] font-semibold leading-[1.2] text-text lg:mt-4 lg:text-[48px]">
-          Entsperren Sie alle Vorteile
+          {t("PackageTitle")}
         </h6>
       </FadeIn>
       <div className="mt-14 flex w-full gap-y-6 max-lg:mx-auto max-lg:max-w-[420px] max-lg:flex-col lg:mt-20">
         {packages.map((pkg, index) => (
           <PackageCard
             key={index}
-            type={pkg.type}
+            type={t(pkg.type)}
             features={pkg.features}
-            forWho={pkg.forWho}
+            forWho={t(pkg.forWho)}
             price={pkg.price}
           />
         ))}

@@ -11,50 +11,49 @@ import FeedbackBackground from "../../../../public/assets/images/feedback-backgr
 import { Icon, IconType } from "@/components/shared";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
 import AvatarPlaceholder from "../../../../public/assets/images/avatar-placeholder.png";
+import { useTranslations } from "next-intl";
 
 const CONTENT = [
   {
     bgColor: "#323CD2",
     avatar: AvatarPlaceholder,
     name: "Retailer X",
-    city: "Switzerland",
+    city: "FeedbackCardCountry1",
     stars: 5,
-    review:
-      "“Seit der Integration von Quitty haben wir die Papierkosten um 35 % reduziert und einen Anstieg der Wiederholungskäufe um 25 % verzeichnet.”",
+    review: "FeedbackCardContent1",
     date: "20 Mar, 2024",
   },
   {
     bgColor: "#00C9A5",
     avatar: AvatarPlaceholder,
     name: "Retailer X",
-    city: "Switzerland",
+    city: "FeedbackCardCountry2",
     stars: 4,
-    review:
-      "“Seit der Integration von Quitty haben wir die Papierkosten um 35 % reduziert und einen Anstieg der Wiederholungskäufe um 25 % verzeichnet.”",
+    review: "FeedbackCardContent2",
     date: "21 Mar, 2024",
   },
   {
     bgColor: "#3F7CF3",
     avatar: AvatarPlaceholder,
     name: "Retailer X",
-    city: "Switzerland",
+    city: "FeedbackCardCountry3",
     stars: 5,
-    review:
-      "“Since integrating Quitty, we’ve reduced paper costs by 35% and seen a 25% increase in repeat purchases.”",
+    review: "FeedbackCardContent3",
     date: "22 Mar, 2024",
   },
 ];
 
 export const FeedbackStacked = () => {
-  const ref = React.useRef<>();
+  const ref = React.useRef<any>();
   const isLargeScreen = useIsLargeScreen();
 
   const slideWidth = isLargeScreen ? 420 : 295;
   const slideFadeDistance = isLargeScreen ? 0.85 : 0.55;
 
+  const t = useTranslations("Home");
   return (
     <div className="relative my-[80px] flex items-center justify-center py-[80px] lg:my-[150px] lg:py-[120px]">
-      <div className="absolute z-[-1] mx-auto h-full w-screen max-w-[1660px] overflow-clip">
+      <div className="absolute z-[-1] mx-auto h-full w-screen overflow-clip">
         <div className="h-full w-full bg-black/5 blur-sm">
           <Image
             src={FeedbackBackground}
@@ -66,14 +65,13 @@ export const FeedbackStacked = () => {
       <div className="h-full w-full">
         <div className="mx-auto max-w-[650px]">
           <p className="text-center text-[18px] font-medium leading-[1.5] text-primary">
-            Erfolgsgeschichten
+            {t("FeedbackUndertitle")}
           </p>
           <h6 className="leading:text-[48px] mt-5 text-center text-[32px] font-medium leading-[1.5] text-text">
-            Sehen Sie, wie wir führenden Einzelhändlern zum Erfolg verholfen
-            haben.
+            {t("FeedbackTitle")}
           </h6>
         </div>
-        <div className="relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px]">
+        <div className="relative mx-auto mt-12 h-full min-h-[300px] w-full max-w-[800px] select-none">
           <ResponsiveContainer
             carouselRef={ref}
             render={(width, carouselRef) => {
@@ -86,9 +84,10 @@ export const FeedbackStacked = () => {
                   data={CONTENT}
                   height={340}
                   maxVisibleSlide={5}
-                  customScales={[1, 0.95, 0.85, 0.3]}
+                  customScales={[1, 0.95, 0.85, 0]}
                   fadeDistance={slideFadeDistance}
-                  transitionTime={500}
+                  transitionTime={350}
+                  disableSwipe
                 />
               );
             }}
@@ -119,6 +118,7 @@ export const FeedbackStacked = () => {
   );
 };
 
+// eslint-disable-next-line react/display-name
 const Slide = React.memo(function (props: StackedCarouselSlideProps) {
   const { dataIndex, isCenterSlide, swipeTo, slideIndex } = props;
   const [loadDelay, setLoadDelay] = React.useState<any>();
@@ -141,6 +141,8 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
 
   const card = CONTENT[dataIndex];
 
+  const t = useTranslations("Home");
+
   return (
     <div
       className="twitch-card overflow-clip rounded-[52px]"
@@ -155,7 +157,10 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
         <div
           className="card-overlay h-full w-full"
           onClick={() => {
-            if (!isCenterSlide) swipeTo(slideIndex);
+            if (!isCenterSlide) {
+              if (slideIndex < 0) swipeTo(-1);
+              else swipeTo(1);
+            }
           }}
         />
       </div>
@@ -174,7 +179,7 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
               {card.name}
             </p>
             <p className="text-[15px] font-medium leading-[1.4] text-white lg:text-[16px]">
-              {card.city}
+              {t(card.city)}
             </p>
           </div>
         </div>
@@ -196,7 +201,7 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
         </div>
         <div className="mt-4 lg:mt-5">
           <p className="text-[16px] font-medium leading-[1.4] text-white">
-            {card.review}
+            {t(card.review)}
           </p>
           <p className="mt-2 text-[15px] font-medium leading-[1.4] text-white lg:mt-3 lg:text-[16px]">
             {card.date}

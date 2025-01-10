@@ -9,8 +9,12 @@ import SpotLightSection from "@/components/sections/spotlight-section/SpotLightS
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
+import { useTranslations } from "next-intl";
+import VideoSection from "@/components/sections/video-section/video-section";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const Home = () => {
+  const t = useTranslations("Home");
   return (
     <>
       <HomeHeroBg />
@@ -20,22 +24,34 @@ const Home = () => {
           <Partners />
         </div>
         <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
-          <h2 className="text-[32px] font-medium leading-[1.4] lg:text-[42px]">
-            Verändere die Art und Weise, wie du deine Quittungen einfach
-            verwaltest.
-          </h2>
-          <p className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]">
-            Bau Loyalität auf, spare Geld und werde mühelos umweltfreundlich.
-          </p>
+          <TextShimmer
+            className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
+            duration={4.5}
+            spread={55}
+          >
+            {t("ChangeTitle")};
+          </TextShimmer>
+          <TextShimmer
+            className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]"
+            duration={4.5}
+            as="h2"
+          >
+            {t("ChangeUndertitle")}
+          </TextShimmer>
         </FadeIn>
         <InsightsSection />
         <FadeIn className="mx-auto max-w-[650px] text-center text-text">
-          <h3 className="text-[32px] font-medium leading-[1.4] lg:text-[58px]">
-            Nachhaltig, effizient und ansprechend.
-          </h3>
+          <TextShimmer
+            className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
+            duration={3}
+            spread={5}
+          >
+            {t("Sustainable")}
+          </TextShimmer>
         </FadeIn>
         <PromoSection />
         <HowItWorksSection />
+        <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
         <SpotLightSection />
         <FeedbackStacked />
         <PackagesSection />
