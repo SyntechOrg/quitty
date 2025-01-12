@@ -13,14 +13,18 @@ const PromoTitleSection: FC<PromoTitleSectionProps> = (props) => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const scale = useTransform(scrollYProgress, [0.25, 0.6, 0.8, 1], [0.75, 1, 1, 0.75]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.6, 0.8, 1], [0, 1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0.25, 0.6, 1], [0.8, 0.9, 1]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.25, 0.6, 0.9, 1],
+    [0, 1, 1, 0],
+  );
 
   return (
-    <div ref={targetRef} className="h-[200vh] mt-[-100vh] mb-[-100vh]">
+    <div ref={targetRef} className="mb-[-100vh] mt-[-100vh] h-[200vh]">
       <motion.div
         style={{ scale, opacity }}
-        className="sticky top-[calc(50vh-90px)]  max-w-[650px] text-center text-text mx-auto"
+        className="sticky top-[calc(50vh-90px)]  mx-auto max-w-[650px] text-center text-text"
       >
         <TextShimmer
           className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
