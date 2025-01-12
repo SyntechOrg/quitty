@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import { Metadata } from "next";
 import Partners from "@/components/shared/partners/Partners";
@@ -8,13 +9,14 @@ import Features from "@/components/sections/features/Features";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import ProductHero from "@/components/sections/product-hero/ProductHero";
+import withAuth from "@/components/hocs/withAuth";
 
-export const metadata: Metadata = {
-  title: "Quitty | Product",
-  description: "Our products",
-};
+// export const metadata: Metadata = {
+//   title: "Quitty | Product",
+//   description: "Our products",
+// };
 
-const ContactPage: FC = () => (
+const ProductPage: FC = () => (
   <div className="container">
     <ProductHero />
     <div className="my-32 lg:my-44">
@@ -33,4 +35,4 @@ const ContactPage: FC = () => (
   </div>
 );
 
-export default ContactPage;
+export default withAuth(ProductPage);

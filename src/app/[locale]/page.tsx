@@ -1,3 +1,5 @@
+"use client";
+
 import HomeHero from "@/components/sections/home-hero/HomeHero";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import InsightsSection from "@/components/sections/insights-section/InsightsSection";
@@ -13,6 +15,7 @@ import { useTranslations } from "next-intl";
 import VideoSection from "@/components/sections/video-section/video-section";
 import { TextShimmer } from "@/components/ui/text-shimmer";
 import PromoTitleSection from "@/components/promo-title-section/PromoTitleSection";
+import withAuth from "@/components/hocs/withAuth";
 
 const Home = () => {
   const t = useTranslations("Home");
@@ -54,4 +57,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withAuth(Home);

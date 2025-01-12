@@ -1,7 +1,9 @@
+"use client";
 import { useTranslations } from "next-intl";
 import React from "react";
 import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import withAuth from "@/components/hocs/withAuth";
 
 const TermsPage = () => {
   const t = useTranslations("Terms");
@@ -36,4 +38,4 @@ const TermsPage = () => {
   );
 };
 
-export default TermsPage;
+export default withAuth(TermsPage);
