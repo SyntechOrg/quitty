@@ -1,7 +1,9 @@
+"use client";
 import { useTranslations } from "next-intl";
 import React from "react";
 import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import withAuth from "@/components/hocs/withAuth";
 
 const PrivacyPage = () => {
   const t = useTranslations("Privacy");
@@ -43,4 +45,4 @@ const PrivacyPage = () => {
   );
 };
 
-export default PrivacyPage;
+export default withAuth(PrivacyPage);

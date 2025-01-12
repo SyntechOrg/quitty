@@ -23,7 +23,7 @@ const Partners = () => {
   const t = useTranslations("Shared");
 
   return (
-    <FadeIn className="mt-[60px] gap-[50px] lg:mt-[100px]">
+    <FadeIn className="my-32 gap-[50px] lg:my-52">
       <h1 className="mx-auto w-fit text-center text-[21px] font-medium leading-[1.4] text-text lg:text-[24px]">
         {t("PartnersTitle")}
       </h1>
