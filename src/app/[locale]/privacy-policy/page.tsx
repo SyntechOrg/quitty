@@ -7,6 +7,7 @@ import withAuth from "@/components/hocs/withAuth";
 
 const PrivacyPage = () => {
   const t = useTranslations("Privacy");
+
   return (
     <div className="container">
       <FadeIn className="mt-[150px] lg:mt-[200px]">
