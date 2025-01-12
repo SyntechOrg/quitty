@@ -14,6 +14,9 @@ const ImpressumPage = () => {
         className="mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px]
      [&>p]:text-[14px] [&>p]:leading-[23px] md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
       >
+        <h1 className="text-[40px] font-bold md:text-[50px] lg:text-[60px]">
+          {t("Title")}
+        </h1>
         <p>{t("Paragraph1-1")}</p>
         <p>{t("Paragraph1-2")}</p>
         <p>{t("Paragraph1-3")}</p>

@@ -5,8 +5,8 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
-const PrivacyPage = () => {
-  const t = useTranslations("Privacy");
+const CookiesPage = () => {
+  const t = useTranslations("Cookies");
 
   return (
     <div className="container">
@@ -14,8 +14,6 @@ const PrivacyPage = () => {
         <h1 className="text-[40px] font-bold md:text-[50px] lg:text-[60px]">
           {t("Title")}
         </h1>
-        <h5 className="text-[16px] md:text-[18px]">{t("UnderText")}</h5>
-
         <div
           className="mt-[75px] space-y-[15px] md:mt-[150px] md:space-y-[25px] [&>p]:text-[14px] [&>p]:leading-[23px]
         md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
@@ -46,4 +44,4 @@ const PrivacyPage = () => {
   );
 };
 
-export default withAuth(PrivacyPage);
+export default withAuth(CookiesPage);
