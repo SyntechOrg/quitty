@@ -5,8 +5,8 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
-const ImpressumPage = () => {
-  const t = useTranslations("Impressum");
+const CookiesPage = () => {
+  const t = useTranslations("Cookies");
 
   return (
     <div className="container">
@@ -42,4 +42,4 @@ const ImpressumPage = () => {
   );
 };
 
-export default withAuth(ImpressumPage);
+export default withAuth(CookiesPage);

@@ -24,6 +24,7 @@ const footerLegalLinks = [
   { text: "Terms", href: "terms-of-service" },
   { text: "Privacy", href: "privacy-policy" },
   { text: "Impressum", href: "impressum" },
+  { text: "Cookies", href: "cookies" },
 ];
 
 export const Footer = () => {
