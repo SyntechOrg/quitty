@@ -13,15 +13,15 @@ const PromoTitleSection: FC<PromoTitleSectionProps> = (props) => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const scale = useTransform(scrollYProgress, [0.25, 0.6, 1], [0.8, 0.9, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacity = useTransform(
     scrollYProgress,
-    [0.25, 0.6, 0.9, 1],
+    [0, 0.4, 0.8, 1],
     [0, 1, 1, 0],
   );
 
   return (
-    <div ref={targetRef} className="-mb-[100vh] -mt-[100vh] h-[200vh]">
+    <div ref={targetRef} className="-mb-[100vh] -mt-[100vh] h-[210vh]">
       <motion.div
         style={{ scale, opacity }}
         className="sticky top-[calc(50vh-90px)]  mx-auto max-w-[650px] text-center text-text"
