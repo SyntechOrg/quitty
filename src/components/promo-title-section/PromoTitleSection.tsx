@@ -21,13 +21,13 @@ const PromoTitleSection: FC<PromoTitleSectionProps> = (props) => {
   );
 
   return (
-    <div ref={targetRef} className="mb-[-100vh] mt-[-100vh] h-[200vh]">
+    <div ref={targetRef} className="-mb-[100vh] -mt-[100vh] h-[200vh]">
       <motion.div
         style={{ scale, opacity }}
         className="sticky top-[calc(50vh-90px)]  mx-auto max-w-[650px] text-center text-text"
       >
         <TextShimmer
-          className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
+          className="flex h-[180px] items-center justify-center text-[32px] font-medium leading-[1.4] lg:text-[58px]"
           duration={3}
           spread={5}
           as={props.as}
