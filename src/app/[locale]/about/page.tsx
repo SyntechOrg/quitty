@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
@@ -14,11 +14,26 @@ import VideoSection from "@/components/sections/video-section/video-section";
 import AboutHero from "@/components/sections/about-hero/AboutHero";
 import withAuth from "@/components/hocs/withAuth";
 
-// export const metadata: Metadata = {
-//   title: "Quitty | About Us",
-//   description: "Learn more about Quitty and our mission!",
-// };
-
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const lang = params.locale || "de";
+//
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty – About Us | Revolutionizing Retail",
+//       description: "At Quitty, we believe in transforming retail for a sustainable future. By eliminating paper receipts and enhancing customer engagement, we empower businesses to thrive in the digital age.",
+//     },
+//     de: {
+//       title: "Quitty – Über Uns | Einzelhandel Revolutionieren",
+//       description: "Bei Quitty glauben wir daran, den Einzelhandel für eine nachhaltige Zukunft zu transformieren. Durch die Abschaffung von Papierbelegen und die Verbesserung der Kundenbindung ermöglichen wir Unternehmen, im digitalen Zeitalter erfolgreich zu sein.",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
 const AboutPage = () => {
   return (
     <div className="container">

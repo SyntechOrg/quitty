@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : blogsDeutsch.find((post) => post.slug === slug);
 
   return {
-    title: `Syntech Solutions AG | ${product?.heroTitle}`,
+    title: product?.heroTitle,
+    description: product?.pageDescription,
     openGraph: {
       // images: product?.heroImage ? [product.heroImage] : [],
     },

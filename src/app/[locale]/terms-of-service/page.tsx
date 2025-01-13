@@ -5,6 +5,27 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const lang = params.locale || "de";
+//
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty – Terms of Service",
+//       description: "Review our terms and conditions for using Quitty. Learn about your rights, responsibilities, and how we ensure a seamless experience for all users.",
+//     },
+//     de: {
+//       title: "Quitty – Nutzungsbedingungen",
+//       description: "Lesen Sie unsere Nutzungsbedingungen für die Nutzung von Quitty. Erfahren Sie mehr über Ihre Rechte, Pflichten und wie wir ein reibungsloses Erlebnis für alle Nutzer gewährleisten.",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
+
 const TermsPage = () => {
   const t = useTranslations("Terms");
   return (

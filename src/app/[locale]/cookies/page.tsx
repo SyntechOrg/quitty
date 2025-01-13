@@ -5,6 +5,27 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const lang = params.locale || "de";
+//
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty | Contact Us",
+//       description: "Contact us for any inquiries or questions!",
+//     },
+//     de: {
+//       title: "Quitty | Kontaktiere uns",
+//       description: "Kontaktieren Sie uns bei Fragen oder Anliegen!",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
+
 const CookiesPage = () => {
   const t = useTranslations("Cookies");
 
