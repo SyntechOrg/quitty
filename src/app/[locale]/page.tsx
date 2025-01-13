@@ -17,6 +17,21 @@ import { TextShimmer } from "@/components/ui/text-shimmer";
 import PromoTitleSection from "@/components/promo-title-section/PromoTitleSection";
 import withAuth from "@/components/hocs/withAuth";
 
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty – Revolutionizing Digital Receipts",
+//       description: "Transform your retail experience with Quitty. Our all-in-one platform offers digital receipts, integrated loyalty rewards, and actionable customer insights, all while reducing your environmental footprint.",
+//     },
+//     de: {
+//       title: "Quitty – Revolutioniert Digitale Kassenbons",
+//       description: "Verwandeln Sie Ihr Einzelhandelserlebnis mit Quitty. Unsere All-in-One-Plattform bietet digitale Kassenbons, integrierte Treueprämien und umsetzbare Kundenanalysen – alles bei gleichzeitiger Reduzierung Ihres ökologischen Fussabdrucks.",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
+
+
 const Home = () => {
   const t = useTranslations("Home");
 

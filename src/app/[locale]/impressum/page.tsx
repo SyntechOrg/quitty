@@ -5,6 +5,27 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const lang = params.locale || "de";
+//
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty – Impressum",
+//       description: "Quitty is brought to you by SynTech Solutions AG. View our legal and company information here.",
+//     },
+//     de: {
+//       title: "Quitty – Impressum",
+//       description: "Quitty wird Ihnen von der SynTech Solutions AG zur Verfügung gestellt. Sehen Sie hier unsere rechtlichen und Unternehmensinformationen.",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
+
 const ImpressumPage = () => {
   const t = useTranslations("Impressum");
 

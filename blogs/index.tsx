@@ -5,12 +5,28 @@ export type Blog = {
   slug: string;
   heroTitle: string;
   heroText: string;
-  content: any[];
+  pageDescription?: string;
+  content: Content[];
+};
+
+type Content = ImageContent | TextContent;
+
+type ImageContent = {
+  type: "image";
+  src: string;
+  alt: string;
+};
+
+type TextContent = {
+  type: "h2" | "h3" | "p";
+  text: string;
 };
 
 export const blogsEnglish: Array<Blog> = [
   {
     slug: "how-digital-receipt-data-can-enhance-card-linked-loyalty-programs",
+    pageDescription:
+      "How Digital Receipt Data Can Enhance Card-Linked Loyalty Programs Quitty offers a technical solution within the retailers applications, enabling a better way to drive digital receipts back into their app as well as link the payment card to a loyalty ID number.",
     heroTitle:
       "How Digital Receipt Data Can Enhance Card-Linked Loyalty Programs",
     heroText: `Crafting the perfect palette with Material Design and Figma`,
@@ -76,6 +92,8 @@ export const blogsEnglish: Array<Blog> = [
 export const blogsDeutsch: Array<Blog> = [
   {
     slug: "how-digital-receipt-data-can-enhance-card-linked-loyalty-programs",
+    pageDescription:
+      "Wie digitale Belegdaten kartengebundene Treueprogramme verbessern können Quitty bietet eine technische Lösung innerhalb der Anwendungen des Einzelhandels, die es ermöglicht, digitale Quittungen besser in ihre Apps zu übertragen und die Zahlungskarte mit einer Treueprogramm-ID-Nummer zu verknüpfen.",
     heroTitle:
       "Wie Daten von digitalen Quittungen kartengebundene Treueprogramme verbessern können",
     heroText: `Die perfekte Farbpalette mit Material Design und Figma erstellen`,
