@@ -204,7 +204,8 @@
     "Impressum": "Impressum",
     "Cookies": "Cookies",
     "CardText": "Die Zukunft der digitalen Belege",
-    "Copyright": "Quitty. Erstellt von "
+    "Copyright": "Quitty. Erstellt von ",
+    "DataDeletionlink": "Daten löschen"
   },
   "Terms": {
     "Title": "Nutzungsbedingungen",
@@ -265,5 +266,41 @@
     "Paragraph-title": "",
     "Paragraph1-8": "8. Kontakt Falls Sie Fragen oder Bedenken zu dieser Cookie-Richtlinie haben, wenden Sie sich bitte an: Quitty AG c/o Treforma AG Grabenstrasse 25 6340 Baar, Schweiz E-Mail: kontakt@quitty.ch Telefon: +41 XX XXX XX XX Letzte Aktualisierung: 12/01/2025",
     "Paragraph1-9": ""
+  },
+  "DataDeletion": {
+    "Title": "Kontrolliere deine Daten",
+    "UnderText": "Bei Quitty respektieren wir deine Privatsphäre und geben dir die Möglichkeit, dein Konto und die zugehörigen Daten sicher zu löschen. Nutze diese Seite, um die Löschung deiner Daten zu beantragen, indem du die erforderlichen Informationen unten einreichst.",
+    "formTitle": "Datenlöschungsanfrage einreichen",
+    "formText": "Um dein Konto und alle zugehörigen Daten zu löschen, fülle bitte das untenstehende Formular aus.",
+    "formListT1": "1. Deine Details angeben",
+    "formListC1": "Gib deine registrierte E-Mail-Adresse, Telefonnummer und den Grund für deine Löschungsanfrage an.",
+    "formListT2": "2. Anfrage absenden",
+    "formListC2": "Nachdem du das Formular eingereicht hast, wird unser Team deine Identität überprüfen und deine Anfrage innerhalb von 30 Tagen bearbeiten.",
+    "formListT3": "3. Bestätigung",
+    "formListC3": "Du erhältst eine Bestätigungs-E-Mail, sobald deine Daten erfolgreich gelöscht wurden.",
+    "label1": "E-Mail (erforderlich)",
+    "input1": "Deine E-Mail",
+    "label2": "Telefon (erforderlich)",
+    "input2": "Deine Telefonnummer",
+    "label3": "Grund für die Löschung:",
+    "input3": "No longer using Quitty",
+    "formCheck": "Ich bin einverstanden, weiterhin E-Mails zu erhalten und meine Aktivitäten zur Verbesserung meiner Erfahrung tracken zu lassen.",
+    "formButton": "Anfrage absenden",
+    "impTitle": "Wichtige Informationen:",
+    "impText": "Mit dem Absenden dieses Formulars bestätigst du, dass alle deine Daten dauerhaft aus Quittys Systemen gelöscht werden, es sei denn, eine Speicherung ist gesetzlich vorgeschrieben.",
+    "contactTitle": "Kontaktiere unser Support Team",
+    "contactText": "Wenn du Probleme beim Ausfüllen des Formulars hast oder Fragen zum Prozess bestehen, melde dich gerne bei uns:",
+    "contactCardT1": "Geschäftssupport",
+    "contactCardI1": "Email: support@quitty.ch",
+    "contactCardC1": "Call us: +4409.120.6705",
+    "contactCardtt1": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)",
+    "contactCardT2": "Vertrieb:",
+    "contactCardI2": "Email: sales@quitty.ch",
+    "contactCardC2": "Call us: +4409.120.6705",
+    "contactCardtt2": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)",
+    "contactCardT3": "Allgemeine Anfragen:",
+    "contactCardI3": "Email: info@quitty.ch",
+    "contactCardC3": "Call us: +4409.120.6705",
+    "contactCardtt3": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)"
   }
 }

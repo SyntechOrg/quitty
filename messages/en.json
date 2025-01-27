@@ -203,7 +203,8 @@
     "Impressum": "Impressum",
     "Cookies": "Cookies",
     "CardText": "The future of Digital Receipts",
-    "Copyright": "Quitty. Created by "
+    "Copyright": "Quitty. Created by ",
+    "DataDeletionlink": "Delete Data"
   },
   "Terms": {
     "Title": "Terms of Service",
@@ -264,5 +265,41 @@
     "Paragraph-title": "",
     "Paragraph1-8": "8. Contact If you have any questions or concerns regarding this cookie policy, please contact us at: Quitty AG c/o Treforma AG Grabenstrasse 25, 6340 Baar, Switzerland Email: kontakt@quitty.ch Phone: +41 XX XXX XX XX Last Updated: 12/01/2025",
     "Paragraph1-9": ""
+  },
+  "DataDeletion": {
+    "Title": "Take Control of Your Data",
+    "UnderText": "At Quitty, we respect your privacy and provide you with the ability to delete your account and associated data securely. Use this page to request data deletion by submitting the required details below.",
+    "formTitle": "Submit a Data Deletion Request",
+    "formText": "To delete your account and all associated data, please complete the form below.",
+    "formListT1": "1. Fill in Your Details",
+    "formListC1": "Provide your registered email address, phone number, and the reason for your deletion request.",
+    "formListT2": "2. Submit Your Request",
+    "formListC2": "Once you submit the form, our team will verify your identity and process your request within 30 days",
+    "formListT3": "3. Confirmation",
+    "formListC3": "You will receive an email confirmation when your data has been successfully deleted.",
+    "label1": "Email (required)",
+    "input1": "Your email",
+    "label2": "Phone (required)",
+    "input2": "Your actual number",
+    "label3": "Reason for Deletion:",
+    "input3": "No longer using Quitty",
+    "formCheck": "I'm okay with getting emails and having that activity tracked to improve my experience.",
+    "formButton": "Submit Request",
+    "impTitle": "Important Information: ",
+    "impText": "By submitting this form, you acknowledge that all your data will be permanently deleted from Quitty's systems within 30 days, except where retention is required by law.",
+    "contactTitle": "Contact our Support Team",
+    "contactText": "If you have any issues completing the form or have questions about the process, feel free to reach out.",
+    "contactCardT1": "Business Support",
+    "contactCardI1": "Email: support@quitty.ch",
+    "contactCardC1": "Call us: +4409.120.6705",
+    "contactCardtt1": "Assistance hours: Monday - Friday  6 am to 8 pm EST (toll free)",
+    "contactCardT2": "Sales:",
+    "contactCardI2": "Email: sales@quitty.ch",
+    "contactCardC2": "Call us: +4409.120.6705",
+    "contactCardtt2": "Assistance hours: Monday - Friday  6 am to 8 pm EST (toll free)",
+    "contactCardT3": "General:",
+    "contactCardI3": "Email: info@quitty.ch",
+    "contactCardC3": "Email: info@quitty.ch",
+    "contactCardtt3": "Assistance hours: Monday - Friday  6 am to 8 pm EST (toll free)"
   }
 }
