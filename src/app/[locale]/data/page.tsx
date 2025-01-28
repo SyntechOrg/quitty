@@ -42,46 +42,46 @@ const DataPage = () => {
   ];
   return (
     <FadeIn className="mt-[120px] md:mt-[150px] lg:mt-[200px]">
-      <h1 className="text-[35px] container md:text-[50px] lg:text-[60px]">
+      <h1 className="container text-[35px] md:text-[50px] lg:text-[60px]">
         {t("Title")}
       </h1>
-      <h5 className="text-[15px] container md:text-[18px]">{t("UnderText")}</h5>
+      <h5 className="container text-[15px] md:text-[18px]">{t("UnderText")}</h5>
 
-      <div className="w-full bg-[#E9EAF066] lg:pt-[100px] lg:pb-[100px] lg:mt-[100px] lg:mb-[100px] md:pt-[80px] md:pb-[80px] md:mt-[80px] md:mb-[80px] pt-[40px] pb-[40px] mt-[40px] mb-[40px]">
-        <div className="container flex flex-col justify-center md:gap-[100px] gap-[50px]">
-          <div className="flex md:flex-row flex-col md:justify-between justify-center md:items-start items-center gap-[50px]">
-            <div className="md:w-[48%] w-full flex flex-col align-start justify-center gap-[20px]">
-              <h1 className="lg:text-[28px] md:text-[24px] text-[20px] text-[#111013] font-bold leading-[1.30]">
+      <div className="mb-[40px] mt-[40px] w-full bg-[#E9EAF066] pb-[40px] pt-[40px] md:mb-[80px] md:mt-[80px] md:pb-[80px] md:pt-[80px] lg:mb-[100px] lg:mt-[100px] lg:pb-[100px] lg:pt-[100px]">
+        <div className="container flex flex-col justify-center gap-[50px] md:gap-[100px]">
+          <div className="flex flex-col items-center justify-center gap-[50px] md:flex-row md:items-start md:justify-between">
+            <div className="align-start flex w-full flex-col justify-center gap-[20px] md:w-[48%]">
+              <h1 className="text-[20px] font-bold leading-[1.30] text-[#111013] md:text-[24px] lg:text-[28px]">
                 {t("formTitle")}
               </h1>
-              <p className="md:text-[16px] text-[14px] text-[#161519] leading-[1.70]">
+              <p className="text-[14px] leading-[1.70] text-[#161519] md:text-[16px]">
                 {t("formText")}
               </p>
               <div>
                 {listData.map((item, index) => (
                   <div key={index}>
-                    <h5 className="md:text-[14px] mb-[4px] mt-[4px] text-[13px] text-[#161519] font-[600] leading-[1.60]">
+                    <h5 className="mb-[4px] mt-[4px] text-[13px] font-[600] leading-[1.60] text-[#161519] md:text-[14px]">
                       {t(item.title)}
                     </h5>
-                    <p className="md:text-[14px] text-[13px]">{t(item.text)}</p>
+                    <p className="text-[13px] md:text-[14px]">{t(item.text)}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="md:w-[48%] w-full">
+            <div className="w-full md:w-[48%]">
               <form
-                className="w-full flex flex-col justify-center gap-[20px]"
+                className="flex w-full flex-col justify-center gap-[20px]"
                 action=""
               >
                 <div className="flex flex-col justify-center gap-[10px]">
                   <label
-                    className="md:text-[14px] text-[13px] text-[#161519] leading-[1.5]"
+                    className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
                     htmlFor="email"
                   >
                     {t("label1")}
                   </label>
                   <input
-                    className="bg-[#90919C14] h-[48px] text-[#000] rounded pl-[10px]"
+                    className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
                     name="email"
                     type="email"
                     placeholder={t("input1")}
@@ -89,13 +89,13 @@ const DataPage = () => {
                 </div>
                 <div className="flex flex-col justify-center gap-[10px]">
                   <label
-                    className="md:text-[14px] text-[13px] text-[#161519] leading-[1.5]"
+                    className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
                     htmlFor="phone"
                   >
                     {t("label2")}
                   </label>
                   <input
-                    className="bg-[#90919C14] h-[48px] text-[#000] rounded pl-[10px]"
+                    className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
                     name="phone"
                     type="tel"
                     placeholder={t("input2")}
@@ -103,13 +103,13 @@ const DataPage = () => {
                 </div>
                 <div className="flex flex-col justify-center gap-[10px]">
                   <label
-                    className="md:text-[14px] text-[13px] text-[#161519] leading-[1.5]"
+                    className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
                     htmlFor="reason"
                   >
                     {t("label3")}
                   </label>
                   <select
-                    className="bg-[#90919C14] h-[48px] text-[#60606B] rounded pl-[10px]"
+                    className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#60606B]"
                     name="reason"
                     value={t("input3")}
                   >
@@ -120,12 +120,12 @@ const DataPage = () => {
                 </div>
                 <div className="flex flex-row justify-start gap-[8px]">
                   <input className="rounded-md" type="checkbox" />
-                  <p className="leading-[1.85] md:text-[14px] text-[13px] text-[#161519]">
+                  <p className="text-[13px] leading-[1.85] text-[#161519] md:text-[14px]">
                     {t("formCheck")}
                   </p>
                 </div>
                 <button
-                  className="bg-[#111013] md:text-[16px] text-[14px] text-[#fff] rounded-md md:w-[180px] w-[160px] md:h-[48px] h-[43px]"
+                  className="h-[43px] w-[160px] rounded-md bg-[#111013] text-[14px] text-[#fff] md:h-[48px] md:w-[180px] md:text-[16px]"
                   type="submit"
                 >
                   {t("formButton")}
@@ -134,42 +134,42 @@ const DataPage = () => {
             </div>
           </div>
           <div>
-            <h1 className="md:text-[18px] text-[16px] text-[#161519] font-[600] leading-[1.60]">
+            <h1 className="text-[16px] font-[600] leading-[1.60] text-[#161519] md:text-[18px]">
               {t("impTitle")}
             </h1>
-            <p className="md:text-[16px] text-[14px] text-[#161519] leading-[1.60]">
+            <p className="text-[14px] leading-[1.60] text-[#161519] md:text-[16px]">
               {t("impText")}
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex md:flex-row flex-col md:justify-between justify-center md:gap-[unset] gap-[30px] container">
-        <div className="md:w-[23%] w-[100%]">
-          <h1 className="lg:text-[28px] md:text-[25px] text-[21px] mb-[13px] text-[#111013] font-bold leading-[1.3]">
+      <div className="container flex flex-col justify-center gap-[30px] md:flex-row md:justify-between md:gap-[unset]">
+        <div className="w-[100%] md:w-[23%]">
+          <h1 className="mb-[13px] text-[21px] font-bold leading-[1.3] text-[#111013] md:text-[25px] lg:text-[28px]">
             {t("contactTitle")}
           </h1>
-          <p className="md:text-[16px] text-[14px] text-[#111013] leading-[1.7]">
+          <p className="text-[14px] leading-[1.7] text-[#111013] md:text-[16px]">
             {t("contactText")}
           </p>
         </div>
         {contactData.map((item, index) => (
           <div
-            className="md:w-[23%] w-[100%] flex flex-col justify-start md:gap-[15px] gap-[10px]"
+            className="flex w-[100%] flex-col justify-start gap-[10px] md:w-[23%] md:gap-[15px]"
             key={index}
           >
-            <h1 className="lg:text-[20px] md:text-[18px] text-[16px] text-[#111013] leading-[1.35] font-bold">
+            <h1 className="text-[16px] font-bold leading-[1.35] text-[#111013] md:text-[18px] lg:text-[20px]">
               {t(item.title)}
             </h1>
             <div>
-              <p className="md:text-[16px] text-[14px] text-[#111013]">
+              <p className="text-[14px] text-[#111013] md:text-[16px]">
                 {t(item.info1)}
               </p>
-              <p className="md:text-[18px] text-[16px] text-[#111013] font-semibold">
+              <p className="text-[16px] font-semibold text-[#111013] md:text-[18px]">
                 {t(item.info2)}
               </p>
             </div>
-            <p className="md:text-[16px] text-[14px] text-[#111013] leading-[1.4]">
+            <p className="text-[14px] leading-[1.4] text-[#111013] md:text-[16px]">
               {t(item.text)}
             </p>
           </div>
