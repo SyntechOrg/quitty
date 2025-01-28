@@ -5,6 +5,27 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
 
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const lang = params.locale || "de";
+//
+//   const metadataMap = {
+//     en: {
+//       title: "Quitty – Privacy Policy",
+//       description: "Your privacy matters to us. Learn how Quitty protects your personal data and ensures compliance with the highest security standards.",
+//     },
+//     de: {
+//       title: "Quitty – Datenschutzrichtlinie",
+//       description: "Ihre Privatsphäre ist uns wichtig. Erfahren Sie, wie Quitty Ihre persönlichen Daten schützt und die höchsten Sicherheitsstandards einhält.",
+//     },
+//   };
+//
+//   return metadataMap[lang] || metadataMap.de;
+// }
+
 const PrivacyPage = () => {
   const t = useTranslations("Privacy");
 

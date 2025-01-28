@@ -18,6 +18,7 @@ const footerNavLinks = [
   { text: "About us", href: "about" },
   { text: "Blog", href: "blog" },
   { text: "Contact", href: "contact" },
+  { text: "DataDeletionlink", href: "data" },
 ];
 
 const footerLegalLinks = [
