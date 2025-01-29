@@ -40,6 +40,7 @@ const DataPage = () => {
       text: "contactCardtt3",
     },
   ];
+
   return (
     <FadeIn className="mt-[120px] md:mt-[150px] lg:mt-[200px]">
       <h1 className="container text-[35px] md:text-[50px] lg:text-[60px]">
