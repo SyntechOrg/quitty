@@ -13,7 +13,7 @@ type Content = ImageContent | TextContent;
 
 type ImageContent = {
   type: "image";
-  src: string;
+  src: string | any;
   alt: string;
 };
 
