@@ -42,6 +42,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${BASE_URL}/data`,
+      lastModified: new Date(),
+      changefreq: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/data`,
+          de: `${BASE_URL}/de/data`,
+        },
+      },
+    },
+    {
       url: `${BASE_URL}/services`,
       lastModified: new Date(),
       changefreq: "monthly",
