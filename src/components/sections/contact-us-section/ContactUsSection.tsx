@@ -1,6 +1,7 @@
 import React from "react";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/shared";
 
 const ContactUsSection = () => {
   const t = useTranslations("Contact");
@@ -68,7 +69,7 @@ const ContactUsSection = () => {
             </p>
           </FadeIn>
         </div>
-        <div className="mt-32 flex w-full gap-x-8 gap-y-12 lg:mt-40">
+        <div className="mt-32 flex w-full flex-col gap-x-8 gap-y-12 max-lg:mx-auto max-lg:max-w-[720px] lg:mt-40 lg:flex-row">
           <div className="w-full lg:w-[30%]">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
               {t("FormTitle")}
@@ -77,7 +78,81 @@ const ContactUsSection = () => {
               {t("FormText")}
             </p>
           </div>
-          <div className="w-full bg-primary/10"></div>
+          <div className="grid w-full grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-8">
+            <div className="space-y-3">
+              <label className="text-[14px] font-medium leading-[16px] text-text">
+                Vollständiger Name (erforderlich)
+              </label>
+              <input
+                type="text"
+                placeholder="Ihr Name"
+                className="w-full rounded-[6px] !bg-[#90919C14] bg-white px-4 py-3 text-text placeholder-[#60606B] focus:border-primary focus:ring-primary"
+              />
+            </div>
+            <div className="space-y-3">
+              <label className="text-[14px] font-medium leading-[16px] text-text">
+                Vollständiger Name (erforderlich)
+              </label>
+              <input
+                type="text"
+                placeholder="Ihr Name"
+                className="w-full rounded-[6px] !bg-[#90919C14] bg-white px-4 py-3 text-text placeholder-[#60606B] focus:border-primary focus:ring-primary"
+              />
+            </div>
+            <div className="space-y-3">
+              <label className="text-[14px] font-medium leading-[16px] text-text">
+                Telefon (optional)
+              </label>
+              <input
+                type="tel"
+                placeholder="Your actual number"
+                className="w-full rounded-[6px] !bg-[#90919C14] bg-white px-4 py-3 text-text placeholder-[#60606B] focus:border-primary focus:ring-primary"
+              />
+            </div>
+            <div className="space-y-3">
+              <label className="text-[14px] font-medium leading-[16px] text-text">
+                Subject (optional)
+              </label>
+              <select
+                className="w-full rounded-[6px] !bg-[#90919C14] bg-white px-4 py-3 text-text
+               placeholder-[#60606B] focus:border-primary focus:ring-primary"
+              >
+                <option>Choose a subject</option>
+                <option>Sales Inquiry</option>
+                <option>Support Request</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div className="space-y-2 lg:col-span-2">
+              <label className="text-[14px] font-medium leading-[16px] text-text">
+                How can we help you?* (required)
+              </label>
+              <textarea
+                placeholder="Brief project details"
+                className="max-h-80 min-h-12 w-full rounded-[6px] !bg-[#90919C14] bg-white px-4
+               py-3 text-text placeholder-[#60606B] focus:border-primary focus:ring-primary"
+              ></textarea>
+            </div>
+            <label className="flex items-center space-x-3 lg:col-span-2">
+              <input
+                type="checkbox"
+                className="h-4 w-4 rounded border-[#90919C14] text-text focus:ring-text"
+              />
+              <span className="text-[14px] leading-[16px] text-text">
+                Ich bin damit einverstanden, E-Mails zu erhalten und diese
+                Aktivität zur Verbesserung meiner Erfahrung zu verfolgen.
+              </span>
+            </label>
+            <div className="lg:col-span-2">
+              <Button
+                type="submit"
+                variant="contact"
+                className="h-12 w-full max-w-[230px] rounded-[6px]"
+              >
+                Ein Angebot anfordern
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </FadeIn>
