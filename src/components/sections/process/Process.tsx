@@ -5,6 +5,7 @@ import icon from "public/assets/images/borderArrow.png";
 import arrow from "public/assets/images/rightArrow.png";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/fade-in/FadeIn";
+import Link from "next/link";
 
 const listItems = [
   { title: "listTitle1", text: "listText1" },
@@ -51,13 +52,15 @@ const Process = () => {
               </FadeIn>
             ))}
             <FadeIn>
-              <button
-                className="flex h-[48px] w-[200px] items-center justify-center gap-2.5 rounded-3xl
+              <Link href={"https://apps.apple.com/us/app/quitty/id6740874619"}>
+                <button
+                  className="flex h-[48px] w-[200px] items-center justify-center gap-2.5 rounded-3xl
                 bg-[#00C9A5] font-semibold text-white max-lg:mx-auto"
-              >
-                {t("button")}
-                <Image src={arrow} alt="arrow icon" className="w-[16px]" />
-              </button>
+                >
+                  {t("button")}
+                  <Image src={arrow} alt="arrow icon" className="w-[16px]" />
+                </button>
+              </Link>
             </FadeIn>
           </div>
         </div>

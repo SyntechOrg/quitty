@@ -1,12 +1,14 @@
 "use client";
 
 import HomeHero from "@/components/sections/home-hero/HomeHero";
+import type { AppProps } from "next/app";
+
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import InsightsSection from "@/components/sections/insights-section/InsightsSection";
 import PromoSection from "@/components/sections/promo-section/PromoSection";
 import HowItWorksSection from "@/components/sections/how-it-works/HowItWorksSection";
 import Partners from "@/components/shared/partners/Partners";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SpotLightSection from "@/components/sections/spotlight-section/SpotLightSection";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
@@ -16,6 +18,7 @@ import VideoSection from "@/components/sections/video-section/video-section";
 import { TextShimmer } from "@/components/ui/text-shimmer";
 import PromoTitleSection from "@/components/promo-title-section/PromoTitleSection";
 import withAuth from "@/components/hocs/withAuth";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 //   const metadataMap = {
 //     en: {
@@ -31,18 +34,17 @@ import withAuth from "@/components/hocs/withAuth";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 
-
 const Home = () => {
   const t = useTranslations("Home");
+
+  useChatbase();
 
   return (
     <>
       <HomeHeroBg />
       <div className="container relative">
         <HomeHero />
-        <div className="mt-[-420px]">
-          <Partners />
-        </div>
+        <div className="mt-[-420px]">{/* <Partners /> */}</div>
         <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
@@ -66,7 +68,7 @@ const Home = () => {
         <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
         <SpotLightSection />
         <FeedbackStacked />
-        <PackagesSection />
+        {/* <PackagesSection /> */}
       </div>
     </>
   );

@@ -10,6 +10,7 @@ import PackagesSection from "@/components/sections/PackagesSection/PackagesSecti
 import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import ProductHero from "@/components/sections/product-hero/ProductHero";
 import withAuth from "@/components/hocs/withAuth";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 // export async function generateMetadata({
 //   params,
@@ -32,23 +33,25 @@ import withAuth from "@/components/hocs/withAuth";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 
-const ProductPage: FC = () => (
-  <div className="container">
-    <ProductHero />
-    <div className="my-32 lg:my-44">
-      <Partners />
+const ProductPage = () => {
+  useChatbase();
+
+  return (
+    <div className="container">
+      <ProductHero />
+      <div className="my-32 lg:my-44">{/* <Partners /> */}</div>
+      <Heading
+        title="Heading-title2"
+        underTitle="Heading-underTitle2"
+        text="Heading-text2"
+      />
+      <Slider />
+      <Process />
+      <Features />
+      <FeedbackStacked />
+      {/* <PackagesSection /> */}
     </div>
-    <Heading
-      title="Heading-title2"
-      underTitle="Heading-underTitle2"
-      text="Heading-text2"
-    />
-    <Slider />
-    <Process />
-    <Features />
-    <FeedbackStacked />
-    <PackagesSection />
-  </div>
-);
+  );
+};
 
 export default withAuth(ProductPage);

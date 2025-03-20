@@ -12,6 +12,7 @@ import AppleLogo from "../../../../public/assets/images/apple-logo.png";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogo from "../../../../public/assets/images/google-play-logo.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
+import Link from "next/link";
 
 const Transform = () => {
   const t = useTranslations("Shared");
@@ -53,42 +54,46 @@ const Transform = () => {
         </div>
 
         <FadeIn className="flex w-fit flex-col items-center justify-center gap-[20px] lg:flex-row lg:justify-start">
-          <button
-            className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+          <Link href={"https://apps.apple.com/us/app/quitty/id6740874619"}>
+            <button
+              className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
-          >
-            <Image
-              src={AppleLogo}
-              alt="Apple logo"
-              className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
-            />
-            <Image
-              src={AppleLogoWhite}
-              alt="Apple logo"
-              className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
-            />
-            <span className="text-text duration-150 group-hover:text-white">
-              App Store
-            </span>
-          </button>
-          <button
-            className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
+            >
+              <Image
+                src={AppleLogo}
+                alt="Apple logo"
+                className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
+              />
+              <Image
+                src={AppleLogoWhite}
+                alt="Apple logo"
+                className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
+              />
+              <span className="text-text duration-150 group-hover:text-white">
+                App Store
+              </span>
+            </button>
+          </Link>
+          <Link href={""}>
+            <button
+              className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
-          >
-            <Image
-              src={GooglePlayLogo}
-              alt="Google Play logo"
-              className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
-            />
-            <Image
-              src={GooglePlayLogoWhite}
-              alt="Google Play logo"
-              className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
-            />
-            <span className="text-text duration-150 group-hover:text-white">
-              Google Play
-            </span>
-          </button>
+            >
+              <Image
+                src={GooglePlayLogo}
+                alt="Google Play logo"
+                className="h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:hidden"
+              />
+              <Image
+                src={GooglePlayLogoWhite}
+                alt="Google Play logo"
+                className="hidden h-full max-h-[30px] w-full max-w-[30px] object-contain group-hover:block"
+              />
+              <span className="text-text duration-150 group-hover:text-white">
+                Google Play
+              </span>
+            </button>
+          </Link>
         </FadeIn>
       </FadeIn>
       <FadeIn className="z-10 w-[300px] lg:w-[30%]">

@@ -1,3 +1,4 @@
+import useChatbase from "@/components/chatbot/useChatbase";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -40,6 +41,8 @@ const DataPage = () => {
       text: "contactCardtt3",
     },
   ];
+
+  useChatbase();
 
   return (
     <FadeIn className="mt-[120px] md:mt-[150px] lg:mt-[200px]">
