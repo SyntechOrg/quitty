@@ -36,7 +36,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 const AboutPage = () => {
-  useChatbase();
+  // useChatbase();
   return (
     <div className="container">
       <AboutHero />
@@ -47,7 +47,7 @@ const AboutPage = () => {
         text="Heading-text1"
       />
       <Mission />
-      <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
+      {/* <VideoSection /> */}
       <CoreValuesSection />
       <TeamSection />
       <ImpactSection />

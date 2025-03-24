@@ -34,7 +34,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 // }
 
 const ProductPage = () => {
-  useChatbase();
+  // useChatbase();
 
   return (
     <div className="container">

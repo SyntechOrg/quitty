@@ -56,7 +56,7 @@ const CoreValuesSection = () => {
               ))}
             </Accordion>
           </FadeIn>
-          <FadeIn>
+          {/* <FadeIn>
             <button
               className="mt-7 flex h-[48px] w-[200px] items-center justify-center gap-2.5
                 rounded-3xl bg-[#00C9A5] font-semibold text-white max-lg:mx-auto lg:mt-5"
@@ -64,7 +64,7 @@ const CoreValuesSection = () => {
               {t("button")}
               <Image src={arrow} alt="arrow icon" className="w-[16px]" />
             </button>
-          </FadeIn>
+          </FadeIn> */}
         </FadeIn>
       </div>
     </div>

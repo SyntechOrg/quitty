@@ -30,7 +30,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const PrivacyPage = () => {
   const t = useTranslations("Privacy");
 
-  useChatbase();
+  // useChatbase();
 
   return (
     <div className="container">
@@ -65,7 +65,7 @@ const PrivacyPage = () => {
           <p>{t("Paragraph1-9")}</p>
         </div>
       </FadeIn>
-      <Partners />
+      {/* <Partners /> */}
     </div>
   );
 };

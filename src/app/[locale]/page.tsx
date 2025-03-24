@@ -37,7 +37,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const Home = () => {
   const t = useTranslations("Home");
 
-  useChatbase();
+  // useChatbase();
 
   return (
     <>
@@ -45,7 +45,7 @@ const Home = () => {
       <div className="container relative">
         <HomeHero />
         <div className="mt-[-420px]">{/* <Partners /> */}</div>
-        <FadeIn className="mx-auto mt-32 max-w-[780px] text-center text-text lg:mt-52">
+        <FadeIn className="mx-auto mt-32 text-center text-text lg:mt-52">
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
             duration={4.5}
@@ -65,7 +65,8 @@ const Home = () => {
         <PromoTitleSection title={t("Sustainable")} as="h4" />
         <PromoSection />
         <HowItWorksSection />
-        <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
+        <VideoSection />
+
         <SpotLightSection />
         <FeedbackStacked />
         {/* <PackagesSection /> */}

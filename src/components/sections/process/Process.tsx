@@ -51,7 +51,7 @@ const Process = () => {
                 <p className="text-[14px] lg:text-[16px]">{t(item.text)}</p>
               </FadeIn>
             ))}
-            <FadeIn>
+            {/* <FadeIn>
               <Link href={"https://apps.apple.com/us/app/quitty/id6740874619"}>
                 <button
                   className="flex h-[48px] w-[200px] items-center justify-center gap-2.5 rounded-3xl
@@ -61,7 +61,7 @@ const Process = () => {
                   <Image src={arrow} alt="arrow icon" className="w-[16px]" />
                 </button>
               </Link>
-            </FadeIn>
+            </FadeIn> */}
           </div>
         </div>
       </div>

@@ -44,7 +44,9 @@ const useChatbase = () => {
 
     return () => {
       document.body.removeChild(script);
-      document.body.removeChild(closeBtn);
+      if (document.body.contains(closeBtn)) {
+        document.body.removeChild(closeBtn);
+      }
       clearInterval(checkIfOpened);
     };
   }, []);

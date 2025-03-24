@@ -30,7 +30,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const ImpressumPage = () => {
   const t = useTranslations("Impressum");
 
-  useChatbase();
+  // useChatbase();
 
   return (
     <div className="container">
@@ -61,7 +61,7 @@ const ImpressumPage = () => {
         <p>{t("Paragraph1-8")}</p>
         <p>{t("Paragraph1-9")}</p>
       </FadeIn>
-      <Partners />
+      {/* <Partners /> */}
     </div>
   );
 };

@@ -32,7 +32,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const BlogPage = () => {
   const t = useTranslations("Blog");
 
-  useChatbase();
+  // useChatbase();
 
   return (
     <div className="container">

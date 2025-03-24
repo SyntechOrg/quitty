@@ -12,6 +12,7 @@ import SpotlightIphoneMockup from "../../../../public/assets/images/spotlight-ip
 import { Button } from "@/components/shared";
 import { useTranslations } from "next-intl";
 import { useLocale } from "use-intl";
+import ContactModal from "@/components/contactPopup/ContactModal";
 
 const SpotLightSection = () => {
   const t = useTranslations("Home");
@@ -130,7 +131,7 @@ const SpotLightSection = () => {
         </div>
         <div
           className="relative col-span-1 h-full min-h-[420px] w-full overflow-hidden rounded-[60px] bg-white duration-200
-         ease-in-out hover:-rotate-3 lg:col-span-2"
+         ease-in-out lg:col-span-2"
         >
           <div className="flex h-full w-full flex-col justify-between py-8 max-lg:px-9 lg:w-[56%] lg:py-14 lg:pl-[47px]">
             <div>
@@ -142,16 +143,7 @@ const SpotLightSection = () => {
               </p>
             </div>
             <div>
-              <p className="text-[21px] font-bold leading-[1.5] text-[#111]">
-                4.5 / 5.0
-              </p>
-              <div className="mt-1">
-                <Image
-                  src={FiveStars}
-                  alt="five-stars"
-                  className="h-full max-h-[18px] w-fit object-contain"
-                />
-              </div>
+              <ContactModal />
             </div>
           </div>
           <div className="absolute bottom-0 right-0 w-1/2 lg:bottom-[-10px] lg:right-[-10px] lg:w-[43%]">

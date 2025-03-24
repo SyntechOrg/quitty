@@ -1,3 +1,4 @@
+"use client";
 import useChatbase from "@/components/chatbot/useChatbase";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
@@ -42,7 +43,7 @@ const DataPage = () => {
     },
   ];
 
-  useChatbase();
+  // useChatbase();
 
   return (
     <FadeIn className="mt-[120px] md:mt-[150px] lg:mt-[200px]">

@@ -8,6 +8,7 @@ import FacebookIcon from "../../../../public/assets/images/team-member-facebook-
 import YoutubeIcon from "../../../../public/assets/images/team-member-youtube-icon.png";
 import BeIcon from "../../../../public/assets/images/team-member-be-icon.png";
 import TeamMemberBackground from "../../../../public/assets/images/team-member-background.png";
+import Team from "../../.././../public/assets/images/quittyTeam.png";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 
@@ -72,7 +73,7 @@ const TeamSection = () => {
 
   return (
     <div className="ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)] mt-32 w-screen lg:mt-52">
-      <FadeIn className="mx-auto w-[90%] max-w-[600px] lg:max-w-[1280px]">
+      <FadeIn className="mx-auto max-w-[600px] lg:max-w-[1280px] container">
         <p className="text-[16px] font-medium leading-[1.2] text-primary lg:text-[18px]">
           {t("ourTeam")}
         </p>
@@ -80,8 +81,10 @@ const TeamSection = () => {
           {t("ourTeamText")}
         </h4>
       </FadeIn>
-      <FadeIn className="mx-auto mt-9 flex w-[95%] max-w-[1660px] flex-col items-center gap-x-1.5 gap-y-6 lg:w-[99%] lg:flex-row">
-        {teamMembers.map((item, index) => (
+      {/* <FadeIn className="mx-auto mt-9 flex w-[95%] max-w-[1660px] flex-col items-center gap-x-1.5 gap-y-6 lg:w-[99%] lg:flex-row"> */}
+      <FadeIn className="container mt-8">
+        <Image src={Team} alt="Quitty Team" />
+        {/* {teamMembers.map((item, index) => (
           <div
             key={item.id}
             className={`group relative flex h-full w-full flex-col overflow-hidden rounded-[60px]
@@ -193,7 +196,7 @@ const TeamSection = () => {
               />
             </div>
           </div>
-        ))}
+        ))} */}
       </FadeIn>
     </div>
   );

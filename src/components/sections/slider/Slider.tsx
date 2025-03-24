@@ -7,7 +7,7 @@ import image3 from "public/assets/images/sliderPic3.png";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import "./Slider.css";
 
-const images = [image1, image2, image3, image1];
+const images = [image1, image2, image3, image2];
 
 const duplicatedImages = [...images, ...images];
 
