@@ -104,7 +104,19 @@
     "HeroText": "Leave us a little info, and we'll be in touch.",
     "CtaButton": "Send Us an Email",
     "FormTitle": "Work inquiries",
-    "FormText": "Let's revolutionize the way you do business. Contact us today to learn how Quitty can help your company become more sustainable and customer-centric."
+    "FormText": "Let's revolutionize the way you do business. Contact us today to learn how Quitty can help your company become more sustainable and customer-centric.",
+    "formInput1": "Your name",
+    "formInput2": "Your company name",
+    "formInput3": "Your actual number",
+    "formInput4": "Choose a subject",
+    "formInput5": "Brief project details",
+    "formlabel1": "Full Name (required)",
+    "formlabel2": "Email (required)",
+    "formlabel3": "Phone (optional)",
+    "formlabel4": "Subject (optional)",
+    "formlabel5": "How can we help you?* (required)",
+    "formbutton1": "Get a Quote",
+    "formcheck1": "I'm okay with getting emails and having that activity tracked to improve my experience."
   },
   "Header": {
     "Home": "Home",

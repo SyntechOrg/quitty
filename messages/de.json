@@ -105,13 +105,25 @@
     "HeroText": "Hinterlassen Sie uns ein paar Informationen, und wir melden uns bei Ihnen.",
     "CtaButton": "Schicken Sie uns eine E-Mail",
     "FormTitle": "Arbeitsanfragen",
-    "FormText": "Lassen Sie uns die Art und Weise, wie Sie Geschäfte machen, revolutionieren. Kontaktieren Sie uns noch heute, um zu erfahren, wie Quitty Ihrem Unternehmen zu mehr Nachhaltigkeit und Kundenzentrierung verhelfen kann."
+    "FormText": "Lassen Sie uns die Art und Weise, wie Sie Geschäfte machen, revolutionieren. Kontaktieren Sie uns noch heute, um zu erfahren, wie Quitty Ihrem Unternehmen zu mehr Nachhaltigkeit und Kundenzentrierung verhelfen kann.",
+    "formInput1": "Ihr Name",
+    "formInput2": "Ihr Firmenname",
+    "formInput3": "Ihre aktuelle Zahl",
+    "formInput4": "Wählen Sie ein Thema",
+    "formInput5": "Kurze Angaben zum Projekt",
+    "formlabel1": "Vollständiger Name (erforderlich)",
+    "formlabel2": "Vollständiger Name (erforderlich)",
+    "formlabel3": "Telefon (optional)",
+    "formlabel4": "Thema (optional)",
+    "formlabel5": "Wie können wir Ihnen helfen?* (erforderlich)",
+    "formbutton1": "Ein Angebot anfordern",
+    "formcheck1": "Ich bin damit einverstanden, E-Mails zu erhalten und diese Aktivität zur Verbesserung meiner Erfahrung zu verfolgen."
   },
   "Header": {
     "Home": "Startseite",
     "About": "Über uns",
     "Product": "Product",
-    "Blog": "Dienstleistungen",
+    "Blog": "Blog",
     "ContactButton": "Kontakt aufnehmen"
   },
   "Shared": {

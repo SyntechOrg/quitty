@@ -72,7 +72,11 @@ const AboutHero = () => {
             {t("heroText")}
           </p>
           <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
-            <Button to={"/"} variant="primary" className="group w-[250px]">
+            <Button
+              to={"https://apps.apple.com/us/app/quitty/id6740874619"}
+              variant="primary"
+              className="group w-[250px]"
+            >
               <Image
                 src={AppleLogo}
                 alt="Apple logo"

@@ -25,17 +25,17 @@ const ProductHero = () => {
 
   const t = useTranslations("Product");
 
-  const left1Top = useTransform(scrollY, [0, 400], ["45vh", "-45vh"]);
-  const left2Top = useTransform(scrollY, [0, 600], ["20vh", "15vh"]);
-  const left3Top = useTransform(scrollY, [0, 600], ["85vh", "-10vh"]);
+  const left1Top = useTransform(scrollY, [0, 400], ["35vh", "-45vh"]);
+  const left2Top = useTransform(scrollY, [0, 600], ["10vh", "0vh"]);
+  const left3Top = useTransform(scrollY, [0, 600], ["60vh", "-10vh"]);
 
-  const right1Top = useTransform(scrollY, [0, 400], ["50vh", "-40vh"]);
-  const right2Top = useTransform(scrollY, [0, 600], ["25vh", "20vh"]);
-  const right3Top = useTransform(scrollY, [0, 600], ["90vh", "-15vh"]);
+  const right1Top = useTransform(scrollY, [0, 400], ["35vh", "-40vh"]);
+  const right2Top = useTransform(scrollY, [0, 600], ["10vh", "20vh"]);
+  const right3Top = useTransform(scrollY, [0, 600], ["60vh", "-15vh"]);
 
   return (
     <div ref={targetRef} className="relative min-h-[100vh]">
-      <div className="relative top-5 z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:sticky lg:top-10 lg:max-w-[640px] lg:pt-20">
+      <div className="relative top-5 z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:sticky lg:top-10 lg:max-w-[640px] lg:pt-[15rem]">
         <FadeIn className="flex flex-col items-center">
           <h1 className="text-center text-[32px] font-medium leading-[1.2] text-text md:text-[40px] lg:text-[52px]">
             {t("heroTitle")}
