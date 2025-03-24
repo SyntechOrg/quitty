@@ -24,12 +24,12 @@ const HomeHero = () => {
   const mockUpScale = useTransform(
     scrollYProgress,
     [0, 0.3, 0.75, 1],
-    [1, 0.85, 1, 1.15],
+    [1, 0.85, 1, 1.15]
   );
   const mockUpTranslateY = useTransform(
     scrollYProgress,
     [0, 0.75, 1],
-    ["0%", "0%", "-125%"],
+    ["0%", "0%", "-125%"]
   );
 
   const t = useTranslations("Home");
@@ -48,7 +48,11 @@ const HomeHero = () => {
               {t("HeroSectionUndertitle")}
             </p>
             <div className="mt-5 flex justify-center gap-5 max-lg:flex-col max-lg:items-center">
-              <Button to={"/"} variant="primary" className="w-[250px]">
+              <Button
+                to={"https://apps.apple.com/us/app/quitty/id6740874619"}
+                variant="primary"
+                className="w-[250px]"
+              >
                 <Image
                   src={AppleLogoWhite}
                   alt="Apple logo"
