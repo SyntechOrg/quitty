@@ -4,6 +4,7 @@ import React from "react";
 import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import withAuth from "@/components/hocs/withAuth";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 // export async function generateMetadata({
 //   params,
@@ -28,6 +29,8 @@ import withAuth from "@/components/hocs/withAuth";
 
 const TermsPage = () => {
   const t = useTranslations("Terms");
+  // useChatbase();
+
   return (
     <div className="container">
       <FadeIn
@@ -57,7 +60,7 @@ const TermsPage = () => {
         <p>{t("Paragraph1-8")}</p>
         <p>{t("Paragraph1-9")}</p>
       </FadeIn>
-      <Partners />
+      {/* <Partners /> */}
     </div>
   );
 };

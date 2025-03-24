@@ -6,23 +6,29 @@ import AppleLogo from "../../../../public/assets/images/apple-logo.png";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogo from "../../../../public/assets/images/google-play-logo.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
-import HeroImage1 from "../../../../public/assets/images/about-hero/about-hero-image-1.png";
+import HeroImage4 from "../../../../public/assets/images/about-hero/about-hero-image-1.png";
+import HeroImage1 from "../../../../public/assets/images/about-hero/hero1.png";
+import HeroImage2 from "../../../../public/assets/images/about-hero/hero2.png";
+import HeroImage3 from "../../../../public/assets/images/about-hero/hero3.png";
+import HeroImage5 from "../../../../public/assets/images/about-hero/hero5.png";
+import HeroImage6 from "../../../../public/assets/images/about-hero/hero6.png";
+import HeroImage7 from "../../../../public/assets/images/about-hero/hero7.png";
 import { useTranslations } from "next-intl";
 import "./AboutHero.css";
 
 const circularCarouselImages = [
   HeroImage1,
+  HeroImage2,
+  HeroImage3,
+  HeroImage4,
+  HeroImage5,
+  HeroImage6,
+  HeroImage7,
   HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
-  HeroImage1,
+  HeroImage2,
+  HeroImage3,
+  HeroImage4,
+  HeroImage5,
 ];
 
 const AboutHero = () => {

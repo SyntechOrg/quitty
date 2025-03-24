@@ -5,6 +5,7 @@ import ContactUsSection from "@/components/sections/contact-us-section/ContactUs
 import ContactHero from "@/components/sections/contact-hero/ContactHero";
 import withAuth from "@/components/hocs/withAuth";
 import { Metadata } from "next";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 // export async function generateMetadata({
 //   params,
@@ -27,12 +28,15 @@ import { Metadata } from "next";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 
-const ContactPage: FC = () => (
-  <div className="container">
-    <ContactHero />
-    <ContactUsSection />
-    <Partners />
-  </div>
-);
+const ContactPage = () => {
+  // useChatbase();
+  return (
+    <div className="container">
+      <ContactHero />
+      <ContactUsSection />
+      {/* <Partners /> */}
+    </div>
+  );
+};
 
 export default withAuth(ContactPage);

@@ -6,6 +6,7 @@ import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import BlogPostCards from "@/components/blog-post-cards/BlogPostCards";
 import withAuth from "@/components/hocs/withAuth";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 // export async function generateMetadata({
 //   params,
@@ -31,6 +32,8 @@ import withAuth from "@/components/hocs/withAuth";
 const BlogPage = () => {
   const t = useTranslations("Blog");
 
+  // useChatbase();
+
   return (
     <div className="container">
       <div className="mt-[150px] lg:mt-[200px]">
@@ -44,7 +47,7 @@ const BlogPage = () => {
         </FadeIn>
       </div>
       <BlogPostCards />
-      <Partners />
+      {/* <Partners /> */}
     </div>
   );
 };

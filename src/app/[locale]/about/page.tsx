@@ -13,6 +13,7 @@ import CoreValuesSection from "@/components/core-values/CoreValuesSection";
 import VideoSection from "@/components/sections/video-section/video-section";
 import AboutHero from "@/components/sections/about-hero/AboutHero";
 import withAuth from "@/components/hocs/withAuth";
+import useChatbase from "@/components/chatbot/useChatbase";
 
 // export async function generateMetadata({
 //   params,
@@ -35,22 +36,23 @@ import withAuth from "@/components/hocs/withAuth";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 const AboutPage = () => {
+  // useChatbase();
   return (
     <div className="container">
       <AboutHero />
-      <Partners />
+      {/* <Partners /> */}
       <Heading
         title="Heading-title1"
         underTitle="Heading-underTitle1"
         text="Heading-text1"
       />
       <Mission />
-      <VideoSection url="https://www.youtube.com/embed/YZ84iQrbYjw?si=NsmS-Uwu1xz690W0" />
+      {/* <VideoSection /> */}
       <CoreValuesSection />
       <TeamSection />
       <ImpactSection />
       <FeedbackStacked />
-      <PackagesSection />
+      {/* <PackagesSection /> */}
     </div>
   );
 };

@@ -163,7 +163,7 @@ export const Footer = () => {
           <Image
             src={QuittyBanner}
             alt="Quitty Logo"
-            className="h-full max-h-[375px] w-full object-contain"
+            className="h-full max-h-[250px] w-full object-contain"
           />
         </div>
       </footer>
