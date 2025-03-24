@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "../shared";
 
-export default function ContactModal() {
+const ContactModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => setIsOpen(!isOpen);
@@ -120,4 +120,6 @@ export default function ContactModal() {
       )}
     </>
   );
-}
+};
+
+export default ContactModal;

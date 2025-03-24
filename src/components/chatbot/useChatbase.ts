@@ -22,7 +22,7 @@ const useChatbase = () => {
     closeBtn.style.display = "none";
 
     closeBtn.onclick = () => {
-      // @ts-ignore
+      // @ts-expect-error
       window.chatbase?.close?.();
       closeBtn.style.display = "none";
     };
