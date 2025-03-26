@@ -52,7 +52,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center justify-end gap-2">
                 <a
-                  href={"https://www.google.com"}
+                  href={"https://apps.apple.com/us/app/quitty/id6740874619"}
                   target="_blank"
                   className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-[#b7babf] duration-150 hover:bg-[#3E3E3E50] lg:h-[48px] lg:w-[48px]"
                   rel="noreferrer"
@@ -118,7 +118,7 @@ export const Footer = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex gap-2.5">
+              {/* <div className="mt-6 flex gap-2.5">
                 <a
                   href={"https://www.google.com"}
                   target="_blank"
@@ -155,7 +155,7 @@ export const Footer = () => {
                     className="h-full max-h-[16px] w-full max-w-[16px] object-contain lg:max-h-[20px] lg:max-w-[20px]"
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

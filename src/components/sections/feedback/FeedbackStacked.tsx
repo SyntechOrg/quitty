@@ -17,29 +17,29 @@ const CONTENT = [
   {
     bgColor: "#323CD2",
     avatar: AvatarPlaceholder,
-    name: "Retailer X",
+    name: "Maximilian L.",
     city: "FeedbackCardCountry1",
     stars: 5,
     review: "FeedbackCardContent1",
-    date: "20 Mar, 2024",
+    date: "2025",
   },
   {
     bgColor: "#00C9A5",
     avatar: AvatarPlaceholder,
-    name: "Retailer X",
+    name: "Sophie M.",
     city: "FeedbackCardCountry2",
-    stars: 4,
+    stars: 5,
     review: "FeedbackCardContent2",
-    date: "21 Mar, 2024",
+    date: "2025",
   },
   {
     bgColor: "#3F7CF3",
     avatar: AvatarPlaceholder,
-    name: "Retailer X",
+    name: "Daniel K.",
     city: "FeedbackCardCountry3",
     stars: 5,
     review: "FeedbackCardContent3",
-    date: "22 Mar, 2024",
+    date: "2025",
   },
 ];
 
@@ -82,7 +82,7 @@ export const FeedbackStacked = () => {
                   slideWidth={slideWidth}
                   carouselWidth={width}
                   data={CONTENT}
-                  height={340}
+                  height={440}
                   maxVisibleSlide={5}
                   customScales={[1, 0.95, 0.85, 0]}
                   fadeDistance={slideFadeDistance}
@@ -145,7 +145,7 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
 
   return (
     <div
-      className="twitch-card overflow-clip rounded-[52px]"
+      className="twitch-card overflow-clip rounded-[52px] !h-[fit-content]"
       draggable={false}
       style={{
         backgroundColor: card.bgColor,
