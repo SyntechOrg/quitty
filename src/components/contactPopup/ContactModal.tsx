@@ -94,12 +94,12 @@ const ContactModal = () => {
                   className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
                   htmlFor="reason"
                 >
-                  {t("label3")}
+                  {t("label3-1")}
                 </label>
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#60606B]"
                   name="reason"
-                  placeholder={t("input3")}
+                  placeholder={t("input3-1")}
                 />
               </div>
               {/* <div className="flex flex-row justify-start gap-[8px]">

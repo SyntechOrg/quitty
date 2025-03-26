@@ -4,11 +4,12 @@ import Image from "next/image";
 import { Button } from "@/components/shared";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
-import IphoneMockup from "../../../../public/assets/images/iphone-mockup.png";
+import IphoneMockupEN from "../../../../public/assets/images/iPhoneMockup2.png";
+import IphoneMockupDE from "../../../../public/assets/images/iPhoneMockup.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const HomeHero = () => {
   const targetRef = useRef(null);
@@ -33,6 +34,14 @@ const HomeHero = () => {
   );
 
   const t = useTranslations("Home");
+  const locale = useLocale() as "en" | "de";
+
+  const images = {
+    en: IphoneMockupEN,
+    de: IphoneMockupDE,
+  };
+
+  const imageSrc = images[locale] || IphoneMockupEN;
   return (
     <div ref={targetRef}>
       <FadeIn>
@@ -83,7 +92,7 @@ const HomeHero = () => {
               className="relative mx-auto h-[calc(100vh-110px)] max-h-[700px] w-full max-w-[300px] lg:max-w-[360px]"
             >
               <Image
-                src={IphoneMockup}
+                src={imageSrc}
                 alt="background image"
                 style={{ marginTop: isLargeScreen ? "80px" : "20px" }}
                 className="h-full w-full object-contain"

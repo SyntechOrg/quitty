@@ -123,7 +123,7 @@ const SpotLightSection = () => {
             <Button
               to={"/"}
               className="mx-auto h-[58px] w-full bg-primary !px-3 text-[20px] leading-[1.5] text-white hover:bg-primary/80
-              active:bg-primary/90 lg:text-[24px]"
+              active:bg-primary/90 lg:text-[22px] text-center"
             >
               {t("SpotCard3ReceiptButton")}
             </Button>
@@ -142,7 +142,7 @@ const SpotLightSection = () => {
                 {t("SpotCard4ReceiptText")}
               </p>
             </div>
-            <div>
+            <div className="lg:w-auto w-[50%]">
               <ContactModal />
             </div>
           </div>

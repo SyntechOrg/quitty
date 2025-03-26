@@ -12,13 +12,13 @@ const ContactHero = () => {
           {t("HeroTitle")}
         </h1>
         <h5 className=" text-[16px] lg:text-[18px]">{t("HeroText")}</h5>
-        <a
+        {/* <a
           href="#"
           className="mt-4 inline-block rounded-[6px] bg-primary px-4 py-3 text-center text-[16px] uppercase leading-[1.5]
           text-white hover:opacity-80 active:opacity-90"
         >
           {t("CtaButton")}
-        </a>
+        </a> */}
       </FadeIn>
     </div>
   );

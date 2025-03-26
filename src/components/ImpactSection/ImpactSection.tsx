@@ -4,21 +4,21 @@ import DiceIcon from "../../../public/assets/images/dice-icon.png";
 import CubeIcon from "../../../public/assets/images/cube-icon.png";
 import NetworkIcon from "../../../public/assets/images/network-icon.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const ImpactSection = () => {
+  const t = useTranslations("About");
   return (
     <div className="mt-32 grid grid-cols-1 gap-x-10 gap-y-16 max-lg:mx-auto max-lg:max-w-[600px] lg:mt-52 lg:grid-cols-3">
       <FadeIn className="lg:row-span-2">
         <p className="text-[16px] font-medium leading-[1.2] text-primary lg:text-[18px]">
-          Statistics
+          {t("undertitle")}
         </p>
         <h4 className="mt-3 text-[24px] font-medium leading-[1.333] text-text lg:mt-4 lg:text-[32px]">
-          Making a Measurable Impact on the Environment
+          {t("title")}
         </h4>
         <p className="mt-5 text-[16px] leading-[1.5] text-text lg:mt-7">
-          Sustainability isn’t just a buzzword for us—it’s central to everything
-          we do. Every digital receipt sent through Quitty means less paper
-          waste and a cleaner planet. Here’s what we’ve accomplished so far:
+          {t("text")}
         </p>
       </FadeIn>
       <FadeIn className="max-lg:text-center">
@@ -35,10 +35,10 @@ const ImpactSection = () => {
           </p>
         </div>
         <p className="mt-6 text-[16px] font-semibold leading-[1.33] text-text lg:mt-7 lg:text-[18px]">
-          Over 1 million receipts digitized
+          {t("statistics1-2")}
         </p>
         <p className="mt-3 text-[15px] leading-[1.5] text-text lg:mt-4 lg:text-[16px]">
-          Saving tons of paper from landfills.
+          {t("statistics1-3")}
         </p>
       </FadeIn>
       <FadeIn className="max-lg:text-center">
@@ -55,10 +55,10 @@ const ImpactSection = () => {
           </p>
         </div>
         <p className="mt-6 text-[16px] font-semibold leading-[1.33] text-text lg:mt-7 lg:text-[18px]">
-          Reduction in retailers&apos; carbon footprint
+          {t("statistics2-2")}
         </p>
         <p className="mt-3 text-[15px] leading-[1.5] text-text lg:mt-4 lg:text-[16px]">
-          Thanks to reduced paper and printing needs.
+          {t("statistics2-3")}
         </p>
       </FadeIn>
       <FadeIn className="max-lg:text-center lg:col-span-2">
@@ -75,11 +75,10 @@ const ImpactSection = () => {
           </p>
         </div>
         <p className="mt-6 text-[16px] font-semibold leading-[1.33] text-text lg:mt-7 lg:text-[18px]">
-          Helping retailers meet their sustainability goals
+          {t("statistics3-2")}
         </p>
         <p className="mt-3 text-[15px] leading-[1.5] text-text lg:mt-4 lg:text-[16px]">
-          Quitty partners with businesses to enhance their eco-credentials,
-          making a real impact on the environment.
+          {t("statistics3-3")}
         </p>
       </FadeIn>
     </div>

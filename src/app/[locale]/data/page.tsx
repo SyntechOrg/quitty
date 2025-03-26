@@ -113,22 +113,18 @@ const DataPage = () => {
                   >
                     {t("label3")}
                   </label>
-                  <select
+                  <input
                     className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#60606B]"
                     name="reason"
-                    value={t("input3")}
-                  >
-                    <option value={t("input3")}>{t("input3")}</option>
-                    <option value={t("input3")}>{t("input3")}</option>
-                    <option value={t("input3")}>{t("input3")}</option>
-                  </select>
+                    placeholder={t("input3")}
+                  />
                 </div>
-                <div className="flex flex-row justify-start gap-[8px]">
+                {/* <div className="flex flex-row justify-start gap-[8px]">
                   <input className="rounded-md" type="checkbox" />
                   <p className="text-[13px] leading-[1.85] text-[#161519] md:text-[14px]">
                     {t("formCheck")}
                   </p>
-                </div>
+                </div> */}
                 <button
                   className="h-[43px] w-[160px] rounded-md bg-[#111013] text-[14px] text-[#fff] md:h-[48px] md:w-[180px] md:text-[16px]"
                   type="submit"

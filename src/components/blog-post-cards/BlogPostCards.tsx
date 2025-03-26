@@ -111,7 +111,8 @@ const BlogPostCards = () => {
           className={`relative flex h-[410px] items-end justify-start duration-200 hover:opacity-90 active:opacity-95 ${
             post.span ? "lg:col-span-2" : ""
           }`}
-          href={`/${localActive}/blogs/${post.slug}`}
+          // href={`/${localActive}/blogs/${post.slug}`}
+          href={""}
         >
           <FadeIn className="absolute inset-0 z-[-1]">
             <Image
