@@ -14,7 +14,7 @@ export const Heading: FC<HeadingProps> = ({ title, underTitle, text }) => {
 
   return (
     <div
-      className="mt-32 flex flex-col justify-between gap-[20px] pb-[60px] pt-[60px] max-lg:mx-auto
+      className="mt-32 flex flex-col justify-between items-center gap-[20px] pb-[60px] pt-[60px] max-lg:mx-auto
      max-lg:max-w-[620px] lg:mt-52 lg:flex-row lg:gap-[0px] lg:pb-[100px] lg:pt-[100px]"
     >
       <FadeIn className="flex w-[100%] flex-col items-start justify-center lg:max-w-[50%] lg:gap-[10px]">
@@ -25,7 +25,7 @@ export const Heading: FC<HeadingProps> = ({ title, underTitle, text }) => {
           {t(title)}
         </h1>
       </FadeIn>
-      <FadeIn className="lg:max-w-1/2 w-full">
+      <FadeIn className="lg:max-w-1/2 w-full h-fit">
         <p className="text-[15px] leading-[1.75] lg:text-[16px]">{t(text)}</p>
       </FadeIn>
     </div>
