@@ -29,7 +29,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 // }
 
 const ContactPage = () => {
-  // useChatbase();
+  useChatbase();
   return (
     <div className="container">
       <ContactHero />

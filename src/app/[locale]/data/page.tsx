@@ -43,7 +43,7 @@ const DataPage = () => {
     },
   ];
 
-  // useChatbase();
+  useChatbase();
 
   return (
     <FadeIn className="mt-[120px] md:mt-[150px] lg:mt-[200px]">
