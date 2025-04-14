@@ -29,7 +29,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 
 const TermsPage = () => {
   const t = useTranslations("Terms");
-  // useChatbase();
+  useChatbase();
 
   return (
     <div className="container">

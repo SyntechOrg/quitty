@@ -37,7 +37,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const Home = () => {
   const t = useTranslations("Home");
 
-  // useChatbase();
+  useChatbase();
 
   return (
     <>

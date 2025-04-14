@@ -36,7 +36,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //   return metadataMap[lang] || metadataMap.de;
 // }
 const AboutPage = () => {
-  // useChatbase();
+  useChatbase();
   return (
     <div className="container">
       <AboutHero />

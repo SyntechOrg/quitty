@@ -30,7 +30,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 const CookiesPage = () => {
   const t = useTranslations("Cookies");
 
-  // useChatbase();
+  useChatbase();
 
   return (
     <div className="container">
