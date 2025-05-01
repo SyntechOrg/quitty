@@ -66,4 +66,4 @@ const ImpressumPage = () => {
   );
 };
 
-export default withAuth(ImpressumPage);
+export default ImpressumPage;

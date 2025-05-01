@@ -70,4 +70,4 @@ const PrivacyPage = () => {
   );
 };
 
-export default withAuth(PrivacyPage);
+export default PrivacyPage;

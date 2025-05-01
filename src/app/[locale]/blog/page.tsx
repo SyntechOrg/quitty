@@ -52,4 +52,4 @@ const BlogPage = () => {
   );
 };
 
-export default withAuth(BlogPage);
+export default BlogPage;
