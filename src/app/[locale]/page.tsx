@@ -75,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default withAuth(Home);
+export default Home;

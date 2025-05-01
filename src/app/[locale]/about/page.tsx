@@ -57,4 +57,4 @@ const AboutPage = () => {
   );
 };
 
-export default withAuth(AboutPage);
+export default AboutPage;

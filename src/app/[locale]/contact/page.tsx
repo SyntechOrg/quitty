@@ -39,4 +39,4 @@ const ContactPage = () => {
   );
 };
 
-export default withAuth(ContactPage);
+export default ContactPage;

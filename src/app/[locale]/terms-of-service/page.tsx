@@ -65,4 +65,4 @@ const TermsPage = () => {
   );
 };
 
-export default withAuth(TermsPage);
+export default TermsPage;

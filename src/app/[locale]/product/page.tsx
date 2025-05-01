@@ -54,4 +54,4 @@ const ProductPage = () => {
   );
 };
 
-export default withAuth(ProductPage);
+export default ProductPage;

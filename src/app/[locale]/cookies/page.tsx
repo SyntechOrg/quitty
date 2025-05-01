@@ -68,4 +68,4 @@ const CookiesPage = () => {
   );
 };
 
-export default withAuth(CookiesPage);
+export default CookiesPage;
