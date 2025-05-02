@@ -4,10 +4,12 @@ import Image from "next/image";
 import image1 from "public/assets/images/sliderPic1.png";
 import image2 from "public/assets/images/sliderPic2.png";
 import image3 from "public/assets/images/sliderPic3.png";
+import image4 from "public/assets/images/sliderPic4.png";
+import image5 from "public/assets/images/sliderPic5.png";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import "./Slider.css";
 
-const images = [image1, image2, image3, image2];
+const images = [image1, image4, image3, image2, image5];
 
 const duplicatedImages = [...images, ...images];
 
