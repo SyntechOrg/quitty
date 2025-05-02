@@ -45,14 +45,14 @@ const Home = () => {
       <div className="container relative">
         <HomeHero />
         <div className="mt-[-420px]">{/* <Partners /> */}</div>
-        <FadeIn className="mx-auto mt-32 text-center text-text lg:mt-52">
+        <FadeIn className="mx-auto text-center text-text">
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
             duration={4.5}
             spread={55}
             as="h2"
           >
-            {t("ChangeTitle")};
+            {t("ChangeTitle")}
           </TextShimmer>
           <TextShimmer
             className="mt-4 text-[18px] font-medium leading-[1.4] lg:mt-8 lg:text-[20px]"

@@ -21,7 +21,7 @@ const SpotLightSection = () => {
 
   return (
     <div className="mt-[150px] lg:mt-[200px]">
-      <FadeIn className="mx-auto max-w-[700px] text-center text-text">
+      <FadeIn className="mx-auto text-center text-text">
         <h6 className="text-[32px] font-medium leading-[1.4] lg:text-[48px]">
           {t("SpotlightTitle")}
         </h6>

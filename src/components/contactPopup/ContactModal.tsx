@@ -16,7 +16,7 @@ const ContactModal = () => {
         to={""}
         className="bg-primary hover:bg-primary/80 active:bg-primary/90"
       >
-        POS-Anbindung anfragen
+        {t("posRequest")}
       </Button>
 
       {isOpen && (
@@ -28,7 +28,7 @@ const ContactModal = () => {
             >
               ✕
             </button>
-            <h2 className="text-xl font-bold mb-4">Contact Form</h2>
+            <h2 className="text-xl font-bold mb-4">{t("contactTitle2")}</h2>
             <form
               className="flex w-full flex-col justify-center gap-[20px]"
               action=""

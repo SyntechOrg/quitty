@@ -5,7 +5,7 @@ const VideoSection = () => {
   return (
     <FadeIn className="mt-32 lg:mt-52">
       <iframe
-        className="z-10 mx-auto aspect-video w-full rounded-[40px] lg:w-10/12"
+        className="z-10 mx-auto aspect-video w-full rounded-[40px] lg:w-full"
         src="https://www.youtube.com/embed/7s8O3zC3clo?si=T3-fHd7lSktjBBYV"
         title="YouTube video player"
         frameBorder="0"

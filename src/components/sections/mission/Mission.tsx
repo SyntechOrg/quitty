@@ -7,8 +7,8 @@ const Mission = () => {
 
   return (
     <div
-      className="mt-32 flex flex-col items-start justify-center gap-14 pb-[60px] pt-[15px] max-lg:mx-auto
-       max-lg:max-w-[600px] lg:mt-52 lg:flex-row lg:justify-between lg:gap-[0] lg:pb-[100px] lg:pt-[40px]"
+      className="mt-12 flex flex-col items-start justify-center gap-14 pb-[60px] pt-[15px] max-lg:mx-auto
+       max-lg:max-w-[600px] lg:mt-20 lg:flex-row lg:justify-between lg:gap-[0] lg:pb-[100px] lg:pt-[40px]"
     >
       <FadeIn className="flex w-[100%] flex-col items-start justify-center gap-[15px] lg:max-w-[45%]">
         <h5 className="w-[100%] border-b-[2px] border-[#60606B] border-opacity-[40%] pb-[13px] text-[16px] font-[500] text-[#0C1726]">
