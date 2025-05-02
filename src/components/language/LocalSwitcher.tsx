@@ -49,7 +49,7 @@ const LocalSwitcher = () => {
         {/*<Icon icon={IconType.DROPDOWN} />*/}
       </div>
       {isLanguageSubMenuOpen && (
-        <div className="absolute left-[8px] top-10 flex flex-col items-center justify-center rounded-md">
+        <div className="absolute left-[8px] top-8 flex flex-col items-center justify-center rounded-md">
           {localActive === "en" ? (
             <button
               className="hover:opacity-70 active:opacity-60"

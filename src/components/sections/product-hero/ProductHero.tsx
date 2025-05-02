@@ -99,7 +99,7 @@ const ProductHero = () => {
           style={{
             top: left2Top,
           }}
-          className="absolute left-24 z-[-1] w-full max-w-[250px]"
+          className="absolute left-[4rem] z-[-1] w-full max-w-[250px]"
         >
           <Image
             src={ProductHeroLeft2}
@@ -138,7 +138,7 @@ const ProductHero = () => {
           style={{
             top: right2Top,
           }}
-          className="absolute right-24 z-[-1] w-full max-w-[250px]"
+          className="absolute right-[4rem] z-[-1] w-full max-w-[250px]"
         >
           <Image
             src={ProductHeroRight2}

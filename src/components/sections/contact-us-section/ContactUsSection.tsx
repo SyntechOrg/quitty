@@ -14,7 +14,7 @@ const ContactUsSection = () => {
         }}
       ></div>
       <div>
-        <div className="flex md:flex-row flex-col gap-x-8 gap-y-12 container">
+        <div className="flex md:flex-row flex-col gap-x-8 gap-y-12">
           <div className="w-full lg:w-[30%]">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
               {t("FormTitle")}
@@ -119,10 +119,10 @@ const ContactUsSection = () => {
         <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4 lg:mt-40 mt-32">
           <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
-              Sie finden uns
+              {t("addressTitle")}
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
-              Brauereistrasse 1a;
+              Brauereistrasse 1a,
               <br />
               8730 Uznach
             </p>
@@ -135,38 +135,38 @@ const ContactUsSection = () => {
               Email: support@quitty.ch
             </p>
             <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              Call us: +4409.120.6705
+              {t("contactNumber")} +4409.120.6705
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
-              Assistance hours: Monday - Friday 9 am to 5 pm EST
+              {t("assistanceContact")}
             </p>
           </FadeIn>
           <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
-              Sales:
+              {t("salesContact")}
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               Email: sales@quitty.ch
             </p>
             <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              Call us: +4409.120.6705
+              {t("contactNumber")} +4409.120.6705
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
-              Assistance hours: Monday - Friday 9 am to 5 pm EST
+              {t("assistanceContact")}
             </p>
           </FadeIn>
           <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
-              General:
+              General
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               Email: info@quitty.ch
             </p>
             <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              Call us: +4409.120.6705
+              {t("contactNumber")} +4409.120.6705
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
-              Assistance hours: Monday - Friday 9 am to 5 pm EST
+              {t("assistanceContact")}
             </p>
           </FadeIn>
         </div>

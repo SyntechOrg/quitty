@@ -13,7 +13,7 @@ const duplicatedImages = [...images, ...images];
 
 const Slider = () => {
   return (
-    <div className="mx-auto my-32 ml-[calc(-50vw+50%)] w-screen overflow-hidden lg:my-52">
+    <div className="mx-auto my-12 ml-[calc(-50vw+50%)] w-screen overflow-hidden lg:my-24">
       <FadeIn className="mx-auto max-w-[2200px] overflow-hidden">
         <div className="animate-slide">
           {duplicatedImages.map((image, index) => (

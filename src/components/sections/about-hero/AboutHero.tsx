@@ -63,9 +63,9 @@ const AboutHero = () => {
           ))}
         </div>
       </FadeIn>
-      <div className="relative z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:max-w-[640px] lg:pt-20">
+      <div className="relative z-10 mx-auto max-w-[400px] md:max-w-[550px] lg:max-w-[875px] lg:pt-20">
         <FadeIn className="flex flex-col items-center">
-          <h1 className="text-center text-[32px] font-medium leading-[1.2] text-text md:text-[40px] lg:text-[52px]">
+          <h1 className="text-center text-[32px] lg:max-w-[640px] font-medium leading-[1.2] text-text md:text-[40px] lg:text-[52px]">
             {t("heroTitle")}
           </h1>
           <p className="mt-5 text-center text-[16px] leading-[1.6] text-text lg:text-[19px]">

@@ -5,10 +5,10 @@
     "ChangeTitle": "Verändere die Art und Weise, wie du deine Quittungen einfach verwaltest.",
     "ChangeUndertitle": "Bau Loyalität auf, spare Geld und werde mühelos umweltfreundlich.",
     "InsightUndertitle": "Vereinfache deine Quittungen",
-    "InsightTitle": "Entdecke deine Ausgabemuster mit Leichtigkeit",
+    "InsightTitle": "Entdecke deine Ausgabemuster mit Leichtigkeit.",
     "InsightUndertitle2": "Sehen Sie Ihre Ausgaben auf einen Blick.",
     "InsightTitle2": "Entdecken Sie Einblicke für jede Kategorie, die Sie verfolgen.",
-    "InsightCard1": "Travel",
+    "InsightCard1": "Reisen",
     "InsightCard2": "Auto",
     "InsightCard3": "Möbel",
     "InsightCard4": "Lebensmittel",
@@ -36,7 +36,7 @@
     "FaqAnswer3": "69% der Verbraucher bevorzugen Marken, die umweltfreundliche Lösungen anbieten.",
 
     "SpotlightTitle": "Im Mittelpunkt der einzigartigen Funktionen",
-    "SpotCard1Users": "Weltweit aktive Nutzer",
+    "SpotCard1Users": "Aktive Nutzer",
     "SpotCard1Text": "Verfügbare Nutzer, die uns stets unterstützen",
     "SpotCard2Support": "Schneller Chat-Support",
     "SpotCard3ReceiptTitle": "Verwandle jede Quittung in eine Loyalitätschance",
@@ -108,7 +108,7 @@
     "statistics1-2": "Über 1 Million digitalisierte Belege",
     "statistics1-3": "Spart Tonnen von Papier und verhindert Abfall",
     "statistics2-1": "80%",
-    "statistics2-2": "Reduktion des CO₂-Fußabdrucks bei Einzelhändlern",
+    "statistics2-2": "Reduktion des CO₂-Fussabdrucks bei Einzelhändlern",
     "statistics2-3": "Dank weniger Papierverbrauch und Druckaufwand",
     "statistics3-1": "29+",
     "statistics3-2": "Unterstützung für Einzelhändler bei ihren Nachhaltigkeitszielen",
@@ -116,7 +116,7 @@
   },
   "Contact": {
     "HeroTitle": "Kontaktieren Sie uns",
-    "HeroText": "Hinterlassen Sie uns ein paar Informationen, und wir melden uns bei Ihnen.",
+    "HeroText": "Hinterlassen Sie uns Ihre Nachricht und wir melden uns bei Ihnen.",
     "CtaButton": "Schicken Sie uns eine E-Mail",
     "FormTitle": "Arbeitsanfragen",
     "FormText": "Lassen Sie uns die Art und Weise, wie Sie Geschäfte machen, revolutionieren. Kontaktieren Sie uns noch heute, um zu erfahren, wie Quitty Ihrem Unternehmen zu mehr Nachhaltigkeit und Kundenzentrierung verhelfen kann.",
@@ -131,12 +131,16 @@
     "formlabel4": "Thema (optional)",
     "formlabel5": "Wie können wir Ihnen helfen? *",
     "formbutton1": "Ein Angebot anfordern",
-    "formcheck1": "Ich bin damit einverstanden, E-Mails zu erhalten und diese Aktivität zur Verbesserung meiner Erfahrung zu verfolgen."
+    "formcheck1": "Ich bin damit einverstanden, E-Mails zu erhalten und diese Aktivität zur Verbesserung meiner Erfahrung zu verfolgen.",
+    "addressTitle": "Unser Standort",
+    "contactNumber": "Telefonnummer",
+    "assistanceContact": "Öffnungszeiten: Montag bis Freitag von 9:00 bis 17:00 Uhr PM",
+    "salesContact": "Vertrieb"
   },
   "Header": {
     "Home": "Startseite",
     "About": "Über uns",
-    "Product": "Product",
+    "Product": "Produkt",
     "Blog": "Blog",
     "ContactButton": "Kontakt aufnehmen"
   },
@@ -220,7 +224,7 @@
   },
   "Footer": {
     "QuickLinks": "Schnellzugriffe",
-    "Product": "Product",
+    "Product": "Produkt",
     "About us": "Über uns",
     "Blog": "Blog",
     "Contact": "Kontakt",
@@ -324,15 +328,17 @@
     "contactText": "Wenn du Probleme beim Ausfüllen des Formulars hast oder Fragen zum Prozess bestehen, melde dich gerne bei uns:",
     "contactCardT1": "Geschäftssupport",
     "contactCardI1": "Email: support@quitty.ch",
-    "contactCardC1": "Call us: +4409.120.6705",
-    "contactCardtt1": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)",
-    "contactCardT2": "Vertrieb:",
+    "contactCardC1": "Telefonnummer: +4409.120.6705",
+    "contactCardtt1": "Öffnungszeiten: Montag bis Freitag von 9:00 bis 17:00 Uhr PM",
+    "contactCardT2": "Vertrieb",
     "contactCardI2": "Email: sales@quitty.ch",
-    "contactCardC2": "Call us: +4409.120.6705",
-    "contactCardtt2": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)",
-    "contactCardT3": "Allgemeine Anfragen:",
+    "contactCardC2": "Telefonnummer: +4409.120.6705",
+    "contactCardtt2": "Öffnungszeiten: Montag bis Freitag von 9:00 bis 17:00 Uhr PM",
+    "contactCardT3": "Allgemeine Anfragen",
     "contactCardI3": "Email: info@quitty.ch",
-    "contactCardC3": "Call us: +4409.120.6705",
-    "contactCardtt3": "Öffnungszeiten: Montag - Freitag, 6:00 bis 20:00 Uhr EST (kostenlos)"
+    "contactCardC3": "Telefonnummer: +4409.120.6705",
+    "contactCardtt3": "Öffnungszeiten: Montag bis Freitag von 9:00 bis 17:00 Uhr PM",
+    "contactTitle2": "Kontaktfeld",
+    "posRequest": "POS-Anbindung anfragen"
   }
 }

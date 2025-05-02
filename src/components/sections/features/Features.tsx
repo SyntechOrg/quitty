@@ -42,7 +42,7 @@ const Features = () => {
   const t = useTranslations("Features");
   return (
     <>
-      <FadeIn className="mt-[80px] flex flex-col items-center justify-center gap-[50px] max-lg:mx-auto max-lg:max-w-[620px] lg:mt-[120px] lg:gap-[80px]">
+      <FadeIn className="md:mt-[160px] mt-[100px] flex flex-col items-center justify-center gap-[50px] max-lg:mx-auto max-lg:max-w-[620px] lg:mt-[200px] lg:gap-[80px]">
         <div>
           <p className="text-center text-[15px] text-[#01C9A5] lg:text-[17px]">
             {t("undertitle")}
