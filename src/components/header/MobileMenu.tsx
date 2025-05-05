@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useMobileHeaderStore } from "@/lib/store";
 import { Nav } from "./Header";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 type MobileMenuProps = {
   className?: string;
@@ -13,6 +15,8 @@ type MobileMenuProps = {
 export const MobileMenu: FC<MobileMenuProps> = () => {
   const { open, toggleOpen } = useMobileHeaderStore();
   const pathname = usePathname();
+
+  const t = useTranslations("Header");
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
@@ -55,8 +59,10 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
             </div>
             <Nav />
             <div className="pb-[105px]">
-              <p className="text-sm text-primary">Get in touch</p>
-              <div className="text-lg text-text">email@placeholder.ch</div>
+              <p className="text-sm text-primary">{t("getInTouch")}</p>
+              <Link href="mailto:info@quitty.ch">
+                <div className="text-lg text-text">info@quitty.ch</div>
+              </Link>
             </div>
           </motion.div>
         )}

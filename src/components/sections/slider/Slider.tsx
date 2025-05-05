@@ -28,7 +28,7 @@ const Slider = () => {
                 src={image}
                 alt="image"
                 loading="eager"
-                className="mx-auto h-full max-h-[250px] w-full rounded-[60px] object-contain lg:max-h-[500px] lg:rounded-[80px]"
+                className="mx-auto h-full max-h-[261px] w-full rounded-[60px] object-contain lg:max-h-[500px] lg:rounded-[80px]"
               />
             </div>
           ))}
