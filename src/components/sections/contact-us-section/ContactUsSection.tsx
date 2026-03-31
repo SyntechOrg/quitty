@@ -134,12 +134,12 @@ const ContactUsSection = () => {
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               Email: support@quitty.ch
             </p>
-            <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
+            {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
               {t("contactNumber")} +4409.120.6705
-            </p>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
+            </p> */}
+            {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
-            </p>
+            </p> */}
           </FadeIn>
           <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
@@ -148,12 +148,12 @@ const ContactUsSection = () => {
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               Email: sales@quitty.ch
             </p>
-            <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
+            {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
               {t("contactNumber")} +4409.120.6705
-            </p>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
+            </p> */}
+            {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
-            </p>
+            </p> */}
           </FadeIn>
           <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
             <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
@@ -162,12 +162,12 @@ const ContactUsSection = () => {
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               Email: info@quitty.ch
             </p>
-            <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
+            {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
               {t("contactNumber")} +4409.120.6705
-            </p>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
+            </p> */}
+            {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
-            </p>
+            </p> */}
           </FadeIn>
         </div>
       </div>
