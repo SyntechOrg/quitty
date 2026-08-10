@@ -63,7 +63,13 @@ const ProductHero = () => {
                 App Store
               </span>
             </Button>
-            <Button to={"/"} variant="primary" className="group w-[250px]">
+            <Button
+              to={
+                "https://play.google.com/store/apps/details?id=com.syntech.quitty"
+              }
+              variant="primary"
+              className="group w-[250px]"
+            >
               <Image
                 src={GooglePlayLogo}
                 alt="Google Play logo"

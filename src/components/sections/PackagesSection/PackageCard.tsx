@@ -62,7 +62,9 @@ const PackageCard: FC<PackageCardProps> = (props) => {
             </span>
           </Button>
           <Button
-            to={"/"}
+            to={
+              "https://play.google.com/store/apps/details?id=com.syntech.quitty"
+            }
             variant="primary"
             className="flex !h-[54px] w-full items-center justify-center gap-x-[5px] !px-0.5 font-medium"
           >

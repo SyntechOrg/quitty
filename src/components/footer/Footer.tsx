@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 import Image from "next/image";
 import QuittyBanner from "../../../public/assets/images/quitty-banner.png";
 import TikTokLogo from "../../../public/assets/images/tik-tok-logo.png";
+import LinkedinLogo from "../../../public/assets/images/linkedin.svg";
 import YoutubeLogo from "../../../public/assets/images/youtube-logo.png";
 import InstagramLogo from "../../../public/assets/images/instagram-logo.png";
 import AppleLogo from "../../../public/assets/images/apple-icon.png";
@@ -64,7 +65,9 @@ export const Footer = () => {
                   />
                 </a>
                 <a
-                  href={"https://www.google.com"}
+                  href={
+                    "https://play.google.com/store/apps/details?id=com.syntech.quitty"
+                  }
                   target="_blank"
                   className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-[#b7babf] duration-150 hover:bg-[#3E3E3E50] lg:h-[48px] lg:w-[48px]"
                   rel="noreferrer"
@@ -118,9 +121,9 @@ export const Footer = () => {
                   </li>
                 ))}
               </ul>
-              {/* <div className="mt-6 flex gap-2.5">
+              <div className="mt-6 flex gap-2.5">
                 <a
-                  href={"https://www.google.com"}
+                  href={"https://www.tiktok.com/@quitty.ch"}
                   target="_blank"
                   className="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-[#3E3E3E] duration-150 hover:bg-[#3E3E3E50] lg:h-[48px] lg:w-[48px]"
                   rel="noreferrer"
@@ -132,19 +135,19 @@ export const Footer = () => {
                   />
                 </a>
                 <a
-                  href={"https://www.google.com"}
+                  href={"https://www.linkedin.com/company/quittyag/"}
                   target="_blank"
                   className="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-[#3E3E3E] duration-150 hover:bg-[#3E3E3E50] lg:h-[48px] lg:w-[48px]"
                   rel="noreferrer"
                 >
                   <Image
-                    src={YoutubeLogo}
-                    alt="Youtube Logo"
+                    src={LinkedinLogo}
+                    alt="Linkedin Logo"
                     className="h-full max-h-[16px] w-full max-w-[16px] object-contain lg:max-h-[20px] lg:max-w-[20px]"
                   />
                 </a>
                 <a
-                  href={"https://www.google.com"}
+                  href={"https://www.instagram.com/quitty.ch/"}
                   target="_blank"
                   className="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-[#3E3E3E] duration-150 hover:bg-[#3E3E3E50] lg:h-[48px] lg:w-[48px]"
                   rel="noreferrer"
@@ -155,7 +158,7 @@ export const Footer = () => {
                     className="h-full max-h-[16px] w-full max-w-[16px] object-contain lg:max-h-[20px] lg:max-w-[20px]"
                   />
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

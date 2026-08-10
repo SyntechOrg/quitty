@@ -69,7 +69,13 @@ const HomeHero = () => {
                 />
                 App Store
               </Button>
-              <Button to={"/"} variant="primary" className="w-[250px]">
+              <Button
+                to={
+                  "https://play.google.com/store/apps/details?id=com.syntech.quitty"
+                }
+                variant="primary"
+                className="w-[250px]"
+              >
                 <Image
                   src={GooglePlayLogoWhite}
                   alt="Google Play logo"
