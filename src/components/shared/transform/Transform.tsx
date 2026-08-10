@@ -74,7 +74,11 @@ const Transform = () => {
               </span>
             </button>
           </Link>
-          <Link href={""}>
+          <Link
+            href={
+              "https://play.google.com/store/apps/details?id=com.syntech.quitty"
+            }
+          >
             <button
               className="border-color-[#00C9A5] group flex h-[60px] w-[200px] items-center justify-center gap-[10px]
             rounded-full border border-primary duration-150 hover:bg-primary"
