@@ -34,7 +34,7 @@ const TermsPage = () => {
   return (
     <div className="container">
       <FadeIn
-        className="mt-[75px] space-y-[15px] md:space-y-[25px] lg:mt-[150px] [&>p]:text-[14px]
+        className="mt-[75px] space-y-[15px] max-lg:!opacity-100 md:space-y-[25px] lg:mt-[150px] [&>p]:text-[14px]
       [&>p]:leading-[23px] md:[&>p]:text-[16px] md:[&>p]:leading-[27px]"
       >
         <h1 className="text-[40px] font-bold md:text-[50px] lg:text-[60px]">

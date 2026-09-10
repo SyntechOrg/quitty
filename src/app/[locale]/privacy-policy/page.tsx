@@ -34,7 +34,7 @@ const PrivacyPage = () => {
 
   return (
     <div className="container">
-      <FadeIn className="mt-[150px] lg:mt-[200px]">
+      <FadeIn className="mt-[150px] max-lg:!opacity-100 lg:mt-[200px]">
         <h1 className="text-[40px] font-bold md:text-[50px] lg:text-[60px]">
           {t("Title")}
         </h1>
