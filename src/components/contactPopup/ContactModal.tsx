@@ -31,33 +31,34 @@ const ContactModal = () => {
             <h2 className="text-xl font-bold mb-4">{t("contactTitle2")}</h2>
             <form
               className="flex w-full flex-col justify-center gap-[20px]"
-              action=""
+              action="https://formspree.io/f/xppznkrv"
+              method="POST"
             >
               <div className="flex flex-col justify-center gap-[10px]">
                 <label
                   className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                  htmlFor="email"
+                  htmlFor="name"
                 >
                   {t("labelName")}
                 </label>
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                  name="email"
-                  type="email"
+                  name="name"
+                  type="text"
                   placeholder={t("inputName")}
                 />
               </div>
               <div className="flex flex-col justify-center gap-[10px]">
                 <label
                   className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                  htmlFor="email"
+                  htmlFor="company"
                 >
                   {t("labelCompany")}
                 </label>
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                  name="email"
-                  type="email"
+                  name="company"
+                  type="text"
                   placeholder={t("inputCompany")}
                 />
               </div>
@@ -99,6 +100,7 @@ const ContactModal = () => {
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#60606B]"
                   name="reason"
+                  type="text"
                   placeholder={t("input3-1")}
                 />
               </div>

@@ -26,34 +26,35 @@ const ContactUsSection = () => {
           <div className="w-full md:w-[70%]">
             <form
               className="flex w-full flex-col justify-center gap-[20px]"
-              action=""
+              action="https://formspree.io/f/xppznkrv"
+              method="POST"
             >
               <div className="flex sm:flex-row flex-col justify-between">
                 <div className="flex flex-col justify-center gap-[10px] sm:w-[48%] w-full">
                   <label
                     className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                    htmlFor="email"
+                    htmlFor="name"
                   >
                     {t("formlabel1")}
                   </label>
                   <input
                     className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                    name="email"
-                    type="email"
+                    name="name"
+                    type="text"
                     placeholder={t("formInput1")}
                   />
                 </div>
                 <div className="flex flex-col justify-center gap-[10px] sm:w-[48%] w-full">
                   <label
                     className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                    htmlFor="phone"
+                    htmlFor="email"
                   >
                     {t("formlabel2")}
                   </label>
                   <input
                     className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                    name="phone"
-                    type="tel"
+                    name="email"
+                    type="email"
                     placeholder={t("formInput2")}
                   />
                 </div>
@@ -62,14 +63,14 @@ const ContactUsSection = () => {
               <div className="flex flex-col justify-center gap-[10px] w-full">
                 <label
                   className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                  htmlFor="email"
+                  htmlFor="phone"
                 >
                   {t("formlabel3")}
                 </label>
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                  name="email"
-                  type="email"
+                  name="phone"
+                  type="tel"
                   placeholder={t("formInput3")}
                 />
               </div>
@@ -89,14 +90,14 @@ const ContactUsSection = () => {
               <div className="flex flex-col justify-center gap-[10px] w-[100%]">
                 <label
                   className="text-[13px] leading-[1.5] text-[#161519] md:text-[14px]"
-                  htmlFor="email"
+                  htmlFor="message"
                 >
                   {t("formlabel5")}
                 </label>
                 <input
                   className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#000]"
-                  name="email"
-                  type="email"
+                  name="message"
+                  type="text"
                   placeholder={t("formInput5")}
                 />
               </div>
