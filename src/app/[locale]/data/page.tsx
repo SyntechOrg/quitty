@@ -76,7 +76,8 @@ const DataPage = () => {
             <div className="w-full md:w-[48%]">
               <form
                 className="flex w-full flex-col justify-center gap-[20px]"
-                action=""
+                action="https://formspree.io/f/xppznkrv"
+                method="POST"
               >
                 <div className="flex flex-col justify-center gap-[10px]">
                   <label
@@ -116,6 +117,7 @@ const DataPage = () => {
                   <input
                     className="h-[48px] rounded bg-[#90919C14] pl-[10px] text-[#60606B]"
                     name="reason"
+                    type="text"
                     placeholder={t("input3")}
                   />
                 </div>
