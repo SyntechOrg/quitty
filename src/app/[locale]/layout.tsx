@@ -23,9 +23,13 @@ export const metadata: Metadata = {
 // eslint-disable-next-line react/function-component-definition
 export default async function LocaleLayout({
   children,
-  params: { locale },
-}: Readonly<{ children: ReactNode; params: { locale: string } }>) {
-  const messages = await getMessages();
+  params,
+}: Readonly<{
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
