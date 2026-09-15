@@ -31,9 +31,9 @@ export const InputField: FC<InputFieldProps> = ({ error, ...props }) => {
   return (
     <div className="w-full">
       <Input {...props} />
-      {error && (
+      {error?.message && (
         <span className="text-xs font-medium text-red-500">
-          {t(error?.message)}
+          {t(error.message)}
         </span>
       )}
     </div>

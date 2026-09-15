@@ -7,13 +7,13 @@ import "./page.css";
 import Partners from "@/components/shared/partners/Partners";
 
 interface Props {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug, locale } = await params;
 
-  const isEnglish = params.locale === "en";
+  const isEnglish = locale === "en";
 
   const product = isEnglish
     ? blogsEnglish.find((post) => post.slug === slug)
@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 type PostPageProps = {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 };
 
 const PostPage = async ({ params }: PostPageProps) => {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const blogs = locale === "en" ? blogsEnglish : blogsDeutsch;
 
   const blog = blogs.find((proj) => proj.slug === slug);
