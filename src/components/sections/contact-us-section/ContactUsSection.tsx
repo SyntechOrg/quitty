@@ -136,7 +136,7 @@ const ContactUsSection = () => {
               Email: support@quitty.ch
             </p>
             {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              {t("contactNumber")} +4409.120.6705
+              {t("contactNumber")} +41 55 589 67 67
             </p> */}
             {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
@@ -150,7 +150,7 @@ const ContactUsSection = () => {
               Email: sales@quitty.ch
             </p>
             {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              {t("contactNumber")} +4409.120.6705
+              {t("contactNumber")} +41 55 589 67 67
             </p> */}
             {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
@@ -164,7 +164,7 @@ const ContactUsSection = () => {
               Email: info@quitty.ch
             </p>
             {/* <p className="text-[16px] font-semibold leading-[1.6] text-[#161519]">
-              {t("contactNumber")} +4409.120.6705
+              {t("contactNumber")} +41 55 589 67 67
             </p> */}
             {/* <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
               {t("assistanceContact")}
