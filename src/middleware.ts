@@ -5,6 +5,8 @@ import type { NextRequest } from "next/server";
 const intlMiddleware = createMiddleware({
   locales: ["en", "de"],
   defaultLocale: "de",
+  // Retention as stated in the cookie policy (NEXT_LOCALE: 12 Monate).
+  localeCookie: { maxAge: 60 * 60 * 24 * 365 },
 });
 
 const customMiddleware = async (request: NextRequest) => {

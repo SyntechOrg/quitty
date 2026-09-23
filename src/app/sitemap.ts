@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogsDeutsch, blogsEnglish } from "blogs";
+import { legalHref, legalNavigation } from "@/content/legal";
 
 const BASE_URL = "https://www.quitty.ch";
 
@@ -41,18 +42,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-    {
-      url: `${BASE_URL}/data`,
+    ...legalNavigation.map((slug) => ({
+      url: `${BASE_URL}${legalHref(slug, "de")}`,
       lastModified: new Date(),
       changefreq: "monthly",
-      priority: 0.8,
+      priority: 0.5,
       alternates: {
         languages: {
-          en: `${BASE_URL}/en/data`,
-          de: `${BASE_URL}/de/data`,
+          en: `${BASE_URL}${legalHref(slug, "en")}`,
+          de: `${BASE_URL}${legalHref(slug, "de")}`,
         },
       },
-    },
+    })),
     {
       url: `${BASE_URL}/services`,
       lastModified: new Date(),

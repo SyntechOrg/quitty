@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { legalHref, toLegalLocale } from "@/content/legal";
+import { hasConsent, markServiceLoaded } from "@/lib/consent";
 
 const CHATBOT_ID = "FjO4H7VgTyYHCXBH2wgHj";
 const SCRIPT_SRC = "https://www.chatbase.co/embed.min.js";
@@ -60,7 +63,97 @@ const createLauncher = () => {
   return launcher;
 };
 
+type NoticeStrings = {
+  text: string;
+  load: string;
+  cancel: string;
+  policy: string;
+  policyHref: string;
+};
+
+const createConsentNotice = (
+  strings: NoticeStrings,
+  onLoad: () => void,
+  onCancel: () => void,
+) => {
+  const notice = document.createElement("div");
+  notice.setAttribute("role", "dialog");
+  notice.setAttribute("aria-label", strings.load);
+  notice.dataset.testid = "chat-consent";
+  Object.assign(notice.style, {
+    position: "fixed",
+    bottom: "92px",
+    right: "20px",
+    width: "min(320px, calc(100vw - 40px))",
+    zIndex: "999999",
+    padding: "20px",
+    borderRadius: "20px",
+    background: "#ffffff",
+    color: "#161519",
+    boxShadow: "0 8px 40px rgba(0, 0, 0, 0.18)",
+    fontSize: "14px",
+    lineHeight: "1.6",
+  });
+
+  const text = document.createElement("p");
+  text.textContent = strings.text;
+
+  const link = document.createElement("a");
+  link.href = strings.policyHref;
+  link.textContent = strings.policy;
+  Object.assign(link.style, {
+    display: "inline-block",
+    marginTop: "8px",
+    textDecoration: "underline",
+  });
+
+  const actions = document.createElement("div");
+  Object.assign(actions.style, {
+    display: "flex",
+    gap: "8px",
+    marginTop: "16px",
+  });
+
+  const button = (label: string, primary: boolean, onClick: () => void) => {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.textContent = label;
+    el.onclick = onClick;
+    Object.assign(el.style, {
+      flex: "1",
+      height: "40px",
+      borderRadius: "999px",
+      border: primary ? "none" : "1px solid #b7babf",
+      background: primary ? "#00C9A5" : "transparent",
+      color: primary ? "#ffffff" : "#161519",
+      fontWeight: "500",
+      cursor: "pointer",
+    });
+    return el;
+  };
+
+  actions.append(
+    button(strings.load, true, onLoad),
+    button(strings.cancel, false, onCancel),
+  );
+  notice.append(text, link, actions);
+  return notice;
+};
+
 const useChatbase = () => {
+  const t = useTranslations("Consent");
+  const locale = toLegalLocale(useLocale());
+  const strings = useMemo<NoticeStrings>(
+    () => ({
+      text: t("chatText"),
+      load: t("chatButton"),
+      cancel: t("cancel"),
+      policy: t("policyLink"),
+      policyHref: legalHref("cookies", locale),
+    }),
+    [t, locale],
+  );
+
   useEffect(() => {
     const closeBtn = document.createElement("button");
     closeBtn.style.position = "fixed";
@@ -96,19 +189,24 @@ const useChatbase = () => {
 
     // Chatbase is only loaded once the visitor clicks the launcher, so nothing
     // is requested from Chatbase (and no Chatbase cookie is set) on page load.
-    // Once loaded it stays loaded across client-side navigation.
+    // Without consent to "Funktional" the click first shows a notice and the
+    // chat loads only after "Chat laden". Once loaded it stays loaded across
+    // client-side navigation.
     let launcher: HTMLButtonElement | undefined;
+    let notice: HTMLDivElement | undefined;
 
     if (!isChatbaseLoaded()) {
       const button = createLauncher();
 
-      button.onclick = () => {
+      const loadChatbase = () => {
+        notice?.remove();
         button.disabled = true;
         button.style.opacity = "0.6";
         button.style.cursor = "wait";
 
         installChatbaseQueue();
         window.chatbase.open();
+        markServiceLoaded("chatbase");
 
         const script = document.createElement("script");
         script.src = SCRIPT_SRC;
@@ -125,16 +223,33 @@ const useChatbase = () => {
         document.body.appendChild(script);
       };
 
+      button.onclick = () => {
+        if (hasConsent("chatbase")) {
+          loadChatbase();
+        } else if (notice) {
+          notice.remove();
+          notice = undefined;
+        } else {
+          notice = createConsentNotice(strings, loadChatbase, () => {
+            notice?.remove();
+            notice = undefined;
+          });
+          document.body.appendChild(notice);
+          notice.querySelector("button")?.focus();
+        }
+      };
+
       document.body.appendChild(button);
       launcher = button;
     }
 
     return () => {
       launcher?.remove();
+      notice?.remove();
       closeBtn.remove();
       clearInterval(checkIfOpened);
     };
-  }, []);
+  }, [strings]);
 };
 
 export default useChatbase;

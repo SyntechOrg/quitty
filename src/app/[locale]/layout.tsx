@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import GradientBackground from "@/components/shared/background/GradientBackground";
 import Transform from "@/components/shared/transform/Transform";
 import LenisWrapper from "@/components/shared/lenis-wrapper/LenisWrapper";
+import CookieConsent from "@/components/consent/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Quitty | Home",
@@ -45,6 +46,7 @@ export default async function LocaleLayout({
             <Footer />
           </LenisWrapper>
           <ToastContainer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

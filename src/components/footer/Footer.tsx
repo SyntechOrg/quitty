@@ -13,21 +13,28 @@ import AppleLogo from "../../../public/assets/images/apple-icon.png";
 import GooglePlayLogo from "../../../public/assets/images/google-play-icon.png";
 import Link from "next/link";
 import { Icon, IconType } from "@/components/shared";
+import {
+  legalHref,
+  legalNavigation,
+  toLegalLocale,
+  type LegalSlug,
+} from "@/content/legal";
+import { openConsentSettings } from "@/lib/consent";
 
 const footerNavLinks = [
   { text: "Product", href: "product" },
   { text: "About us", href: "about" },
   { text: "Blog", href: "blog" },
   { text: "Contact", href: "contact" },
-  { text: "DataDeletionlink", href: "data" },
 ];
 
-const footerLegalLinks = [
-  { text: "Terms", href: "terms-of-service" },
-  { text: "Privacy", href: "privacy-policy" },
-  { text: "Impressum", href: "impressum" },
-  { text: "Cookies", href: "cookies" },
-];
+const footerLegalLabels: Record<LegalSlug, string> = {
+  impressum: "Impressum",
+  "privacy-policy": "Privacy",
+  cookies: "Cookies",
+  "terms-of-service": "Terms",
+  data: "DataDeletionlink",
+};
 
 export const Footer = () => {
   const localActive = useLocale();
@@ -110,16 +117,21 @@ export const Footer = () => {
                 <p className="pb-2 text-[16px] font-medium leading-[1.4] text-white">
                   {t("Legal")}
                 </p>
-                {footerLegalLinks.map((item) => (
+                {legalNavigation.map((slug) => (
                   <li
-                    key={item.text}
+                    key={slug}
                     className="text-[16px] leading-[1.4] text-[#b7babf] duration-150 hover:text-white"
                   >
-                    <Link href={`/${localActive}/${item.href.toLowerCase()}`}>
-                      {t(item.text)}
+                    <Link href={legalHref(slug, toLegalLocale(localActive))}>
+                      {t(footerLegalLabels[slug])}
                     </Link>
                   </li>
                 ))}
+                <li className="text-[16px] leading-[1.4] text-[#b7babf] duration-150 hover:text-white">
+                  <button type="button" onClick={openConsentSettings}>
+                    {t("CookieSettings")}
+                  </button>
+                </li>
               </ul>
               <div className="mt-6 flex gap-2.5">
                 <a

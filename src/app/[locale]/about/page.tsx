@@ -4,10 +4,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Heading from "@/components/shared/heading/Heading";
 import Mission from "@/components/sections/mission/Mission";
-import Partners from "@/components/shared/partners/Partners";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
-import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
-import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import TeamSection from "@/components/sections/team-section/TeamSection";
 import CoreValuesSection from "@/components/core-values/CoreValuesSection";
 import VideoSection from "@/components/sections/video-section/video-section";
@@ -40,7 +37,6 @@ const AboutPage = () => {
   return (
     <div className="container">
       <AboutHero />
-      {/* <Partners /> */}
       <Heading
         title="Heading-title1"
         underTitle="Heading-underTitle1"
@@ -50,8 +46,6 @@ const AboutPage = () => {
       {/* <VideoSection /> */}
       <CoreValuesSection />
       <TeamSection />
-      <ImpactSection />
-      <FeedbackStacked />
       {/* <PackagesSection /> */}
     </div>
   );

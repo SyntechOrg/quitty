@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import React from "react";
-import Partners from "@/components/shared/partners/Partners";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import BlogPostCards from "@/components/blog-post-cards/BlogPostCards";
 import withAuth from "@/components/hocs/withAuth";
@@ -47,7 +46,6 @@ const BlogPage = () => {
         </FadeIn>
       </div>
       <BlogPostCards />
-      {/* <Partners /> */}
     </div>
   );
 };
