@@ -1,6 +1,7 @@
 import React from "react";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
+import FormPrivacyNotice from "@/components/legal/FormPrivacyNotice";
 
 const ContactUsSection = () => {
   const t = useTranslations("Contact");
@@ -102,12 +103,36 @@ const ContactUsSection = () => {
                 />
               </div>
 
-              <div className="flex flex-row justify-start gap-[8px]">
-                <input className="rounded-md" type="checkbox" />
-                <p className="text-[13px] leading-[1.85] text-[#161519] md:text-[14px]">
-                  {t("formcheck1")}
-                </p>
-              </div>
+              {/* Two separate, optional consents (QTY-LAUNCH-2026-01 M-1);
+                  neither is needed to send the enquiry. */}
+              <fieldset className="flex flex-col gap-[10px]">
+                <legend className="mb-[10px] text-[13px] leading-[1.5] text-[#161519] md:text-[14px]">
+                  {t("formcheckLegend")}
+                </legend>
+                <label className="flex flex-row items-start justify-start gap-[8px]">
+                  <input
+                    className="mt-[6px] rounded-md"
+                    type="checkbox"
+                    name="consent_marketing_emails"
+                    value="yes"
+                  />
+                  <span className="text-[13px] leading-[1.85] text-[#161519] md:text-[14px]">
+                    {t("formcheckEmails")}
+                  </span>
+                </label>
+                <label className="flex flex-row items-start justify-start gap-[8px]">
+                  <input
+                    className="mt-[6px] rounded-md"
+                    type="checkbox"
+                    name="consent_email_tracking"
+                    value="yes"
+                  />
+                  <span className="text-[13px] leading-[1.85] text-[#161519] md:text-[14px]">
+                    {t("formcheckTracking")}
+                  </span>
+                </label>
+              </fieldset>
+              <FormPrivacyNotice />
               <button
                 className="h-[43px] w-[160px] rounded-md bg-[#111013] text-[14px] text-[#fff] md:h-[48px] md:w-[180px] md:text-[16px]"
                 type="submit"

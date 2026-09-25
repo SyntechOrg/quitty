@@ -4,7 +4,6 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 import { Metadata } from "next";
 import Image from "next/image";
 import "./page.css";
-import Partners from "@/components/shared/partners/Partners";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -80,7 +79,6 @@ const PostPage = async ({ params }: PostPageProps) => {
           </FadeIn>
         ))}
       </FadeIn>
-      <Partners />
     </div>
   );
 };

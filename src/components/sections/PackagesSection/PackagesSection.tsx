@@ -10,7 +10,6 @@ const packages = [
     features: [
       "PackageCardFeatures1-1",
       "PackageCardFeatures1-2",
-      "PackageCardFeatures1-3",
       "PackageCardFeatures1-4",
       "PackageCardFeatures1-5",
     ],
@@ -22,7 +21,6 @@ const packages = [
     features: [
       "PackageCardFeatures2-1",
       "PackageCardFeatures2-2",
-      "PackageCardFeatures2-3",
       "PackageCardFeatures2-4",
       "PackageCardFeatures2-5",
     ],
@@ -34,7 +32,6 @@ const packages = [
     features: [
       "PackageCardFeatures3-1",
       "PackageCardFeatures3-2",
-      "PackageCardFeatures3-3",
       "PackageCardFeatures3-4",
       "PackageCardFeatures3-5",
     ],

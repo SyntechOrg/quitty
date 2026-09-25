@@ -15,14 +15,6 @@ const FAQ = [
     question: "FaqQuestion1",
     answer: "FaqAnswer1",
   },
-  {
-    question: "FaqQuestion2",
-    answer: "FaqAnswer2",
-  },
-  {
-    question: "FaqQuestion3",
-    answer: "FaqAnswer3",
-  },
 ];
 
 const HowItWorksSection = () => {

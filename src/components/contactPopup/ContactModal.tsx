@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "../shared";
+import FormPrivacyNotice from "@/components/legal/FormPrivacyNotice";
 
 const ContactModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,6 +111,7 @@ const ContactModal = () => {
                   {t("formCheck")}
                 </p>
               </div> */}
+              <FormPrivacyNotice />
               <button
                 className="h-[43px] w-[160px] rounded-md bg-[#111013] text-[14px] text-[#fff] md:h-[48px] md:w-[180px] md:text-[16px]"
                 type="submit"
