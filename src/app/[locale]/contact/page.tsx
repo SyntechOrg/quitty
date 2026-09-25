@@ -1,6 +1,5 @@
 "use client";
 import React, { FC } from "react";
-import Partners from "@/components/shared/partners/Partners";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import ContactHero from "@/components/sections/contact-hero/ContactHero";
 import withAuth from "@/components/hocs/withAuth";
@@ -34,7 +33,6 @@ const ContactPage = () => {
     <div className="container">
       <ContactHero />
       <ContactUsSection />
-      {/* <Partners /> */}
     </div>
   );
 };

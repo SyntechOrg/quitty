@@ -1,0 +1,73 @@
+.legal-document {
+  @apply mt-[60px] max-w-[720px] break-words text-[15px] leading-[1.65] text-[#161519] md:text-[16px] lg:mt-[120px];
+}
+
+.legal-document h1 {
+  @apply text-[34px] font-bold leading-[1.1] text-[#111013] md:text-[48px];
+  hyphens: auto;
+}
+
+.legal-document .lead {
+  @apply mt-3 text-[14px] text-[#60606B] md:text-[15px];
+}
+
+.legal-document .legal-translation {
+  @apply mt-2 text-[14px] text-[#60606B] md:text-[15px];
+}
+
+.legal-document .legal-notice {
+  @apply mb-4 mt-8 border-y border-[#E3E4EA] py-4 text-[14px] leading-[1.6] text-[#60606B];
+}
+
+.legal-document .legal-notice strong {
+  @apply font-semibold text-[#161519];
+}
+
+.legal-document h2 {
+  @apply mt-10 text-[19px] font-semibold leading-[1.35] text-[#111013] md:text-[21px];
+}
+
+.legal-document h3 {
+  @apply mt-6 text-[16px] font-semibold text-[#111013] md:text-[17px];
+}
+
+.legal-document p {
+  @apply mt-2;
+}
+
+.legal-document h2 + p,
+.legal-document h3 + p {
+  @apply mt-1.5;
+}
+
+.legal-document ul {
+  @apply mt-2 list-disc pl-5;
+}
+
+.legal-document li {
+  @apply mt-1 pl-1;
+}
+
+.legal-document a {
+  @apply underline decoration-[#b7babf] decoration-1 underline-offset-[3px] hover:decoration-[#111013];
+}
+
+.legal-document hr {
+  @apply my-14 border-[#E3E4EA];
+}
+
+.legal-document .legal-table {
+  @apply mt-4 overflow-x-auto;
+}
+
+.legal-document table {
+  @apply w-full min-w-[560px] border-collapse text-left text-[14px] leading-[1.5];
+}
+
+.legal-document th {
+  @apply border-b border-[#111013] py-2 pr-4 font-semibold text-[#111013];
+}
+
+.legal-document td {
+  @apply border-b border-[#E3E4EA] py-2.5 pr-4 align-top;
+}

@@ -81,10 +81,6 @@ export const blogsEnglish: Array<Blog> = [
         type: "p",
         text: "Quitty offers a technical solution within the retailers applications, enabling a better way to drive digital receipts back into their app as well as link the payment card to a loyalty ID number. For those retailers not having an application, Quitty offers a cost efficient universal iOS and Android app where retailers can enable card linked receipts and rewards for their customers.",
       },
-      {
-        type: "p",
-        text: "When it comes to cardholder data, Quitty is a secure partner with PCI DSS Level certification. We already receive large amounts of cardholder data and follow strict payment regulations to keep it safe. As a retailer you will not need to store this data within your solution, all card data with Quitty. Our platform works with both Mastercard and Visa at a card network level but also with European payment partners such as Verifone, Worldline & Ingenico.",
-      },
     ],
   },
 ];
@@ -147,10 +143,6 @@ export const blogsDeutsch: Array<Blog> = [
       {
         type: "p",
         text: "Quitty bietet eine technische Lösung innerhalb der Anwendungen der Einzelhändler, die eine bessere Möglichkeit bietet, digitale Belege in ihre App zurückzuführen und die Zahlungskarte mit einer Treue-ID-Nummer zu verknüpfen. Für Einzelhändler ohne eigene App bietet Quitty eine kostengünstige, universelle iOS- und Android-App, mit der Einzelhändler kartengebundene Belege und Belohnungen für ihre Kunden aktivieren können.",
-      },
-      {
-        type: "p",
-        text: "Was die Kartendaten betrifft, ist Quitty ein sicherer Partner mit PCI DSS Level-Zertifizierung. Wir empfangen bereits große Mengen an Kartendaten und halten uns an strenge Zahlungsrichtlinien, um diese sicher zu speichern. Als Einzelhändler müssen Sie diese Daten nicht in Ihrer Lösung speichern – alle Kartendaten verbleiben bei Quitty. Unsere Plattform arbeitet sowohl mit Mastercard und Visa auf Kartenetzwerkebene als auch mit europäischen Zahlungsdienstleistern wie Verifone, Worldline und Ingenico.",
       },
     ],
   },

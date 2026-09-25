@@ -1,13 +1,11 @@
 "use client";
 import React, { FC } from "react";
 import { Metadata } from "next";
-import Partners from "@/components/shared/partners/Partners";
 import Heading from "@/components/shared/heading/Heading";
 import Slider from "@/components/sections/slider/Slider";
 import Process from "@/components/sections/process/Process";
 import Features from "@/components/sections/features/Features";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
-import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import ProductHero from "@/components/sections/product-hero/ProductHero";
 import withAuth from "@/components/hocs/withAuth";
 import useChatbase from "@/components/chatbot/useChatbase";
@@ -39,7 +37,7 @@ const ProductPage = () => {
   return (
     <div className="container">
       <ProductHero />
-      <div className="my-32 lg:my-44">{/* <Partners /> */}</div>
+      <div className="my-32 lg:my-44"></div>
       <Heading
         title="Heading-title2"
         underTitle="Heading-underTitle2"
@@ -48,7 +46,6 @@ const ProductPage = () => {
       <Slider />
       <Process />
       <Features />
-      <FeedbackStacked />
       {/* <PackagesSection /> */}
     </div>
   );

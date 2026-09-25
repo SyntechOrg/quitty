@@ -7,12 +7,10 @@ import { FadeIn } from "@/components/fade-in/FadeIn";
 import InsightsSection from "@/components/sections/insights-section/InsightsSection";
 import PromoSection from "@/components/sections/promo-section/PromoSection";
 import HowItWorksSection from "@/components/sections/how-it-works/HowItWorksSection";
-import Partners from "@/components/shared/partners/Partners";
 import React, { useEffect, useState } from "react";
 import SpotLightSection from "@/components/sections/spotlight-section/SpotLightSection";
 import PackagesSection from "@/components/sections/PackagesSection/PackagesSection";
 import HomeHeroBg from "@/components/sections/home-hero/HomeHeroBg";
-import FeedbackStacked from "@/components/sections/feedback/FeedbackStacked";
 import { useTranslations } from "next-intl";
 import VideoSection from "@/components/sections/video-section/video-section";
 import { TextShimmer } from "@/components/ui/text-shimmer";
@@ -44,7 +42,7 @@ const Home = () => {
       <HomeHeroBg />
       <div className="container relative">
         <HomeHero />
-        <div className="mt-[-420px]">{/* <Partners /> */}</div>
+        <div className="mt-[-420px]"></div>
         <FadeIn className="mx-auto text-center text-text">
           <TextShimmer
             className="text-[32px] font-medium leading-[1.4] lg:text-[58px]"
@@ -68,7 +66,6 @@ const Home = () => {
         <VideoSection />
 
         <SpotLightSection />
-        <FeedbackStacked />
         {/* <PackagesSection /> */}
       </div>
     </>
