@@ -2,12 +2,12 @@
 // Not supplied in the legal package: needs Leutrim's approval. The German
 // version is binding; keep structure and numbers in sync with it.
 const html = String.raw`<h1>Privacy Policy</h1>
-<p class="lead">Website quitty.ch and mobile application “Quitty” — as of 21 September 2026</p>
-<aside class="legal-notice"><strong>Note:</strong> This version applies from 21 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
+<p class="lead">Website quitty.ch and mobile application “Quitty” — as of 27 September 2026</p>
+<aside class="legal-notice"><strong>Note:</strong> This version applies from 27 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
 <h2>1. Purpose and structure</h2>
 <p>This policy describes how Quitty AG processes personal data when you visit the website quitty.ch or use the mobile application “Quitty”. Section 6 provides an overview; sections 7 to 14 explain the individual processing activities. In the event of any conflict between the overview and a detailed section, the detailed section prevails.</p>
 <h2>2. Controller</h2>
-<p>Quitty AG, c/o Treforma AG, Grabenstrasse 25, 6340 Baar, Switzerland. For data protection matters, you can reach us at info@quitty.ch, subject “Datenschutz”.</p>
+<p>Quitty AG, Brauereistrasse 1a, 8730 Uznach, Switzerland, telephone 055 589 67 67. For data protection matters, you can reach us at info@quitty.ch, subject “Datenschutz”.</p>
 <h2>3. Applicable law</h2>
 <p>The Swiss Federal Act on Data Protection applies. Our service is aimed at users in Switzerland; we do not actively target markets in the European Economic Area. To the extent that the General Data Protection Regulation nevertheless applies to individual users, we also grant the rights provided for therein.</p>
 <h2>4. Definitions</h2>
@@ -98,7 +98,7 @@ const html = String.raw`<h1>Privacy Policy</h1>
 <h2>24. Complaints</h2>
 <p>You can contact us at any time. The competent supervisory authority in Switzerland is the Federal Data Protection and Information Commissioner, Feldeggweg 1, 3003 Bern.</p>
 <h2>25. Version</h2>
-<p>Version 1.0, valid from 21 September 2026. This version replaces all previous versions.</p>
+<p>Version 1.1, valid from 27 September 2026. This version replaces all previous versions.</p>
 <hr />
 <h2>Annex A — Service providers and recipients</h2>
 <table>

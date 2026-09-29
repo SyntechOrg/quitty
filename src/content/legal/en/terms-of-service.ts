@@ -2,10 +2,10 @@
 // Not supplied in the legal package: needs Leutrim's approval. The German
 // version is binding; keep structure and numbers in sync with it.
 const html = String.raw`<h1>Terms of Use</h1>
-<p class="lead">Mobile application “Quitty” and website quitty.ch — as of 21 September 2026</p>
-<aside class="legal-notice"><strong>Note:</strong> This version applies from 21 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
+<p class="lead">Mobile application “Quitty” and website quitty.ch — as of 27 September 2026</p>
+<aside class="legal-notice"><strong>Note:</strong> This version applies from 27 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
 <h2>1. Scope</h2>
-<p>These terms apply to the use of the mobile application “Quitty” (the “App”) and the website quitty.ch of Quitty AG, c/o Treforma AG, Grabenstrasse 25, 6340 Baar (“Quitty”, “we”). By registering, you agree to these terms.</p>
+<p>These terms apply to the use of the mobile application “Quitty” (the “App”) and the website quitty.ch of Quitty AG, Brauereistrasse 1a, 8730 Uznach (“Quitty”, “we”). By registering, you agree to these terms.</p>
 <h2>2. Conclusion of contract and account</h2>
 <p>The contract is concluded upon completion of registration and confirmation of your email address. You can register with an email address and password or via your Google or Apple account. Your details must be accurate and kept up to date. The account is personal; access data must be kept secret. If you suspect misuse, inform us immediately.</p>
 <h2>3. Minimum age</h2>
@@ -63,10 +63,10 @@ const html = String.raw`<h1>Terms of Use</h1>
 <h2>26. Support</h2>
 <p>Send enquiries and complaints to support@quitty.ch. We usually respond within five working days.</p>
 <h2>27. Applicable law and place of jurisdiction</h2>
-<p>Swiss law applies, excluding the United Nations Convention on Contracts for the International Sale of Goods. For claims brought by consumers domiciled in Switzerland, the statutory places of jurisdiction apply; otherwise, the place of jurisdiction is Zug.</p>
+<p>Swiss law applies, excluding the United Nations Convention on Contracts for the International Sale of Goods. For claims brought by consumers domiciled in Switzerland, the statutory places of jurisdiction apply; otherwise, the place of jurisdiction is Uznach.</p>
 <h2>28. Final provisions</h2>
 <p>Should any provision be invalid, the validity of the remaining provisions remains unaffected. We may transfer rights and obligations under this agreement to a legal successor, provided that your legal position does not deteriorate as a result; in this case you may terminate the agreement.</p>
 <h2>29. Version</h2>
-<p>Version 1.0, valid from 21 September 2026. This version replaces all previous versions.</p>`;
+<p>Version 1.1, valid from 27 September 2026. This version replaces all previous versions.</p>`;
 
 export default html;

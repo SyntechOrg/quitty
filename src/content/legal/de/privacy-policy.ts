@@ -1,13 +1,13 @@
-// QTY-DSE-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 21.09.2026).
+// QTY-DSE-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 27.09.2026).
 // Verbatim copy of the approved source. Do not edit the wording here; wording
 // changes must come from Leutrim as a new supplied version.
 const html = String.raw`<h1>Datenschutzerklärung</h1>
-<p class="lead">Website quitty.ch und mobile Anwendung «Quitty» — Stand 21. September 2026</p>
-<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 21. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
+<p class="lead">Website quitty.ch und mobile Anwendung «Quitty» — Stand 27. September 2026</p>
+<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 27. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
 <h2>1. Zweck und Aufbau</h2>
 <p>Diese Erklärung beschreibt, wie die Quitty AG Personendaten bearbeitet, wenn Sie die Website quitty.ch besuchen oder die mobile Anwendung «Quitty» nutzen. Ziffer 6 gibt eine Übersicht; die Ziffern 7 bis 14 erläutern die einzelnen Bearbeitungen. Bei Widersprüchen zwischen Übersicht und Detailkapitel geht das Detailkapitel vor.</p>
 <h2>2. Verantwortliche Stelle</h2>
-<p>Quitty AG, c/o Treforma AG, Grabenstrasse 25, 6340 Baar, Schweiz. Für Datenschutzanliegen erreichen Sie uns unter info@quitty.ch, Stichwort «Datenschutz».</p>
+<p>Quitty AG, Brauereistrasse 1a, 8730 Uznach, Schweiz, Telefon 055 589 67 67. Für Datenschutzanliegen erreichen Sie uns unter info@quitty.ch, Stichwort «Datenschutz».</p>
 <h2>3. Anwendbares Recht</h2>
 <p>Massgeblich ist das schweizerische Datenschutzgesetz. Unser Angebot richtet sich an Nutzende in der Schweiz; eine aktive Bearbeitung von Märkten im Europäischen Wirtschaftsraum findet nicht statt. Soweit auf einzelne Nutzende dennoch die Datenschutz-Grundverordnung anwendbar ist, gewähren wir die darin vorgesehenen Rechte ebenfalls.</p>
 <h2>4. Begriffe</h2>
@@ -98,7 +98,7 @@ const html = String.raw`<h1>Datenschutzerklärung</h1>
 <h2>24. Beschwerden</h2>
 <p>Sie können sich jederzeit an uns wenden. Zuständige Aufsichtsbehörde in der Schweiz ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte, Feldeggweg 1, 3003 Bern.</p>
 <h2>25. Stand</h2>
-<p>Version 1.0, gültig ab 21. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>
+<p>Version 1.1, gültig ab 27. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>
 <hr />
 <h2>Anhang A — Dienstleister und Empfänger</h2>
 <table>
