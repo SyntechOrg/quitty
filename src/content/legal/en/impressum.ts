@@ -2,14 +2,14 @@
 // Not supplied in the legal package: needs Leutrim's approval. The German
 // version is binding; keep structure and numbers in sync with it.
 const html = String.raw`<h1>Legal Notice</h1>
-<p class="lead">Website quitty.ch and mobile application “Quitty” — as of 21 September 2026</p>
-<aside class="legal-notice"><strong>Note:</strong> This version applies from 21 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
+<p class="lead">Website quitty.ch and mobile application “Quitty” — as of 27 September 2026</p>
+<aside class="legal-notice"><strong>Note:</strong> This version applies from 27 September 2026. Some details are currently being reviewed as part of ongoing technical development and will be supplemented or clarified in the coming weeks. The current version published on quitty.ch always prevails; material changes will be shown in the app.</aside>
 <h2>Provider</h2>
 <p>Quitty AG</p>
-<p>c/o Treforma AG, Grabenstrasse 25</p>
-<p>6340 Baar, Switzerland</p>
-<p>Operating location: Brauereistrasse 1a, 8730 Uznach</p>
-<p>Registered in the commercial register of the Canton of Zug, company number CH-170.3.050.306-7</p>
+<p>Brauereistrasse 1a</p>
+<p>8730 Uznach, Switzerland</p>
+<p>Telephone: 055 589 67 67</p>
+<p>Registered in the commercial register</p>
 <p>Business identification number (UID): CHE-308.785.748</p>
 <p>Quitty AG is not entered in the register of persons liable for value added tax.</p>
 <h2>Authorised representatives</h2>
@@ -37,6 +37,6 @@ const html = String.raw`<h1>Legal Notice</h1>
 <h2>Complaints and dispute resolution</h2>
 <p>Complaints can be sent to info@quitty.ch; they will be answered within a reasonable period. Quitty AG does not participate in any out-of-court dispute resolution procedure.</p>
 <h2>Version</h2>
-<p>Version 1.0, valid from 21 September 2026. This version replaces all previous versions.</p>`;
+<p>Version 1.1, valid from 27 September 2026. This version replaces all previous versions.</p>`;
 
 export default html;

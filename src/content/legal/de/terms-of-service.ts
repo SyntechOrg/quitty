@@ -1,11 +1,11 @@
-// QTY-AGB-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 21.09.2026).
+// QTY-AGB-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 27.09.2026).
 // Verbatim copy of the approved source. Do not edit the wording here; wording
 // changes must come from Leutrim as a new supplied version.
 const html = String.raw`<h1>Nutzungsbedingungen</h1>
-<p class="lead">Mobile Anwendung «Quitty» und Website quitty.ch — Stand 21. September 2026</p>
-<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 21. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
+<p class="lead">Mobile Anwendung «Quitty» und Website quitty.ch — Stand 27. September 2026</p>
+<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 27. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
 <h2>1. Geltungsbereich</h2>
-<p>Diese Bedingungen gelten für die Nutzung der mobilen Anwendung «Quitty» (die «App») und der Website quitty.ch der Quitty AG, c/o Treforma AG, Grabenstrasse 25, 6340 Baar («Quitty», «wir»). Mit der Registrierung erklären Sie sich mit diesen Bedingungen einverstanden.</p>
+<p>Diese Bedingungen gelten für die Nutzung der mobilen Anwendung «Quitty» (die «App») und der Website quitty.ch der Quitty AG, Brauereistrasse 1a, 8730 Uznach («Quitty», «wir»). Mit der Registrierung erklären Sie sich mit diesen Bedingungen einverstanden.</p>
 <h2>2. Vertragsschluss und Konto</h2>
 <p>Der Vertrag kommt mit Abschluss der Registrierung und der Bestätigung Ihrer E-Mail-Adresse zustande. Die Registrierung ist mit E-Mail-Adresse und Passwort oder über Ihr Google- beziehungsweise Apple-Konto möglich. Ihre Angaben müssen zutreffend sein und sind aktuell zu halten. Das Konto ist persönlich; Zugangsdaten sind geheim zu halten. Bei Verdacht auf Missbrauch informieren Sie uns unverzüglich.</p>
 <h2>3. Mindestalter</h2>
@@ -63,10 +63,10 @@ const html = String.raw`<h1>Nutzungsbedingungen</h1>
 <h2>26. Support</h2>
 <p>Anfragen und Beschwerden richten Sie an support@quitty.ch. Wir antworten in der Regel innert fünf Arbeitstagen.</p>
 <h2>27. Anwendbares Recht und Gerichtsstand</h2>
-<p>Es gilt schweizerisches Recht unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf. Für Klagen von Konsumentinnen und Konsumenten mit Wohnsitz in der Schweiz gelten die gesetzlichen Gerichtsstände; im Übrigen ist Gerichtsstand Zug.</p>
+<p>Es gilt schweizerisches Recht unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf. Für Klagen von Konsumentinnen und Konsumenten mit Wohnsitz in der Schweiz gelten die gesetzlichen Gerichtsstände; im Übrigen ist Gerichtsstand Uznach.</p>
 <h2>28. Schlussbestimmungen</h2>
 <p>Sollte eine Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen unberührt. Wir können Rechte und Pflichten aus diesem Vertrag auf eine Rechtsnachfolgerin übertragen, sofern sich Ihre Rechtsstellung dadurch nicht verschlechtert; Sie können in diesem Fall kündigen.</p>
 <h2>29. Stand</h2>
-<p>Version 1.0, gültig ab 21. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>`;
+<p>Version 1.1, gültig ab 27. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>`;
 
 export default html;

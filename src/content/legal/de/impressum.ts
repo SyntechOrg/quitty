@@ -1,15 +1,15 @@
-// QTY-IMP-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 21.09.2026).
+// QTY-IMP-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 27.09.2026).
 // Verbatim copy of the approved source. Do not edit the wording here; wording
 // changes must come from Leutrim as a new supplied version.
 const html = String.raw`<h1>Impressum</h1>
-<p class="lead">Website quitty.ch und mobile Anwendung «Quitty» — Stand 21. September 2026</p>
-<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 21. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
+<p class="lead">Website quitty.ch und mobile Anwendung «Quitty» — Stand 27. September 2026</p>
+<aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 27. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
 <h2>Anbieterin</h2>
 <p>Quitty AG</p>
-<p>c/o Treforma AG, Grabenstrasse 25</p>
-<p>6340 Baar, Schweiz</p>
-<p>Betriebsstandort: Brauereistrasse 1a, 8730 Uznach</p>
-<p>Eingetragen im Handelsregister des Kantons Zug, Firmennummer CH-170.3.050.306-7</p>
+<p>Brauereistrasse 1a</p>
+<p>8730 Uznach, Schweiz</p>
+<p>Telefon: 055 589 67 67</p>
+<p>Eingetragen im Handelsregister</p>
 <p>Unternehmens-Identifikationsnummer: CHE-308.785.748</p>
 <p>Die Quitty AG ist nicht im Register der mehrwertsteuerpflichtigen Personen eingetragen.</p>
 <h2>Vertretungsberechtigte Organe</h2>
@@ -37,6 +37,6 @@ const html = String.raw`<h1>Impressum</h1>
 <h2>Beschwerden und Streitbeilegung</h2>
 <p>Beschwerden können an info@quitty.ch gerichtet werden; sie werden innert angemessener Frist beantwortet. Die Quitty AG nimmt an keinem aussergerichtlichen Streitbeilegungsverfahren teil.</p>
 <h2>Stand</h2>
-<p>Version 1.0, gültig ab 21. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>`;
+<p>Version 1.1, gültig ab 27. September 2026. Diese Fassung ersetzt sämtliche früheren Fassungen.</p>`;
 
 export default html;
