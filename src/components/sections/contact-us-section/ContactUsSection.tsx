@@ -142,9 +142,9 @@ const ContactUsSection = () => {
             </form>
           </div>
         </div>
-        <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4 lg:mt-40 mt-32">
-          <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
-            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
+        <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-[repeat(5,max-content)] xl:justify-between lg:mt-40 mt-32">
+          <FadeIn className="w-full min-w-0 text-left">
+            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] md:min-h-[68px] lg:text-[26px]">
               {t("addressTitle")}
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
@@ -153,8 +153,16 @@ const ContactUsSection = () => {
               8730 Uznach
             </p>
           </FadeIn>
-          <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
-            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
+          <FadeIn className="w-full min-w-0 text-left">
+            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] md:min-h-[68px] lg:text-[26px]">
+              {t("contactNumber")}
+            </p>
+            <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
+              <a href="tel:+41555896767">055 589 67 67</a>
+            </p>
+          </FadeIn>
+          <FadeIn className="w-full min-w-0 text-left">
+            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] md:min-h-[68px] lg:text-[26px]">
               Business Support
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
@@ -167,8 +175,8 @@ const ContactUsSection = () => {
               {t("assistanceContact")}
             </p> */}
           </FadeIn>
-          <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
-            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
+          <FadeIn className="w-full min-w-0 text-left">
+            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] md:min-h-[68px] lg:text-[26px]">
               {t("salesContact")}
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">
@@ -181,8 +189,8 @@ const ContactUsSection = () => {
               {t("assistanceContact")}
             </p> */}
           </FadeIn>
-          <FadeIn className="w-full max-lg:mx-auto max-lg:max-w-[320px] max-md:text-center">
-            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] lg:text-[26px]">
+          <FadeIn className="w-full min-w-0 text-left">
+            <p className="text-[24px] font-semibold leading-[1.3] text-[#111013] md:min-h-[68px] lg:text-[26px]">
               General
             </p>
             <p className="mt-3 text-[16px] leading-[1.6] text-[#161519]">

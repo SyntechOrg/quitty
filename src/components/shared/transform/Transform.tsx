@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import phone from "public/assets/images/TransformPhone.png";
-import flame from "public/assets/images/flameIcon.png";
 import apple from "public/assets/images/apple-logo.png";
 import play from "public/assets/images/google-play-logo.png";
 import { useTranslations } from "next-intl";
@@ -33,20 +32,20 @@ const Transform = () => {
           {t("TransformTitle")}
         </h1>
         <div className="mx-auto flex w-11/12 flex-col gap-[20px] lg:w-fit lg:gap-[25px]">
-          <div className="flex w-fit items-center justify-center gap-[10px]">
-            <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+          <div className="flex w-fit items-start justify-center gap-[10px]">
+            <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
             <p className="text-[16px] leading-[24px] lg:text-[18px]">
               {t("TransformP1")}
             </p>
           </div>
-          <div className="flex w-fit items-center justify-center gap-[10px]">
-            <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+          <div className="flex w-fit items-start justify-center gap-[10px]">
+            <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
             <p className="text-[16px] leading-[24px] lg:text-[18px]">
               {t("TransformP2")}
             </p>
           </div>
-          <div className="flex w-fit items-center justify-center gap-[10px]">
-            <Image src={flame} alt="" className="mt-[5px] w-[22px]" />
+          <div className="flex w-fit items-start justify-center gap-[10px]">
+            <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
             <p className="text-[16px] leading-[24px] lg:text-[18px]">
               {t("TransformP3")}
             </p>

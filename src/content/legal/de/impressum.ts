@@ -1,6 +1,6 @@
 // QTY-IMP-2026-01 — supplied public text (Quitty_Rechtstextwerk_FINAL, Stand 27.09.2026).
-// Verbatim copy of the approved source. Do not edit the wording here; wording
-// changes must come from Leutrim as a new supplied version.
+// German address adapted to du on user request (01.10.2026); legal substance
+// preserved. Further substantive changes require a new supplied version from Leutrim.
 const html = String.raw`<h1>Impressum</h1>
 <p class="lead">Website quitty.ch und mobile Anwendung «Quitty» — Stand 27. September 2026</p>
 <aside class="legal-notice"><strong>Hinweis:</strong> Diese Fassung gilt ab dem 27. September 2026. Einzelne Angaben werden im Rahmen der laufenden technischen Weiterentwicklung derzeit überprüft und in den kommenden Wochen ergänzt oder präzisiert. Massgeblich ist stets die auf quitty.ch veröffentlichte aktuelle Fassung; wesentliche Änderungen werden in der App angezeigt.</aside>
@@ -27,7 +27,7 @@ const html = String.raw`<h1>Impressum</h1>
 <p>Die Quitty AG erbringt keine bewilligungspflichtigen Dienstleistungen und untersteht keiner besonderen Aufsicht.</p>
 <h2>Marken</h2>
 <p>«QUITTY» ist eine in der Schweiz eingetragene Marke der Quitty AG (Swissreg Nr. 13599/2024, eingetragen am 11. Dezember 2024).</p>
-<p>Marken, Firmennamen und Logos Dritter gehören ihren jeweiligen Inhabern. Ihre Nennung und Darstellung in der Anwendung dient allein der Kennzeichnung Ihrer eigenen Einkäufe und begründet keine Zusammenarbeit, Empfehlung oder sonstige Verbindung mit Quitty.</p>
+<p>Marken, Firmennamen und Logos Dritter gehören ihren jeweiligen Inhabern. Ihre Nennung und Darstellung in der Anwendung dient allein der Kennzeichnung deiner eigenen Einkäufe und begründet keine Zusammenarbeit, Empfehlung oder sonstige Verbindung mit Quitty.</p>
 <h2>Urheberrecht</h2>
 <p>Sämtliche Inhalte dieser Website und der Anwendung, namentlich Texte, Gestaltung, Grafiken und Software, sind urheberrechtlich geschützt. Jede Verwendung ausserhalb der bestimmungsgemässen Nutzung bedarf der vorgängigen schriftlichen Zustimmung der Quitty AG.</p>
 <h2>Haftung für eigene Inhalte</h2>

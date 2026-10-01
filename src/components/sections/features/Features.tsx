@@ -31,7 +31,7 @@ const myContent = [
   {
     src: "/assets/images/featureimage4.png",
     src2: "/assets/images/featureicon4.png",
-    title: "listTitle3",
+    title: "listTitle4",
     text: "listText4",
     text2: "listText4-2",
     span: "span",

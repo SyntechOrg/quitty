@@ -21,7 +21,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //     },
 //     de: {
 //       title: "Quitty Blog – Einblicke und Trends im Einzelhandel",
-//       description: "Entdecken Sie die neuesten Einblicke, Trends und Innovationen in den Bereichen Einzelhandelsnachhaltigkeit, digitale Transformation und Kundenbindung.",
+//       description: "Entdecke die neuesten Einblicke, Trends und Innovationen in den Bereichen Einzelhandelsnachhaltigkeit, digitale Transformation und Kundenbindung.",
 //     },
 //   };
 //

@@ -69,7 +69,7 @@ const SpotLightSection = () => {
           </div>
           <div className="px-7">
             <Button
-              to={"/"}
+              to={`/${localActive}/product`}
               className="mx-auto h-[58px] w-full bg-primary !px-3 text-[20px] leading-[1.5] text-white hover:bg-primary/80
               active:bg-primary/90 lg:text-[22px] text-center"
             >

@@ -65,7 +65,14 @@ const InsightsLeft: FC<InsightsLeftProps> = (props) => {
           {t("InsightUndertitle")}
         </p>
         <h3 className="mx-auto text-[32px] font-medium text-text max-lg:max-w-[520px] lg:text-[52px]">
-          {t("InsightTitle")}
+          {t("InsightTitle").includes("\n")
+            ? t("InsightTitle").split("\n").map((line, index) => (
+                <React.Fragment key={line}>
+                  {index > 0 && <br />}
+                  <span className="whitespace-nowrap max-[360px]:text-[30px]">{line}</span>
+                </React.Fragment>
+              ))
+            : t("InsightTitle")}
         </h3>
       </motion.div>
       <motion.div

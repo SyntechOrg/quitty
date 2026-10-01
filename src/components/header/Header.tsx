@@ -1,4 +1,5 @@
 "use client";
+import { BLOG_NAVIGATION_VISIBLE } from "@/lib/site-visibility";
 import React, { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import { Button, Icon, IconType, Logo } from "../shared";
@@ -10,7 +11,7 @@ import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
 import { useScrollYPosition } from "@/hooks/useScrollYPosition";
 
-const NAV_ITEMS = ["Home", "Product", "About", "Blog"] as const;
+const NAV_ITEMS = ["Home", "Product", "About", "Blog", "Contact"] as const;
 
 type NavProps = {
   className?: string;
@@ -21,11 +22,14 @@ const Nav: FC<NavProps> = ({ className }) => {
   const localActive = useLocale();
   const isHomePage = pathname === `/${localActive}`;
   const t = useTranslations("Header");
+  const tFooter = useTranslations("Footer");
 
   return (
     <nav className={classNames("lg:block relative z-10", className)}>
       <ul className="flex flex-col gap-x-10 gap-y-5 text-[32px] leading-[36px] lg:flex-row lg:items-center lg:gap-y-0">
-        {NAV_ITEMS.map((item, index) => {
+        {NAV_ITEMS.filter(
+          (item) => BLOG_NAVIGATION_VISIBLE || item !== "Blog",
+        ).map((item, index) => {
           const lowerCaseItem = item.toLowerCase();
           const isActive =
             (isHomePage && lowerCaseItem === "home") ||
@@ -45,7 +49,7 @@ const Nav: FC<NavProps> = ({ className }) => {
                     {(index + 1).toString().padStart(2, "0")}
                   </span>
                   <span className="text-[16px] font-medium leading-[20px]">
-                    {t(item)}
+                    {item === "Contact" ? tFooter("Contact") : t(item)}
                   </span>
                 </div>
               </Link>

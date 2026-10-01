@@ -1,4 +1,5 @@
 "use client";
+import { BLOG_NAVIGATION_VISIBLE } from "@/lib/site-visibility";
 import React from "react";
 import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
@@ -100,7 +101,9 @@ export const Footer = () => {
                 <p className="pb-2 text-[16px] font-medium leading-[1.4] text-white">
                   {t("QuickLinks")}
                 </p>
-                {footerNavLinks.map((item) => (
+                {footerNavLinks.filter(
+                  (item) => BLOG_NAVIGATION_VISIBLE || item.href !== "blog",
+                ).map((item) => (
                   <li
                     key={item.text}
                     className="text-[16px] leading-[1.4] text-[#b7babf] duration-150 hover:text-white"

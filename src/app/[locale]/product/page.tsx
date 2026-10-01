@@ -24,7 +24,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //     },
 //     de: {
 //       title: "Quitty – Die Ultimative Lösung für Digitale Belege",
-//       description: "Quitty ist mehr als nur digitale Belege. Es ist eine komplette Einzelhandelslösung, die Treueprämien integriert, Rückgaben vereinfacht und leistungsstarke Ausgabenanalysen bietet – alles nahtlos mit Ihrem Kassensystem verbunden.",
+//       description: "Quitty ist mehr als nur digitale Belege. Es ist eine komplette Einzelhandelslösung, die Treueprämien integriert, Rückgaben vereinfacht und leistungsstarke Ausgabenanalysen bietet – alles nahtlos mit deinem Kassensystem verbunden.",
 //     },
 //   };
 //
