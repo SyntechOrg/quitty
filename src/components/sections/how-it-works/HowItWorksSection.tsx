@@ -2,12 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Globe from "../../../../public/assets/images/globe.png";
 import { FadeIn } from "@/components/fade-in/FadeIn";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/shared/accordion/Accordion";
+import { Icon, IconType } from "@/components/shared";
 import { useTranslations } from "next-intl";
 
 const FAQ = [
@@ -41,14 +36,20 @@ const HowItWorksSection = () => {
             {t("HowDescription")}
           </p>
           <div className="mt-4 lg:mt-6">
-            <Accordion type="single" className="" defaultValue="item-0">
-              {FAQ.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger>{t(faq.question)}</AccordionTrigger>
-                  <AccordionContent>{t(faq.answer)}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            {FAQ.map((faq) => (
+              <div key={faq.question} className="py-4">
+                <h6 className="flex items-center gap-3 py-2 text-[16px] leading-[1.5] md:text-[18px]">
+                  <Icon
+                    icon={IconType.ARROW_DIAGONAL}
+                    className="h-[16px] w-[16px] object-contain"
+                  />
+                  {t(faq.question)}
+                </h6>
+                <p className="mt-3 pb-2 text-[18px] leading-[1.6] text-[#161616] md:text-[16px]">
+                  {t(faq.answer)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </FadeIn>

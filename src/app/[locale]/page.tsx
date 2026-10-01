@@ -25,7 +25,7 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //     },
 //     de: {
 //       title: "Quitty – Revolutioniert Digitale Kassenbons",
-//       description: "Verwandeln Sie Ihr Einzelhandelserlebnis mit Quitty. Unsere All-in-One-Plattform bietet digitale Kassenbons, integrierte Treueprämien und umsetzbare Kundenanalysen – alles bei gleichzeitiger Reduzierung Ihres ökologischen Fussabdrucks.",
+//       description: "Verwandle dein Einzelhandelserlebnis mit Quitty. Unsere All-in-One-Plattform bietet digitale Kassenbons, integrierte Treueprämien und umsetzbare Kundenanalysen – alles bei gleichzeitiger Reduzierung deines ökologischen Fussabdrucks.",
 //     },
 //   };
 //

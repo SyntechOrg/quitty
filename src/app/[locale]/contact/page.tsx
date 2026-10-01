@@ -19,8 +19,8 @@ import useChatbase from "@/components/chatbot/useChatbase";
 //       description: "Get in Touch with Quitty. Have questions? Need support? Contact us today to learn more about Quitty and how we can help your business thrive.",
 //     },
 //     de: {
-//       title: "Kontakt Quitty – Lassen Sie Uns Reden",
-//       description: "Kontaktieren Sie Quitty. Haben Sie Fragen? Brauchen Sie Unterstützung? Kontaktieren Sie uns noch heute, um mehr über Quitty zu erfahren und wie wir Ihrem Unternehmen helfen können.",
+//       title: "Kontakt Quitty – Lass uns reden",
+//       description: "Kontaktiere Quitty. Hast du Fragen? Brauchst du Unterstützung? Kontaktiere uns noch heute, um mehr über Quitty zu erfahren und wie wir deinem Unternehmen helfen können.",
 //     },
 //   };
 //
