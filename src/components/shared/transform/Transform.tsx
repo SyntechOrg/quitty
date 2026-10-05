@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import phone from "public/assets/images/TransformPhone.png";
+import expenseExample from "public/assets/images/download-current-expenses-phone.png";
+import { usePathname } from "next/navigation";
 import apple from "public/assets/images/apple-logo.png";
 import play from "public/assets/images/google-play-logo.png";
 import { useTranslations } from "next-intl";
@@ -15,11 +18,13 @@ import Link from "next/link";
 
 const Transform = () => {
   const t = useTranslations("Shared");
+  const pathname = usePathname();
+  const isHomepage = /^\/(de|en)\/?$/.test(pathname);
   return (
     <FadeIn
-      className="container relative my-32 flex h-[auto] flex-col items-center justify-end overflow-hidden
+      className={`container relative my-32 flex h-[auto] flex-col items-center justify-end overflow-hidden
         rounded-[80px] border-l-2 border-t-2 border-l-[#b6d0f8] border-t-[#b6d0f8] bg-[#E6F2F4] p-4 pb-[0px] pt-[50px]
-        lg:my-52 lg:flex-row lg:items-end lg:justify-center lg:gap-[7.5%] lg:pt-[75px]"
+        lg:my-52 lg:flex-row lg:items-end lg:pt-[75px] ${isHomepage ? "lg:justify-start" : "lg:justify-center lg:gap-[7.5%]"}`}
     >
       <Image
         src={bgBlur}
@@ -27,7 +32,7 @@ const Transform = () => {
         className="absolute right-0 top-0 h-[100%] w-[100%] object-cover lg:w-[88%]"
       />
 
-      <FadeIn className="z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ">
+      <FadeIn className={`z-10 mb-[10%] flex flex-col items-center gap-[17px] lg:items-start lg:gap-[30px] ${isHomepage ? "lg:w-[64%]" : ""}`}>
         <h1 className="max-w-[420px] text-center text-[28px] font-medium leading-[40px] max-lg:mx-auto lg:text-left lg:text-[36px] lg:leading-[50px]">
           {t("TransformTitle")}
         </h1>
@@ -99,10 +104,10 @@ const Transform = () => {
           </Link>
         </FadeIn>
       </FadeIn>
-      <FadeIn className="z-10 w-[300px] lg:w-[30%]">
+      <FadeIn className={`z-10 w-[300px] ${isHomepage ? "lg:absolute lg:bottom-0 lg:right-4 lg:w-[30%]" : "lg:w-[30%]"}`}>
         <Image
-          src={phone}
-          alt="Tranform Phone"
+          src={isHomepage ? expenseExample : phone}
+          alt={isHomepage ? "Quitty-Spesenübersicht mit Beispieldaten" : "Tranform Phone"}
           className="h-full w-full object-contain"
         />
       </FadeIn>

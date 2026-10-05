@@ -5,7 +5,7 @@ import { Button } from "@/components/shared";
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 import IphoneMockupEN from "../../../../public/assets/images/iPhoneMockup2.png";
-import IphoneMockupDE from "../../../../public/assets/images/iPhoneMockup.png";
+import IphoneMockupDE from "../../../../public/assets/images/home-screen-current-de.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import useIsLargeScreen from "@/hooks/useIsLargeScreen";
@@ -98,8 +98,9 @@ const HomeHero = () => {
               className="relative mx-auto h-[calc(100vh-110px)] max-h-[700px] w-full max-w-[300px] lg:max-w-[360px]"
             >
               <Image
+                data-testid={locale === "de" ? "home-phone-frame" : undefined}
                 src={imageSrc}
-                alt="background image"
+                alt={locale === "de" ? "Quitty-App: aktuelle Startseite mit Beispielbetrag" : "background image"}
                 style={{ marginTop: isLargeScreen ? "80px" : "20px" }}
                 className="h-full w-full object-contain"
               />
