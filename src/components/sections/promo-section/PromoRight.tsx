@@ -1,7 +1,7 @@
 "use client";
 import React, { FC } from "react";
 import PromoImage1 from "../../../../public/assets/images/digitalReceipts.png";
-import PromoImage2 from "../../../../public/assets/images/promo-image-2.png";
+import PromoImage2 from "../../../../public/assets/images/warranty-tracker-calm.png";
 import PromoImage3 from "../../../../public/assets/images/promo-image-3.png";
 import PromoImage4 from "../../../../public/assets/images/promo-image-4.png";
 import Image from "next/image";

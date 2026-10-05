@@ -6,7 +6,7 @@ import ChatSupport from "../../../../public/assets/images/chat-support.png";
 import ChatSupportDE from "../../../../public/assets/images/chat-support-de.png";
 import OrderMockup from "../../../../public/assets/images/order-mockup.png";
 import FiveStars from "../../../../public/assets/images/5-stars.png";
-import SpotlightIphoneMockup from "../../../../public/assets/images/spotlight-iphone-mockup.png";
+import SpotlightIphoneMockup from "../../../../public/assets/images/spotlight-current-home.png";
 import { Button } from "@/components/shared";
 import { useTranslations } from "next-intl";
 import { useLocale } from "use-intl";
