@@ -7,12 +7,12 @@ import GooglePlayLogo from "../../../../public/assets/images/google-play-logo.pn
 import AppleLogoWhite from "../../../../public/assets/images/apple-logo-white.png";
 import GooglePlayLogoWhite from "../../../../public/assets/images/google-play-logo-white.png";
 import ProductHeroLeft1 from "../../../../public/assets/images/product-hero/hero-left-1.png";
-import ProductHeroLeft2 from "../../../../public/assets/images/product-hero/hero-left-2.png";
-import ProductHeroLeft3 from "../../../../public/assets/images/product-hero/hero-left-3.png";
-import ProductHeroRight1 from "../../../../public/assets/images/product-hero/hero-right-1.png";
-import ProductHeroRight2 from "../../../../public/assets/images/product-hero/hero-right-2.png";
+import ProductHeroLeft2 from "../../../../public/assets/images/product-current/cafe-paperless.png";
+import ProductHeroLeft3 from "../../../../public/assets/images/product-current/calm-customer.png";
+import ProductHeroRight1 from "../../../../public/assets/images/product-current/phone-scan.png";
+import ProductHeroRight2 from "../../../../public/assets/images/product-current/phone-home.png";
 import ProductHeroRight3 from "../../../../public/assets/images/product-hero/hero-right-3.png";
-import ProductHeroResponsive from "../../../../public/assets/images/product-hero/product-hero-responsive.png";
+import ProductHeroResponsive from "../../../../public/assets/images/product-current/hero-mobile.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/fade-in/FadeIn";
 import { useTranslations } from "next-intl";
@@ -96,7 +96,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroLeft1}
-            alt="product hero image"
+            alt="Stack of paper receipts"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -109,7 +109,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroLeft2}
-            alt="product hero image"
+            alt="Paperless cafe visit with smartphone and POS terminal"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -122,7 +122,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroLeft3}
-            alt="product hero image"
+            alt="Original Quitty expenses screen in an upright phone"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -135,7 +135,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroRight1}
-            alt="product hero image"
+            alt="Smartphone showing the original Quitty scan interface beside a POS terminal"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -148,7 +148,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroRight2}
-            alt="product hero image"
+            alt="Smartphone showing the original Quitty home screen at a cafe counter"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -161,7 +161,7 @@ const ProductHero = () => {
         >
           <Image
             src={ProductHeroRight3}
-            alt="product hero image"
+            alt="Paper receipt pile"
             className="h-full w-full object-contain"
             loading="eager"
           />
@@ -170,7 +170,7 @@ const ProductHero = () => {
       <FadeIn className="mx-auto mt-10 block max-w-[620px] lg:hidden">
         <Image
           src={ProductHeroResponsive}
-          alt="product hero image"
+          alt="Paper receipts and current Quitty app screens"
           className="h-full w-full object-cover"
           loading="eager"
         />

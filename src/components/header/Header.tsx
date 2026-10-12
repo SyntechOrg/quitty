@@ -11,7 +11,7 @@ import { useLocale } from "use-intl";
 import { useTranslations } from "next-intl";
 import { useScrollYPosition } from "@/hooks/useScrollYPosition";
 
-const NAV_ITEMS = ["Home", "Product", "About", "Blog", "Contact"] as const;
+const NAV_ITEMS = ["Home", "Product", "App", "About", "Blog", "Contact"] as const;
 
 type NavProps = {
   className?: string;
@@ -49,7 +49,7 @@ const Nav: FC<NavProps> = ({ className }) => {
                     {(index + 1).toString().padStart(2, "0")}
                   </span>
                   <span className="text-[16px] font-medium leading-[20px]">
-                    {item === "Contact" ? tFooter("Contact") : t(item)}
+                    {item === "App" ? "App" : item === "Contact" ? tFooter("Contact") : t(item)}
                   </span>
                 </div>
               </Link>
