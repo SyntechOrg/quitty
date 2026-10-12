@@ -767,6 +767,35 @@
   height: 100%;
   pointer-events: none;
 }
+
+/* Match the gentle 3-degree hover of the homepage's Spotlight images. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .imageWrap,
+  .multiVisual .scanPhone,
+  .appCapture img {
+    transition: transform 200ms ease-in-out;
+  }
+
+  .heroVisual:hover .imageWrap {
+    transform: rotate(-3deg);
+  }
+
+  .scanStage:hover .scanPhone {
+    transform: translateY(-50%) rotate(3deg);
+  }
+
+  .appCapture:hover img {
+    transform: rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html):has(.page),
+  :global(body):has(.page) {
+    scroll-behavior: auto;
+  }
+}
+
 .hero {
   padding-top: 54px;
 }
