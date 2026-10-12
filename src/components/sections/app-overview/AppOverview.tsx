@@ -21,6 +21,12 @@ import expensesScreen from "public/assets/images/app-overview/expenses-entry-ori
 import assistantScreen from "public/assets/images/app-overview/assistant-original.png";
 import styles from "./AppOverview.module.css";
 
+const supportContact = {
+  email: "support@quitty.ch",
+  phone: "+41 55 589 67 67",
+  phoneHref: "tel:+41555896767",
+};
+
 const copy = {
   de: {
     eyebrow: "DIE QUITTY-APP",
@@ -52,41 +58,51 @@ const copy = {
     assistantAlt:
       "Quitty-KI-Assistent mit Chatoberfläche für Fragen zu eigenen Quittungen und Ausgaben",
     faqLabel: "GUT ZU WISSEN",
-    faqTitle: "Noch eine Frage?",
+    faqTitle: "Fragen zur Quitty-App",
     faq: [
       {
-        q: "Was kann ich mit KI erfassen?",
-        a: "Rechnungen, Quittungen, Garantien und Ausgaben. Du kannst auch mehrere Quittungen und Garantiebelege gleichzeitig fotografieren. Quitty sortiert die Belege und füllt Angaben voraus. Prüfe und ergänze sie vor dem Speichern; du kannst sie auch manuell erfassen.",
+        q: "Welche Belege kann ich erfassen?",
+        a: "Du kannst Rechnungen, Quittungen, Garantiebelege und Spesen erfassen. Fotografiere einen Beleg und prüfe die automatisch erkannten Angaben vor dem Speichern. Du kannst die Angaben auch vollständig manuell eintragen und ergänzen.",
       },
       {
-        q: "Wie organisiere ich Garantien?",
-        a: "Scanne den Garantiebeleg oder trage die Angaben selbst ein. Prüfe Kaufdatum und Garantiedauer und behalte das Ablaufdatum im Blick. Frage rechtzeitig beim Händler nach möglichen Verlängerungen.",
+        q: "Wie funktioniert Multi-Scan?",
+        a: "Fotografiere mehrere Quittungen oder Garantiebelege gleichzeitig. Quitty sortiert die Belege und füllt erkannte Angaben voraus. Prüfe und ergänze die Ergebnisse, bevor du sie speicherst.",
       },
       {
-        q: "Wie sehe ich meine Spesen?",
-        a: "Wähle in der Spesenansicht einen Monat. Die Gesamtsumme und Kategorien geben dir einen Überblick über die erfassten Ausgaben.",
+        q: "Wie behalte ich meine Garantien im Blick?",
+        a: "Scanne den Garantiebeleg oder erfasse eine Garantie manuell. Prüfe Kaufdatum und Garantiedauer und behalte das Ablaufdatum im Blick. Frage rechtzeitig beim Händler nach möglichen Verlängerungen.",
       },
       {
-        q: "Kann ich einzelne Belege als PDF ausgeben?",
+        q: "Wo sehe ich meine Ausgaben und Kategorien?",
+        a: "Wähle in der Spesenansicht einen Monat. Die Gesamtsumme und die Verteilung nach Kategorien zeigen dir, wofür du Geld ausgegeben hast. Die Übersicht basiert auf deinen erfassten Ausgaben.",
+      },
+      {
+        q: "Kann ich meine Belege als PDF teilen?",
         a: "Ja. Wähle alle oder nur die gewünschten Einträge aus und drucke oder teile sie als PDF. Unter „Meine PDFs“ kannst du die gespeicherte Ausgabe später erneut öffnen.",
       },
       {
-        q: "Worauf stützt sich der KI-Assistent?",
-        a: "Der KI-Assistent beantwortet deine Fragen anhand deiner eigenen Quittungen und Ausgaben.",
+        q: "Was kann ich den KI-Assistenten fragen?",
+        a: "Der KI-Assistent beantwortet Fragen anhand deiner eigenen Quittungen und Ausgaben. Frage zum Beispiel nach deinen Ausgaben diese Woche, den Kategorien mit den höchsten Ausgaben oder deinen Lebensmittelausgaben in diesem Monat.",
       },
       {
         q: "Was bestätige ich bei der ersten Anmeldung?",
-        a: "Bei der ersten Anmeldung wird dir die KI-Nutzung erklärt und von dir bestätigt. Nutzungsanalyse und Werbemessung sind optional und werden nur mit deinem Opt-in aktiviert.",
+        a: "Bei der ersten Anmeldung wird dir die Nutzung der KI-Funktionen erklärt und von dir bestätigt. Nutzungsanalyse und Werbemessung sind freiwillig und werden nur mit deiner Einwilligung aktiviert.",
       },
       {
         q: "Wo bekomme ich Quitty?",
-        a: "Quitty findest du im App Store und bei Google Play. Der Funktionsumfang kann je nach Plattform und Version abweichen.",
+        a: "Die Quitty-App findest du im App Store und bei Google Play. Nutze die Downloadlinks auf dieser Seite. Der Funktionsumfang kann je nach Plattform und Version abweichen.",
       },
       {
         q: "Wie erreiche ich den Support?",
-        a: "Über unsere Kontaktseite kannst du uns schreiben oder die Support-Kontaktdaten finden.",
+        a: "Schreibe für Support an ",
+        support: true,
       },
     ],
+    supportPhoneLabel: ". Telefon: ",
+    supportFormLead: ". Du kannst uns auch über das ",
+    supportFormLabel: "Kontaktformular",
+    supportChatText:
+      " schreiben. Für allgemeine Fragen zu Quitty öffne den Chatbutton unten rechts auf dieser Website und gib deine Frage als Nachricht ein.",
     contact: "Zum Kontakt",
     finalTitle: "Bereit für weniger Papier?",
     finalText: "Entdecke Quitty für dein Smartphone.",
@@ -161,41 +177,51 @@ const copy = {
     assistantAlt:
       "Quitty AI assistant chat for questions about your own receipts and expenses",
     faqLabel: "GOOD TO KNOW",
-    faqTitle: "Have a question?",
+    faqTitle: "Questions about Quitty",
     faq: [
       {
-        q: "What can I capture with AI?",
-        a: "Invoices, receipts, warranties and expenses. You can also photograph several receipts and warranty documents at the same time. Quitty sorts them and pre-fills details. Check and complete them before saving, or enter them by hand.",
+        q: "Which documents can I record?",
+        a: "You can record invoices, receipts, warranty documents and expenses. Photograph a document and check the automatically recognised details before saving. You can also enter and complete the details entirely by hand.",
       },
       {
-        q: "How do I organise warranties?",
-        a: "Scan the warranty document or enter its details yourself. Check the purchase date and warranty duration and keep the expiry date in view. Ask the merchant about possible extensions before the warranty expires.",
+        q: "How does Multi-Scan work?",
+        a: "Photograph several receipts or warranty documents at once. Quitty sorts them and pre-fills recognised details. Check and complete the results before saving them.",
       },
       {
-        q: "How can I see my expenses?",
-        a: "Choose a month in the expense view. The total and categories give you an overview of recorded spending.",
+        q: "How can I keep track of my warranties?",
+        a: "Scan the warranty document or record a warranty manually. Check the purchase date and warranty duration and keep the expiry date in view. Ask the merchant about possible extensions before it expires.",
       },
       {
-        q: "Can I include only selected receipts in a PDF?",
+        q: "Where can I see my spending and categories?",
+        a: "Choose a month in the expense view. The total and category breakdown show what you have spent money on. The overview is based on your recorded expenses.",
+      },
+      {
+        q: "Can I share my receipts as a PDF?",
         a: "Yes. Choose all entries or just the ones you need, then print or share them as a PDF. Reopen the saved output later in “My PDFs”.",
       },
       {
-        q: "What are the AI assistant’s answers based on?",
-        a: "The AI assistant answers your questions based on your own receipts and expenses.",
+        q: "What can I ask the AI assistant?",
+        a: "The AI assistant answers questions based on your own receipts and expenses. Ask about your spending this week, the categories with the highest spending or your grocery spending this month.",
       },
       {
         q: "What do I confirm at first login?",
-        a: "At first login, AI use is explained and you confirm it. Usage analytics and advertising measurement are optional and are activated only if you opt in.",
+        a: "At first login, the use of AI features is explained and you confirm it. Usage analytics and advertising measurement are optional and are activated only with your consent.",
       },
       {
         q: "Where can I get Quitty?",
-        a: "Quitty is available in the App Store and on Google Play. Features may differ by platform and version.",
+        a: "The Quitty app is available in the App Store and on Google Play. Use the download links on this page. Features may differ by platform and version.",
       },
       {
         q: "How can I contact support?",
-        a: "Visit our contact page to write to us or find support contact details.",
+        a: "For support, email ",
+        support: true,
       },
     ],
+    supportPhoneLabel: ". Phone: ",
+    supportFormLead: ". You can also write to us using the ",
+    supportFormLabel: "contact form",
+    supportChatText:
+      ". For general questions about Quitty, open the chat button at the bottom right of this website and enter your question as a message.",
     contact: "Contact us",
     finalTitle: "Ready for less paper?",
     finalText: "Discover Quitty for your smartphone.",
@@ -402,7 +428,34 @@ const AppOverview = () => {
                 {item.q}
                 <span aria-hidden="true">+</span>
               </summary>
-              <p>{item.a}</p>
+              <p>
+                {item.a}
+                {"support" in item && (
+                  <>
+                    <a
+                      href={`mailto:${supportContact.email}`}
+                      className="font-medium text-[#007e68] underline underline-offset-4"
+                    >
+                      {supportContact.email}
+                    </a>
+                    {t.supportPhoneLabel}
+                    <a
+                      href={supportContact.phoneHref}
+                      className="font-medium text-[#007e68] underline underline-offset-4"
+                    >
+                      {supportContact.phone}
+                    </a>
+                    {t.supportFormLead}
+                    <Link
+                      href={`/${locale}/contact`}
+                      className="font-medium text-[#007e68] underline underline-offset-4"
+                    >
+                      {t.supportFormLabel}
+                    </Link>
+                    {t.supportChatText}
+                  </>
+                )}
+              </p>
             </details>
           ))}
         </div>
