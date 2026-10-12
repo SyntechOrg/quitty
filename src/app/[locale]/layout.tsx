@@ -9,7 +9,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
 import GradientBackground from "@/components/shared/background/GradientBackground";
-import Transform from "@/components/shared/transform/Transform";
+import SiteDownloadSection from "@/components/shared/SiteDownloadSection";
 import LenisWrapper from "@/components/shared/lenis-wrapper/LenisWrapper";
 import CookieConsent from "@/components/consent/CookieConsent";
 
@@ -42,7 +42,7 @@ export default async function LocaleLayout({
           <GradientBackground />
           <LenisWrapper>
             {children}
-            <Transform />
+            <SiteDownloadSection />
             <Footer />
           </LenisWrapper>
           <ToastContainer />
