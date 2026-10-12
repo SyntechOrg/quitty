@@ -13,11 +13,11 @@ import assistantImage from "public/assets/images/app-overview/assistant-framed.p
 import appleLogo from "public/assets/images/apple-logo.png";
 import playLogo from "public/assets/images/google-play-logo.png";
 import AppJourney from "./AppJourney";
-import startScreen from "public/assets/images/app-overview/start-original.png";
-import overviewScreen from "public/assets/images/app-overview/overview-original.png";
+import startScreen from "public/assets/images/app-overview/start-thomas-demo.png";
+import overviewScreen from "public/assets/images/app-overview/overview-expenses-demo.png";
 import scanScreen from "public/assets/images/app-overview/scan-camera-crop.png";
 import warrantyScreen from "public/assets/images/app-overview/warranty-original.png";
-import expensesScreen from "public/assets/images/app-overview/expenses-original.png";
+import expensesScreen from "public/assets/images/app-overview/expenses-entry-original.png";
 import assistantScreen from "public/assets/images/app-overview/assistant-original.png";
 import styles from "./AppOverview.module.css";
 
@@ -28,9 +28,7 @@ const copy = {
     intro:
       "Erfasse Quittungen, Garantien und Ausgaben mit KI. Fotografiere mehrere Belege gleichzeitig, stelle Fragen zu deinen eigenen Belegen und behalte Garantien im Blick.",
     download: "App entdecken",
-    explore: "Funktionen ansehen",
-    tags: ["Mit KI erfassen", "Mehrfachscan", "KI zu deinen Belegen"],
-    multiLabel: "KI-SCAN & MULTISCAN",
+    multiLabel: "MULTI-SCAN",
     multiTitle: "Mehrere Belege.\nEin Scan.",
     multiText:
       "Fotografiere mehrere Quittungen und Garantiebelege gleichzeitig. Quitty sortiert sie und füllt erkannte Angaben voraus. So erfasst du mehrere Belege in einem Durchgang. Prüfe und ergänze die Ergebnisse vor dem Speichern.",
@@ -41,21 +39,15 @@ const copy = {
     ],
     recognitionTitle: "Weniger von Hand eintragen.",
     recognitionText:
-      "Quitty liest Rechnungen, Quittungen, Garantien und Ausgaben mit KI aus und füllt Felder voraus. Automatisch erkannte Händlerlogos helfen dir beim Zuordnen. Du kannst die Angaben auch vollständig manuell erfassen.",
-    overviewLabel: "ALLES-ANSICHT",
-    overviewTitle: "Alles zusammen. Schnell gefunden.",
-    overviewText:
-      "In der Alles-Ansicht findest du deine Einträge an einem Ort. Filter nach Zeitraum, Art, Kategorie und Betrag helfen dir, die Auswahl einzugrenzen.",
-    filterLabel: "Filter nach",
-    filters: ["Zeitraum", "Art", "Kategorie", "Betrag"],
+      "Quitty erkennt Angaben auf Rechnungen, Quittungen und Garantiebelegen automatisch und füllt Felder voraus. Erkannte Händlerlogos helfen dir beim Zuordnen. Du kannst die Angaben auch vollständig manuell erfassen.",
     assistantLabel: "DEIN KI-ASSISTENT",
     assistantTitle: "Deine Belege.\nDeine Fragen.",
     assistantText:
       "Der KI-Assistent beantwortet Fragen anhand deiner eigenen Quittungen und Ausgaben. So kannst du deine erfassten Belege besser verstehen und Ausgaben nachvollziehen.",
     assistantTopics: [
-      "Welche Ausgaben habe ich erfasst?",
-      "Was steht auf meinen Quittungen?",
-      "Wie hoch sind meine erfassten Ausgaben?",
+      "Wie hoch sind meine Ausgaben diese Woche?",
+      "In welchen Kategorien habe ich am meisten ausgegeben?",
+      "Wie viel habe ich diesen Monat für Lebensmittel ausgegeben?",
     ],
     assistantAlt:
       "Quitty-KI-Assistent mit Chatoberfläche für Fragen zu eigenen Quittungen und Ausgaben",
@@ -68,7 +60,7 @@ const copy = {
       },
       {
         q: "Wie organisiere ich Garantien?",
-        a: "Scanne den Garantiebeleg oder trage die Angaben selbst ein. Prüfe Kaufdatum und Garantiedauer. In der Übersicht findest du Preis, Händlerlogo und Ablaufdatum deiner gespeicherten Garantie.",
+        a: "Scanne den Garantiebeleg oder trage die Angaben selbst ein. Prüfe Kaufdatum und Garantiedauer und behalte das Ablaufdatum im Blick. Frage rechtzeitig beim Händler nach möglichen Verlängerungen.",
       },
       {
         q: "Wie sehe ich meine Spesen?",
@@ -105,32 +97,32 @@ const copy = {
       {
         title: "Dein Start",
         description:
-          "Starte mit Quitty. Bei der ersten Anmeldung wird die KI-Nutzung erklärt und bestätigt.",
-        alt: "Originale Quitty-Startansicht ohne erfasste Quittungen",
+          "Öffne Quitty und wähle Quittungen, Garantien, Spesen oder den Scanner.",
+        alt: "Quitty-Startansicht mit Thomas-Demodaten",
       },
       {
-        title: "Deine Übersicht",
+        title: "Übersicht",
         description:
-          "Finde Quittungen, Garantien und Spesen von der Startansicht aus.",
-        alt: "Originale Quitty-Startübersicht mit einer erfassten Quittung",
+          "Sieh auf einen Blick, wie sich deine erfassten Ausgaben nach Zeitraum und Kategorie verteilen.",
+        alt: "Quitty-Ausgabenanalyse mit Gesamtsumme und Kategorien anhand von Demodaten",
       },
       {
-        title: "Mit KI erfassen",
+        title: "Multi-Scan",
         description:
-          "Fotografiere mehrere Quittungen oder Garantien gleichzeitig. Prüfe die vorausgefüllten Angaben.",
+          "Fotografiere mehrere Quittungen oder Garantiebelege gleichzeitig. Prüfe, ergänze und speichere die erkannten Angaben.",
         alt: "Quitty-Kameraansicht mit vier Musterbelegen",
       },
       {
-        title: "Garantien im Blick",
+        title: "Garantie im Blick",
         description:
-          "Behalte Preis, automatisch erkanntes Händlerlogo und Ablaufdatum im Blick.",
+          "Verwalte deine Garantien und behalte Dauer und Ablauf im Blick. Frage rechtzeitig beim Händler nach Verlängerungsmöglichkeiten.",
         alt: "Originaler Quitty-Bildschirm zum Erfassen einer Garantie",
       },
       {
-        title: "Deine Spesen",
+        title: "Spesen",
         description:
-          "Behalte eigene Ausgaben im Blick. Nettobetrag, MwSt. und Steuersatz werden getrennt angezeigt.",
-        alt: "Originale Quitty-Spesenübersicht",
+          "Erfasse deine Spesen, ordne sie Kategorien zu und behalte deine Ausgaben im Überblick.",
+        alt: "Originaler Quitty-Bildschirm zum Erfassen und Kategorisieren von Spesen",
       },
       {
         title: "Dein KI-Assistent",
@@ -145,9 +137,7 @@ const copy = {
     intro:
       "Capture receipts, warranties and expenses with AI. Photograph several documents at once, ask questions about your own receipts and expenses, and keep warranties in view.",
     download: "Discover the app",
-    explore: "Explore features",
-    tags: ["Capture with AI", "Multi-receipt scan", "AI for your own receipts"],
-    multiLabel: "AI SCAN & MULTISCAN",
+    multiLabel: "MULTI-SCAN",
     multiTitle: "Several receipts.\nOne scan.",
     multiText:
       "Photograph several receipts and warranty documents at the same time. Quitty sorts them and fills in recognised details. Capture several documents in one go, then check and complete the results before saving.",
@@ -158,21 +148,15 @@ const copy = {
     ],
     recognitionTitle: "Less manual entry.",
     recognitionText:
-      "Quitty reads invoices, receipts, warranties and expenses with AI and pre-fills fields. Automatically recognised merchant logos help you identify entries. You can also enter the details entirely by hand.",
-    overviewLabel: "EVERYTHING VIEW",
-    overviewTitle: "Everything together. Easy to find.",
-    overviewText:
-      "The Everything view brings your entries together. Filter by period, type, category and amount to narrow your selection.",
-    filterLabel: "Filter by",
-    filters: ["Period", "Type", "Category", "Amount"],
+      "Quitty automatically recognises details on invoices, receipts and warranty documents and pre-fills fields. Recognised merchant logos help you identify entries. You can also enter the details entirely by hand.",
     assistantLabel: "YOUR AI ASSISTANT",
     assistantTitle: "Your receipts.\nYour questions.",
     assistantText:
       "The AI assistant answers questions based on your own receipts and expenses. Understand your saved receipts and make sense of your spending.",
     assistantTopics: [
-      "Which expenses have I recorded?",
-      "What is on my receipts?",
-      "What is the total of my recorded expenses?",
+      "How much have I spent this week?",
+      "Which categories account for my highest spending?",
+      "How much have I spent on groceries this month?",
     ],
     assistantAlt:
       "Quitty AI assistant chat for questions about your own receipts and expenses",
@@ -185,7 +169,7 @@ const copy = {
       },
       {
         q: "How do I organise warranties?",
-        a: "Scan the warranty document or enter its details yourself. Check purchase date and warranty duration. The overview shows the price, merchant logo and expiry date for your saved warranty.",
+        a: "Scan the warranty document or enter its details yourself. Check the purchase date and warranty duration and keep the expiry date in view. Ask the merchant about possible extensions before the warranty expires.",
       },
       {
         q: "How can I see my expenses?",
@@ -221,32 +205,32 @@ const copy = {
       {
         title: "Your start",
         description:
-          "Start with Quitty. At first login, AI use is explained and you confirm it.",
-        alt: "Original Quitty home screen before any receipts have been saved",
+          "Open Quitty and choose receipts, warranties, expenses or the scanner.",
+        alt: "Quitty home screen with Thomas demo data",
       },
       {
-        title: "Your overview",
+        title: "Overview",
         description:
-          "Find receipts, warranties and expenses from the home screen.",
-        alt: "Original Quitty home overview with one saved receipt",
+          "See at a glance how your recorded spending breaks down by period and category.",
+        alt: "Quitty spending analysis showing totals and categories with demo data",
       },
       {
-        title: "Capture with AI",
+        title: "Multi-Scan",
         description:
-          "Photograph several receipts or warranties at once. Check the pre-filled details.",
+          "Photograph several receipts or warranty documents at once. Check, complete and save the recognised details.",
         alt: "Quitty camera view with four sample receipts",
       },
       {
         title: "Track warranties",
         description:
-          "Keep the price, automatically recognised merchant logo and expiry date in view.",
+          "Manage your warranties and track their duration and expiry. Ask the merchant about extension options before they expire.",
         alt: "Original Quitty warranty entry screen",
       },
       {
-        title: "Your expenses",
+        title: "Expenses",
         description:
-          "Keep your own expenses in view. Net amount, VAT and tax rate are shown separately.",
-        alt: "Original Quitty expenses overview",
+          "Record your expenses, assign categories and keep an overview of your spending.",
+        alt: "Original Quitty screen for recording and categorising expenses",
       },
       {
         title: "Your AI assistant",
@@ -290,19 +274,7 @@ const AppOverview = () => {
               {t.download}
               <span aria-hidden="true">→</span>
             </Button>
-            <Link href="#app-scan" className={styles.textLink}>
-              {t.explore}
-              <span aria-hidden="true">↓</span>
-            </Link>
           </div>
-          <ul className={styles.tags}>
-            {t.tags.map((tag) => (
-              <li key={tag}>
-                <span aria-hidden="true" />
-                {tag}
-              </li>
-            ))}
-          </ul>
         </div>
         <figure className={styles.heroVisual}>
           <div className={styles.imageWrap}>
@@ -412,25 +384,6 @@ const AppOverview = () => {
             image: journeyImages[i],
           }))}
         />
-        <aside
-          id="app-overview"
-          className={styles.overview}
-          aria-labelledby="overview-title"
-        >
-          <div>
-            <p className="category-text">{t.overviewLabel}</p>
-            <h3 id="overview-title">{t.overviewTitle}</h3>
-            <p>{t.overviewText}</p>
-          </div>
-          <div className={styles.filterList}>
-            <h4>{t.filterLabel}</h4>
-            <ul>
-              {t.filters.map((filter) => (
-                <li key={filter}>{filter}</li>
-              ))}
-            </ul>
-          </div>
-        </aside>
       </div>
 
       <section className={styles.faq} aria-labelledby="app-faq-title">

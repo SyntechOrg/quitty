@@ -20,30 +20,24 @@ type AppJourneyProps = {
 
 const labels = {
   de: {
-    eyebrow: "SCHRITT FÜR SCHRITT",
-    title: "So nutzt du Quitty",
-    hint: "Mit Pfeilen blättern oder seitlich wischen.",
+    eyebrow: "FUNKTIONEN IM ÜBERBLICK",
+    title: "Quitty im Überblick",
     keyboardHint:
-      "Fokussiere den Ablauf und nutze die Pfeiltasten links und rechts. Pos1 springt zum Anfang, Ende zum letzten Schritt.",
+      "Fokussiere die Funktionsübersicht und nutze die Pfeiltasten links und rechts. Pos1 springt zum Anfang, Ende zur letzten Funktion.",
     carousel: "Karussell",
-    previous: "Vorheriger Schritt",
-    next: "Nächster Schritt",
-    step: "Schritt",
-    steps: "Schritte",
-    of: "von",
+    previous: "Vorherige Funktion",
+    next: "Nächste Funktion",
+    visible: "Sichtbare Funktionen:",
   },
   en: {
-    eyebrow: "STEP BY STEP",
-    title: "How to use Quitty",
-    hint: "Browse with the arrows or swipe sideways.",
+    eyebrow: "FEATURE OVERVIEW",
+    title: "Quitty at a glance",
     keyboardHint:
-      "Focus the journey and use the left and right arrow keys. Home jumps to the start, End to the last step.",
+      "Focus the feature overview and use the left and right arrow keys. Home jumps to the start, End to the last feature.",
     carousel: "carousel",
-    previous: "Previous step",
-    next: "Next step",
-    step: "Step",
-    steps: "Steps",
-    of: "of",
+    previous: "Previous feature",
+    next: "Next feature",
+    visible: "Visible features:",
   },
 };
 
@@ -167,18 +161,10 @@ const AppJourney = ({ locale, steps }: AppJourneyProps) => {
 
   if (steps.length === 0) return null;
 
-  const range =
-    position.first === position.last
-      ? position.first
-      : position.first + "–" + position.last;
-  const positionLabel =
-    (position.first === position.last ? t.step : t.steps) +
-    " " +
-    range +
-    " " +
-    t.of +
-    " " +
-    steps.length;
+  const visibleTitles = steps
+    .slice(position.first - 1, position.last)
+    .map((feature) => feature.title)
+    .join(", ");
 
   return (
     <section
@@ -191,11 +177,7 @@ const AppJourney = ({ locale, steps }: AppJourneyProps) => {
         <h2 id={id + "-title"}>{t.title}</h2>
       </div>
       <div className={styles.toolbar}>
-        <p className={styles.hint}>{t.hint}</p>
         <div className={styles.navigation}>
-          <p className={styles.position} aria-live="polite" aria-atomic="true">
-            {positionLabel}
-          </p>
           <button
             type="button"
             className={styles.arrow}
@@ -244,6 +226,13 @@ const AppJourney = ({ locale, steps }: AppJourneyProps) => {
           </button>
         </div>
       </div>
+      <p
+        className={styles.visuallyHidden}
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {t.visible} {visibleTitles}
+      </p>
       <p id={id + "-keys"} className={styles.visuallyHidden}>
         {t.keyboardHint}
       </p>
@@ -259,13 +248,10 @@ const AppJourney = ({ locale, steps }: AppJourneyProps) => {
         onKeyDown={handleKeyDown}
         data-lenis-prevent
       >
-        <ol className={styles.cards} role="list">
-          {steps.map((step, index) => (
+        <ul className={styles.cards} role="list">
+          {steps.map((step) => (
             <li className={styles.card} key={step.title} data-journey-step>
               <div className={styles.copy}>
-                <p className={styles.stepNumber}>
-                  {t.step} {String(index + 1).padStart(2, "0")}
-                </p>
                 <h3>{step.title}</h3>
                 <p className={styles.description}>{step.description}</p>
               </div>
@@ -280,7 +266,7 @@ const AppJourney = ({ locale, steps }: AppJourneyProps) => {
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );
