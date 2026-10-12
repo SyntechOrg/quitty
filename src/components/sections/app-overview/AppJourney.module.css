@@ -225,6 +225,12 @@
   }
 }
 
+@media (max-width: 374px) {
+  .card {
+    --card-size: min(315px, calc(100vw - 32px));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .track {
     scroll-behavior: auto;
