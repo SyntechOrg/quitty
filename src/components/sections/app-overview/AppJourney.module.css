@@ -176,6 +176,20 @@
   object-fit: contain;
 }
 
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .screen img {
+    transition: transform 200ms ease-in-out;
+  }
+
+  .card:nth-child(odd):hover .screen img {
+    transform: rotate(-3deg);
+  }
+
+  .card:nth-child(even):hover .screen img {
+    transform: rotate(3deg);
+  }
+}
+
 .visuallyHidden {
   position: absolute;
   width: 1px;
