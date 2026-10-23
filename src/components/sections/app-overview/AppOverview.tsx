@@ -18,7 +18,6 @@ import overviewScreen from "public/assets/images/app-overview/overview-expenses-
 import scanScreen from "public/assets/images/app-overview/scan-camera-crop.png";
 import warrantyScreen from "public/assets/images/app-overview/warranty-original.png";
 import expensesScreen from "public/assets/images/app-overview/expenses-entry-original.png";
-import assistantScreen from "public/assets/images/app-overview/assistant-original.png";
 import styles from "./AppOverview.module.css";
 
 const supportContact = {
@@ -273,7 +272,7 @@ const journeyImages = [
   scanScreen,
   warrantyScreen,
   expensesScreen,
-  assistantScreen,
+  assistantImage,
 ];
 
 const AppOverview = () => {
