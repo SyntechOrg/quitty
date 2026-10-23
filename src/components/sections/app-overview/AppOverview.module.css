@@ -796,6 +796,16 @@
   }
 }
 
+.assistant.assistantSlide {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .assistant.assistantSlide {
+    padding-bottom: 76px;
+  }
+}
+
 .hero {
   padding-top: 54px;
 }
