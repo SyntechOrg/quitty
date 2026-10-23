@@ -1,0 +1,176 @@
+.slider {
+  position: relative;
+  min-width: 0;
+  margin: 32px 0 120px;
+  overflow: hidden;
+  border-radius: 60px;
+  scroll-margin-top: 115px;
+}
+
+.stage {
+  --slide-distance: clamp(20px, 4vw, 56px);
+  --slide-duration: 640ms;
+  position: relative;
+  width: 100%;
+}
+
+.imagePanel,
+.videoPanel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition:
+    opacity var(--slide-duration) ease,
+    transform var(--slide-duration) cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
+}
+
+/* Keep the original frame in flow while both complete views crossfade. */
+.imagePanel[data-visible="false"],
+.videoPanel[data-visible="false"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s, 0s, var(--slide-duration);
+}
+
+.imagePanel[data-visible="false"] {
+  transform: translateX(calc(-1 * var(--slide-distance)));
+}
+
+.videoPanel[data-visible="false"] {
+  transform: translateX(var(--slide-distance));
+}
+
+.videoPanel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.videoPanel video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  background: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.videoPanel video::-webkit-media-controls,
+.videoPanel video::-webkit-media-controls-panel,
+.videoPanel video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* Keep the transparent white outro legible over the site's light gradient. */
+.videoPanel video[data-video-variant="alpha-webm"] {
+  filter: drop-shadow(0 1px 1px rgb(12 23 38 / 90%))
+    drop-shadow(0 0 3px rgb(12 23 38 / 45%));
+  /* The phone ends above 97%; only its clipped bottom shadow fades out. */
+  mask-image: linear-gradient(to bottom, #000 97%, transparent 100%);
+}
+
+.controls,
+.indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 2px;
+  padding: 2px 6px;
+  border: 1px solid #bdd9dd;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 94%);
+}
+
+.slider[data-active-slide="1"] .controls {
+  top: 12px;
+  right: 12px;
+  bottom: auto;
+  left: auto;
+  transform: none;
+}
+
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #007e68;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #d0eee5;
+}
+
+.controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.controls .indicator {
+  border-color: transparent;
+  background: transparent;
+}
+
+.indicator span {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #007e68;
+  border-radius: 50%;
+}
+
+.indicator[aria-pressed="true"] span {
+  background: #007e68;
+}
+
+.slider:focus-visible,
+.slider button:focus-visible {
+  outline: 2px solid #007e68;
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage .imagePanel,
+  .stage .videoPanel {
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .slider {
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider {
+    margin: 16px 0 80px;
+    border-radius: 36px;
+  }
+
+  .slider[data-active-slide="1"] .controls {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -13,6 +13,7 @@ import assistantImage from "public/assets/images/app-overview/assistant-framed.p
 import appleLogo from "public/assets/images/apple-logo.png";
 import playLogo from "public/assets/images/google-play-logo.png";
 import AppJourney from "./AppJourney";
+import AssistantSlider from "./AssistantSlider";
 import startScreen from "public/assets/images/app-overview/start-thomas-demo.png";
 import overviewScreen from "public/assets/images/app-overview/overview-expenses-demo.png";
 import scanScreen from "public/assets/images/app-overview/scan-camera-crop.png";
@@ -374,32 +375,33 @@ const AppOverview = () => {
         </div>
       </section>
 
-      <section
-        id="app-assistant"
-        className={styles.assistant}
-        aria-labelledby="assistant-title"
+      <AssistantSlider
+        alt={t.assistantAlt}
+        locale={locale === "de" ? "de" : "en"}
       >
-        <figure className={styles.appCapture}>
-          <Image
-            src={assistantImage}
-            alt={t.assistantAlt}
-            sizes="(min-width: 768px) 270px, 70vw"
-          />
-        </figure>
-        <div>
-          <p className="category-text">{t.assistantLabel}</p>
-          <h2 id="assistant-title">{t.assistantTitle}</h2>
-          <p>{t.assistantText}</p>
-          <p className={styles.assistantTopicsLabel}>
-            {t.assistantTopicsLabel}
-          </p>
-          <ul className={styles.assistantTopics}>
-            {t.assistantTopics.map((topic) => (
-              <li key={topic}>{topic}</li>
-            ))}
-          </ul>
+        <div className={`${styles.assistant} ${styles.assistantSlide}`}>
+          <figure className={styles.appCapture}>
+            <Image
+              src={assistantImage}
+              alt={t.assistantAlt}
+              sizes="(min-width: 768px) 270px, 70vw"
+            />
+          </figure>
+          <div>
+            <p className="category-text">{t.assistantLabel}</p>
+            <h2 id="assistant-title">{t.assistantTitle}</h2>
+            <p>{t.assistantText}</p>
+            <p className={styles.assistantTopicsLabel}>
+              {t.assistantTopicsLabel}
+            </p>
+            <ul className={styles.assistantTopics}>
+              {t.assistantTopics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </section>
+      </AssistantSlider>
 
       <div id="app-features" className={styles.featureSection}>
         <AppJourney
